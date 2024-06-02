@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.InputSystem;
@@ -12,6 +14,7 @@ public class PlayerMovementController : MonoBehaviour
     [SerializeField] private InputAction mouseDelta;
 
     private NavMeshAgent agent;
+    private PathfindingCostGrid pfindCostGrid;
     private Vector2 movementInput;
     private bool isMovingWithInput;
     private bool isRotating;
@@ -19,6 +22,7 @@ public class PlayerMovementController : MonoBehaviour
     private void Start()
     {
         agent = GetComponentInChildren<NavMeshAgent>();
+        pfindCostGrid = GameObject.FindObjectOfType<PathfindingCostGrid>();
     }
 
     private void OnEnable()
@@ -84,7 +88,7 @@ public class PlayerMovementController : MonoBehaviour
 
     private void OnClick(InputAction.CallbackContext context)
     {
-        if (isMovingWithInput)
+        if (isMovingWithInput || Input.GetKeyDown(KeyCode.LeftControl))
             return;
 
         Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
@@ -93,14 +97,39 @@ public class PlayerMovementController : MonoBehaviour
             NavMeshHit navHit;
             if (NavMesh.SamplePosition(hit.point, out navHit, clickRadius, NavMesh.AllAreas))
             {
-                NavMeshPath path = new NavMeshPath();
-                if (agent.CalculatePath(navHit.position, path) && path.status == NavMeshPathStatus.PathComplete)
+                if (pfindCostGrid)
                 {
-                    agent.SetDestination(navHit.position);
+                    List<Vector3> path = pfindCostGrid.FindPath(agent, agent.transform.position, navHit.position);
+                    if (path.Count > 0)
+                    {
+                        StopAllCoroutines();
+                        StartCoroutine(FollowPath(path));
+                    }
+                }
+                else
+                {
+                    NavMeshPath path = new NavMeshPath();
+                    if (agent.CalculatePath(navHit.position, path) && path.status == NavMeshPathStatus.PathComplete)
+                    {
+                        agent.SetDestination(navHit.position);
+                    }
                 }
             }
         }
     }
+
+    private IEnumerator FollowPath(List<Vector3> path)
+    {
+        foreach (Vector3 point in path)
+        {
+            agent.SetDestination(point);
+            while (agent.pathPending || agent.remainingDistance > agent.stoppingDistance)
+            {
+                yield return null;
+            }
+        }
+    }
+
 
     private void OnRightMouseButtonDown(InputAction.CallbackContext context)
     {
