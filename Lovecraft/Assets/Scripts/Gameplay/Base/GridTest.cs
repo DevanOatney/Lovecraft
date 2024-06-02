@@ -1,3 +1,4 @@
+using Unity.AI.Navigation;
 using UnityEngine;
 
 public class GridTest : MonoBehaviour
@@ -7,11 +8,14 @@ public class GridTest : MonoBehaviour
     public float cellSize = 1.0f;
     public BoxCollider gridCollider;
 
-    private Grid<int> grid;
+    private Grid<BuildingNode> grid;
     private PathfindingCostGrid pfindCostGrid;
     private int previousWidth;
     private int previousHeight;
     private float previousCellSize;
+
+    //TEMP, remove me
+    public Transform BuildingPrefab;
 
     private void Start()
     {
@@ -24,15 +28,31 @@ public class GridTest : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q))
         {
             Vector3 mousePosition = GetMouseWorldPosition();
-            grid.SetValue(mousePosition, grid.GetValue(mousePosition) + 10);
+            grid.GetValue(mousePosition).pathingCost += 10;
         }
-
+         
         if (Input.GetKeyDown(KeyCode.E))
         {
             Vector3 mousePosition = GetMouseWorldPosition();
-            int value = grid.GetValue(mousePosition);
+            int value = grid.GetValue(mousePosition).pathingCost;
             Debug.Log("Grid Value: " + value);
         }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Vector3 mousePosition = GetMouseWorldPosition();
+            var bNode = grid.GetValue(mousePosition);
+            if(bNode.buildingObject == null)
+            {
+                grid.GetXY(mousePosition, out int x, out int y);
+                bNode.buildingObject = Instantiate(BuildingPrefab, grid.GetWorldPosition(x, y), Quaternion.identity);
+                Vector3 pos = bNode.buildingObject.transform.position;
+                bNode.buildingObject.transform.position = new Vector3(pos.x, mousePosition.y, pos.z);
+                
+                GameObject.FindObjectOfType<NavMeshSurface>().BuildNavMesh();
+            }
+        }
+
 
         // Automatically recreate grid if any dimension or cell size changes
         if (gridCollider != null)
@@ -67,11 +87,11 @@ public class GridTest : MonoBehaviour
             height = Mathf.CeilToInt(scaledSize.z / cellSize);
             Vector3 originPosition = gridCollider.transform.position - new Vector3(scaledSize.x, 0, scaledSize.z) / 2f;
 
-            grid = new Grid<int>(width, height, cellSize, originPosition);
+            grid = new Grid<BuildingNode>(width, height, cellSize, originPosition);
         }
         else
         {
-            grid = new Grid<int>(width, height, cellSize, Vector3.zero);
+            grid = new Grid<BuildingNode>(width, height, cellSize, Vector3.zero);
         }
 
         if (pfindCostGrid)
@@ -88,5 +108,23 @@ public class GridTest : MonoBehaviour
             return hit.point;
         }
         return Vector3.zero;
+    }
+}
+
+public class BuildingNode
+{
+    public Transform buildingObject;
+    public int pathingCost;
+
+    public BuildingNode()
+    {
+        buildingObject = null;
+        pathingCost = 0;
+    }
+
+    public BuildingNode(Transform buildingObject = null, int pathingCost = 0)
+    {
+        this.buildingObject = buildingObject;
+        this.pathingCost = pathingCost;
     }
 }

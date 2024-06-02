@@ -5,7 +5,7 @@ using System;
 
 public class PathfindingCostGrid : MonoBehaviour
 {
-    public Grid<int> costGrid;
+    public Grid<BuildingNode> costGrid;
 
     public List<Vector3> FindPath(NavMeshAgent agent, Vector3 startPosition, Vector3 endPosition)
     {
@@ -50,7 +50,12 @@ public class PathfindingCostGrid : MonoBehaviour
 
             foreach (var neighbor in GetNeighbors(currentNode.Position))
             {
-                int neighborCost = costGrid.GetValue(neighbor);
+                var bNode = costGrid.GetValue(neighbor);
+                if (bNode == null || costGrid.GetValue(neighbor).buildingObject != null)
+                {
+                    continue;
+                }
+                int neighborCost = costGrid.GetValue(neighbor).pathingCost;
                 float newMovementCostToNeighbor = currentNode.GCost + Vector3.Distance(currentNode.Position, neighbor) + neighborCost;
 
                 Node neighborNode = new Node(neighbor, currentNode, newMovementCostToNeighbor, GetHeuristic(neighbor, goal));
@@ -109,7 +114,7 @@ public class PathfindingCostGrid : MonoBehaviour
         public float HCost { get; }
         public float FCost => GCost + HCost;
 
-        public Node(Vector3 position, Node parent, float gCost, float hCost)
+        public Node(Vector3 position, Node parent, float gCost, float hCost, Transform _gridObject = null)
         {
             Position = position;
             Parent = parent;

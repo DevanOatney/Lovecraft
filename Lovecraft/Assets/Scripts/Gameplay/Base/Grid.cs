@@ -22,8 +22,31 @@ public class Grid<T>
 
         gridArray = new T[width, height];
 
+        if (typeof(T) == typeof(int) || typeof(T) == typeof(float) || typeof(T) == typeof(double) || typeof(T) == typeof(string))
+        {
+            // No need to initialize primitive types
+            return;
+        }
+
+        for (int x = 0; x < width; x++)
+        {
+            for (int y = 0; y < height; y++)
+            {
+                try
+                {
+                    gridArray[x, y] = Activator.CreateInstance<T>();
+                }
+                catch (MissingMethodException)
+                {
+                    Debug.LogError($"Type {typeof(T)} must have a parameterless constructor.");
+                    throw;
+                }
+            }
+        }
+
         DrawGrid();
     }
+
 
     private void DrawGrid()
     {
@@ -47,6 +70,12 @@ public class Grid<T>
         {
             // Example: Higher values are closer to red, lower values closer to green
             float normalizedValue = Mathf.InverseLerp(0, 100, intValue); // Adjust the range as needed
+            return Color.Lerp(Color.green, Color.red, normalizedValue);
+        }
+        else if (value is BuildingNode buildingNode)
+        {
+            // Example: Higher pathingCost values are closer to red, lower values closer to green
+            float normalizedValue = Mathf.InverseLerp(0, 100, buildingNode.pathingCost); // Adjust the range as needed
             return Color.Lerp(Color.green, Color.red, normalizedValue);
         }
         return Color.white;
