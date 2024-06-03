@@ -13,47 +13,17 @@ public class GridTest : MonoBehaviour
     private int previousWidth;
     private int previousHeight;
     private float previousCellSize;
-
-    //TEMP, remove me
-    public Transform BuildingPrefab;
+    private GameplayController gameplayController;
 
     private void Start()
     {
         pfindCostGrid = GetComponentInChildren<PathfindingCostGrid>();
+        gameplayController = GameObject.FindObjectOfType<GameplayController>();
         CreateGrid();
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            Vector3 mousePosition = GetMouseWorldPosition();
-            grid.GetValue(mousePosition).pathingCost += 10;
-        }
-         
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            Vector3 mousePosition = GetMouseWorldPosition();
-            int value = grid.GetValue(mousePosition).pathingCost;
-            Debug.Log("Grid Value: " + value);
-        }
-
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            Vector3 mousePosition = GetMouseWorldPosition();
-            var bNode = grid.GetValue(mousePosition);
-            if(bNode.buildingObject == null)
-            {
-                grid.GetXY(mousePosition, out int x, out int y);
-                bNode.buildingObject = Instantiate(BuildingPrefab, grid.GetWorldPosition(x, y), Quaternion.identity);
-                Vector3 pos = bNode.buildingObject.transform.position;
-                bNode.buildingObject.transform.position = new Vector3(pos.x, mousePosition.y, pos.z);
-                
-                GameObject.FindObjectOfType<NavMeshSurface>().BuildNavMesh();
-            }
-        }
-
-
         // Automatically recreate grid if any dimension or cell size changes
         if (gridCollider != null)
         {
@@ -71,6 +41,41 @@ public class GridTest : MonoBehaviour
                 previousWidth = width;
                 previousHeight = height;
                 previousCellSize = cellSize;
+            }
+        }
+
+        HandleDebugCommands();
+    }
+
+    private void HandleDebugCommands()
+    {
+        if (MouseInputManager.Instance.IsPointerOverUIElement()) return;
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            Vector3 mousePosition = GetMouseWorldPosition();
+            grid.GetValue(mousePosition).pathingCost += 10;
+        }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            Vector3 mousePosition = GetMouseWorldPosition();
+            int value = grid.GetValue(mousePosition).pathingCost;
+            Debug.Log("Grid Value: " + value);
+        }
+
+        if (Input.GetKeyDown(KeyCode.R) && gameplayController != null && gameplayController.SelectedObject != null)
+        {
+            Vector3 mousePosition = GetMouseWorldPosition();
+            var bNode = grid.GetValue(mousePosition);
+            if (bNode.buildingObject == null)
+            {
+                grid.GetXY(mousePosition, out int x, out int y);
+                bNode.buildingObject = Instantiate(gameplayController.SelectedObject, grid.GetWorldPosition(x, y), Quaternion.identity);
+                Vector3 pos = bNode.buildingObject.transform.position;
+                bNode.buildingObject.transform.position = new Vector3(pos.x, mousePosition.y, pos.z);
+
+                GameObject.FindObjectOfType<NavMeshSurface>().BuildNavMesh();
             }
         }
     }

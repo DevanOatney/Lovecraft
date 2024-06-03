@@ -88,7 +88,7 @@ public class PlayerMovementController : MonoBehaviour
 
     private void OnClick(InputAction.CallbackContext context)
     {
-        if (isMovingWithInput || Input.GetKeyDown(KeyCode.LeftControl))
+        if (isMovingWithInput || Input.GetKeyDown(KeyCode.LeftControl) || MouseInputManager.Instance.IsPointerOverUIElement())
             return;
 
         Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
