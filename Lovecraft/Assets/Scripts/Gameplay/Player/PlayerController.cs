@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
     private bool isMovingWithInput;
     private bool isRotating = true;
     private bool isDashing = false; 
-    private float dashCooldownBucket = 0;
+    private float dashCooldownBucket = 3;
 
     private void Start()
     {

@@ -107,16 +107,27 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
-  rightMouseButton:
-    m_Name: Right Mouse Button
+  playerDash:
+    m_Name: Player Dash
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: da7be4ce-5a21-4363-bfaf-5e9070975d04
+    m_Id: c51b81f1-7a06-4f79-aefc-b19b66eb2a79
     m_Processors: 
     m_Interactions: 
-    m_SingletonActionBindings: []
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 019758bf-bba0-4e2f-9515-d954441a0f9b
+      m_Path: <Keyboard>/shift
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Player Dash
+      m_Flags: 0
     m_Flags: 0
   PlayerVisuals: {fileID: 1947467634584407920}
+  dashDistance: 20
+  dashCooldown: 3
+  dashCooldownIndicator: {fileID: 0}
 --- !u!195 &2888299167588811223
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -127,11 +138,11 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
+  m_Speed: 12
+  m_Acceleration: 75
   avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_AngularSpeed: 0
+  m_StoppingDistance: 2
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
