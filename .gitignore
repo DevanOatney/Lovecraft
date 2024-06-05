@@ -73,3 +73,7 @@ crashlytics-build.properties
 /Lovecraft/Library
 /Lovecraft/Temp
 /Lovecraft/Logs
+/Lovecraft/UserSettings
+*.cache
+*.cache
+/Lovecraft/obj/Debug

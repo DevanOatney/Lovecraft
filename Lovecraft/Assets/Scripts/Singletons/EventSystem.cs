@@ -6,6 +6,8 @@ public enum GameEvent
 {
     EMPTY_EVENT,
     BUILDING_OBJECT_SELECTED,
+    BUILDING_OBJECT_PLACE,
+    BUILDING_OBJECT_HIGHLIGHT,
 }
 
 public class GameEventSystem : MonoBehaviour
