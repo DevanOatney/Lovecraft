@@ -6,9 +6,9 @@ using UnityEngine.UI;
 public class DelayedPhaseOut : MonoBehaviour
 {
 
-    [SerializeField] private float phaseOutTime = 1f;
+    [SerializeField] protected float phaseOutTime = 1f;
     [SerializeField] private Image imageToAlphaOut;
-    private float phaseOutBucket = 0;
+    protected float phaseOutBucket = 0;
 
     private void OnEnable()
     {
@@ -18,13 +18,18 @@ public class DelayedPhaseOut : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        PhaseOutUpdate();
+    }
+
+    public void PhaseOutUpdate()
+    {
         phaseOutBucket += Time.deltaTime;
-        if( phaseOutBucket >= phaseOutTime )
+        if (phaseOutBucket >= phaseOutTime)
         {
             gameObject.SetActive(false);
         }
 
-        if( imageToAlphaOut != null)
+        if (imageToAlphaOut != null)
         {
             Color tempColor = imageToAlphaOut.color;
             tempColor.a = 1 - phaseOutBucket / phaseOutTime;

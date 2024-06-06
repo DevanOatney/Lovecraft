@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class RoundController : MonoBehaviour
 {
-    [SerializeField] private RectTransform dayNightClockHand;
+    [SerializeField] private RectTransform phaseClockHand;
     [SerializeField] private float timeForEachRound = 45f;
-    [SerializeField] private GameObject DayIndicator;
-    [SerializeField] private GameObject NightIndicator;
+    [SerializeField] private GameObject combatPhaseIndicator;
+    [SerializeField] private GameObject buildingPhaseIndicator;
+    [SerializeField] private Canvas buildingPhaseCanvas;
+    [SerializeField] private Canvas combatPhaseCanvas;
 
     private float roundTimerBucket = 0f;
     private bool cycleState = true; //'true' for Day/combat; 'false' for Night/build
@@ -30,12 +32,18 @@ public class RoundController : MonoBehaviour
 
             if( cycleState )
             {
-                DayIndicator.SetActive(true);
-                NightIndicator.SetActive(false);
+                combatPhaseIndicator.SetActive(true);
+                combatPhaseCanvas.gameObject.SetActive(true);
+
+                buildingPhaseIndicator.SetActive(false);
+                buildingPhaseCanvas.gameObject.SetActive(false);
             } else
             {
-                DayIndicator.SetActive(false);
-                NightIndicator.SetActive(true);
+                combatPhaseIndicator.SetActive(false);
+                combatPhaseCanvas.gameObject.SetActive(false);
+
+                buildingPhaseIndicator.SetActive(true);
+                buildingPhaseCanvas.gameObject.SetActive(true);
             }
         }
 
@@ -49,7 +57,7 @@ public class RoundController : MonoBehaviour
         {
             rotationAmount -= 180f;
         }
-        dayNightClockHand.rotation = Quaternion.Euler(0, 0, rotationAmount);
+        phaseClockHand.rotation = Quaternion.Euler(0, 0, rotationAmount);
 
 
     }
