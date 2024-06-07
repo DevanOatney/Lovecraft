@@ -41,6 +41,7 @@ public class MouseInputManager : MonoBehaviour
 
     public bool IsPointerOverUIElement()
     {
+        if( EventSystem.current == null ) { return false; }
         return EventSystem.current.IsPointerOverGameObject();
     }
 
