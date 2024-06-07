@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 9222016085877644315}
   - component: {fileID: 6147056304947906270}
   - component: {fileID: 2888299167588811223}
+  - component: {fileID: 2233644863914172661}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -107,27 +108,7 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
-  playerDash:
-    m_Name: Player Dash
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: c51b81f1-7a06-4f79-aefc-b19b66eb2a79
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: 019758bf-bba0-4e2f-9515-d954441a0f9b
-      m_Path: <Keyboard>/shift
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Player Dash
-      m_Flags: 0
-    m_Flags: 0
   PlayerVisuals: {fileID: 1947467634584407920}
-  dashDistance: 20
-  dashCooldown: 3
-  dashCooldownIndicator: {fileID: 0}
 --- !u!195 &2888299167588811223
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -150,6 +131,39 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &2233644863914172661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1821844674282759311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 788ae0c5cc9e6e0499a2a8ef2d40b10d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerVisuals: {fileID: 1947467634584407920}
+  playerDash:
+    m_Name: Player Dash
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 78bc8771-c0d8-46b5-8de9-bce741c81345
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: ceb90eea-38ef-4174-b56e-5ecb00f76ae9
+      m_Path: <Keyboard>/shift
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Player Dash
+      m_Flags: 0
+    m_Flags: 0
+  dashDistance: 15
+  dashCooldown: 3
+  dashCooldownIndicator: {fileID: 0}
 --- !u!1 &2348319102099890103
 GameObject:
   m_ObjectHideFlags: 0

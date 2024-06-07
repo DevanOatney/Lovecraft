@@ -1922,7 +1922,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1c3a3657bf3c14caa7bc7311f5d3a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  phaseOutTime: 2
+  phaseOutTime: 3
   imageToAlphaOut: {fileID: 5656273323503768325}
   tmpText: {fileID: 5449074377162512501}
 --- !u!1 &8052890778419918945
