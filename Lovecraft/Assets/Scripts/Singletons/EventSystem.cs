@@ -8,6 +8,7 @@ public enum GameEvent
     BUILDING_OBJECT_SELECTED,
     BUILDING_OBJECT_PLACE,
     BUILDING_OBJECT_HIGHLIGHT,
+    PHASE_CHANGE,
 }
 
 public class GameEventSystem : MonoBehaviour

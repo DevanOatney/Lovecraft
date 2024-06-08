@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17612594, g: 0.22042361, b: 0.3027514, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -169,6 +168,9 @@ MonoBehaviour:
   height: 3
   cellSize: 1
   gridCollider: {fileID: 1609847413}
+  buildableSurfaceMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!4 &13002833
 Transform:
   m_ObjectHideFlags: 0
