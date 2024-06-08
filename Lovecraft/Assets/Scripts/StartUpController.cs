@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class StartUpController : MonoBehaviour
 {
+
+    private void Start()
+    {
+        Invoke("LoadMainMenu", Random.Range(16, 21));    
+    }
+
     // Start is called before the first frame update
-    void Start()
+    public void LoadMainMenu()
     {
         SceneManager.Instance.LoadScene(Scene.MainMenu);
     }
