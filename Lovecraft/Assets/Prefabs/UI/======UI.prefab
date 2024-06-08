@@ -2160,7 +2160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b12d8252f5224b6449ca0aafd0e69f74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allowTimedPhases: 1
+  allowTimedPhases: 0
   phaseClockHand: {fileID: 5414999168914897693}
   timeForEachRound: 45
   combatPhaseIndicator: {fileID: 7927496798706743948}

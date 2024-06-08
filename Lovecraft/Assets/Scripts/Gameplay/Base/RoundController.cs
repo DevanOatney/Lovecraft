@@ -2,10 +2,39 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
+public enum GameSate
+{
+    BUILD_PHASE,
+    COMBAT_PHASE,
+    GAME_STATE_COUNT,
+}
 
 public class RoundController : MonoBehaviour
 {
+    #region Singleton
+    private static RoundController _instance;
+    public static RoundController Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                // Find existing instance
+                _instance = FindObjectOfType<RoundController>();
+
+                // If no instance was found, create one
+                if (_instance == null)
+                {
+                    GameObject singleton = new GameObject("RoundController");
+                    _instance = singleton.AddComponent<RoundController>();
+                }
+            }
+            return _instance;
+        }
+    }
+    #endregion
+
+
     [SerializeField] private bool allowTimedPhases = false;
 
     [SerializeField] private RectTransform phaseClockHand;
@@ -17,7 +46,7 @@ public class RoundController : MonoBehaviour
     [SerializeField] private GameObject nextPhaseButton;
 
     private float roundTimerBucket = 0f;
-    private bool cycleState = true; //'true' for Day/combat; 'false' for Night/build
+    private GameSate gameState = GameSate.BUILD_PHASE; //'true' for Day/combat; 'false' for Night/build
 
     // Start is called before the first frame update
     void Start()
@@ -58,7 +87,7 @@ public class RoundController : MonoBehaviour
 
             float percent = roundTimerBucket / timeForEachRound;
             float rotationAmount = -180 * percent;
-            if (!cycleState) //daytime 
+            if (gameState == GameSate.COMBAT_PHASE) //daytime 
             {
                 rotationAmount -= 180f;
             }
@@ -85,31 +114,34 @@ public class RoundController : MonoBehaviour
     public void TriggerBuildPhase()
     {
         // set the state to the 'wrong' state so the 'TriggerPhaseChange' method will set it to the correct state with it's logic
-        cycleState = true;
+        gameState = GameSate.COMBAT_PHASE;
         TriggerPhaseChange();
     }
 
     public void TriggerCombatPhase()
     {
         // set the state to the 'wrong' state so the 'TriggerPhaseChange' method will set it to the correct state with it's logic
-        cycleState = false;
+        gameState = GameSate.BUILD_PHASE;
         TriggerPhaseChange();
     }
 
     private void OnPhaseChange(object obj)
     {
-        cycleState = !cycleState;
 
-        if (cycleState)
+        if (gameState == GameSate.BUILD_PHASE)
         {
+            gameState = GameSate.COMBAT_PHASE;
+
             combatPhaseIndicator.SetActive(true);
             combatPhaseCanvas.gameObject.SetActive(true);
 
             buildingPhaseIndicator.SetActive(false);
             buildingPhaseCanvas.gameObject.SetActive(false);
         }
-        else
+        else if( gameState == GameSate.COMBAT_PHASE)
         {
+            gameState = GameSate.BUILD_PHASE;
+
             combatPhaseIndicator.SetActive(false);
             combatPhaseCanvas.gameObject.SetActive(false);
 
