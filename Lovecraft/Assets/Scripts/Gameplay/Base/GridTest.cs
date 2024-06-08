@@ -7,6 +7,7 @@ public class GridTest : MonoBehaviour
     public int height = 10;
     public float cellSize = 1.0f;
     public BoxCollider gridCollider;
+    public LayerMask buildableSurfaceMask;
 
     private Grid<BuildingNode> grid;
     private PathfindingCostGrid pfindCostGrid;
@@ -51,33 +52,53 @@ public class GridTest : MonoBehaviour
     {
         if (MouseInputManager.Instance.IsPointerOverUIElement()) return;
 
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            Vector3 mousePosition = GetMouseWorldPosition();
-            grid.GetValue(mousePosition).pathingCost += 10;
-        }
+        //if (Input.GetKeyDown(KeyCode.Q))
+        //{
+        //    Vector3 mousePosition = GetMouseWorldPosition();
+        //    grid.GetValue(mousePosition).pathingCost += 10;
+        //}
 
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            Vector3 mousePosition = GetMouseWorldPosition();
-            int value = grid.GetValue(mousePosition).pathingCost;
-            Debug.Log("Grid Value: " + value);
-        }
+        //if (Input.GetKeyDown(KeyCode.E))
+        //{
+        //    Vector3 mousePosition = GetMouseWorldPosition();
+        //    int value = grid.GetValue(mousePosition).pathingCost;
+        //    Debug.Log("Grid Value: " + value);
+        //}
+    }
 
-        if (Input.GetKeyDown(KeyCode.R) && gameplayController != null && gameplayController.SelectedObject != null)
+    public void CreateBuilding(Transform buildingToCreate, Quaternion rotation)
+    {
+        Vector3 mousePosition = GetMouseWorldPosition();
+        var bNode = grid.GetValue(mousePosition);
+        if (bNode.buildingObject == null)
         {
-            Vector3 mousePosition = GetMouseWorldPosition();
-            var bNode = grid.GetValue(mousePosition);
-            if (bNode.buildingObject == null)
+            grid.GetXY(mousePosition, out int x, out int y);
+            Vector3 worldPosition = grid.GetWorldPosition(x, y);
+
+            // Perform a raycast downwards from the target position to find the ground level
+            if (Physics.Raycast(worldPosition + Vector3.up * 10, Vector3.down, out RaycastHit hit, Mathf.Infinity, buildableSurfaceMask))
             {
-                grid.GetXY(mousePosition, out int x, out int y);
-                bNode.buildingObject = Instantiate(gameplayController.SelectedObject, grid.GetWorldPosition(x, y), Quaternion.identity);
-                Vector3 pos = bNode.buildingObject.transform.position;
-                bNode.buildingObject.transform.position = new Vector3(pos.x, mousePosition.y, pos.z);
-
-                GameObject.FindObjectOfType<NavMeshSurface>().BuildNavMesh();
+                worldPosition.y = hit.point.y;
             }
+
+            bNode.buildingObject = Instantiate(buildingToCreate, worldPosition, rotation);
+
+            GameObject.FindObjectOfType<NavMeshSurface>().BuildNavMesh();
         }
+    }
+
+    public Vector3 GetBuildingPositionFromGrid()
+    {
+        Vector3 mousePosition = GetMouseWorldPosition();
+        grid.GetXY(mousePosition, out int x, out int y);
+        Vector3 pos = grid.GetWorldPosition(x, y);
+
+        // Perform a raycast downwards from the target position to find the ground level
+        if (Physics.Raycast(pos + Vector3.up * 10, Vector3.down, out RaycastHit hit, Mathf.Infinity, buildableSurfaceMask))
+        {
+            pos.y = hit.point.y;
+        }
+        return pos;
     }
 
     private void CreateGrid()
