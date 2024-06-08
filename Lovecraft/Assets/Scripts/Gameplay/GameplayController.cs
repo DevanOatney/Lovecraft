@@ -58,15 +58,14 @@ public class GameplayController : MonoBehaviour
     {
         if (previewObject != null)
         {
-            MovePreviewObject();
-            RotatePreviewObject();
-
-            if (Input.GetMouseButtonDown(0) && !MouseInputManager.Instance.IsPointerOverUIElement())
+            if (Input.GetMouseButtonDown(0))
             {
                 buildingGrid.CreateBuilding(SelectedObject, previewObject.rotation);
                 Destroy(previewObject.gameObject);
                 previewObject = null;
             }
+            MovePreviewObject();
+            RotatePreviewObject();
         }
     }
 

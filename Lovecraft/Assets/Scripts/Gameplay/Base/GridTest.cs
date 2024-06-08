@@ -9,7 +9,7 @@ public class GridTest : MonoBehaviour
     public BoxCollider gridCollider;
     public LayerMask buildableSurfaceMask;
 
-    private Grid<BuildingNode> grid;
+    public Grid<BuildingNode> grid;
     private PathfindingCostGrid pfindCostGrid;
     private int previousWidth;
     private int previousHeight;
@@ -72,14 +72,7 @@ public class GridTest : MonoBehaviour
         var bNode = grid.GetValue(mousePosition);
         if (bNode.buildingObject == null)
         {
-            grid.GetXY(mousePosition, out int x, out int y);
-            Vector3 worldPosition = grid.GetWorldPosition(x, y);
-
-            // Perform a raycast downwards from the target position to find the ground level
-            if (Physics.Raycast(worldPosition + Vector3.up * 10, Vector3.down, out RaycastHit hit, Mathf.Infinity, buildableSurfaceMask))
-            {
-                worldPosition.y = hit.point.y;
-            }
+            Vector3 worldPosition = GetBuildingPositionFromGrid();
 
             bNode.buildingObject = Instantiate(buildingToCreate, worldPosition, rotation);
 
@@ -91,7 +84,7 @@ public class GridTest : MonoBehaviour
     {
         Vector3 mousePosition = GetMouseWorldPosition();
         grid.GetXY(mousePosition, out int x, out int y);
-        Vector3 pos = grid.GetWorldPosition(x, y);
+        Vector3 pos = grid.GetCenterOfCell(x, y);
 
         // Perform a raycast downwards from the target position to find the ground level
         if (Physics.Raycast(pos + Vector3.up * 10, Vector3.down, out RaycastHit hit, Mathf.Infinity, buildableSurfaceMask))
@@ -126,7 +119,7 @@ public class GridTest : MonoBehaviour
         }
     }
 
-    private Vector3 GetMouseWorldPosition()
+    public Vector3 GetMouseWorldPosition()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out RaycastHit hit))
