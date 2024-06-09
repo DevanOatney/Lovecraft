@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17612594, g: 0.22042361, b: 0.3027514, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -265,6 +264,7 @@ GameObject:
   - component: {fileID: 19725075}
   - component: {fileID: 19725074}
   - component: {fileID: 19725073}
+  - component: {fileID: 19725079}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -288,8 +288,6 @@ MonoBehaviour:
   treeTarget: {fileID: 1068816252}
   playerTarget: {fileID: 1661449701}
   attackRange: 5
-  attackCooldown: 1
-  attackDamage: 10
   playerChaseRange: 10
   playerChaseReturnRange: 15
   waypointRoot: {fileID: 1467252657}
@@ -403,6 +401,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &19725079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 19725072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72aaaee2c7f3176478487caed465809e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  telegraphDuration: 1
+  attackDuration: 0.5
+  recoveryDuration: 1
 --- !u!1 &21697294
 GameObject:
   m_ObjectHideFlags: 0
@@ -722,13 +735,14 @@ GameObject:
   - component: {fileID: 543883840}
   - component: {fileID: 543883839}
   - component: {fileID: 543883838}
+  - component: {fileID: 543883844}
   m_Layer: 0
   m_Name: Capsule (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &543883838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -745,8 +759,6 @@ MonoBehaviour:
   treeTarget: {fileID: 1068816252}
   playerTarget: {fileID: 1661449701}
   attackRange: 5
-  attackCooldown: 1
-  attackDamage: 10
   playerChaseRange: 10
   playerChaseReturnRange: 15
   waypointRoot: {fileID: 1467252657}
@@ -860,6 +872,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &543883844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 543883837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72aaaee2c7f3176478487caed465809e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  telegraphDuration: 1
+  attackDuration: 0.5
+  recoveryDuration: 1
 --- !u!114 &619964462 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6147056304947906270, guid: 337ac67ce67d95b409c57d9bd53cd2b1, type: 3}
@@ -896,13 +923,14 @@ GameObject:
   - component: {fileID: 779884103}
   - component: {fileID: 779884102}
   - component: {fileID: 779884101}
+  - component: {fileID: 779884107}
   m_Layer: 0
   m_Name: Capsule (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &779884101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -919,8 +947,6 @@ MonoBehaviour:
   treeTarget: {fileID: 1068816252}
   playerTarget: {fileID: 1661449701}
   attackRange: 5
-  attackCooldown: 1
-  attackDamage: 10
   playerChaseRange: 10
   playerChaseReturnRange: 15
   waypointRoot: {fileID: 1467252657}
@@ -1034,6 +1060,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &779884107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779884100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72aaaee2c7f3176478487caed465809e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  telegraphDuration: 1
+  attackDuration: 0.5
+  recoveryDuration: 1
 --- !u!1 &824330974
 GameObject:
   m_ObjectHideFlags: 0
@@ -8391,13 +8432,14 @@ GameObject:
   - component: {fileID: 1613734570}
   - component: {fileID: 1613734569}
   - component: {fileID: 1613734568}
+  - component: {fileID: 1613734574}
   m_Layer: 0
   m_Name: Capsule (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1613734568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8414,8 +8456,6 @@ MonoBehaviour:
   treeTarget: {fileID: 1068816252}
   playerTarget: {fileID: 1661449701}
   attackRange: 5
-  attackCooldown: 1
-  attackDamage: 10
   playerChaseRange: 10
   playerChaseReturnRange: 15
   waypointRoot: {fileID: 1467252657}
@@ -8529,6 +8569,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1613734574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613734567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72aaaee2c7f3176478487caed465809e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  telegraphDuration: 1
+  attackDuration: 0.5
+  recoveryDuration: 1
 --- !u!4 &1661449701 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9222016085877644315, guid: 337ac67ce67d95b409c57d9bd53cd2b1, type: 3}
@@ -8718,13 +8773,14 @@ GameObject:
   - component: {fileID: 1857121569}
   - component: {fileID: 1857121568}
   - component: {fileID: 1857121567}
+  - component: {fileID: 1857121573}
   m_Layer: 0
   m_Name: Capsule (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1857121567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8741,8 +8797,6 @@ MonoBehaviour:
   treeTarget: {fileID: 1068816252}
   playerTarget: {fileID: 1661449701}
   attackRange: 5
-  attackCooldown: 1
-  attackDamage: 10
   playerChaseRange: 10
   playerChaseReturnRange: 15
   waypointRoot: {fileID: 1467252657}
@@ -8856,6 +8910,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1857121573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1857121566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72aaaee2c7f3176478487caed465809e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  telegraphDuration: 1
+  attackDuration: 0.5
+  recoveryDuration: 1
 --- !u!1 &1873769027
 GameObject:
   m_ObjectHideFlags: 0
@@ -9030,13 +9099,14 @@ GameObject:
   - component: {fileID: 1989591913}
   - component: {fileID: 1989591912}
   - component: {fileID: 1989591911}
+  - component: {fileID: 1989591917}
   m_Layer: 0
   m_Name: Capsule (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1989591911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9053,8 +9123,6 @@ MonoBehaviour:
   treeTarget: {fileID: 1068816252}
   playerTarget: {fileID: 1661449701}
   attackRange: 5
-  attackCooldown: 1
-  attackDamage: 10
   playerChaseRange: 10
   playerChaseReturnRange: 15
   waypointRoot: {fileID: 1467252657}
@@ -9168,6 +9236,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1989591917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1989591910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72aaaee2c7f3176478487caed465809e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  telegraphDuration: 1
+  attackDuration: 0.5
+  recoveryDuration: 1
 --- !u!1 &2044101754
 GameObject:
   m_ObjectHideFlags: 0
@@ -9182,13 +9265,14 @@ GameObject:
   - component: {fileID: 2044101757}
   - component: {fileID: 2044101756}
   - component: {fileID: 2044101755}
+  - component: {fileID: 2044101761}
   m_Layer: 0
   m_Name: Capsule (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2044101755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9205,8 +9289,6 @@ MonoBehaviour:
   treeTarget: {fileID: 1068816252}
   playerTarget: {fileID: 1661449701}
   attackRange: 5
-  attackCooldown: 1
-  attackDamage: 10
   playerChaseRange: 10
   playerChaseReturnRange: 15
   waypointRoot: {fileID: 1467252657}
@@ -9320,6 +9402,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2044101761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044101754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72aaaee2c7f3176478487caed465809e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  telegraphDuration: 1
+  attackDuration: 0.5
+  recoveryDuration: 1
 --- !u!1 &2061227827
 GameObject:
   m_ObjectHideFlags: 0

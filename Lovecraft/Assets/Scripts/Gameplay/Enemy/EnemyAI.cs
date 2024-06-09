@@ -15,15 +15,13 @@ public class EnemyAI : MonoBehaviour
     public Transform treeTarget; // The target object (tree)
     public Transform playerTarget; // The player object
     public float attackRange = 5f; // Range within which the enemy can attack
-    public float attackCooldown = 1f; // Time between attacks
-    public int attackDamage = 10; // Damage per attack
     public float playerChaseRange = 10f; // Range within which the enemy will chase the player
     public float playerChaseReturnRange = 15f; // Range beyond which the enemy will stop chasing the player
     public Transform waypointRoot; // Root object for waypoints
     public List<List<Transform>> waypoints = new List<List<Transform>>(); // List of lists of waypoints
 
     private NavMeshAgent agent;
-    private float lastAttackTime;
+    private AttackHandler attackHandler;
     private bool attackingPlayer;
     private List<Transform> treePositions = new List<Transform>();
     private Transform currentTreePosition;
@@ -34,6 +32,7 @@ public class EnemyAI : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        attackHandler = GetComponent<AttackHandler>();
         PopulateWaypoints();
         foreach (Transform child in treeTarget)
         {
@@ -46,6 +45,11 @@ public class EnemyAI : MonoBehaviour
 
     void Update()
     {
+        if (attackHandler.IsAttacking())
+        {
+            return;
+        }
+
         float distanceToTree = Vector3.Distance(transform.position, currentTreePosition.position);
         float distanceToPlayer = Vector3.Distance(transform.position, playerTarget.position);
 
@@ -78,7 +82,7 @@ public class EnemyAI : MonoBehaviour
         if (distanceToTree <= attackRange)
         {
             agent.isStopped = true;
-            AttackTarget(treeTarget);
+            attackHandler.StartAttack(treeTarget, 10);
         }
         else
         {
@@ -103,7 +107,7 @@ public class EnemyAI : MonoBehaviour
             else if (distanceToPlayer <= attackRange)
             {
                 agent.isStopped = true;
-                AttackTarget(playerTarget);
+                attackHandler.StartAttack(playerTarget, 10);
             }
             else
             {
@@ -113,7 +117,7 @@ public class EnemyAI : MonoBehaviour
         }
         else
         {
-            if (distanceToPlayer <= playerChaseRange)
+            if (distanceToPlayer <= playerChaseRange && distanceToTree > attackRange)
             {
                 attackingPlayer = true;
                 MoveToTarget(playerTarget);
@@ -121,7 +125,7 @@ public class EnemyAI : MonoBehaviour
             else if (distanceToTree <= attackRange)
             {
                 agent.isStopped = true;
-                AttackTarget(treeTarget);
+                attackHandler.StartAttack(treeTarget, 10);
             }
             else
             {
@@ -139,7 +143,7 @@ public class EnemyAI : MonoBehaviour
         if (distanceToPlayer <= attackRange)
         {
             agent.isStopped = true;
-            AttackTarget(playerTarget);
+            attackHandler.StartAttack(playerTarget, 10);
         }
         else
         {
@@ -191,20 +195,9 @@ public class EnemyAI : MonoBehaviour
             currentTreePosition = treeTarget;
     }
 
-    void AttackTarget(Transform target)
+    public void OnAttackComplete()
     {
-        if (Time.time - lastAttackTime > attackCooldown)
-        {
-            if (target == treeTarget)
-            {
-                target.GetComponent<TreeController>().TakeDamage(attackDamage);
-            }
-            else if (target == playerTarget)
-            {
-                target.GetComponent<PlayerController>().TakeDamage(attackDamage);
-            }
-            lastAttackTime = Time.time;
-        }
+        agent.isStopped = false;
     }
 
     void PopulateWaypoints()
