@@ -104,4 +104,9 @@ public class PlayerController : MonoBehaviour
     private void OnClick(InputAction.CallbackContext context)
     {
     }
+
+    public void TakeDamage(int damageToTake)
+    {
+
+    }
 }

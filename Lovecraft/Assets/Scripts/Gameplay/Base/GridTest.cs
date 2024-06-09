@@ -76,6 +76,13 @@ public class GridTest : MonoBehaviour
 
             bNode.buildingObject = Instantiate(buildingToCreate, worldPosition, rotation);
 
+            BuildingObject buildingObject = bNode.buildingObject.GetComponent<BuildingObject>();
+            if (buildingObject != null)
+            {
+                buildingObject.ParentNode = bNode;
+                buildingObject.DirectionToFire = rotation;
+            }
+
             GameObject.FindObjectOfType<NavMeshSurface>().BuildNavMesh();
         }
     }

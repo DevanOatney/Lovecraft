@@ -8,6 +8,7 @@ public class GameplayController : MonoBehaviour
     private Transform previewObject;
     private Vector3 originalScale;
 
+    private LineRenderer lineRenderer;
     private GridTest buildingGrid;
 
     private void Start()
@@ -52,20 +53,31 @@ public class GameplayController : MonoBehaviour
 
         // Set the preview object to be transparent
         SetPreviewObjectTransparency(previewObject, 0.5f);
+
+        // Add LineRenderer to the preview object for the arrow
+        lineRenderer = previewObject.gameObject.AddComponent<LineRenderer>();
+        lineRenderer.startWidth = 0.1f;
+        lineRenderer.endWidth = 0.1f;
+        lineRenderer.positionCount = 3;
+        lineRenderer.material = new Material(Shader.Find("Sprites/Default"));
+        lineRenderer.startColor = Color.red;
+        lineRenderer.endColor = Color.red;
     }
 
     private void Update()
     {
         if (previewObject != null)
         {
+            MovePreviewObject();
+            RotatePreviewObject();
+            DrawArrow();
+
             if (Input.GetMouseButtonDown(0))
             {
                 buildingGrid.CreateBuilding(SelectedObject, previewObject.rotation);
                 Destroy(previewObject.gameObject);
                 previewObject = null;
             }
-            MovePreviewObject();
-            RotatePreviewObject();
         }
     }
 
@@ -80,6 +92,20 @@ public class GameplayController : MonoBehaviour
         {
             previewObject.Rotate(0, 90, 0);
         }
+    }
+
+    private void DrawArrow()
+    {
+        Vector3 arrowStart = previewObject.position;
+        Vector3 arrowEnd = previewObject.position + previewObject.forward * 2.0f; // Adjust length as needed
+        Vector3 arrowHeadLeft = arrowEnd + Quaternion.Euler(0, 150, 0) * (previewObject.forward * 0.5f); // Adjust size as needed
+        Vector3 arrowHeadRight = arrowEnd + Quaternion.Euler(0, -150, 0) * (previewObject.forward * 0.5f);
+
+        lineRenderer.SetPosition(0, arrowStart);
+        lineRenderer.SetPosition(1, arrowEnd);
+        lineRenderer.SetPosition(2, arrowHeadLeft);
+        lineRenderer.SetPosition(3, arrowEnd);
+        lineRenderer.SetPosition(4, arrowHeadRight);
     }
 
     private void SetPreviewObjectTransparency(Transform obj, float alpha)
