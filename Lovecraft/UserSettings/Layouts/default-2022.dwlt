@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2560
     height: 1349.3334
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Project
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -189,8 +189,8 @@ MonoBehaviour:
     y: 0
     width: 472
     height: 879.3333
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -215,8 +215,8 @@ MonoBehaviour:
     y: 0
     width: 1492.6666
     height: 879.3333
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 20}
@@ -601,9 +601,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: 2c660000
       m_LastClickedID: 0
-      m_ExpandedIDs: 5414ffffca890000348a00005e8a0000b28a0000
+      m_ExpandedIDs: 92f6ffff2afbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1074,9 +1074,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 12.768091, y: 9.339256, z: -22.093609}
+    m_Target: {x: 12.849019, y: 9.92479, z: -21.67359}
     speed: 2
-    m_Value: {x: 12.768091, y: 9.339256, z: -22.093609}
+    m_Value: {x: 12.849019, y: 9.92479, z: -21.67359}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1122,9 +1122,9 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.3223499, y: 0.29146862, z: -0.11981871, w: -0.8943469}
+    m_Target: {x: -0.1493945, y: 0.21282765, z: -0.04632594, w: -0.9660843}
     speed: 2
-    m_Value: {x: -0.32185522, y: 0.29102132, z: -0.11963484, w: -0.89297444}
+    m_Value: {x: -0.149165, y: 0.21250072, z: -0.046254776, w: -0.96460027}
   m_Size:
     m_Target: 0.8660254
     speed: 2
@@ -1173,8 +1173,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 473
-    y: 19
+    x: 472
+    y: 72.66667
     width: 1490.6666
     height: 858.3333
   m_SerializedDataModeController:
@@ -1217,10 +1217,10 @@ MonoBehaviour:
     m_VAllowExceedBaseRangeMin: 1
     m_VAllowExceedBaseRangeMax: 1
     m_ScaleWithWindow: 0
-    m_HSlider: 1
+    m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -1296,7 +1296,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/StreamingAssets/Audio/BGM
+    - Assets/StreamingAssets/Audio/SFX/Impact
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -1304,16 +1304,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 96
   m_LastFolders:
-  - Assets/StreamingAssets/Audio/BGM
+  - Assets/StreamingAssets/Audio/SFX/Impact
   m_LastFoldersGridSize: 96
   m_LastProjectPath: C:\Users\Devan\OneDrive\Desktop\Unity Project\Lovecraft\Lovecraft
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 68.99994}
-    m_SelectedIDs: 28990000
-    m_LastClickedID: 39208
-    m_ExpandedIDs: 000000006c8d00006e8d0000708d0000728d0000748d00001c9900002099000000ca9a3b
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 2c660000
+    m_LastClickedID: 26156
+    m_ExpandedIDs: 00000000ae650000b0650000b2650000f4650000206600002266000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1341,7 +1341,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000006c8d00006e8d0000708d0000728d0000748d0000
+    m_ExpandedIDs: 00000000ae650000b0650000b2650000b4650000b6650000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
