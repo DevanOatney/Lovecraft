@@ -19,6 +19,8 @@ public class EnemyAI : MonoBehaviour
     public float playerChaseReturnRange = 15f; // Range beyond which the enemy will stop chasing the player
     public Transform waypointRoot; // Root object for waypoints
     public List<List<Transform>> waypoints = new List<List<Transform>>(); // List of lists of waypoints
+    public bool IsDying = false;
+    public int HP = 10;
 
     private NavMeshAgent agent;
     private AttackHandler attackHandler;
@@ -198,6 +200,33 @@ public class EnemyAI : MonoBehaviour
     public void OnAttackComplete()
     {
         agent.isStopped = false;
+    }
+
+    public void TakeDamage(int damageToTake)
+    {
+        if (IsDying)
+            return;
+        HP -= damageToTake;
+
+        if (HP <= 0)
+        {
+            IsDying = true;
+            StartDying();
+        }
+    }
+
+    private void StartDying()
+    {
+        //Play animations?
+        //Sink into the ground?
+        //Spawn resources/loot?
+        FinishDying();
+    }
+
+    private void FinishDying()
+    {
+        GameEventSystem.Instance.TriggerEvent(GameEvent.ENEMY_KILLED);
+        Destroy(this.gameObject);
     }
 
     void PopulateWaypoints()
