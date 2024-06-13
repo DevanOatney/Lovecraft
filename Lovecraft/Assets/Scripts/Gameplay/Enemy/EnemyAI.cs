@@ -22,6 +22,9 @@ public class EnemyAI : MonoBehaviour
     public bool IsDying = false;
     public int HP = 10;
 
+    public List<AudioClip> hitSFXList;
+    public AudioSource audioSource;
+
     private NavMeshAgent agent;
     private AttackHandler attackHandler;
     private bool attackingPlayer;
@@ -207,6 +210,7 @@ public class EnemyAI : MonoBehaviour
         if (IsDying)
             return;
         HP -= damageToTake;
+        audioSource.PlayOneShot(hitSFXList[Random.Range(0, hitSFXList.Count)]);
 
         if (HP <= 0)
         {
