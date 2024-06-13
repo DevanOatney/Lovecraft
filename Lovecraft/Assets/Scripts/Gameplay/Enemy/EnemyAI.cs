@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 using System.Collections.Generic;
 
 public class EnemyAI : MonoBehaviour
@@ -20,10 +21,13 @@ public class EnemyAI : MonoBehaviour
     public Transform waypointRoot; // Root object for waypoints
     public List<List<Transform>> waypoints = new List<List<Transform>>(); // List of lists of waypoints
     public bool IsDying = false;
-    public int HP = 10;
+    public float HP = 10;
+    public float MaxHP;
 
     public List<AudioClip> hitSFXList;
     public AudioSource audioSource;
+
+    public Image HealthBar;
 
     private NavMeshAgent agent;
     private AttackHandler attackHandler;
@@ -46,6 +50,8 @@ public class EnemyAI : MonoBehaviour
         PickRandomTreePosition();
         PickRandomWaypoint();
         stuckTime = Time.time + stuckCheckInterval;
+        HealthBar = GetComponentInChildren<Image>();
+        MaxHP = HP;
     }
 
     void Update()
@@ -207,10 +213,18 @@ public class EnemyAI : MonoBehaviour
 
     public void TakeDamage(int damageToTake)
     {
+
+        audioSource.PlayOneShot(hitSFXList[Random.Range(0, hitSFXList.Count)]);
+
         if (IsDying)
             return;
+
         HP -= damageToTake;
-        audioSource.PlayOneShot(hitSFXList[Random.Range(0, hitSFXList.Count)]);
+
+        if (HealthBar != null)
+        {
+            HealthBar.fillAmount =  HP / MaxHP;
+        }
 
         if (HP <= 0)
         {

@@ -294,8 +294,10 @@ MonoBehaviour:
   waypointRoot: {fileID: 1467252657}
   IsDying: 0
   HP: 10
+  MaxHP: 0
   hitSFXList: []
   audioSource: {fileID: 0}
+  HealthBar: {fileID: 0}
 --- !u!195 &19725074
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -934,8 +936,10 @@ MonoBehaviour:
   waypointRoot: {fileID: 1467252657}
   IsDying: 0
   HP: 10
+  MaxHP: 0
   hitSFXList: []
   audioSource: {fileID: 0}
+  HealthBar: {fileID: 0}
 --- !u!195 &543883839
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1126,8 +1130,10 @@ MonoBehaviour:
   waypointRoot: {fileID: 1467252657}
   IsDying: 0
   HP: 10
+  MaxHP: 0
   hitSFXList: []
   audioSource: {fileID: 0}
+  HealthBar: {fileID: 0}
 --- !u!195 &779884102
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -3312,8 +3318,10 @@ MonoBehaviour:
   waypointRoot: {fileID: 1467252657}
   IsDying: 0
   HP: 10
+  MaxHP: 0
   hitSFXList: []
   audioSource: {fileID: 0}
+  HealthBar: {fileID: 0}
 --- !u!195 &1613734569
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -3741,8 +3749,10 @@ MonoBehaviour:
   waypointRoot: {fileID: 1467252657}
   IsDying: 0
   HP: 10
+  MaxHP: 0
   hitSFXList: []
   audioSource: {fileID: 0}
+  HealthBar: {fileID: 0}
 --- !u!195 &1857121568
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -4071,8 +4081,10 @@ MonoBehaviour:
   waypointRoot: {fileID: 1467252657}
   IsDying: 0
   HP: 10
+  MaxHP: 0
   hitSFXList: []
   audioSource: {fileID: 0}
+  HealthBar: {fileID: 0}
 --- !u!195 &1989591912
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -4241,8 +4253,10 @@ MonoBehaviour:
   waypointRoot: {fileID: 1467252657}
   IsDying: 0
   HP: 10
+  MaxHP: 0
   hitSFXList: []
   audioSource: {fileID: 0}
+  HealthBar: {fileID: 0}
 --- !u!195 &2044101756
 NavMeshAgent:
   m_ObjectHideFlags: 0
