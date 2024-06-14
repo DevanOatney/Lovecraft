@@ -166,6 +166,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 4a04b6877b8bf8d4991d16f6f87637e7, type: 3}
   audioSource: {fileID: 3017173933458322725}
   HealthBar: {fileID: 0}
+  bloodSplatterBase: {fileID: 2819901525366177038, guid: cdd4a1cefbfe5b644bae4e3a88b52ae5, type: 3}
 --- !u!114 &2044095413327045763
 MonoBehaviour:
   m_ObjectHideFlags: 0

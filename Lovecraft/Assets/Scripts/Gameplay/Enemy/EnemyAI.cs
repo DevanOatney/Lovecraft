@@ -23,11 +23,10 @@ public class EnemyAI : MonoBehaviour
     public bool IsDying = false;
     public float HP = 10;
     public float MaxHP;
-
     public List<AudioClip> hitSFXList;
     public AudioSource audioSource;
-
     public Image HealthBar;
+    public GameObject bloodSplatterBase;
 
     private NavMeshAgent agent;
     private AttackHandler attackHandler;
@@ -238,6 +237,9 @@ public class EnemyAI : MonoBehaviour
         //Play animations?
         //Sink into the ground?
         //Spawn resources/loot?
+        GameObject obj = Instantiate(bloodSplatterBase, new Vector3(transform.position.x, 0.51f, transform.position.z), Quaternion.identity);
+        obj.transform.Rotate(90, Random.Range(0, 359), 0);
+
         FinishDying();
     }
 
