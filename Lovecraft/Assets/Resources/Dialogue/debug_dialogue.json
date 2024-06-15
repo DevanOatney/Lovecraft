@@ -1,0 +1,14 @@
+{
+    "lines": [
+        {
+            "speakerName": "Alice",
+            "dialogueText": "Hello there!",
+            "portraitName": "alice_portrait"
+        },
+        {
+            "speakerName": "Bob",
+            "dialogueText": "Hi Alice!",
+            "portraitName": "bob_portrait"
+        }
+    ]
+}
