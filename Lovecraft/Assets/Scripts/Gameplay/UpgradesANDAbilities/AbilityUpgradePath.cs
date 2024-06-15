@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
+using UnityEngine.UI;
 
 public enum Abilities
 {
@@ -42,8 +43,26 @@ public class AbilityUpgradePath : MonoBehaviour
 
     public void UpgradeSelected()
     {
-        currentAbilityLevel++;
-        uiLevel.text = currentAbilityLevel.ToString();
-        uiCost.text = upgradePaths[currentAbilityLevel + 1].Cost.ToString();
+
+        if (predefinedPath)
+        {
+            currentAbilityLevel++;
+            uiLevel.text = currentAbilityLevel.ToString();
+
+            if (upgradePaths.Count == currentAbilityLevel + 1)
+            {
+                uiCost.text = "Max Upgrades";
+                uiCost.GetComponentInParent<Button>().interactable = false;
+            }
+            else
+            {
+                uiCost.text = upgradePaths[currentAbilityLevel + 1].Cost.ToString();
+            }
+        } else
+        {
+            currentAbilityLevel++;
+            uiLevel.text = currentAbilityLevel.ToString();
+            uiCost.text = (currentAbilityLevel * 10).ToString();
+        }
     }
 }
