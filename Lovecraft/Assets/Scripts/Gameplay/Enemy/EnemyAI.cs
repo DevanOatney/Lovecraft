@@ -60,8 +60,8 @@ public class EnemyAI : MonoBehaviour
             return;
         }
 
-        float distanceToTree = Vector3.Distance(transform.position, currentTreePosition.position);
-        float distanceToPlayer = Vector3.Distance(transform.position, playerTarget.position);
+        float distanceToTree = currentTreePosition != null ? Vector3.Distance(transform.position, currentTreePosition.position) : 0;
+        float distanceToPlayer = playerTarget != null ? Vector3.Distance(transform.position, playerTarget.position) : 0;
 
         switch (enemyTactic)
         {
@@ -210,7 +210,7 @@ public class EnemyAI : MonoBehaviour
         agent.isStopped = false;
     }
 
-    public void TakeDamage(int damageToTake)
+    public void TakeDamage(float damageToTake)
     {
 
         audioSource.PlayOneShot(hitSFXList[Random.Range(0, hitSFXList.Count)]);

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DamageZoneController : MonoBehaviour
 {
-    [SerializeField] int damageToOpponant = 1;
+    [SerializeField] public float damageToOpponant = 1;
     [SerializeField] LayerMask InteractionWithUnitsOnLayer;
 
     // Start is called before the first frame update

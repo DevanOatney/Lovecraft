@@ -7,7 +7,7 @@ public class StartUpController : MonoBehaviour
 
     private void Start()
     {
-        Invoke("LoadMainMenu", Random.Range(16, 21));    
+        Invoke("LoadMainMenu", Random.Range(12, 18));    
     }
 
     // Start is called before the first frame update

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.EventSystems;
 
 public class PlayerWeaponSwingController : MonoBehaviour
 {
@@ -36,8 +37,16 @@ public class PlayerWeaponSwingController : MonoBehaviour
 
     private void PerformWeaponAttack(InputAction.CallbackContext context)
     {
+
+        foreach(CanvasHitDetector canvas in GameObject.FindObjectsByType<CanvasHitDetector>(FindObjectsSortMode.None))
+        {
+            if( canvas.IsPointerOverUI() ) { return; }
+        }
+
         weaponAnimationController.SetTrigger("WeaponSlash");
         Instantiate(slashTrailBase, weaponVisual).gameObject.SetActive(true);
+
+
     }
 
 }
