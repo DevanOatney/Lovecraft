@@ -25,6 +25,8 @@ public class PlayerController : MonoBehaviour
         agent = GetComponentInChildren<NavMeshAgent>();
         pfindCostGrid = GameObject.FindObjectOfType<PathfindingCostGrid>();
         dashAbility = GetComponent<PlayerDashAbility>();
+        transform.rotation = Quaternion.identity;
+        transform.Rotate(new Vector3(0, 120, 0));
     }
 
     private void OnEnable()
