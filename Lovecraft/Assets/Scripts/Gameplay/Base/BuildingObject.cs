@@ -10,18 +10,29 @@ public class BuildingObject : MonoBehaviour
     public float FiringFrequency = 1f;
     private float FiringTimer = 0.0f;
 
-    public float SlowDownRate = 0f;
+    public float MovementSpeedAdjuster = 0f;
+    public bool IsInPreviewMode = false;
+
+    private Collider buildingCollider;
+
+    public void Awake()
+    {
+        buildingCollider = GetComponentInChildren<Collider>();
+    }
 
     public void Update()
     {
-        if (FiringTimer >= FiringFrequency)
+        if (!IsInPreviewMode)
         {
-            FiringTimer = 0.0f;
-            FireProjectile();
-        }
-        else
-        {
-            FiringTimer += Time.deltaTime;
+            if (FiringTimer >= FiringFrequency)
+            {
+                FiringTimer = 0.0f;
+                FireProjectile();
+            }
+            else
+            {
+                FiringTimer += Time.deltaTime;
+            }
         }
     }
 
@@ -31,6 +42,11 @@ public class BuildingObject : MonoBehaviour
         {
             Vector3 spawnPosition = transform.position + new Vector3(0, 0.5f, 0) + transform.forward * 1.0f; // Slightly in front of the building
             GameObject projectile = Instantiate(ProjectilePrefab, spawnPosition, DirectionToFire);
+            var ProjectileController = projectile.GetComponent<ProjectileController>();
+            if (ProjectileController != null)
+            {
+                ProjectileController.Initialize(buildingCollider);
+            }
             Rigidbody rb = projectile.GetComponent<Rigidbody>();
             if (rb != null)
             {
@@ -39,19 +55,29 @@ public class BuildingObject : MonoBehaviour
         }
     }
 
-    public void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        if (SlowDownRate > 0f && other.CompareTag("Enemy"))
+        if (MovementSpeedAdjuster != 0f && other.CompareTag("Enemy"))
         {
-            // Slow down enemy movement rate
+            //Adjust movement speed
+            EnemyAI eAi = other.GetComponent<EnemyAI>();
+            if (eAi != null)
+            {
+                eAi.AddAdjuster(this.gameObject, MovementSpeedAdjuster);
+            }
         }
     }
 
-    public void OnTriggerExit(Collider other)
+    private void OnTriggerExit(Collider other)
     {
-        if (SlowDownRate > 0f && other.CompareTag("Enemy"))
+        if (MovementSpeedAdjuster != 0f && other.CompareTag("Enemy"))
         {
             // Return enemy movement rate to normal
+            EnemyAI eAi = other.GetComponent<EnemyAI>();
+            if(eAi != null)
+            {
+                eAi.RemoveAdjuster(this.gameObject);
+            }
         }
     }
 }

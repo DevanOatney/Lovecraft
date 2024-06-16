@@ -11,6 +11,9 @@ public class GameplayController : MonoBehaviour
     private LineRenderer lineRenderer;
     private GridTest buildingGrid;
 
+    private float creationSpeed = 0.15f;
+    private float creationTimer = 0f;
+
     private void Start()
     {
         buildingGrid = GameObject.FindObjectOfType<GridTest>();
@@ -49,6 +52,12 @@ public class GameplayController : MonoBehaviour
         }
 
         previewObject = Instantiate(SelectedObject, buildingGrid.GetBuildingPositionFromGrid(), Quaternion.identity);
+        var buildingObj = previewObject.GetComponent<BuildingObject>();
+        if (buildingObj != null)
+        {
+            buildingObj.IsInPreviewMode = true;
+        }
+
         originalScale = previewObject.localScale;
 
         // Set the preview object to be transparent
@@ -72,12 +81,16 @@ public class GameplayController : MonoBehaviour
             RotatePreviewObject();
             DrawArrow();
 
-            if (Input.GetMouseButtonDown(0))
+            if (creationTimer >= creationSpeed)
             {
-                buildingGrid.CreateBuilding(SelectedObject, previewObject.rotation);
-                Destroy(previewObject.gameObject);
-                previewObject = null;
+                if (Input.GetMouseButton(0))
+                {
+                    creationTimer = 0f;
+                    buildingGrid.CreateBuilding(SelectedObject, previewObject.rotation);
+                }
             }
+            else
+                creationTimer += Time.deltaTime;
         }
     }
 
@@ -101,11 +114,16 @@ public class GameplayController : MonoBehaviour
         Vector3 arrowHeadLeft = arrowEnd + Quaternion.Euler(0, 150, 0) * (previewObject.forward * 0.5f); // Adjust size as needed
         Vector3 arrowHeadRight = arrowEnd + Quaternion.Euler(0, -150, 0) * (previewObject.forward * 0.5f);
 
-        lineRenderer.SetPosition(0, arrowStart);
-        lineRenderer.SetPosition(1, arrowEnd);
-        lineRenderer.SetPosition(2, arrowHeadLeft);
-        lineRenderer.SetPosition(3, arrowEnd);
-        lineRenderer.SetPosition(4, arrowHeadRight);
+        BuildingObject bObj = previewObject.GetComponent<BuildingObject>();
+        if(bObj != null)
+        {
+            if(bObj.ProjectilePrefab != null)
+            {
+                lineRenderer.SetPosition(0, arrowStart);
+                lineRenderer.SetPosition(1, arrowEnd);
+                lineRenderer.SetPosition(2, arrowHeadLeft);
+            }
+        }        
     }
 
     private void SetPreviewObjectTransparency(Transform obj, float alpha)

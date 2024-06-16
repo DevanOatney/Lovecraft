@@ -23,6 +23,7 @@ public class EnemyAI : MonoBehaviour
     public bool IsDying = false;
     public float HP = 10;
     public float MaxHP;
+    public float MovementSpeed = 5f;
     public List<AudioClip> hitSFXList;
     public AudioSource audioSource;
     public Image HealthBar;
@@ -36,6 +37,8 @@ public class EnemyAI : MonoBehaviour
     private int currentWaypointListIndex = 0;
     private float stuckTime;
     private float stuckCheckInterval = 1f; // Time interval to check if the AI is stuck
+
+    private Dictionary<GameObject, float> adjustments = new Dictionary<GameObject, float>();
 
     void Start()
     {
@@ -62,6 +65,18 @@ public class EnemyAI : MonoBehaviour
 
         float distanceToTree = currentTreePosition != null ? Vector3.Distance(transform.position, currentTreePosition.position) : 0;
         float distanceToPlayer = playerTarget != null ? Vector3.Distance(transform.position, playerTarget.position) : 0;
+
+        float totalAdjustment = 1f;
+        foreach (var adj in adjustments)
+        {
+            totalAdjustment += adj.Value;
+        }
+
+        if (totalAdjustment < 0.2f)
+            totalAdjustment = 0.2f;
+        if (totalAdjustment < 1f)
+            Debug.Log(totalAdjustment);
+        agent.speed = MovementSpeed * totalAdjustment;
 
         switch (enemyTactic)
         {
@@ -263,5 +278,17 @@ public class EnemyAI : MonoBehaviour
                 waypoints.Add(waypointList);
             }
         }
+    }
+
+    public void AddAdjuster(GameObject adjuster, float adjustment)
+    {
+        if(adjustments.ContainsKey(adjuster))
+            adjustments.Remove(adjuster);
+        adjustments.Add(adjuster, adjustment);
+    }
+
+    public void RemoveAdjuster(GameObject adjuster)
+    {
+        adjustments.Remove(adjuster);
     }
 }

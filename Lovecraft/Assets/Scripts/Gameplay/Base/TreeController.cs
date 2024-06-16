@@ -1,9 +1,12 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TreeController : MonoBehaviour
 {
     public int maxHealth = 100;
     private int currentHealth;
+
+    [SerializeField] Image TreeHealthImage;
 
     void Start()
     {
@@ -15,8 +18,10 @@ public class TreeController : MonoBehaviour
         currentHealth -= amount;
         if (currentHealth <= 0)
         {
+            currentHealth = 0;
             Die();
         }
+        TreeHealthImage.fillAmount = (float)currentHealth / (float)maxHealth;
     }
 
     void Die()

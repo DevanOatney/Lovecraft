@@ -10,6 +10,7 @@ public enum GameEvent
     BUILDING_OBJECT_HIGHLIGHT,
     PHASE_CHANGE,
     ENEMY_KILLED,
+    TREE_DAMAGED,
 }
 
 public class GameEventSystem : MonoBehaviour

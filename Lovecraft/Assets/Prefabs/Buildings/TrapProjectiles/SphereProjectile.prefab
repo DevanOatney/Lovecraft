@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 7930664541316819774}
   - component: {fileID: 2890120367707002873}
   - component: {fileID: 7412208761838867238}
-  m_Layer: 0
+  - component: {fileID: -8224116878099355560}
+  m_Layer: 8
   m_Name: SphereProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,10 +102,10 @@ SphereCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
-  m_ProvidesContacts: 0
+  m_ProvidesContacts: 1
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
+  m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &7412208761838867238
 Rigidbody:
@@ -132,4 +133,18 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 116
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
+--- !u!114 &-8224116878099355560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3581104198715019158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7ca3cdadca579648ade3af04d16a278, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FilteredTag: Enemy
+  DamageToDeal: 1
