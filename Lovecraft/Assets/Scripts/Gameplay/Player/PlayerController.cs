@@ -12,12 +12,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private InputAction playerMovement;
     [SerializeField] private InputAction playerClick;
     [SerializeField] private Transform PlayerVisuals;
+    [SerializeField] private int MaxHP = 100;
 
     private NavMeshAgent agent;
     private PathfindingCostGrid pfindCostGrid;
     private Vector2 movementInput;
     private bool isMovingWithInput;
     private bool isRotating = true;
+    private int curHP = 0;
     private PlayerDashAbility dashAbility;
 
     private void Start()
@@ -27,6 +29,7 @@ public class PlayerController : MonoBehaviour
         dashAbility = GetComponent<PlayerDashAbility>();
         transform.rotation = Quaternion.identity;
         transform.Rotate(new Vector3(0, 120, 0));
+        curHP = MaxHP;
     }
 
     private void OnEnable()
@@ -109,6 +112,11 @@ public class PlayerController : MonoBehaviour
 
     public void TakeDamage(int damageToTake)
     {
-        int x = 5;
+        curHP -= damageToTake;
+        Debug.Log(curHP);
+        if(curHP < 0)
+        {
+            SceneManager.Instance.ReloadCurrentScene();
+        }
     }
 }

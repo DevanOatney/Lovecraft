@@ -9,16 +9,33 @@ public enum Scene
 
 public class SceneManager : MonoBehaviour
 {
-    public static SceneManager Instance { get; private set; }
+    private static SceneManager instance;
+    public static SceneManager Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                GameObject singletonObject = new GameObject("SceneManager");
+                instance = singletonObject.AddComponent<SceneManager>();
+                DontDestroyOnLoad(singletonObject);
+            }
+            return instance;
+        }
+        private set
+        {
+            instance = value;
+        }
+    }
 
     private void Awake()
     {
-        if (Instance == null)
+        if (instance == null)
         {
-            Instance = this;
+            instance = this;
             DontDestroyOnLoad(gameObject);
         }
-        else
+        else if (instance != this)
         {
             Destroy(gameObject);
         }
