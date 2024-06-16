@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DamageZoneController : MonoBehaviour
 {
-    [SerializeField] public float damageToOpponant = 1;
+    [SerializeField] public float damageToOpponent = 1;
     [SerializeField] LayerMask InteractionWithUnitsOnLayer;
 
     // Start is called before the first frame update
@@ -18,6 +18,12 @@ public class DamageZoneController : MonoBehaviour
         Destroy(gameObject);
     }
 
+    public void Initialize(LayerMask targetMask, float dmg)
+    {
+        InteractionWithUnitsOnLayer = targetMask; 
+        damageToOpponent = dmg;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if ((InteractionWithUnitsOnLayer & (1 << other.gameObject.layer)) != 0)
@@ -26,11 +32,14 @@ public class DamageZoneController : MonoBehaviour
             EnemyAI eAI = other.GetComponent<EnemyAI>();
             if( eAI != null )
             {
-                eAI.TakeDamage(damageToOpponant);
+                eAI.TakeDamage(damageToOpponent);
+                return;
             }
-            // if other.contains method for taking damage 
+            PlayerController pC = other.GetComponent<PlayerController>();
+            if (pC != null)
             {
-                // take damage
+                pC.TakeDamage((int)damageToOpponent);
+                return;
             }
         }
     }

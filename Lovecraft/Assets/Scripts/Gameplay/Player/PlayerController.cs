@@ -109,6 +109,6 @@ public class PlayerController : MonoBehaviour
 
     public void TakeDamage(int damageToTake)
     {
-
+        int x = 5;
     }
 }

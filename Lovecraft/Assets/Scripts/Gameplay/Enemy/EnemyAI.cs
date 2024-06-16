@@ -28,6 +28,7 @@ public class EnemyAI : MonoBehaviour
     public AudioSource audioSource;
     public Image HealthBar;
     public GameObject bloodSplatterBase;
+    public EnemyAttackData enemyAttack;
 
     private NavMeshAgent agent;
     private AttackHandler attackHandler;
@@ -74,8 +75,7 @@ public class EnemyAI : MonoBehaviour
 
         if (totalAdjustment < 0.2f)
             totalAdjustment = 0.2f;
-        if (totalAdjustment < 1f)
-            Debug.Log(totalAdjustment);
+
         agent.speed = MovementSpeed * totalAdjustment;
 
         switch (enemyTactic)
@@ -107,7 +107,7 @@ public class EnemyAI : MonoBehaviour
         if (distanceToTree <= attackRange)
         {
             agent.isStopped = true;
-            attackHandler.StartAttack(treeTarget, 10);
+            attackHandler.AttackTree(treeTarget, enemyAttack.damageToDeal);
         }
         else
         {
@@ -132,7 +132,7 @@ public class EnemyAI : MonoBehaviour
             else if (distanceToPlayer <= attackRange)
             {
                 agent.isStopped = true;
-                attackHandler.StartAttack(playerTarget, 10);
+                attackHandler.StartAttack(playerTarget, enemyAttack);
             }
             else
             {
@@ -150,7 +150,7 @@ public class EnemyAI : MonoBehaviour
             else if (distanceToTree <= attackRange)
             {
                 agent.isStopped = true;
-                attackHandler.StartAttack(treeTarget, 10);
+                attackHandler.AttackTree(treeTarget, enemyAttack.damageToDeal);
             }
             else
             {
@@ -168,7 +168,7 @@ public class EnemyAI : MonoBehaviour
         if (distanceToPlayer <= attackRange)
         {
             agent.isStopped = true;
-            attackHandler.StartAttack(playerTarget, 10);
+            attackHandler.StartAttack(playerTarget, enemyAttack);
         }
         else
         {

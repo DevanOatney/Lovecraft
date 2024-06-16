@@ -12,7 +12,7 @@ public class PlayerWeaponSwingDamageController : MonoBehaviour
     {
         GameObject obj = Instantiate(weaponSwingDamageZone, weaponSwingDamageZone.transform.position, weaponSwingDamageZone.transform.rotation);
         obj.SetActive(true);
-        obj.GetComponent<DamageZoneController>().damageToOpponant = AbilityUpgradesManager.Instance.AbilityUpgrades[Abilities.ATTACK_DAMAGE].GetModifiedValue(1);
+        obj.GetComponent<DamageZoneController>().damageToOpponent = AbilityUpgradesManager.Instance.AbilityUpgrades[Abilities.ATTACK_DAMAGE].GetModifiedValue(1);
         audioSource.PlayOneShot(swingSFXList[Random.Range(0, swingSFXList.Count)]);
     }
 }

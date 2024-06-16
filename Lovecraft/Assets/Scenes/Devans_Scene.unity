@@ -484,7 +484,7 @@ GameObject:
   - component: {fileID: 310613698}
   - component: {fileID: 310613697}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: AbilityUpgradesManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -894,7 +894,7 @@ MonoBehaviour:
         regionTransform: {fileID: 913861745}
         spawnPoints: []
     timeBetweenWaves: 5
-    reinforcementThreshold: 3
+    reinforcementThreshold: 1
   - enemiesToSpawn:
     - enemyPrefab: {fileID: 6101225967246542521, guid: 6fcab8744564c0c41918cbe1a5fdf470, type: 3}
       count: 1
@@ -902,7 +902,7 @@ MonoBehaviour:
         regionTransform: {fileID: 758739215}
         spawnPoints: []
     timeBetweenWaves: 100
-    reinforcementThreshold: 3
+    reinforcementThreshold: 1
   checkInterval: 2
 --- !u!1 &913861744
 GameObject:
