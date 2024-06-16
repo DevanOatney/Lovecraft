@@ -34,9 +34,7 @@ public class RoundController : MonoBehaviour
     }
     #endregion
 
-
     [SerializeField] private bool allowTimedPhases = false;
-
     [SerializeField] private RectTransform phaseClockHand;
     [SerializeField] private float timeForEachRound = 45f;
     [SerializeField] private GameObject combatPhaseIndicator;
@@ -44,31 +42,33 @@ public class RoundController : MonoBehaviour
     [SerializeField] private Canvas buildingPhaseCanvas;
     [SerializeField] private Canvas combatPhaseCanvas;
     [SerializeField] private GameObject nextPhaseButton;
+    [SerializeField] private List<WaveManager> waveManagers;
 
     private float roundTimerBucket = 0f;
-    private GameSate gameState = GameSate.BUILD_PHASE; //'true' for Day/combat; 'false' for Night/build
+    private GameSate gameState = GameSate.BUILD_PHASE;
+    private int currentWaveIndex = 0;
 
-    // Start is called before the first frame update
     void Start()
     {
         GameEventSystem.Instance.RegisterListener(GameEvent.PHASE_CHANGE, OnPhaseChange);
+        GameEventSystem.Instance.RegisterListener(GameEvent.WAVE_COMPLETED, OnWaveCompleted);
     }
 
     private void OnDestroy()
     {
         GameEventSystem.Instance.UnregisterListener(GameEvent.PHASE_CHANGE, OnPhaseChange);
+        GameEventSystem.Instance.UnregisterListener(GameEvent.WAVE_COMPLETED, OnWaveCompleted);
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (allowTimedPhases)
         {
-            if( !phaseClockHand.parent.gameObject.activeSelf )
+            if (!phaseClockHand.parent.gameObject.activeSelf)
             {
                 phaseClockHand.parent.gameObject.SetActive(true);
             }
-            if( nextPhaseButton.activeSelf)
+            if (nextPhaseButton.activeSelf)
             {
                 nextPhaseButton.SetActive(false);
             }
@@ -81,25 +81,21 @@ public class RoundController : MonoBehaviour
                 TriggerPhaseChange();
             }
 
-            //clockface rotation;
-            // 0 -> -180 == daytime
-            // -180 -> -360 == nighttime
-
             float percent = roundTimerBucket / timeForEachRound;
             float rotationAmount = -180 * percent;
-            if (gameState == GameSate.COMBAT_PHASE) //daytime 
+            if (gameState == GameSate.COMBAT_PHASE)
             {
                 rotationAmount -= 180f;
             }
             phaseClockHand.rotation = Quaternion.Euler(0, 0, rotationAmount);
-
-        } else
+        }
+        else
         {
             if (phaseClockHand.parent.gameObject.activeSelf)
             {
                 phaseClockHand.parent.gameObject.SetActive(false);
-            }   
-            if( !nextPhaseButton.activeSelf )
+            }
+            if (!nextPhaseButton.activeSelf)
             {
                 nextPhaseButton.SetActive(true);
             }
@@ -113,21 +109,18 @@ public class RoundController : MonoBehaviour
 
     public void TriggerBuildPhase()
     {
-        // set the state to the 'wrong' state so the 'TriggerPhaseChange' method will set it to the correct state with it's logic
         gameState = GameSate.COMBAT_PHASE;
         TriggerPhaseChange();
     }
 
     public void TriggerCombatPhase()
     {
-        // set the state to the 'wrong' state so the 'TriggerPhaseChange' method will set it to the correct state with it's logic
         gameState = GameSate.BUILD_PHASE;
         TriggerPhaseChange();
     }
 
     private void OnPhaseChange(object obj)
     {
-
         if (gameState == GameSate.BUILD_PHASE)
         {
             gameState = GameSate.COMBAT_PHASE;
@@ -137,8 +130,10 @@ public class RoundController : MonoBehaviour
 
             buildingPhaseIndicator.SetActive(false);
             buildingPhaseCanvas.gameObject.SetActive(false);
+
+            StartCombatPhase();
         }
-        else if( gameState == GameSate.COMBAT_PHASE)
+        else if (gameState == GameSate.COMBAT_PHASE)
         {
             gameState = GameSate.BUILD_PHASE;
 
@@ -147,6 +142,27 @@ public class RoundController : MonoBehaviour
 
             buildingPhaseIndicator.SetActive(true);
             buildingPhaseCanvas.gameObject.SetActive(true);
+        }
+    }
+
+    private void StartCombatPhase()
+    {
+        if (currentWaveIndex < waveManagers.Count)
+        {
+            waveManagers[currentWaveIndex].StartWave();
+        }
+    }
+
+    private void OnWaveCompleted(object obj)
+    {
+        currentWaveIndex++;
+        if (currentWaveIndex < waveManagers.Count)
+        {
+            OnPhaseChange(null);
+        }
+        else
+        {
+            Debug.Log("All waves completed!");
         }
     }
 }

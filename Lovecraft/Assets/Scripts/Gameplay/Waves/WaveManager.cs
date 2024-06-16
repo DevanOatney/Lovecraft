@@ -5,34 +5,43 @@ using System.Collections.Generic;
 public class WaveManager : MonoBehaviour
 {
     public List<WaveData> waves;
-    public float checkInterval = 2f; // Time interval to check enemy count
+    public float checkInterval = 2f;
     private int currentWaveIndex = 0;
     private int enemiesAlive = 0;
     private Transform treeTarget;
     private Transform playerTarget;
+    private bool waveInProgress = false;
 
     void Start()
     {
         treeTarget = GameObject.FindObjectOfType<TreeController>().transform;
         playerTarget = GameObject.FindObjectOfType<PlayerController>().transform;
-        StartCoroutine(ManageWaves());
         GameEventSystem.Instance.RegisterListener(GameEvent.ENEMY_KILLED, OnEnemyKilled);
     }
 
-    IEnumerator ManageWaves()
+    public void StartWave()
     {
-        while (currentWaveIndex < waves.Count)
+        if (currentWaveIndex < waves.Count)
         {
-            WaveData currentWave = waves[currentWaveIndex];
-            StartCoroutine(SpawnWave(currentWave));
-            yield return new WaitForSeconds(currentWave.timeBetweenWaves);
-            currentWaveIndex++;
+            StartCoroutine(ManageWave(waves[currentWaveIndex]));
         }
     }
 
-    IEnumerator SpawnWave(WaveData wave)
+    IEnumerator ManageWave(WaveData wave)
     {
-        foreach (var enemyData in wave.enemiesToSpawn)
+        waveInProgress = true;
+        foreach (var stage in wave.stages)
+        {
+            yield return StartCoroutine(SpawnWaveStage(stage));
+            yield return new WaitForSeconds(stage.timeBetweenStages);
+        }
+        waveInProgress = false;
+        StartCoroutine(CheckWaveCompletion());
+    }
+
+    IEnumerator SpawnWaveStage(WaveStage stage)
+    {
+        foreach (var enemyData in stage.enemiesToSpawn)
         {
             for (int i = 0; i < enemyData.count; i++)
             {
@@ -41,20 +50,20 @@ public class WaveManager : MonoBehaviour
                 enemy.treeTarget = treeTarget;
                 enemy.playerTarget = playerTarget;
                 enemiesAlive++;
-                yield return new WaitForSeconds(0.1f); // Slight delay between spawns
+                yield return new WaitForSeconds(0.1f);
             }
         }
 
-        StartCoroutine(CheckForReinforcements(wave));
+        StartCoroutine(CheckForReinforcements(stage));
     }
 
-    IEnumerator CheckForReinforcements(WaveData wave)
+    IEnumerator CheckForReinforcements(WaveStage stage)
     {
-        while (true)
+        while (waveInProgress)
         {
-            if (enemiesAlive <= wave.reinforcementThreshold)
+            if (enemiesAlive <= stage.reinforcementThreshold)
             {
-                foreach (var enemyData in wave.enemiesToSpawn)
+                foreach (var enemyData in stage.enemiesToSpawn)
                 {
                     for (int i = 0; i < enemyData.count; i++)
                     {
@@ -63,9 +72,22 @@ public class WaveManager : MonoBehaviour
                         enemy.treeTarget = treeTarget;
                         enemy.playerTarget = playerTarget;
                         enemiesAlive++;
-                        yield return new WaitForSeconds(0.1f); // Slight delay between spawns
+                        yield return new WaitForSeconds(0.1f);
                     }
                 }
+            }
+            yield return new WaitForSeconds(checkInterval);
+        }
+    }
+
+    IEnumerator CheckWaveCompletion()
+    {
+        while (true)
+        {
+            if (enemiesAlive <= 0 && !waveInProgress)
+            {
+                GameEventSystem.Instance.TriggerEvent(GameEvent.WAVE_COMPLETED, null);
+                yield break;
             }
             yield return new WaitForSeconds(checkInterval);
         }

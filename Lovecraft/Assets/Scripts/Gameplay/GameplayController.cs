@@ -83,7 +83,7 @@ public class GameplayController : MonoBehaviour
 
             if (creationTimer >= creationSpeed)
             {
-                if (Input.GetMouseButton(0))
+                if (Input.GetMouseButtonDown(0))
                 {
                     creationTimer = 0f;
                     buildingGrid.CreateBuilding(SelectedObject, previewObject.rotation);
@@ -91,6 +91,12 @@ public class GameplayController : MonoBehaviour
             }
             else
                 creationTimer += Time.deltaTime;
+
+            if (Input.GetMouseButtonDown(1))
+            {
+                Destroy(previewObject.gameObject);
+                previewObject = null;
+            }
         }
     }
 

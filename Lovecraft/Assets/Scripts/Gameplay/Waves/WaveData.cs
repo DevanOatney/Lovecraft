@@ -4,8 +4,14 @@ using System.Collections.Generic;
 [System.Serializable]
 public class WaveData
 {
+    public List<WaveStage> stages;
+}
+
+[System.Serializable]
+public class WaveStage
+{
     public List<EnemySpawnData> enemiesToSpawn;
-    public float timeBetweenWaves;
+    public float timeBetweenStages;
     public int reinforcementThreshold;
 }
 
