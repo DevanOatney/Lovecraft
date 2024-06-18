@@ -30,7 +30,7 @@ public class ProjectileController : MonoBehaviour
             return;
         }
 
-        var player = collision.gameObject.GetComponent<PlayerController>();
+        var player = collision.gameObject.GetComponent<PlayerSixWayDirectionalController>();
         if (player != null)
         {
             if(FilteredTag != string.Empty)

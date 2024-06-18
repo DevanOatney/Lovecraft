@@ -15,7 +15,7 @@ public class WaveManager : MonoBehaviour
     void Start()
     {
         treeTarget = GameObject.FindObjectOfType<TreeController>().transform;
-        playerTarget = GameObject.FindObjectOfType<PlayerController>().transform;
+        playerTarget = GameObject.FindObjectOfType<PlayerSixWayDirectionalController>().transform;
         GameEventSystem.Instance.RegisterListener(GameEvent.ENEMY_KILLED, OnEnemyKilled);
     }
 

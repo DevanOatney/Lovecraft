@@ -75,9 +75,9 @@ public class AttackHandler : MonoBehaviour
             {
                 target.GetComponent<TreeController>().TakeDamage(damage);
             }
-            else if (target.GetComponent<PlayerController>() != null)
+            else if (target.GetComponent<PlayerSixWayDirectionalController>() != null)
             {
-                target.GetComponent<PlayerController>().TakeDamage(damage);
+                target.GetComponent<PlayerSixWayDirectionalController>().TakeDamage(damage);
             }
         }
         yield return new WaitForSeconds(attackDuration);

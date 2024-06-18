@@ -22,6 +22,8 @@ public class PlayerController : MonoBehaviour
     private int curHP = 0;
     private PlayerDashAbility dashAbility;
 
+    public GameObject HitCircle;
+
     private void Start()
     {
         agent = GetComponentInChildren<NavMeshAgent>();
@@ -83,6 +85,7 @@ public class PlayerController : MonoBehaviour
                 Vector3 LookAtPos = hit.point;
                 LookAtPos.y = PlayerVisuals.position.y;
                 PlayerVisuals.LookAt(LookAtPos);
+                HitCircle.transform.position = LookAtPos;
             }
         }
 

@@ -35,7 +35,7 @@ public class DamageZoneController : MonoBehaviour
                 eAI.TakeDamage(damageToOpponent);
                 return;
             }
-            PlayerController pC = other.GetComponent<PlayerController>();
+            PlayerSixWayDirectionalController pC = other.GetComponent<PlayerSixWayDirectionalController>();
             if (pC != null)
             {
                 pC.TakeDamage((int)damageToOpponent);
