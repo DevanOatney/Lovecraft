@@ -8,7 +8,6 @@ public class PlayerWeaponSwingController : MonoBehaviour
 {
     [SerializeField] private InputAction playerWeaponAttack;
     [SerializeField] private Animator weaponAnimationController;
-    [SerializeField] private TrailRenderer slashTrailBase;
     [SerializeField] private Transform weaponVisual;
 
     // Start is called before the first frame update
@@ -44,7 +43,6 @@ public class PlayerWeaponSwingController : MonoBehaviour
         }
 
         weaponAnimationController.SetTrigger("WeaponSlash");
-        Instantiate(slashTrailBase, weaponVisual).gameObject.SetActive(true);
 
 
     }
