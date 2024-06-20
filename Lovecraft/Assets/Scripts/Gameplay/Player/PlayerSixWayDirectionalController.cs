@@ -25,6 +25,7 @@ public class PlayerSixWayDirectionalController : MonoBehaviour
     [SerializeField] private InputAction playerClick;
     [SerializeField] private int MaxHP = 100;
     [SerializeField] private Transform PlayerVisuals;
+    [SerializeField] private Animator twoDAnimations;
 
     private NavMeshAgent agent;
     private Vector2 movementInput;
@@ -84,13 +85,16 @@ public class PlayerSixWayDirectionalController : MonoBehaviour
         {
             Vector2 clampedDir = Vector2.zero;
             float eulerRotation = 0f;
+            twoDAnimations.SetInteger("Horizontal", 0);
+            twoDAnimations.SetInteger("Vertical", 0);
 
-            switch(movementControl)
+            switch (movementControl)
             {
                 case MovementControlCombo.SINGLE_W:
                     clampedDir = new Vector2(0,1);
                     break;
                 case MovementControlCombo.SINGLE_A:
+                    twoDAnimations.transform.GetComponent<SpriteRenderer>().flipX = false;
                     clampedDir = new Vector2(-1,0);
                     eulerRotation = 270;
                     break;
@@ -99,26 +103,34 @@ public class PlayerSixWayDirectionalController : MonoBehaviour
                     eulerRotation = 180;
                     break;
                 case MovementControlCombo.SINGLE_D:
+                    twoDAnimations.transform.GetComponent<SpriteRenderer>().flipX = true;
                     clampedDir = new Vector2(1,0);
                     eulerRotation = 90;
                     break;
                 case MovementControlCombo.COMBO_WA:
+                    twoDAnimations.transform.GetComponent<SpriteRenderer>().flipX = false;
                     clampedDir = new Vector2(-1,1);
                     eulerRotation = 330;
                     break;
                 case MovementControlCombo.COMBO_AS:
+                    twoDAnimations.transform.GetComponent<SpriteRenderer>().flipX = false;
                     clampedDir = new Vector2(-1,-1);
                     eulerRotation = 240;
                     break;
                 case MovementControlCombo.COMBO_SD:
+                    twoDAnimations.transform.GetComponent<SpriteRenderer>().flipX = true;
                     clampedDir = new Vector2(1,-1);
                     eulerRotation = 150;
                     break;
                 case MovementControlCombo.COMBO_DW:
+                    twoDAnimations.transform.GetComponent<SpriteRenderer>().flipX = true;
                     clampedDir = new Vector2(1,1);
                     eulerRotation = 60;
                     break;
             }
+            twoDAnimations.SetInteger("Horizontal", (int)clampedDir.y);
+            twoDAnimations.SetInteger("Vertical", (int)clampedDir.x);
+
 
             Vector3 moveDirection = new Vector3(clampedDir.x, 0, clampedDir.y);
             moveDirection = transform.TransformDirection(moveDirection);
@@ -129,6 +141,11 @@ public class PlayerSixWayDirectionalController : MonoBehaviour
                 PlayerVisuals.localRotation = Quaternion.Euler(0, eulerRotation, 0);
                 prevMovementControl = movementControl;
             }
+        } else
+        {
+
+            twoDAnimations.SetInteger("Horizontal", 0);
+            twoDAnimations.SetInteger("Vertical", 0);
         }
     }
 
