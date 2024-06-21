@@ -255,6 +255,9 @@ public class EnemyAI : MonoBehaviour
         GameObject obj = Instantiate(bloodSplatterBase, new Vector3(transform.position.x, 0.51f, transform.position.z), Quaternion.identity);
         obj.transform.Rotate(90, Random.Range(0, 359), 0);
 
+        int aup = (int)AbilityUpgradesManager.Instance.AbilityUpgrades[Abilities.BLOODLETTING].GetModifiedValue(1);
+        GameObject.FindAnyObjectByType<PlayerCurrencyController>().AddBloodCurrency(aup);
+
         FinishDying();
     }
 
