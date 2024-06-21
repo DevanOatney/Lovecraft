@@ -1,0 +1,1143 @@
+fileFormatVersion: 2
+guid: efde2f7846d22814794004d43ef4dbac
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: purple-slime-animation-animated-sprite-sheet-vector_0
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 852
+        width: 192
+        height: 192
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d7fb383f5f41844f9a2d9e0bc7627ff
+      internalID: 124156639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple-slime-animation-animated-sprite-sheet-vector_1
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 852
+        width: 192
+        height: 192
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfae3ee2a71417b4ebf4d4c6009d2898
+      internalID: 1810169125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple-slime-animation-animated-sprite-sheet-vector_2
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 852
+        width: 192
+        height: 192
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5889469c4c1cbc34c8dc9065e1e17d82
+      internalID: -1895165961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple-slime-animation-animated-sprite-sheet-vector_3
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 852
+        width: 192
+        height: 192
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bca45748c44dc74c996865d16d1b60f
+      internalID: 51959838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple-slime-animation-animated-sprite-sheet-vector_4
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 852
+        width: 192
+        height: 192
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f69e8970903417141a23944066240a27
+      internalID: -1075142079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple-slime-animation-animated-sprite-sheet-vector_5
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 852
+        width: 192
+        height: 192
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 796cb78e015efd740a5e13880a4cbb98
+      internalID: 1460998771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple-slime-animation-animated-sprite-sheet-vector_6
+      rect:
+        serializedVersion: 2
+        x: 1274
+        y: 852
+        width: 192
+        height: 192
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8af79544372413428ebb87f22fd2793
+      internalID: 592086682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple-slime-animation-animated-sprite-sheet-vector_7
+      rect:
+        serializedVersion: 2
+        x: 1478
+        y: 852
+        width: 192
+        height: 192
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f10237d0444b8b641b7f21ec6d0f8410
+      internalID: -1473878972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple-slime-animation-animated-sprite-sheet-vector_8
+      rect:
+        serializedVersion: 2
+        x: 1682
+        y: 852
+        width: 192
+        height: 192
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 221171fee1107ec4cbac4a387c932466
+      internalID: -491380209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple-slime-animation-animated-sprite-sheet-vector_9
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 650
+        width: 192
+        height: 192
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a61e7c24ec6b814f8e9b641329ee5c2
+      internalID: -1245645068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple-slime-animation-animated-sprite-sheet-vector_10
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 650
+        width: 192
+        height: 192
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 427f43667627a3246af4cda42f3ad7d7
+      internalID: -236442097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple-slime-animation-animated-sprite-sheet-vector_11
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 650
+        width: 192
+        height: 192
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad2ff2c08d2928342a631461e3c9eccd
+      internalID: 313359454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple-slime-animation-animated-sprite-sheet-vector_12
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 650
+        width: 192
+        height: 192
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c2439328b6922e4795d2cb7266fbb2a
+      internalID: -905857038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple-slime-animation-animated-sprite-sheet-vector_13
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 650
+        width: 192
+        height: 192
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b113f39f63eff7345b4fa7f49c907fc6
+      internalID: -1887607383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple-slime-animation-animated-sprite-sheet-vector_14
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 650
+        width: 192
+        height: 192
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 544b41707dcdee14eac68bdff785a740
+      internalID: -1241506865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple-slime-animation-animated-sprite-sheet-vector_15
+      rect:
+        serializedVersion: 2
+        x: 1274
+        y: 650
+        width: 192
+        height: 192
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ade35a46232fa014e81f042abea0fbfd
+      internalID: -1209259075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple-slime-animation-animated-sprite-sheet-vector_16
+      rect:
+        serializedVersion: 2
+        x: 1478
+        y: 650
+        width: 192
+        height: 192
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e90ea6481bc37f498f951f03cb6cd34
+      internalID: 1752764379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple-slime-animation-animated-sprite-sheet-vector_17
+      rect:
+        serializedVersion: 2
+        x: 1682
+        y: 650
+        width: 192
+        height: 192
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 925a6080ff6ba1e4badf348fb5992282
+      internalID: 513668078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple-slime-animation-animated-sprite-sheet-vector_18
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 448
+        width: 192
+        height: 192
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59a48f2a58b7b5a49b0af12d47425700
+      internalID: 957048301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple-slime-animation-animated-sprite-sheet-vector_19
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 448
+        width: 192
+        height: 192
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8df096dc03bc485489910b08c71e6c64
+      internalID: -861614964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple-slime-animation-animated-sprite-sheet-vector_20
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 448
+        width: 192
+        height: 192
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e42d86cc92eeb5b4583ba418c45030f4
+      internalID: 1207883282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple-slime-animation-animated-sprite-sheet-vector_21
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 448
+        width: 192
+        height: 192
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9f43c3a7e9b693408d794f0d324c697
+      internalID: 900640576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple-slime-animation-animated-sprite-sheet-vector_22
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 448
+        width: 192
+        height: 192
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fabed32b1743d5478462add2c37259c
+      internalID: 1951973066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple-slime-animation-animated-sprite-sheet-vector_23
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 448
+        width: 192
+        height: 192
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be164d43feab4cc4398650da906681ee
+      internalID: -581363586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple-slime-animation-animated-sprite-sheet-vector_24
+      rect:
+        serializedVersion: 2
+        x: 1274
+        y: 448
+        width: 192
+        height: 192
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b9ad2586de384a479917c7fea463c27
+      internalID: 498762321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple-slime-animation-animated-sprite-sheet-vector_25
+      rect:
+        serializedVersion: 2
+        x: 1478
+        y: 448
+        width: 192
+        height: 192
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed2f79405d60f4141b2da4a75bdd41ee
+      internalID: -403419077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple-slime-animation-animated-sprite-sheet-vector_26
+      rect:
+        serializedVersion: 2
+        x: 1682
+        y: 448
+        width: 192
+        height: 192
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91f32aab362e4b446b20184eee60bd5b
+      internalID: -1398018538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple-slime-animation-animated-sprite-sheet-vector_27
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 246
+        width: 192
+        height: 192
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6400c18ee7196e9438586a2c35b0d594
+      internalID: -1671121212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple-slime-animation-animated-sprite-sheet-vector_28
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 246
+        width: 192
+        height: 192
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6cbc0ff99145b4439077b05057f46e3
+      internalID: -1747459092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple-slime-animation-animated-sprite-sheet-vector_29
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 246
+        width: 192
+        height: 192
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab871219752e5774f931ed3e55d0f112
+      internalID: 201591987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple-slime-animation-animated-sprite-sheet-vector_30
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 246
+        width: 192
+        height: 192
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8280898d257f67942817ce2b56522d58
+      internalID: 1246509237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple-slime-animation-animated-sprite-sheet-vector_31
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 246
+        width: 192
+        height: 192
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 839fb671b2b5323499691ff5d131f873
+      internalID: 85442027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple-slime-animation-animated-sprite-sheet-vector_32
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 246
+        width: 192
+        height: 192
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f749c76f23227349bcbae8d90e4cec4
+      internalID: -867688842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple-slime-animation-animated-sprite-sheet-vector_33
+      rect:
+        serializedVersion: 2
+        x: 1274
+        y: 246
+        width: 192
+        height: 192
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 591d05358dfaee842861a97c3d5819aa
+      internalID: -969637736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple-slime-animation-animated-sprite-sheet-vector_34
+      rect:
+        serializedVersion: 2
+        x: 1478
+        y: 246
+        width: 192
+        height: 192
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e22eacfa691e2b4384a14bd61bdb4ad
+      internalID: -328702064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple-slime-animation-animated-sprite-sheet-vector_35
+      rect:
+        serializedVersion: 2
+        x: 1682
+        y: 246
+        width: 192
+        height: 192
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa240122334ed134bb2449c76b31b226
+      internalID: 1314838425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple-slime-animation-animated-sprite-sheet-vector_36
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 44
+        width: 192
+        height: 192
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9597e569db8cbc249b73e1839db86671
+      internalID: -383650764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple-slime-animation-animated-sprite-sheet-vector_37
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 44
+        width: 192
+        height: 192
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79ce882d7c4c91341ad18756573ce82e
+      internalID: -886488756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple-slime-animation-animated-sprite-sheet-vector_38
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 44
+        width: 192
+        height: 192
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8732cab2540d5b243a328542939982ac
+      internalID: 1962393067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple-slime-animation-animated-sprite-sheet-vector_39
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 44
+        width: 192
+        height: 192
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b097f856d09029043ae250a5f2ad3c3b
+      internalID: -124744502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple-slime-animation-animated-sprite-sheet-vector_40
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 44
+        width: 192
+        height: 192
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22d09d7338bb2cc4596236295615f4a9
+      internalID: -819903147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple-slime-animation-animated-sprite-sheet-vector_41
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 44
+        width: 192
+        height: 192
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 589ba17ed887ddb4eba60d40f53251f3
+      internalID: 529197093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple-slime-animation-animated-sprite-sheet-vector_42
+      rect:
+        serializedVersion: 2
+        x: 1274
+        y: 44
+        width: 192
+        height: 192
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e479c9d090986924e9eae918bdb60850
+      internalID: -2047705774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple-slime-animation-animated-sprite-sheet-vector_43
+      rect:
+        serializedVersion: 2
+        x: 1478
+        y: 44
+        width: 192
+        height: 192
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ff8af554ec9a7e4ebd5458622700a3e
+      internalID: 619662043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple-slime-animation-animated-sprite-sheet-vector_44
+      rect:
+        serializedVersion: 2
+        x: 1682
+        y: 44
+        width: 192
+        height: 192
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31d33a4a22e9a7e44bff03b1970b7d32
+      internalID: 817246424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      purple-slime-animation-animated-sprite-sheet-vector_0: 124156639
+      purple-slime-animation-animated-sprite-sheet-vector_1: 1810169125
+      purple-slime-animation-animated-sprite-sheet-vector_10: -236442097
+      purple-slime-animation-animated-sprite-sheet-vector_11: 313359454
+      purple-slime-animation-animated-sprite-sheet-vector_12: -905857038
+      purple-slime-animation-animated-sprite-sheet-vector_13: -1887607383
+      purple-slime-animation-animated-sprite-sheet-vector_14: -1241506865
+      purple-slime-animation-animated-sprite-sheet-vector_15: -1209259075
+      purple-slime-animation-animated-sprite-sheet-vector_16: 1752764379
+      purple-slime-animation-animated-sprite-sheet-vector_17: 513668078
+      purple-slime-animation-animated-sprite-sheet-vector_18: 957048301
+      purple-slime-animation-animated-sprite-sheet-vector_19: -861614964
+      purple-slime-animation-animated-sprite-sheet-vector_2: -1895165961
+      purple-slime-animation-animated-sprite-sheet-vector_20: 1207883282
+      purple-slime-animation-animated-sprite-sheet-vector_21: 900640576
+      purple-slime-animation-animated-sprite-sheet-vector_22: 1951973066
+      purple-slime-animation-animated-sprite-sheet-vector_23: -581363586
+      purple-slime-animation-animated-sprite-sheet-vector_24: 498762321
+      purple-slime-animation-animated-sprite-sheet-vector_25: -403419077
+      purple-slime-animation-animated-sprite-sheet-vector_26: -1398018538
+      purple-slime-animation-animated-sprite-sheet-vector_27: -1671121212
+      purple-slime-animation-animated-sprite-sheet-vector_28: -1747459092
+      purple-slime-animation-animated-sprite-sheet-vector_29: 201591987
+      purple-slime-animation-animated-sprite-sheet-vector_3: 51959838
+      purple-slime-animation-animated-sprite-sheet-vector_30: 1246509237
+      purple-slime-animation-animated-sprite-sheet-vector_31: 85442027
+      purple-slime-animation-animated-sprite-sheet-vector_32: -867688842
+      purple-slime-animation-animated-sprite-sheet-vector_33: -969637736
+      purple-slime-animation-animated-sprite-sheet-vector_34: -328702064
+      purple-slime-animation-animated-sprite-sheet-vector_35: 1314838425
+      purple-slime-animation-animated-sprite-sheet-vector_36: -383650764
+      purple-slime-animation-animated-sprite-sheet-vector_37: -886488756
+      purple-slime-animation-animated-sprite-sheet-vector_38: 1962393067
+      purple-slime-animation-animated-sprite-sheet-vector_39: -124744502
+      purple-slime-animation-animated-sprite-sheet-vector_4: -1075142079
+      purple-slime-animation-animated-sprite-sheet-vector_40: -819903147
+      purple-slime-animation-animated-sprite-sheet-vector_41: 529197093
+      purple-slime-animation-animated-sprite-sheet-vector_42: -2047705774
+      purple-slime-animation-animated-sprite-sheet-vector_43: 619662043
+      purple-slime-animation-animated-sprite-sheet-vector_44: 817246424
+      purple-slime-animation-animated-sprite-sheet-vector_5: 1460998771
+      purple-slime-animation-animated-sprite-sheet-vector_6: 592086682
+      purple-slime-animation-animated-sprite-sheet-vector_7: -1473878972
+      purple-slime-animation-animated-sprite-sheet-vector_8: -491380209
+      purple-slime-animation-animated-sprite-sheet-vector_9: -1245645068
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
