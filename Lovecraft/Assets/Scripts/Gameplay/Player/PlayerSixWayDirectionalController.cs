@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.InputSystem;
+using UnityEngine.Audio;
 
 public enum MovementControlCombo
 {
@@ -26,6 +27,7 @@ public class PlayerSixWayDirectionalController : MonoBehaviour
     [SerializeField] private int MaxHP = 100;
     [SerializeField] private Transform PlayerVisuals;
     [SerializeField] private Animator twoDAnimations;
+    [SerializeField] private AudioSource sfxFootsteps;
 
     private NavMeshAgent agent;
     private Vector2 movementInput;
@@ -83,6 +85,11 @@ public class PlayerSixWayDirectionalController : MonoBehaviour
             }
         } else if (isMovingWithInput)
         {
+            if (!sfxFootsteps.isPlaying)
+            {
+                sfxFootsteps.Play();
+            }
+
             Vector2 clampedDir = Vector2.zero;
             float eulerRotation = 0f;
             twoDAnimations.SetInteger("Horizontal", 0);
@@ -143,7 +150,7 @@ public class PlayerSixWayDirectionalController : MonoBehaviour
             }
         } else
         {
-
+            sfxFootsteps.Pause();
             twoDAnimations.SetInteger("Horizontal", 0);
             twoDAnimations.SetInteger("Vertical", 0);
         }
