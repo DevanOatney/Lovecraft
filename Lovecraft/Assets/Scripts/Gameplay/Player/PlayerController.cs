@@ -54,6 +54,8 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        if (RoundController.Instance.IsSceneInitialized() == false)
+            return;
 
         if( dashAbility.IsDashing() )
         {

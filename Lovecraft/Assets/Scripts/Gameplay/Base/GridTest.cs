@@ -44,26 +44,6 @@ public class GridTest : MonoBehaviour
                 previousCellSize = cellSize;
             }
         }
-
-        HandleDebugCommands();
-    }
-
-    private void HandleDebugCommands()
-    {
-        if (MouseInputManager.Instance.IsPointerOverUIElement()) return;
-
-        //if (Input.GetKeyDown(KeyCode.Q))
-        //{
-        //    Vector3 mousePosition = GetMouseWorldPosition();
-        //    grid.GetValue(mousePosition).pathingCost += 10;
-        //}
-
-        //if (Input.GetKeyDown(KeyCode.E))
-        //{
-        //    Vector3 mousePosition = GetMouseWorldPosition();
-        //    int value = grid.GetValue(mousePosition).pathingCost;
-        //    Debug.Log("Grid Value: " + value);
-        //}
     }
 
     public void CreateBuilding(Transform buildingToCreate, Quaternion rotation)

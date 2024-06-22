@@ -59,7 +59,7 @@ public class EnemyAI : MonoBehaviour
 
     void Update()
     {
-        if (attackHandler.IsAttacking())
+        if (attackHandler.IsAttacking() || RoundController.Instance.IsSceneInitialized() == false)
         {
             return;
         }

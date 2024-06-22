@@ -47,6 +47,7 @@ public class RoundController : MonoBehaviour
     private float roundTimerBucket = 0f;
     private GameSate gameState = GameSate.BUILD_PHASE;
     private int currentWaveIndex = 0;
+    private bool isSceneInitialized = false;
 
     void Start()
     {
@@ -164,5 +165,15 @@ public class RoundController : MonoBehaviour
         {
             Debug.Log("All waves completed!");
         }
+    }
+
+    public void SetSceneInitialized(bool sceneInitialized)
+    {
+        isSceneInitialized = sceneInitialized;
+    }
+
+    public bool IsSceneInitialized()
+    {
+        return isSceneInitialized;
     }
 }

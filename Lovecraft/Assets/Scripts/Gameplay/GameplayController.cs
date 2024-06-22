@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.AI.Navigation;
 using UnityEngine;
 
 public class GameplayController : MonoBehaviour
@@ -18,6 +19,17 @@ public class GameplayController : MonoBehaviour
     {
         buildingGrid = GameObject.FindObjectOfType<GridTest>();
         RegisterEventsToListenTo();
+    }
+
+    private void BakeNavMeshes()
+    {
+        var nMeshes = GameObject.FindObjectsOfType<NavMeshSurface>();
+        foreach (var nMesh in nMeshes)
+        {
+            nMesh.BuildNavMesh();
+        }
+
+        RoundController.Instance.SetSceneInitialized(true);
     }
 
     private void OnDestroy()
