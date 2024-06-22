@@ -1,0 +1,163 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b1e7284cf7543d41b80dceb2f90ce8f, type: 3}
+  m_Name: introduction_dialogue
+  m_EditorClassIdentifier: 
+  dialogueName: intro_story_dialogue
+  lines:
+  - speakerName: Emma
+    dialogueText: Henry... I'm tired.
+    portraitName: 
+    voiceClip: 2
+    isRandomBark: 0
+    storyAudioClip: {fileID: 8300000, guid: 1fb8478906b87394daec5b9b9cedcaef, type: 3}
+    portrait: {fileID: 0}
+  - speakerName: Henry
+    dialogueText: "I know, my love but you must keep fighting. Things will be better
+      soon. You\u2019ll see."
+    portraitName: H_Neutral_ECMO
+    voiceClip: 2
+    isRandomBark: 0
+    storyAudioClip: {fileID: 8300000, guid: c5611c3e022a90a45905c7a2c9b1142e, type: 3}
+    portrait: {fileID: 0}
+  - speakerName: Emma
+    dialogueText: Help me outside. Just for a moment. I miss the garden. Do you remember
+      how we would sit under the oak in the evenings? The jasmine smelled so sweet.
+    portraitName: 
+    voiceClip: 2
+    isRandomBark: 0
+    storyAudioClip: {fileID: 8300000, guid: c5611c3e022a90a45905c7a2c9b1142e, type: 3}
+    portrait: {fileID: 0}
+  - speakerName: Henry
+    dialogueText: "Yes, I remember. But you mustn\u2019t go outside. You need to
+      stay here and rest."
+    portraitName: H_Neutral_ECMC
+    voiceClip: 2
+    isRandomBark: 0
+    storyAudioClip: {fileID: 8300000, guid: c5611c3e022a90a45905c7a2c9b1142e, type: 3}
+    portrait: {fileID: 0}
+  - speakerName: Henry
+    dialogueText: ...
+    portraitName: H_Neutral_EOMC
+    voiceClip: 2
+    isRandomBark: 0
+    storyAudioClip: {fileID: 8300000, guid: c5611c3e022a90a45905c7a2c9b1142e, type: 3}
+    portrait: {fileID: 0}
+  - speakerName: Henry
+    dialogueText: Stay inside.
+    portraitName: H_Neutral_EOMO
+    voiceClip: 2
+    isRandomBark: 0
+    storyAudioClip: {fileID: 8300000, guid: c5611c3e022a90a45905c7a2c9b1142e, type: 3}
+    portrait: {fileID: 0}
+  - speakerName: High Inquisitor
+    dialogueText: It is the hour of your reckoning. You slaughter our kin, use them
+      as fodder for your infernal machine. Today your fiendish machinations come
+      to an end.
+    portraitName: 
+    voiceClip: 2
+    isRandomBark: 0
+    storyAudioClip: {fileID: 8300000, guid: c5611c3e022a90a45905c7a2c9b1142e, type: 3}
+    portrait: {fileID: 0}
+  - speakerName: Henry
+    dialogueText: I did what was necessary.
+    portraitName: H_Angry_EOMC
+    voiceClip: 2
+    isRandomBark: 0
+    storyAudioClip: {fileID: 8300000, guid: c5611c3e022a90a45905c7a2c9b1142e, type: 3}
+    portrait: {fileID: 0}
+  - speakerName: High Inquisitor
+    dialogueText: You and that witch are a plague upon this land. By grand ducal
+      decree, on this day, you will be bathed in holy fire. May God have mercy on
+      your soul.
+    portraitName: 
+    voiceClip: 2
+    isRandomBark: 0
+    storyAudioClip: {fileID: 8300000, guid: c5611c3e022a90a45905c7a2c9b1142e, type: 3}
+    portrait: {fileID: 0}
+  - speakerName: High Inquisitor
+    dialogueText: Tear it down. And kill them both.
+    portraitName: 
+    voiceClip: 2
+    isRandomBark: 0
+    storyAudioClip: {fileID: 8300000, guid: c5611c3e022a90a45905c7a2c9b1142e, type: 3}
+    portrait: {fileID: 0}
+  - speakerName: Henry
+    dialogueText: Stop! Get away from it!
+    portraitName: H_Apprehensive_EOMO
+    voiceClip: 2
+    isRandomBark: 0
+    storyAudioClip: {fileID: 8300000, guid: c5611c3e022a90a45905c7a2c9b1142e, type: 3}
+    portrait: {fileID: 0}
+  - speakerName: Emma
+    dialogueText: Aaaahh!
+    portraitName: 
+    voiceClip: 2
+    isRandomBark: 0
+    storyAudioClip: {fileID: 8300000, guid: c5611c3e022a90a45905c7a2c9b1142e, type: 3}
+    portrait: {fileID: 0}
+  - speakerName: Henry
+    dialogueText: "Stop it! You\u2019ll kill her!"
+    portraitName: H_Apprehensive_EOMO
+    voiceClip: 2
+    isRandomBark: 0
+    storyAudioClip: {fileID: 8300000, guid: c5611c3e022a90a45905c7a2c9b1142e, type: 3}
+    portrait: {fileID: 0}
+  - speakerName: Emma
+    dialogueText: Henry!
+    portraitName: 
+    voiceClip: 2
+    isRandomBark: 0
+    storyAudioClip: {fileID: 8300000, guid: c5611c3e022a90a45905c7a2c9b1142e, type: 3}
+    portrait: {fileID: 0}
+  - speakerName: Henry
+    dialogueText: I said STOP!
+    portraitName: H_Rage_EOMO
+    voiceClip: 2
+    isRandomBark: 0
+    storyAudioClip: {fileID: 8300000, guid: c5611c3e022a90a45905c7a2c9b1142e, type: 3}
+    portrait: {fileID: 0}
+  - speakerName: Henry
+    dialogueText: Emma! Are you alright?
+    portraitName: H_Angry_EOMC
+    voiceClip: 2
+    isRandomBark: 0
+    storyAudioClip: {fileID: 8300000, guid: c5611c3e022a90a45905c7a2c9b1142e, type: 3}
+    portrait: {fileID: 0}
+  - speakerName: Emma
+    dialogueText: "Henry, what\u2019s going on?"
+    portraitName: 
+    voiceClip: 2
+    isRandomBark: 0
+    storyAudioClip: {fileID: 8300000, guid: c5611c3e022a90a45905c7a2c9b1142e, type: 3}
+    portrait: {fileID: 0}
+  - speakerName: Henry
+    dialogueText: Just stay inside! Everything will be alright.
+    portraitName: H_Angry_EOMC
+    voiceClip: 2
+    isRandomBark: 0
+    storyAudioClip: {fileID: 8300000, guid: c5611c3e022a90a45905c7a2c9b1142e, type: 3}
+    portrait: {fileID: 0}
+  - speakerName: Henry
+    dialogueText: "I\u2019ll make sure of it."
+    portraitName: H_Neutral_EOMC
+    voiceClip: 2
+    isRandomBark: 0
+    storyAudioClip: {fileID: 8300000, guid: c5611c3e022a90a45905c7a2c9b1142e, type: 3}
+    portrait: {fileID: 0}
+  - speakerName: Henry
+    dialogueText: More will come. I must prepare.
+    portraitName: H_Angry_ECMC
+    voiceClip: 2
+    isRandomBark: 0
+    storyAudioClip: {fileID: 8300000, guid: c5611c3e022a90a45905c7a2c9b1142e, type: 3}
+    portrait: {fileID: 0}

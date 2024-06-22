@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b1e7284cf7543d41b80dceb2f90ce8f, type: 3}
+  m_Name: player_death_ending_dialogue
+  m_EditorClassIdentifier: 
+  dialogueName: player_death_ending_story_dialogue
+  lines:
+  - speakerName: Emma
+    dialogueText: 'Henry? Henry! '
+    portraitName: 
+    voiceClip: 2
+    isRandomBark: 0
+    storyAudioClip: {fileID: 8300000, guid: 1fb8478906b87394daec5b9b9cedcaef, type: 3}
+    portrait: {fileID: 0}
+  - speakerName: Henry
+    dialogueText: "Emma... I\u2019m sorry."
+    portraitName: H_Neutral_ECMO
+    voiceClip: 2
+    isRandomBark: 0
+    storyAudioClip: {fileID: 8300000, guid: 1fb8478906b87394daec5b9b9cedcaef, type: 3}
+    portrait: {fileID: 0}
