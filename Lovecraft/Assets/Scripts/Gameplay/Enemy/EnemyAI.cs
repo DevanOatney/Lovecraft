@@ -229,6 +229,7 @@ public class EnemyAI : MonoBehaviour
     {
 
         audioSource.PlayOneShot(hitSFXList[Random.Range(0, hitSFXList.Count)]);
+        Debug.Log(damageToTake.ToString());
 
         if (IsDying)
             return;

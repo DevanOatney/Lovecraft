@@ -9,7 +9,7 @@ public class BuildingObjectSelfDestruct : MonoBehaviour
     private float lifetimebucket = 0f;
 
     public bool isCollisionSelfDestruct = false;
-
+    public bool isTimedAfterCollisionSelfDestruct = false;
 
     private bool selfDestructActivated = false;
 
@@ -22,21 +22,34 @@ public class BuildingObjectSelfDestruct : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if( isTimedSelfDestruct && !selfDestructActivated)
+        if( isTimedSelfDestruct && !selfDestructActivated && !GetComponent<BuildingObject>().IsInPreviewMode)
         {
             lifetimebucket += Time.deltaTime;
-            if( lifetimebucket >= lifetime)
+
+            float newLifetime = AbilityUpgradesManager.Instance.AbilityUpgrades[Abilities.TRAP_DURATION].GetModifiedValue(lifetime);
+
+            if( lifetimebucket >= newLifetime)
             {
                 ActivateSelfDestruct();
             }
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if( isCollisionSelfDestruct && !selfDestructActivated)
+        if( (isTimedAfterCollisionSelfDestruct || isCollisionSelfDestruct) && !selfDestructActivated && !GetComponent<BuildingObject>().IsInPreviewMode)
         {
+            if(other.gameObject.layer == LayerMask.NameToLayer("EnemyUnitLayer"))
+            {
 
+                if( isTimedAfterCollisionSelfDestruct )
+                {
+                    isTimedSelfDestruct = true;
+                }else
+                {
+                    ActivateSelfDestruct();
+                }
+            }
         }
     }
 
@@ -44,13 +57,6 @@ public class BuildingObjectSelfDestruct : MonoBehaviour
     {
         selfDestructActivated = true;
 
-        foreach(MeshRenderer mr in GetComponentsInChildren<MeshRenderer>())
-        {
-            if(mr.GetComponent<Rigidbody>() == null)
-            {
-                mr.gameObject.AddComponent<Rigidbody>();
-            }
-            mr.GetComponent<Rigidbody>().AddExplosionForce(50, transform.position, 5);
-        }
+        Destroy(gameObject);
     }
 }

@@ -99,6 +99,8 @@ public class GameplayController : MonoBehaviour
                 {
                     creationTimer = 0f;
                     buildingGrid.CreateBuilding(SelectedObject, previewObject.rotation);
+                    Destroy(previewObject.gameObject);
+                    previewObject = null;
                 }
             }
             else

@@ -2977,8 +2977,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -18.2977, y: 35.3}
-  m_SizeDelta: {x: 130.1362, y: 30.8707}
+  m_AnchoredPosition: {x: 1.9834, y: 35.3}
+  m_SizeDelta: {x: 170.6983, y: 30.8707}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8269206095422460751
 CanvasRenderer:
@@ -3042,7 +3042,7 @@ MonoBehaviour:
   m_fontSizeMin: 10
   m_fontSizeMax: 18
   m_fontStyle: 0
-  m_HorizontalAlignment: 4
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -4873,6 +4873,30 @@ PrefabInstance:
       propertyPath: purchaseIndicator
       value: 
       objectReference: {fileID: 5996132837389373590}
+    - target: {fileID: 1804318735160707407, guid: 0f3f8d1771980e94aba413a9b5197168, type: 3}
+      propertyPath: upgradePaths.Array.data[0].Value
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1804318735160707407, guid: 0f3f8d1771980e94aba413a9b5197168, type: 3}
+      propertyPath: upgradePaths.Array.data[1].Value
+      value: 1.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 1804318735160707407, guid: 0f3f8d1771980e94aba413a9b5197168, type: 3}
+      propertyPath: upgradePaths.Array.data[2].Value
+      value: 1.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1804318735160707407, guid: 0f3f8d1771980e94aba413a9b5197168, type: 3}
+      propertyPath: upgradePaths.Array.data[3].Value
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1804318735160707407, guid: 0f3f8d1771980e94aba413a9b5197168, type: 3}
+      propertyPath: upgradePaths.Array.data[4].Value
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1804318735160707407, guid: 0f3f8d1771980e94aba413a9b5197168, type: 3}
+      propertyPath: upgradePaths.Array.data[5].Value
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1807879687099225403, guid: 0f3f8d1771980e94aba413a9b5197168, type: 3}
       propertyPath: m_Sprite
       value: 
