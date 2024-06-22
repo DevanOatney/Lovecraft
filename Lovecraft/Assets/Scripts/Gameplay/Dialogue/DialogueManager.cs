@@ -63,7 +63,7 @@ public class DialogueManager : MonoBehaviour
 
     private void OnGameOver(object data)
     {
-        StartDialogue("player_death_ending_dialogue");
+        StartDialogue("player_death_ending_story_dialogue");
     }
 
     public void StartDialogue(string dialogueName)

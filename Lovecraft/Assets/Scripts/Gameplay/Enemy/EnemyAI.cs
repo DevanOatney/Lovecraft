@@ -52,7 +52,7 @@ public class EnemyAI : MonoBehaviour
         PopulateWaypoints();
 
         treeTarget = GameObject.FindObjectOfType<TreeController>().transform;
-        playerTarget = GameObject.FindObjectOfType<PlayerController>().transform;
+        playerTarget = GameObject.FindObjectOfType<PlayerSixWayDirectionalController>().transform;
 
         foreach (Transform child in treeTarget)
         {
