@@ -116,6 +116,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8007966969217033566}
   - component: {fileID: 6156307744085145319}
+  - component: {fileID: -1237341523593231900}
   m_Layer: 0
   m_Name: Directional Trap
   m_TagString: Untagged
@@ -157,6 +158,22 @@ MonoBehaviour:
   FiringFrequency: 1
   MovementSpeedAdjuster: 0
   IsInPreviewMode: 0
+--- !u!208 &-1237341523593231900
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6233558388099431412}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1, y: 1, z: 1}
+  m_MoveThreshold: 1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &9202142574802977035
 GameObject:
   m_ObjectHideFlags: 0

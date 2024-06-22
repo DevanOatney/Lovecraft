@@ -25,7 +25,10 @@ public class ProjectileController : MonoBehaviour
                     return;
                 }
             }
-            eAi.TakeDamage(DamageToDeal);
+
+            float modDamage = AbilityUpgradesManager.Instance.AbilityUpgrades[Abilities.TRAP_EFFECTIVENESS].GetModifiedValue(DamageToDeal);
+
+            eAi.TakeDamage(modDamage);
             OnCollided();
             return;
         }

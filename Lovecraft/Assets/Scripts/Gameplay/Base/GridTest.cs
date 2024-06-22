@@ -63,7 +63,7 @@ public class GridTest : MonoBehaviour
                 buildingObject.DirectionToFire = rotation;
             }
 
-            GameObject.FindObjectOfType<NavMeshSurface>().BuildNavMesh();
+           // GameObject.FindObjectOfType<NavMeshSurface>().BuildNavMesh();
         }
     }
 
