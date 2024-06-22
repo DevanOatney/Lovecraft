@@ -7,9 +7,10 @@ public class BillboardToMainCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.LookAt(Camera.main.transform,ClampToAxis);
-        Quaternion rot = transform.rotation;
-        rot.eulerAngles = new Vector3(rot.eulerAngles.x * ClampToAxis.x, rot.eulerAngles.y - 180f, rot.eulerAngles.z * ClampToAxis.z);
+        //transform.LookAt(Camera.main.transform,ClampToAxis);
+        //Quaternion rot = transform.rotation;
+        //rot.eulerAngles = new Vector3(rot.eulerAngles.x * ClampToAxis.x, rot.eulerAngles.y - 180f, rot.eulerAngles.z * ClampToAxis.z);
         //transform.rotation = rot;
+        transform.forward = Camera.main.transform.forward;
     }
 }

@@ -9,6 +9,7 @@ public enum SFXType
     UIPop,
     Impact,
     RandomBark,
+    CreatureSpawned,
     // Add other SFX types here
 }
 

@@ -55,7 +55,7 @@ public class DialogueManager : MonoBehaviour
             if (dialogue != null && dialogue.lines.Count > 0)
             {
                 DialogueLine line = dialogue.lines[0];
-                enemyAI.OnSpeechBubble(line.dialogueText, SFXType.RandomBark);
+                enemyAI.OnSpeechBubble(line.dialogueText, line.sfxType);
             }
         }
     }

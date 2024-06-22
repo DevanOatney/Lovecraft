@@ -171,6 +171,8 @@ MonoBehaviour:
   HealthBar: {fileID: 2513280107889541879}
   bloodSplatterBase: {fileID: 2819901525366177038, guid: cdd4a1cefbfe5b644bae4e3a88b52ae5, type: 3}
   enemyAttack: {fileID: 11400000, guid: f079b8ef33ce0364e9f3dd3b6280c344, type: 2}
+  SpeechBubbleRef: {fileID: 5978549493826712888}
+  SpeechBubbleTextRef: {fileID: 7537026571337126545}
 --- !u!114 &2044095413327045763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -448,8 +450,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8.86, y: 0.09}
-  m_SizeDelta: {x: 20, y: 5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &8143713922970601371
 MeshRenderer:
@@ -556,7 +558,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -768,6 +770,11 @@ PrefabInstance:
 --- !u!224 &5396898246980930648 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8371576069198910868, guid: 131357a0e4d903041b6b7ae95751e51a, type: 3}
+  m_PrefabInstance: {fileID: 4523991479306754508}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5978549493826712888 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7795838014576979188, guid: 131357a0e4d903041b6b7ae95751e51a, type: 3}
   m_PrefabInstance: {fileID: 4523991479306754508}
   m_PrefabAsset: {fileID: 0}
 --- !u!224 &7800372000334316005 stripped

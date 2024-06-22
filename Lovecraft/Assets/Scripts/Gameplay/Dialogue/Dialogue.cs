@@ -8,7 +8,7 @@ public class DialogueLine
     public string dialogueText;
     public string portraitName; // Name of the portrait image in Resources/Portraits
     [Tooltip("Pretty sure this should always be set to RandomBark")]
-    public SFXType voiceClip; // SFX type for the voice clip... if we want random ones I guess? this is a terrible idea lol
+    public SFXType sfxType; // SFX type for the voice clip... if we want random ones I guess? this is a terrible idea lol
     [Tooltip("Set to true for speech bubble, false for main story UI dialogue")]
     public bool isRandomBark;
     public AudioClip storyAudioClip; // Specific AudioClip for StoryDialogue
