@@ -28,6 +28,7 @@ public class DialogueManager : MonoBehaviour
             //Register all of the listeners...
             GameEventSystem.Instance.RegisterListener(GameEvent.TEST_DIALOGUE, OnTestDialogue);
             GameEventSystem.Instance.RegisterListener(GameEvent.CREATURE_SPAWNED_DIALOGUE_BARK, OnCreatureSpawnedDialogueBark);
+            GameEventSystem.Instance.RegisterListener(GameEvent.GAME_OVER, OnGameOver);
         }
         else
         {
@@ -58,6 +59,11 @@ public class DialogueManager : MonoBehaviour
                 enemyAI.OnSpeechBubble(line.dialogueText, line.sfxType);
             }
         }
+    }
+
+    private void OnGameOver(object data)
+    {
+        StartDialogue("player_death_ending_story_dialogue");
     }
 
     public void StartDialogue(string dialogueName)

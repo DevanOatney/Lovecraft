@@ -61,7 +61,10 @@ public class AbilityUpgradePath : MonoBehaviour
             if (predefinedPath)
             {
                 currentAbilityLevel++;
-                uiLevel.text = (currentAbilityLevel + 1).ToString();
+                if (uiLevel != null)
+                {
+                    uiLevel.text = (currentAbilityLevel + 1).ToString();
+                }
 
                 if (upgradePaths.Count == currentAbilityLevel + 1)
                 {
@@ -78,7 +81,10 @@ public class AbilityUpgradePath : MonoBehaviour
             else
             {
                 currentAbilityLevel++;
-                uiLevel.text = (currentAbilityLevel + 1).ToString();
+                if (uiLevel)
+                {
+                    uiLevel.text = (currentAbilityLevel + 1).ToString();
+                }
                 uiCost.text = (currentAbilityLevel * 10).ToString();
                 currentCost = currentAbilityLevel * 10;
             }

@@ -17,14 +17,14 @@ MonoBehaviour:
   - speakerName: Emma
     dialogueText: 'Aaaagghhh! '
     portraitName: 
-    voiceClip: 2
+    sfxType: 0
     isRandomBark: 0
-    storyAudioClip: {fileID: 8300000, guid: 1fb8478906b87394daec5b9b9cedcaef, type: 3}
+    storyAudioClip: {fileID: 8300000, guid: bdb98e669b3b63d4f9a04d117871e203, type: 3}
     portrait: {fileID: 0}
   - speakerName: Henry
     dialogueText: No!
     portraitName: H_Apprehensive_EOMO
-    voiceClip: 2
+    sfxType: 0
     isRandomBark: 0
-    storyAudioClip: {fileID: 8300000, guid: 1fb8478906b87394daec5b9b9cedcaef, type: 3}
+    storyAudioClip: {fileID: 8300000, guid: 7c0eb189344be38478ec30238d83c32d, type: 3}
     portrait: {fileID: 0}
