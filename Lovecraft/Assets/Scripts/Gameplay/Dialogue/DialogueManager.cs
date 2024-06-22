@@ -1,15 +1,17 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using TMPro;
 
 public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager Instance { get; private set; }
 
-    public Text speakerNameText;
-    public Text dialogueText;
-    public Image portraitImage;
-    public GameObject dialoguePanel;
+    public TextMeshProUGUI speakerNameTextRef;
+    public TextMeshProUGUI dialogueTextRef;
+    public Image portraitImageRef;
+    public GameObject dialoguePanelRef;
+    public Button nextLineButtonRef;
 
     private Queue<DialogueLine> dialogueLines;
 
@@ -18,8 +20,14 @@ public class DialogueManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
             dialogueLines = new Queue<DialogueLine>();
+            dialoguePanelRef.SetActive(false);
+
+            nextLineButtonRef.onClick.AddListener(DisplayNextLine);
+
+            //Register all of the listeners...
+            GameEventSystem.Instance.RegisterListener(GameEvent.TEST_DIALOGUE, OnTestDialogue);
+            GameEventSystem.Instance.RegisterListener(GameEvent.CREATURE_SPAWNED_DIALOGUE_BARK, OnCreatureSpawnedDialogueBark);
         }
         else
         {
@@ -27,19 +35,59 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public void StartDialogue(Dialogue dialogue)
+    private void OnDestroy()
     {
-        dialoguePanel.SetActive(true);
-        dialogueLines.Clear();
-
-        foreach (var line in dialogue.lines)
-        {
-            dialogueLines.Enqueue(line);
-        }
-
-        DisplayNextLine();
+        //Unregister all of the listeners...
+        GameEventSystem.Instance.UnregisterListener(GameEvent.TEST_DIALOGUE, OnTestDialogue);
+        GameEventSystem.Instance.UnregisterListener(GameEvent.CREATURE_SPAWNED_DIALOGUE_BARK, OnCreatureSpawnedDialogueBark);
     }
 
+    private void OnTestDialogue(object data)
+    {
+        StartDialogue("enemy_killed_dialogue");
+    }
+
+    private void OnCreatureSpawnedDialogueBark(object data)
+    {
+        if (data is EnemyAI enemyAI)
+        {
+            Dialogue dialogue = DialogueLoader.Instance.GetDialogue("creature_spawned");
+            if (dialogue != null && dialogue.lines.Count > 0)
+            {
+                DialogueLine line = dialogue.lines[0];
+                enemyAI.OnSpeechBubble(line.dialogueText, SFXType.RandomBark);
+            }
+        }
+    }
+
+    public void StartDialogue(string dialogueName)
+    {
+        Dialogue dialogue = DialogueLoader.Instance.GetDialogue(dialogueName);
+
+        if (dialogue != null)
+        {
+            dialogueLines.Clear();
+
+            foreach (var line in dialogue.lines)
+            {
+                dialogueLines.Enqueue(line);
+            }
+
+            var firstLine = dialogue.lines[0];
+            if (firstLine.isRandomBark)
+            {
+                Debug.LogError("This... shouldn't play this way");
+            }
+            else
+            {
+                dialoguePanelRef.SetActive(true);
+                Time.timeScale = 0; // Pause the game
+                DisplayNextLine();
+            }
+        }
+    }
+
+    //(can be called from the UI)
     public void DisplayNextLine()
     {
         if (dialogueLines.Count == 0)
@@ -49,27 +97,32 @@ public class DialogueManager : MonoBehaviour
         }
 
         var line = dialogueLines.Dequeue();
-        speakerNameText.text = line.speakerName;
-        dialogueText.text = line.dialogueText;
-        portraitImage.sprite = line.portrait;
-        if (line.voiceClip == SFXType.RandomBark)
+        speakerNameTextRef.text = line.speakerName;
+        dialogueTextRef.text = line.dialogueText;
+        portraitImageRef.sprite = line.portrait;
+
+        if (line.storyAudioClip != null)
         {
-            AudioManager.Instance.PlaySFX(line.voiceClip);
-        }
-        else if (!string.IsNullOrEmpty(line.storyDialogueFileName))
-        {
-            DialogueLoader.Instance.LoadStoryDialogue(line.storyDialogueFileName);
+            AudioManager.Instance.PlayAudioClip(line.storyAudioClip);
         }
     }
 
     private void EndDialogue()
     {
-        dialoguePanel.SetActive(false);
+        dialoguePanelRef.SetActive(false);
+        Time.timeScale = 1; // Resume the game
+        GameEventSystem.Instance.TriggerEvent(GameEvent.DIALOGUE_COMPLETE);
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && dialoguePanel.activeSelf)
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            GameEventSystem.Instance.TriggerEvent(GameEvent.TEST_DIALOGUE);
+        }
+
+        //TEMP code for progressing dialogue.. eventually make this UI driven?
+        if (Input.GetKeyDown(KeyCode.Space) && dialoguePanelRef.activeSelf)
         {
             DisplayNextLine();
         }

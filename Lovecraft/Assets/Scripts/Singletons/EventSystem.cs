@@ -12,6 +12,9 @@ public enum GameEvent
     WAVE_COMPLETED,
     ENEMY_KILLED,
     TREE_DAMAGED,
+    DIALOGUE_COMPLETE,
+    TEST_DIALOGUE,
+    CREATURE_SPAWNED_DIALOGUE_BARK,
 }
 
 public class GameEventSystem : MonoBehaviour

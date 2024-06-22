@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BillboardToMainCamera : MonoBehaviour
@@ -12,6 +10,6 @@ public class BillboardToMainCamera : MonoBehaviour
         transform.LookAt(Camera.main.transform,ClampToAxis);
         Quaternion rot = transform.rotation;
         rot.eulerAngles = new Vector3(rot.eulerAngles.x * ClampToAxis.x, rot.eulerAngles.y - 180f, rot.eulerAngles.z * ClampToAxis.z);
-        transform.rotation = rot;
+        //transform.rotation = rot;
     }
 }

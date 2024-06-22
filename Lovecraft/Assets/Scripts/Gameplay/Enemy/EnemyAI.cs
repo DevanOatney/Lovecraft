@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using TMPro;
 
 public class EnemyAI : MonoBehaviour
 {
@@ -29,6 +30,8 @@ public class EnemyAI : MonoBehaviour
     public Image HealthBar;
     public GameObject bloodSplatterBase;
     public EnemyAttackData enemyAttack;
+    public GameObject SpeechBubbleRef;
+    public TextMeshProUGUI SpeechBubbleTextRef;
 
     private NavMeshAgent agent;
     private AttackHandler attackHandler;
@@ -99,6 +102,12 @@ public class EnemyAI : MonoBehaviour
             {
                 PickRandomWaypoint();
             }
+        }
+
+        //Temp code, delete me
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            GameEventSystem.Instance.TriggerEvent(GameEvent.CREATURE_SPAWNED_DIALOGUE_BARK, this);
         }
     }
 
@@ -229,7 +238,6 @@ public class EnemyAI : MonoBehaviour
     {
 
         audioSource.PlayOneShot(hitSFXList[Random.Range(0, hitSFXList.Count)]);
-        Debug.Log(damageToTake.ToString());
 
         if (IsDying)
             return;
@@ -294,5 +302,23 @@ public class EnemyAI : MonoBehaviour
     public void RemoveAdjuster(GameObject adjuster)
     {
         adjustments.Remove(adjuster);
+    }
+
+    public void OnSpeechBubble(string dialogueLine, SFXType sfxType)
+    {
+        if (dialogueLine == string.Empty)
+            return;
+        //Have speech bubble appear over the unit
+        SpeechBubbleTextRef.text = dialogueLine;
+        SpeechBubbleRef.SetActive(true);
+        AudioManager.Instance.PlaySFX(sfxType);
+
+        Invoke("HideSpeechBubble", 2f);
+    }
+
+    private void HideSpeechBubble()
+    {
+        SpeechBubbleTextRef.text = "";
+        SpeechBubbleRef.SetActive(false);
     }
 }

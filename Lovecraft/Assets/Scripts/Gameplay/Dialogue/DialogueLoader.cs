@@ -1,15 +1,19 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class DialogueLoader : MonoBehaviour
 {
     public static DialogueLoader Instance { get; private set; }
 
+    private Dictionary<string, Dialogue> dialogues;
+
     private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
+            dialogues = new Dictionary<string, Dialogue>();
+            LoadAllDialogues();
         }
         else
         {
@@ -17,39 +21,34 @@ public class DialogueLoader : MonoBehaviour
         }
     }
 
-    public void LoadDialogue(string fileName)
+    private void LoadAllDialogues()
     {
-        TextAsset jsonFile = Resources.Load<TextAsset>("Dialogues/" + fileName);
-        if (jsonFile != null)
+        Dialogue[] loadedDialogues = Resources.LoadAll<Dialogue>("Dialogue/");
+
+        foreach (Dialogue dialogue in loadedDialogues)
         {
-            Dialogue dialogue = JsonUtility.FromJson<Dialogue>(jsonFile.text);
             foreach (var line in dialogue.lines)
             {
                 line.portrait = Resources.Load<Sprite>("Portraits/" + line.portraitName);
+                if (!line.isRandomBark)
+                {
+                    line.storyAudioClip = Resources.Load<AudioClip>("StoryDialogue/" + line.storyAudioClip.name);
+                }
             }
-            DialogueManager.Instance.StartDialogue(dialogue);
-        }
-        else
-        {
-            Debug.LogError("Dialogue file not found: " + fileName);
+            dialogues[dialogue.dialogueName] = dialogue;
         }
     }
 
-    public void LoadStoryDialogue(string fileName)
+    public Dialogue GetDialogue(string dialogueName)
     {
-        TextAsset jsonFile = Resources.Load<TextAsset>("StoryDialogue/" + fileName);
-        if (jsonFile != null)
+        if (dialogues.TryGetValue(dialogueName, out Dialogue dialogue))
         {
-            Dialogue dialogue = JsonUtility.FromJson<Dialogue>(jsonFile.text);
-            foreach (var line in dialogue.lines)
-            {
-                line.portrait = Resources.Load<Sprite>("Portraits/" + line.portraitName);
-            }
-            DialogueManager.Instance.StartDialogue(dialogue);
+            return dialogue;
         }
         else
         {
-            Debug.LogError("Story dialogue file not found: " + fileName);
+            Debug.LogError("Dialogue not found: " + dialogueName);
+            return null;
         }
     }
 }
