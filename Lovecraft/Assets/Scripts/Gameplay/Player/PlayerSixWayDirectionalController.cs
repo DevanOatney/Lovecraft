@@ -221,11 +221,13 @@ public class PlayerSixWayDirectionalController : MonoBehaviour
 
     public void TakeDamage(int damageToTake)
     {
-        curHP -= damageToTake;
-        Debug.Log(curHP);
-        if(curHP < 0)
+        if (curHP > 0)
         {
-            SceneManager.Instance.ReloadCurrentScene();
+            curHP -= damageToTake;
+            if (curHP <= 0)
+            {
+                GameEventSystem.Instance.TriggerEvent(GameEvent.PLAYER_KILLED);
+            }
         }
     }
 }

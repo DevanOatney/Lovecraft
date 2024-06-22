@@ -17,49 +17,49 @@ MonoBehaviour:
   - speakerName: High Inquisitor
     dialogueText: The Light forsakes me.
     portraitName: 
-    voiceClip: 2
+    sfxType: 0
     isRandomBark: 0
-    storyAudioClip: {fileID: 8300000, guid: 1fb8478906b87394daec5b9b9cedcaef, type: 3}
+    storyAudioClip: {fileID: 8300000, guid: fdb6c8e542599454cb9cb9622ecbeb04, type: 3}
     portrait: {fileID: 0}
   - speakerName: Henry
     dialogueText: Emma...
     portraitName: H_Neutral_EOMO
-    voiceClip: 2
+    sfxType: 0
     isRandomBark: 0
-    storyAudioClip: {fileID: 8300000, guid: c5611c3e022a90a45905c7a2c9b1142e, type: 3}
+    storyAudioClip: {fileID: 8300000, guid: e6f30afdb733d234abd99ee28be8392c, type: 3}
     portrait: {fileID: 0}
   - speakerName: Emma
     dialogueText: Henry?
     portraitName: 
-    voiceClip: 2
+    sfxType: 0
     isRandomBark: 0
-    storyAudioClip: {fileID: 8300000, guid: c5611c3e022a90a45905c7a2c9b1142e, type: 3}
+    storyAudioClip: {fileID: 8300000, guid: 3de5c7834302a3543b5cdf36a98798c4, type: 3}
     portrait: {fileID: 0}
   - speakerName: Henry
     dialogueText: Emma!
     portraitName: H_Soft_EOMO
-    voiceClip: 2
+    sfxType: 0
     isRandomBark: 0
     storyAudioClip: {fileID: 8300000, guid: c5611c3e022a90a45905c7a2c9b1142e, type: 3}
     portrait: {fileID: 0}
   - speakerName: Emma
     dialogueText: Henry, what is all this?
     portraitName: 
-    voiceClip: 2
+    sfxType: 0
     isRandomBark: 0
     storyAudioClip: {fileID: 8300000, guid: c5611c3e022a90a45905c7a2c9b1142e, type: 3}
     portrait: {fileID: 0}
   - speakerName: Emma
     dialogueText: You did this?
     portraitName: 
-    voiceClip: 2
+    sfxType: 0
     isRandomBark: 0
     storyAudioClip: {fileID: 8300000, guid: c5611c3e022a90a45905c7a2c9b1142e, type: 3}
     portrait: {fileID: 0}
   - speakerName: Henry
     dialogueText: I did what was necessary, my love.
     portraitName: H_Soft_EOMC
-    voiceClip: 2
+    sfxType: 0
     isRandomBark: 0
     storyAudioClip: {fileID: 8300000, guid: c5611c3e022a90a45905c7a2c9b1142e, type: 3}
     portrait: {fileID: 0}

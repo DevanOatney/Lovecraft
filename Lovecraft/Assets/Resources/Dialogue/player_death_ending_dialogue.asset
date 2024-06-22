@@ -17,14 +17,14 @@ MonoBehaviour:
   - speakerName: Emma
     dialogueText: 'Henry? Henry! '
     portraitName: 
-    voiceClip: 2
+    sfxType: 0
     isRandomBark: 0
-    storyAudioClip: {fileID: 8300000, guid: 1fb8478906b87394daec5b9b9cedcaef, type: 3}
+    storyAudioClip: {fileID: 8300000, guid: c1d13afa865bf5c48ba4e9b530aa1159, type: 3}
     portrait: {fileID: 0}
   - speakerName: Henry
     dialogueText: "Emma... I\u2019m sorry."
     portraitName: H_Neutral_ECMO
-    voiceClip: 2
+    sfxType: 0
     isRandomBark: 0
-    storyAudioClip: {fileID: 8300000, guid: 1fb8478906b87394daec5b9b9cedcaef, type: 3}
+    storyAudioClip: {fileID: 8300000, guid: dd5219753acbea24d9b820449015a285, type: 3}
     portrait: {fileID: 0}

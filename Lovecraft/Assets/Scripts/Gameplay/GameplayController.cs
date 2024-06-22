@@ -16,9 +16,12 @@ public class GameplayController : MonoBehaviour
     private float creationSpeed = 0.15f;
     private float creationTimer = 0f;
 
+    private bool waitingForGameOver = false;
+
     private void Start()
     {
         buildingGrid = GameObject.FindObjectOfType<GridTest>();
+        GameOverScene = GameObject.FindObjectOfType<GameOverController>();
         RegisterEventsToListenTo();
         BakeNavMeshes();
     }
@@ -43,6 +46,7 @@ public class GameplayController : MonoBehaviour
     {
         GameEventSystem.Instance.RegisterListener(GameEvent.BUILDING_OBJECT_SELECTED, OnBuildingObjectSelected);
         GameEventSystem.Instance.RegisterListener(GameEvent.PLAYER_KILLED, OnPlayerKilled);
+        GameEventSystem.Instance.RegisterListener(GameEvent.DIALOGUE_COMPLETE, OnDialogueComplete);
     }
 
     private void UnregisterEventsToListenTo()
@@ -174,6 +178,14 @@ public class GameplayController : MonoBehaviour
         Time.timeScale = 0f;
         GameOverScene.gameObject.SetActive(true);
         GameOverScene.OnGameOver();
-        SceneManager.Instance.ReloadCurrentScene();
+        waitingForGameOver = true;
+    }
+
+    private void OnDialogueComplete(object data)
+    {
+        if (waitingForGameOver)
+        {
+            SceneManager.Instance.ReloadCurrentScene();
+        }
     }
 }
