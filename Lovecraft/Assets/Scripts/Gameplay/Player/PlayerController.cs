@@ -1,9 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.InputSystem;
-using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -117,11 +114,13 @@ public class PlayerController : MonoBehaviour
 
     public void TakeDamage(int damageToTake)
     {
-        curHP -= damageToTake;
-        Debug.Log(curHP);
-        if(curHP < 0)
+        if (curHP > 0)
         {
-            SceneManager.Instance.ReloadCurrentScene();
+            curHP -= damageToTake;
+            if (curHP < 0)
+            {
+                GameEventSystem.Instance.TriggerEvent(GameEvent.PLAYER_KILLED);                
+            }
         }
     }
 }

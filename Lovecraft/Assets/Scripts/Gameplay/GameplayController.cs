@@ -6,6 +6,7 @@ using UnityEngine;
 public class GameplayController : MonoBehaviour
 {
     public Transform SelectedObject;
+    public GameOverController GameOverScene;
     private Transform previewObject;
     private Vector3 originalScale;
 
@@ -41,11 +42,13 @@ public class GameplayController : MonoBehaviour
     private void RegisterEventsToListenTo()
     {
         GameEventSystem.Instance.RegisterListener(GameEvent.BUILDING_OBJECT_SELECTED, OnBuildingObjectSelected);
+        GameEventSystem.Instance.RegisterListener(GameEvent.PLAYER_KILLED, OnPlayerKilled);
     }
 
     private void UnregisterEventsToListenTo()
     {
         GameEventSystem.Instance.UnregisterListener(GameEvent.BUILDING_OBJECT_SELECTED, OnBuildingObjectSelected);
+        GameEventSystem.Instance.UnregisterListener(GameEvent.PLAYER_KILLED, OnPlayerKilled);
     }
 
     private void OnBuildingObjectSelected(object obj)
@@ -164,5 +167,13 @@ public class GameplayController : MonoBehaviour
             material.DisableKeyword("_ALPHAPREMULTIPLY_ON");
             material.renderQueue = 3000;
         }
+    }
+
+    private void OnPlayerKilled(object data)
+    {
+        Time.timeScale = 0f;
+        GameOverScene.gameObject.SetActive(true);
+        GameOverScene.OnGameOver();
+        SceneManager.Instance.ReloadCurrentScene();
     }
 }
