@@ -19,7 +19,7 @@ public enum Abilities
 public struct UpgradeNode
 {
     public float Value;
-    public float Cost;
+    public int Cost;
 }
 
 public class AbilityUpgradePath : MonoBehaviour
@@ -29,12 +29,22 @@ public class AbilityUpgradePath : MonoBehaviour
     public bool predefinedPath;
     public float undefinedUpgradeModifier; // this is only used if we dont have a predefined upgrade path
     public int currentAbilityLevel = 0;
-
+    public GameObject purchaseIndicator;
 
     // UI Connections
     [SerializeField] private TMP_Text uiLevel;
     [SerializeField] private TMP_Text uiCost;
     // ------
+
+    int currentCost = 0;
+    PlayerCurrencyController PCC;
+
+    private void Start()
+    {
+        currentCost = predefinedPath ? upgradePaths[0].Cost : currentAbilityLevel + 1 * 10;
+        uiCost.text = currentCost.ToString();
+        PCC = GameObject.FindObjectOfType<PlayerCurrencyController>();
+    }
 
     public float GetModifiedValue(float ogValue)
     {
@@ -43,26 +53,39 @@ public class AbilityUpgradePath : MonoBehaviour
 
     public void UpgradeSelected()
     {
-
-        if (predefinedPath)
+        if (PCC.SpendBloodCurrency(currentCost))
         {
-            currentAbilityLevel++;
-            uiLevel.text = (currentAbilityLevel + 1).ToString();
+            purchaseIndicator.GetComponent<TMP_Text>().text = "- " + currentCost.ToString();
+            purchaseIndicator.SetActive(true);
 
-            if (upgradePaths.Count == currentAbilityLevel + 1)
+            if (predefinedPath)
             {
-                uiCost.text = "Max Upgrades";
-                uiCost.GetComponentInParent<Button>().interactable = false;
+                currentAbilityLevel++;
+                uiLevel.text = (currentAbilityLevel + 1).ToString();
+
+                if (upgradePaths.Count == currentAbilityLevel + 1)
+                {
+                    uiCost.text = "Max Upgrades";
+                    uiCost.GetComponentInParent<Button>().interactable = false;
+                    currentCost = Int32.MaxValue;
+                }
+                else
+                {
+                    currentCost = upgradePaths[currentAbilityLevel + 1].Cost;
+                    uiCost.text = upgradePaths[currentAbilityLevel + 1].Cost.ToString();
+                }
             }
             else
             {
-                uiCost.text = upgradePaths[currentAbilityLevel + 1].Cost.ToString();
+                currentAbilityLevel++;
+                uiLevel.text = (currentAbilityLevel + 1).ToString();
+                uiCost.text = (currentAbilityLevel * 10).ToString();
+                currentCost = currentAbilityLevel * 10;
             }
         } else
         {
-            currentAbilityLevel++;
-            uiLevel.text = (currentAbilityLevel + 1).ToString();
-            uiCost.text = (currentAbilityLevel * 10).ToString();
+            purchaseIndicator.GetComponent<TMP_Text>().text = "Anemic - not enough blood";
+            purchaseIndicator.SetActive(true);
         }
     }
 }
