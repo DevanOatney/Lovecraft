@@ -2223,6 +2223,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 83fe8592a6f73c444886f2c831d65f7c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2095318808}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 83fe8592a6f73c444886f2c831d65f7c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2095318814}
   m_SourcePrefab: {fileID: 100100000, guid: 83fe8592a6f73c444886f2c831d65f7c, type: 3}
 --- !u!1001 &685928627
 PrefabInstance:
@@ -4624,6 +4627,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7434480802888800030, guid: 6fcab8744564c0c41918cbe1a5fdf470, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7434480802888800030, guid: 6fcab8744564c0c41918cbe1a5fdf470, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5930,6 +5941,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1518601921}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1815236192 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8506342505392904120, guid: 1a34a64cec2557c468f3bacc3c7bc0a7, type: 3}
+  m_PrefabInstance: {fileID: 5563167043503947642}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1846874421
 GameObject:
   m_ObjectHideFlags: 0
@@ -6777,6 +6799,20 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 83fe8592a6f73c444886f2c831d65f7c, type: 3}
   m_PrefabInstance: {fileID: 681851086}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2095318814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2095318804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e59ae36c4f8035048846dc379487603b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  TreeHealthImage: {fileID: 1815236192}
 --- !u!114 &2113835477 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6358073344055023179, guid: 1a34a64cec2557c468f3bacc3c7bc0a7, type: 3}

@@ -19,6 +19,7 @@ public class GameplayController : MonoBehaviour
     {
         buildingGrid = GameObject.FindObjectOfType<GridTest>();
         RegisterEventsToListenTo();
+        BakeNavMeshes();
     }
 
     private void BakeNavMeshes()

@@ -31,7 +31,7 @@ public class EnemyAI : MonoBehaviour
     public GameObject bloodSplatterBase;
     public EnemyAttackData enemyAttack;
     public GameObject SpeechBubbleRef;
-    public TextMeshProUGUI SpeechBubbleTextRef;
+    public TextMeshPro SpeechBubbleTextRef;
 
     private NavMeshAgent agent;
     private AttackHandler attackHandler;
@@ -46,9 +46,14 @@ public class EnemyAI : MonoBehaviour
 
     void Start()
     {
+        SpeechBubbleRef.SetActive(false);
         agent = GetComponent<NavMeshAgent>();
         attackHandler = GetComponent<AttackHandler>();
         PopulateWaypoints();
+
+        treeTarget = GameObject.FindObjectOfType<TreeController>().transform;
+        playerTarget = GameObject.FindObjectOfType<PlayerController>().transform;
+
         foreach (Transform child in treeTarget)
         {
             treePositions.Add(child);
@@ -64,9 +69,22 @@ public class EnemyAI : MonoBehaviour
     {
         if (attackHandler.IsAttacking() || RoundController.Instance.IsSceneInitialized() == false)
         {
-            return;
+            //probably don't need to do anything here but.. /shrug
+        }
+        else
+        {
+            HandleMovement();
         }
 
+        //Temp code, delete me
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            GameEventSystem.Instance.TriggerEvent(GameEvent.CREATURE_SPAWNED_DIALOGUE_BARK, this);
+        }
+    }
+
+    void HandleMovement()
+    {
         float distanceToTree = currentTreePosition != null ? Vector3.Distance(transform.position, currentTreePosition.position) : 0;
         float distanceToPlayer = playerTarget != null ? Vector3.Distance(transform.position, playerTarget.position) : 0;
 
@@ -102,12 +120,6 @@ public class EnemyAI : MonoBehaviour
             {
                 PickRandomWaypoint();
             }
-        }
-
-        //Temp code, delete me
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            GameEventSystem.Instance.TriggerEvent(GameEvent.CREATURE_SPAWNED_DIALOGUE_BARK, this);
         }
     }
 
@@ -310,6 +322,14 @@ public class EnemyAI : MonoBehaviour
             return;
         //Have speech bubble appear over the unit
         SpeechBubbleTextRef.text = dialogueLine;
+
+        RectTransform tform = SpeechBubbleRef.GetComponent<RectTransform>();
+        Vector2 minSize = new Vector2(3, 3);
+        tform.sizeDelta = new Vector2(minSize.x + (int)dialogueLine.Length / 2, minSize.y);
+
+        RectTransform textTform = SpeechBubbleTextRef.GetComponent<RectTransform>();
+        textTform.anchoredPosition = new Vector2(-((int)dialogueLine.Length / 4), 0);
+
         SpeechBubbleRef.SetActive(true);
         AudioManager.Instance.PlaySFX(sfxType);
 
