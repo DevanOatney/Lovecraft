@@ -24,6 +24,8 @@ public class BuildingObject : MonoBehaviour
     {
         if (!IsInPreviewMode)
         {
+            float modifier = AbilityUpgradesManager.Instance.AbilityUpgrades[Abilities.TRAP_COOLDOWN].GetModifiedValue(FiringFrequency);
+            Debug.Log(modifier);
             if (FiringTimer >= FiringFrequency)
             {
                 FiringTimer = 0.0f;
