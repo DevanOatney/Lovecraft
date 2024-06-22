@@ -6,7 +6,6 @@ public class PlayerCurrencyController : MonoBehaviour
 {
     public int Blood_Currency_Count = 0;
 
-
     public bool SpendBloodCurrency(int amount)
     {
         if( Blood_Currency_Count - amount >= 0 )
@@ -21,4 +20,5 @@ public class PlayerCurrencyController : MonoBehaviour
     {
         Blood_Currency_Count += amount;
     }
+
 }

@@ -105,6 +105,8 @@ public class GameplayController : MonoBehaviour
                     buildingGrid.CreateBuilding(SelectedObject, previewObject.rotation);
                     Destroy(previewObject.gameObject);
                     previewObject = null;
+
+                    GameEventSystem.Instance.TriggerEvent(GameEvent.BUILDING_OBJECT_PLACE, null);
                 }
             }
             else
