@@ -34,4 +34,22 @@ public class DialogueLoader : MonoBehaviour
             Debug.LogError("Dialogue file not found: " + fileName);
         }
     }
+
+    public void LoadStoryDialogue(string fileName)
+    {
+        TextAsset jsonFile = Resources.Load<TextAsset>("StoryDialogue/" + fileName);
+        if (jsonFile != null)
+        {
+            Dialogue dialogue = JsonUtility.FromJson<Dialogue>(jsonFile.text);
+            foreach (var line in dialogue.lines)
+            {
+                line.portrait = Resources.Load<Sprite>("Portraits/" + line.portraitName);
+            }
+            DialogueManager.Instance.StartDialogue(dialogue);
+        }
+        else
+        {
+            Debug.LogError("Story dialogue file not found: " + fileName);
+        }
+    }
 }

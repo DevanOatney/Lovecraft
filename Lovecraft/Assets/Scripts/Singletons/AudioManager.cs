@@ -6,6 +6,7 @@ public enum SFXType
 {
     UIPop,
     Impact,
+    RandomBark,
     // Add other SFX types here
 }
 

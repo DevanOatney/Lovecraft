@@ -52,6 +52,14 @@ public class DialogueManager : MonoBehaviour
         speakerNameText.text = line.speakerName;
         dialogueText.text = line.dialogueText;
         portraitImage.sprite = line.portrait;
+        if (line.voiceClip == SFXType.RandomBark)
+        {
+            AudioManager.Instance.PlaySFX(line.voiceClip);
+        }
+        else if (!string.IsNullOrEmpty(line.storyDialogueFileName))
+        {
+            DialogueLoader.Instance.LoadStoryDialogue(line.storyDialogueFileName);
+        }
     }
 
     private void EndDialogue()
