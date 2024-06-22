@@ -10,6 +10,8 @@ public enum SFXType
     Impact,
     RandomBark,
     CreatureSpawned,
+    ScriptedBark,
+    ScriptedDialogue,
     // Add other SFX types here
 }
 
