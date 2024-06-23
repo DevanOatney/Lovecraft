@@ -152,7 +152,7 @@ MonoBehaviour:
   enemyTactic: 1
   treeTarget: {fileID: 0}
   playerTarget: {fileID: 0}
-  attackRange: 5
+  attackRange: 10
   playerChaseRange: 10
   playerChaseReturnRange: 15
   waypointRoot: {fileID: 0}
@@ -170,7 +170,7 @@ MonoBehaviour:
   audioSource: {fileID: 4833695028840949049}
   HealthBar: {fileID: 2513280107889541879}
   bloodSplatterBase: {fileID: 2819901525366177038, guid: cdd4a1cefbfe5b644bae4e3a88b52ae5, type: 3}
-  enemyAttack: {fileID: 11400000, guid: f079b8ef33ce0364e9f3dd3b6280c344, type: 2}
+  enemyAttack: {fileID: 11400000, guid: 67e8a2f94e97ca34d92beecf97cbbf59, type: 2}
   SpeechBubbleRef: {fileID: 5978549493826712888}
   SpeechBubbleTextRef: {fileID: 7537026571337126545}
 --- !u!114 &2044095413327045763
@@ -188,6 +188,7 @@ MonoBehaviour:
   telegraphDuration: 1
   attackDuration: 0.5
   recoveryDuration: 1
+  attackRange: 20
 --- !u!54 &-3387405180889373208
 Rigidbody:
   m_ObjectHideFlags: 0

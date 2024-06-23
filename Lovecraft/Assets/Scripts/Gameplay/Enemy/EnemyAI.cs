@@ -16,7 +16,7 @@ public class EnemyAI : MonoBehaviour
     public Tactic enemyTactic; // The tactic this enemy will use
     public Transform treeTarget; // The target object (tree)
     public Transform playerTarget; // The player object
-    public float attackRange = 5f; // Range within which the enemy can attack
+    public float attackRange = 1f; // Range within which the enemy can attack
     public float playerChaseRange = 10f; // Range within which the enemy will chase the player
     public float playerChaseReturnRange = 15f; // Range beyond which the enemy will stop chasing the player
     public Transform waypointRoot; // Root object for waypoints
@@ -147,6 +147,7 @@ public class EnemyAI : MonoBehaviour
             if (distanceToPlayer > playerChaseReturnRange)
             {
                 attackingPlayer = false;
+                agent.isStopped = false;
                 PickRandomTreePosition();
                 MoveToTarget(currentTreePosition);
             }

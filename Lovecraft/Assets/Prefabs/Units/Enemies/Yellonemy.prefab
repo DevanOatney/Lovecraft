@@ -272,7 +272,7 @@ GameObject:
   - component: {fileID: 1671639145545408312}
   - component: {fileID: 3017173933458322725}
   m_Layer: 6
-  m_Name: Redemy
+  m_Name: Yellonemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -324,7 +324,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 23f6a6e612776dd4b92cd112c0c46da0, type: 2}
+  - {fileID: 2100000, guid: e87d6a003b798b341a6a2ca143f78cbc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -406,7 +406,7 @@ MonoBehaviour:
   enemyTactic: 1
   treeTarget: {fileID: 0}
   playerTarget: {fileID: 0}
-  attackRange: 3
+  attackRange: 15
   playerChaseRange: 10
   playerChaseReturnRange: 15
   waypointRoot: {fileID: 0}
@@ -442,7 +442,7 @@ MonoBehaviour:
   telegraphDuration: 1
   attackDuration: 0.5
   recoveryDuration: 1
-  attackRange: 3
+  attackRange: 20
 --- !u!54 &1671639145545408312
 Rigidbody:
   m_ObjectHideFlags: 0
