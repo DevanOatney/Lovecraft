@@ -7,6 +7,7 @@ public enum TRAP_TYPES
     SLOW = 0,
     FLASH,
     STUN,
+    TURRET,
 }
 
 
