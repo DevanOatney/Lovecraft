@@ -68,6 +68,14 @@ public class PlayerSixWayDirectionalController : MonoBehaviour
 
     private void Update()
     {
+        if(AbilityUpgradesManager.Instance.AbilityUpgrades[Abilities.HP_INCREASE].isDirty)
+        {
+            float newHP = AbilityUpgradesManager.Instance.AbilityUpgrades[Abilities.HP_INCREASE].GetModifiedValue(MaxHP);
+            float deltaHP = newHP - MaxHP;
+            MaxHP = (int)newHP;
+            curHP += (int)deltaHP;
+            AbilityUpgradesManager.Instance.AbilityUpgrades[Abilities.HP_INCREASE].isDirty = false;
+        }
 
         if( dashAbility.IsDashing() )
         {
