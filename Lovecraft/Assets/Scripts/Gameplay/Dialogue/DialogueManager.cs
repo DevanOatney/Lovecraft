@@ -46,6 +46,7 @@ public class DialogueManager : MonoBehaviour
         //Unregister all of the listeners...
         GameEventSystem.Instance.UnregisterListener(GameEvent.WIN_CONDITION_WAVES_COMPLETE, OnWavesCompleteVictory);
         GameEventSystem.Instance.UnregisterListener(GameEvent.CREATURE_SPAWNED_DIALOGUE_BARK, OnCreatureSpawnedDialogueBark);
+        GameEventSystem.Instance.UnregisterListener(GameEvent.GAME_OVER, OnGameOver);
         GameEventSystem.Instance.UnregisterListener(GameEvent.WAVE_COMPLETED, OnWaveComplete);
         GameEventSystem.Instance.UnregisterListener(GameEvent.GAME_STARTED, OnGameStart);
     }
