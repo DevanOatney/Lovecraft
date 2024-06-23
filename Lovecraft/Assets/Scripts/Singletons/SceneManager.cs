@@ -46,6 +46,11 @@ public class SceneManager : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene((int)scene);
     }
 
+    public void BackToMainMenu()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(1);
+    }
+
     public void ReloadCurrentScene()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
