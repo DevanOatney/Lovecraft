@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 1895864340091506249}
   m_Layer: 8
   m_Name: Floor Trap
-  m_TagString: Untagged
+  m_TagString: SlowTrap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -138,6 +138,7 @@ MonoBehaviour:
   FiringFrequency: 0
   MovementSpeedAdjuster: -0.5
   IsInPreviewMode: 0
+  placementCost: 1
 --- !u!65 &4021684648511057520
 BoxCollider:
   m_ObjectHideFlags: 0

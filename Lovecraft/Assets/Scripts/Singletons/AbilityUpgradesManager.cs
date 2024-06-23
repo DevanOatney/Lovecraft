@@ -38,7 +38,6 @@ public class AbilityUpgradesManager : MonoBehaviour
 
     private void Start()
     {
-        AbilityUpgrades = new Dictionary<Abilities, AbilityUpgradePath>();
         Load();
     }
 
@@ -49,6 +48,10 @@ public class AbilityUpgradesManager : MonoBehaviour
 
     private void Load()
     {
+        if (AbilityUpgrades == null)
+        {
+            AbilityUpgrades = new Dictionary<Abilities, AbilityUpgradePath>();
+        }
         foreach (AbilityUpgradePath aup in GameObject.FindObjectsOfType<AbilityUpgradePath>(true))
         {
             AbilityUpgrades[aup.associatedAbility] = aup;
