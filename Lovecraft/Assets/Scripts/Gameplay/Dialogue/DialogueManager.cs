@@ -13,7 +13,8 @@ public class DialogueManager : MonoBehaviour
     public GameObject dialoguePanelRef;
     public Button nextLineButtonRef;
     public List<Dialogue> StoryPoints = new List<Dialogue>();
-    public int CurrentStoryPointIndex = 0;
+    public Dialogue WaveCompleteVictory;
+    private int CurrentStoryPointIndex = 0;
 
     private Queue<DialogueLine> dialogueLines;
 
@@ -28,7 +29,7 @@ public class DialogueManager : MonoBehaviour
             nextLineButtonRef.onClick.AddListener(DisplayNextLine);
 
             //Register all of the listeners...
-            GameEventSystem.Instance.RegisterListener(GameEvent.TEST_DIALOGUE, OnTestDialogue);
+            GameEventSystem.Instance.RegisterListener(GameEvent.WIN_CONDITION_WAVES_COMPLETE, OnWavesCompleteVictory);
             GameEventSystem.Instance.RegisterListener(GameEvent.CREATURE_SPAWNED_DIALOGUE_BARK, OnCreatureSpawnedDialogueBark);
             GameEventSystem.Instance.RegisterListener(GameEvent.GAME_OVER, OnGameOver);
             GameEventSystem.Instance.RegisterListener(GameEvent.WAVE_COMPLETED, OnWaveComplete);
@@ -43,7 +44,7 @@ public class DialogueManager : MonoBehaviour
     private void OnDestroy()
     {
         //Unregister all of the listeners...
-        GameEventSystem.Instance.UnregisterListener(GameEvent.TEST_DIALOGUE, OnTestDialogue);
+        GameEventSystem.Instance.UnregisterListener(GameEvent.WIN_CONDITION_WAVES_COMPLETE, OnWavesCompleteVictory);
         GameEventSystem.Instance.UnregisterListener(GameEvent.CREATURE_SPAWNED_DIALOGUE_BARK, OnCreatureSpawnedDialogueBark);
         GameEventSystem.Instance.UnregisterListener(GameEvent.WAVE_COMPLETED, OnWaveComplete);
         GameEventSystem.Instance.UnregisterListener(GameEvent.GAME_STARTED, OnGameStart);
@@ -58,12 +59,13 @@ public class DialogueManager : MonoBehaviour
     private void OnWaveComplete(object data)
     {
         CurrentStoryPointIndex++;
-        StartDialogue(StoryPoints[CurrentStoryPointIndex].dialogueName);
+        if(CurrentStoryPointIndex < StoryPoints.Count)
+            StartDialogue(StoryPoints[CurrentStoryPointIndex].dialogueName);
     }
 
-    private void OnTestDialogue(object data)
+    private void OnWavesCompleteVictory(object data)
     {
-        StartDialogue("enemy_killed_dialogue");
+        StartDialogue(WaveCompleteVictory.dialogueName);
     }
 
     private void OnCreatureSpawnedDialogueBark(object data)
@@ -140,11 +142,6 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.N))
-        {
-            GameEventSystem.Instance.TriggerEvent(GameEvent.TEST_DIALOGUE);
-        }
-
         //TEMP code for progressing dialogue.. eventually make this UI driven?
         if (Input.GetKeyDown(KeyCode.Space) && dialoguePanelRef.activeSelf)
         {

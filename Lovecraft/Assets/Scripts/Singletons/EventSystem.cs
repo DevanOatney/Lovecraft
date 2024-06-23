@@ -15,9 +15,9 @@ public enum GameEvent
     PLAYER_KILLED,
     GAME_OVER,
     DIALOGUE_COMPLETE,
-    TEST_DIALOGUE,
     CREATURE_SPAWNED_DIALOGUE_BARK,
     GAME_STARTED,
+    WIN_CONDITION_WAVES_COMPLETE,
 }
 
 public class GameEventSystem : MonoBehaviour

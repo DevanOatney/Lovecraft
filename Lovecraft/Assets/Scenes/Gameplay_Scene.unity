@@ -984,7 +984,7 @@ MonoBehaviour:
   StoryPoints:
   - {fileID: 11400000, guid: 875e1957800f81145b0e2b38f686d0ca, type: 2}
   - {fileID: 11400000, guid: 5707493013d11ad44a07c3e051ee12ff, type: 2}
-  CurrentStoryPointIndex: 0
+  WaveCompleteVictory: {fileID: 11400000, guid: 3ac721183bd61e746846a528ff286523, type: 2}
 --- !u!114 &322307697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7351,6 +7351,10 @@ PrefabInstance:
       propertyPath: dashCooldownIndicator
       value: 
       objectReference: {fileID: 729199226}
+    - target: {fileID: 2639783265070328548, guid: 337ac67ce67d95b409c57d9bd53cd2b1, type: 3}
+      propertyPath: MaxHP
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 8585870232659736567, guid: 337ac67ce67d95b409c57d9bd53cd2b1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.000002861023

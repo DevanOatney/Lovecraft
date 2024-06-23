@@ -166,6 +166,7 @@ public class RoundController : MonoBehaviour
         }
         else
         {
+            GameEventSystem.Instance.TriggerEvent(GameEvent.WIN_CONDITION_WAVES_COMPLETE);
             Debug.Log("All waves completed!");
         }
     }
