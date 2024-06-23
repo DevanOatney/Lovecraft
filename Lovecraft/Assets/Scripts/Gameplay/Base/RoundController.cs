@@ -43,7 +43,7 @@ public class RoundController : MonoBehaviour
     [SerializeField] private Canvas buildingPhaseCanvas;
     [SerializeField] private Canvas combatPhaseCanvas;
     [SerializeField] private GameObject nextPhaseButton;
-    [SerializeField] private List<WaveManager> waveManagers;
+    [SerializeField] private WaveManager waveManager;
 
     private float roundTimerBucket = 0f;
     
@@ -151,16 +151,16 @@ public class RoundController : MonoBehaviour
 
     private void StartCombatPhase()
     {
-        if (currentWaveIndex < waveManagers.Count)
+        if (currentWaveIndex < waveManager.waves.Count)
         {
-            waveManagers[currentWaveIndex].StartWave();
+            waveManager.StartWave();
         }
     }
 
     private void OnWaveCompleted(object obj)
     {
         currentWaveIndex++;
-        if (currentWaveIndex < waveManagers.Count)
+        if (currentWaveIndex < waveManager.waves.Count)
         {
             OnPhaseChange(null);
         }

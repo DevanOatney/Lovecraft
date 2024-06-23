@@ -6482,6 +6482,7 @@ MonoBehaviour:
           spawnPoints: []
       timeBetweenStages: 5
       reinforcementThreshold: 1
+  - stages:
     - enemiesToSpawn:
       - enemyPrefab: {fileID: 6101225967246542521, guid: 6fcab8744564c0c41918cbe1a5fdf470, type: 3}
         count: 2
@@ -7166,6 +7167,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1369698375894385199, guid: 1a34a64cec2557c468f3bacc3c7bc0a7, type: 3}
+      propertyPath: waveManager
+      value: 
+      objectReference: {fileID: 1919749142}
     - target: {fileID: 1369698375894385199, guid: 1a34a64cec2557c468f3bacc3c7bc0a7, type: 3}
       propertyPath: waveManagers.Array.size
       value: 1
