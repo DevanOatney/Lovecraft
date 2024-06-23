@@ -35,7 +35,7 @@ MonoBehaviour:
     portraitName: 
     sfxType: 0
     isRandomBark: 0
-    storyAudioClip: {fileID: 8300000, guid: c5611c3e022a90a45905c7a2c9b1142e, type: 3}
+    storyAudioClip: {fileID: 0}
     portrait: {fileID: 0}
   - speakerName: Henry
     dialogueText: "Yes, I remember. But you mustn\u2019t go outside. You need to
@@ -43,21 +43,21 @@ MonoBehaviour:
     portraitName: H_Neutral_ECMC
     sfxType: 0
     isRandomBark: 0
-    storyAudioClip: {fileID: 8300000, guid: c5611c3e022a90a45905c7a2c9b1142e, type: 3}
+    storyAudioClip: {fileID: 0}
     portrait: {fileID: 0}
   - speakerName: Henry
     dialogueText: ...
     portraitName: H_Neutral_EOMC
     sfxType: 0
     isRandomBark: 0
-    storyAudioClip: {fileID: 8300000, guid: c5611c3e022a90a45905c7a2c9b1142e, type: 3}
+    storyAudioClip: {fileID: 0}
     portrait: {fileID: 0}
   - speakerName: Henry
     dialogueText: Stay inside.
     portraitName: H_Neutral_EOMO
     sfxType: 0
     isRandomBark: 0
-    storyAudioClip: {fileID: 8300000, guid: c5611c3e022a90a45905c7a2c9b1142e, type: 3}
+    storyAudioClip: {fileID: 0}
     portrait: {fileID: 0}
   - speakerName: High Inquisitor
     dialogueText: It is the hour of your reckoning. You slaughter our kin, use them
@@ -66,14 +66,14 @@ MonoBehaviour:
     portraitName: 
     sfxType: 0
     isRandomBark: 0
-    storyAudioClip: {fileID: 8300000, guid: c5611c3e022a90a45905c7a2c9b1142e, type: 3}
+    storyAudioClip: {fileID: 0}
     portrait: {fileID: 0}
   - speakerName: Henry
     dialogueText: I did what was necessary.
     portraitName: H_Angry_EOMC
     sfxType: 0
     isRandomBark: 0
-    storyAudioClip: {fileID: 8300000, guid: c5611c3e022a90a45905c7a2c9b1142e, type: 3}
+    storyAudioClip: {fileID: 0}
     portrait: {fileID: 0}
   - speakerName: High Inquisitor
     dialogueText: You and that witch are a plague upon this land. By grand ducal
@@ -82,21 +82,21 @@ MonoBehaviour:
     portraitName: 
     sfxType: 0
     isRandomBark: 0
-    storyAudioClip: {fileID: 8300000, guid: c5611c3e022a90a45905c7a2c9b1142e, type: 3}
+    storyAudioClip: {fileID: 0}
     portrait: {fileID: 0}
   - speakerName: High Inquisitor
     dialogueText: Tear it down. And kill them both.
     portraitName: 
     sfxType: 0
     isRandomBark: 0
-    storyAudioClip: {fileID: 8300000, guid: c5611c3e022a90a45905c7a2c9b1142e, type: 3}
+    storyAudioClip: {fileID: 0}
     portrait: {fileID: 0}
   - speakerName: Henry
     dialogueText: Stop! Get away from it!
     portraitName: H_Apprehensive_EOMO
     sfxType: 0
     isRandomBark: 0
-    storyAudioClip: {fileID: 8300000, guid: c5611c3e022a90a45905c7a2c9b1142e, type: 3}
+    storyAudioClip: {fileID: 0}
     portrait: {fileID: 0}
   - speakerName: Emma
     dialogueText: Aaaahh!

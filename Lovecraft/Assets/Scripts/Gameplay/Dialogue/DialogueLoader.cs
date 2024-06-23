@@ -32,7 +32,8 @@ public class DialogueLoader : MonoBehaviour
                 line.portrait = Resources.Load<Sprite>("Portraits/" + line.portraitName);
                 if (!line.isRandomBark)
                 {
-                    line.storyAudioClip = Resources.Load<AudioClip>("StoryDialogue/" + line.storyAudioClip.name);
+                    if(line.storyAudioClip != null)
+                        line.storyAudioClip = Resources.Load<AudioClip>("StoryDialogue/" + line.storyAudioClip.name);
                 }
             }
             dialogues[dialogue.dialogueName] = dialogue;
