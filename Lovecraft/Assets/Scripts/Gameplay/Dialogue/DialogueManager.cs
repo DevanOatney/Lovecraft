@@ -12,6 +12,8 @@ public class DialogueManager : MonoBehaviour
     public Image portraitImageRef;
     public GameObject dialoguePanelRef;
     public Button nextLineButtonRef;
+    public List<Dialogue> StoryPoints = new List<Dialogue>();
+    public int CurrentStoryPointIndex = 0;
 
     private Queue<DialogueLine> dialogueLines;
 
@@ -29,6 +31,8 @@ public class DialogueManager : MonoBehaviour
             GameEventSystem.Instance.RegisterListener(GameEvent.TEST_DIALOGUE, OnTestDialogue);
             GameEventSystem.Instance.RegisterListener(GameEvent.CREATURE_SPAWNED_DIALOGUE_BARK, OnCreatureSpawnedDialogueBark);
             GameEventSystem.Instance.RegisterListener(GameEvent.GAME_OVER, OnGameOver);
+            GameEventSystem.Instance.RegisterListener(GameEvent.WAVE_COMPLETED, OnWaveComplete);
+            GameEventSystem.Instance.RegisterListener(GameEvent.GAME_STARTED, OnGameStart);
         }
         else
         {
@@ -41,6 +45,20 @@ public class DialogueManager : MonoBehaviour
         //Unregister all of the listeners...
         GameEventSystem.Instance.UnregisterListener(GameEvent.TEST_DIALOGUE, OnTestDialogue);
         GameEventSystem.Instance.UnregisterListener(GameEvent.CREATURE_SPAWNED_DIALOGUE_BARK, OnCreatureSpawnedDialogueBark);
+        GameEventSystem.Instance.UnregisterListener(GameEvent.WAVE_COMPLETED, OnWaveComplete);
+        GameEventSystem.Instance.UnregisterListener(GameEvent.GAME_STARTED, OnGameStart);
+    }
+
+    private void OnGameStart(object data)
+    {
+        CurrentStoryPointIndex = 0;
+        StartDialogue(StoryPoints[CurrentStoryPointIndex].dialogueName);
+    }
+
+    private void OnWaveComplete(object data)
+    {
+        CurrentStoryPointIndex++;
+        StartDialogue(StoryPoints[CurrentStoryPointIndex].dialogueName);
     }
 
     private void OnTestDialogue(object data)

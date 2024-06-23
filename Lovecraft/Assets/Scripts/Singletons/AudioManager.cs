@@ -23,7 +23,26 @@ public enum BGMType
 
 public class AudioManager : MonoBehaviour
 {
-    public static AudioManager Instance { get; private set; }
+    private static AudioManager _instance;
+    public static AudioManager Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = FindObjectOfType<AudioManager>();
+                if (_instance == null)
+                {
+                    GameObject audioManagerObject = new GameObject("AudioManager");
+                    _instance = audioManagerObject.AddComponent<AudioManager>();
+                    _instance.Initialize();
+                    DontDestroyOnLoad(audioManagerObject);
+                }
+            }
+            return _instance;
+        }
+        private set => _instance = value;
+    }
 
     private Dictionary<SFXType, List<AudioClip>> sfxClips = new Dictionary<SFXType, List<AudioClip>>();
     private Dictionary<BGMType, AudioClip> bgmClips = new Dictionary<BGMType, AudioClip>();
@@ -37,29 +56,33 @@ public class AudioManager : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance == null)
+        if (Instance == this)
         {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-
-            for (int i = 0; i < sfxSourcePoolSize; i++)
-            {
-                AudioSource sfxSource = gameObject.AddComponent<AudioSource>();
-                sfxSource.playOnAwake = false;
-                sfxSources.Add(sfxSource);
-            }
-
-            bgmSource = gameObject.AddComponent<AudioSource>();
-            bgmSource.playOnAwake = false;
-            bgmSource.loop = true;
-
-            LoadAudioClips<SFXType>(sfxPath, sfxClips);
-            LoadAudioClips<BGMType>(bgmPath, bgmClips);
+            Initialize();
         }
         else
         {
             Destroy(gameObject);
         }
+    }
+
+    private void Initialize()
+    {
+        if (sfxSources.Count > 0) return; // Already initialized
+
+        for (int i = 0; i < sfxSourcePoolSize; i++)
+        {
+            AudioSource sfxSource = gameObject.AddComponent<AudioSource>();
+            sfxSource.playOnAwake = false;
+            sfxSources.Add(sfxSource);
+        }
+
+        bgmSource = gameObject.AddComponent<AudioSource>();
+        bgmSource.playOnAwake = false;
+        bgmSource.loop = true;
+
+        LoadAudioClips<SFXType>(sfxPath, sfxClips);
+        LoadAudioClips<BGMType>(bgmPath, bgmClips);
     }
 
     private void LoadAudioClips<T>(string path, Dictionary<T, List<AudioClip>> clipDict) where T : System.Enum

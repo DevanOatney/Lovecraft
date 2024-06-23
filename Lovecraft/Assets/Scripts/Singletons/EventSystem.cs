@@ -17,6 +17,7 @@ public enum GameEvent
     DIALOGUE_COMPLETE,
     TEST_DIALOGUE,
     CREATURE_SPAWNED_DIALOGUE_BARK,
+    GAME_STARTED,
 }
 
 public class GameEventSystem : MonoBehaviour

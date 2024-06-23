@@ -7,6 +7,7 @@ public class GameplayController : MonoBehaviour
 {
     public Transform SelectedObject;
     public GameOverController GameOverScene;
+
     private Transform previewObject;
     private Vector3 originalScale;
 

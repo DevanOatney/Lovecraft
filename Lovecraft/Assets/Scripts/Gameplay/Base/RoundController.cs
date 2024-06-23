@@ -54,6 +54,7 @@ public class RoundController : MonoBehaviour
     {
         GameEventSystem.Instance.RegisterListener(GameEvent.PHASE_CHANGE, OnPhaseChange);
         GameEventSystem.Instance.RegisterListener(GameEvent.WAVE_COMPLETED, OnWaveCompleted);
+        GameEventSystem.Instance.TriggerEvent(GameEvent.GAME_STARTED);
         TriggerBuildPhase();
     }
 
