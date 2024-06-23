@@ -110,15 +110,18 @@ public class GameplayController : MonoBehaviour
                 if (Input.GetMouseButtonDown(0))
                 {
                     //if you can afford to build to building, remove the currency and build
-                    if (GameObject.FindObjectOfType<PlayerCurrencyController>().SpendBloodCurrency(SelectedObject.GetComponent<BuildingObject>().placementCost))
+                    if( GameObject.FindObjectOfType<PlayerCurrencyController>().Blood_Currency_Count >= SelectedObject.GetComponent<BuildingObject>().placementCost)
                     {
 
                         creationTimer = 0f;
-                        buildingGrid.CreateBuilding(SelectedObject, previewObject.rotation);
+                        if( buildingGrid.CreateBuilding(SelectedObject, previewObject.rotation) )
+                        {
+                            GameObject.FindObjectOfType<PlayerCurrencyController>().SpendBloodCurrency(SelectedObject.GetComponent<BuildingObject>().placementCost);
+                            GameEventSystem.Instance.TriggerEvent(GameEvent.BUILDING_OBJECT_PLACE, null);
+                        }
                         Destroy(previewObject.gameObject);
                         previewObject = null;
 
-                        GameEventSystem.Instance.TriggerEvent(GameEvent.BUILDING_OBJECT_PLACE, null);
                     }
                 }
             }
