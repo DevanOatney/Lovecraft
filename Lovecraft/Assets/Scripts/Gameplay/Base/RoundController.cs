@@ -34,6 +34,7 @@ public class RoundController : MonoBehaviour
     }
     #endregion
 
+    [SerializeField] private GameSate gameState = GameSate.BUILD_PHASE;
     [SerializeField] private bool allowTimedPhases = false;
     [SerializeField] private RectTransform phaseClockHand;
     [SerializeField] private float timeForEachRound = 45f;
@@ -45,7 +46,7 @@ public class RoundController : MonoBehaviour
     [SerializeField] private List<WaveManager> waveManagers;
 
     private float roundTimerBucket = 0f;
-    private GameSate gameState = GameSate.BUILD_PHASE;
+    
     private int currentWaveIndex = 0;
     private bool isSceneInitialized = false;
 
@@ -53,6 +54,7 @@ public class RoundController : MonoBehaviour
     {
         GameEventSystem.Instance.RegisterListener(GameEvent.PHASE_CHANGE, OnPhaseChange);
         GameEventSystem.Instance.RegisterListener(GameEvent.WAVE_COMPLETED, OnWaveCompleted);
+        TriggerBuildPhase();
     }
 
     private void OnDestroy()

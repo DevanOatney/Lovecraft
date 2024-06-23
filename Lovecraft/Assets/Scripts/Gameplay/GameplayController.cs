@@ -83,6 +83,9 @@ public class GameplayController : MonoBehaviour
         // Set the preview object to be transparent
         SetPreviewObjectTransparency(previewObject, 0.5f);
 
+        previewObject.GetComponent<UnityEngine.AI.NavMeshObstacle>().enabled = false;
+        previewObject.GetComponentInChildren<BoxCollider>().enabled = false;
+
         // Add LineRenderer to the preview object for the arrow
         lineRenderer = previewObject.gameObject.AddComponent<LineRenderer>();
         lineRenderer.startWidth = 0.1f;
