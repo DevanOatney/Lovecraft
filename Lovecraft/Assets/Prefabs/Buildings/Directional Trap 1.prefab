@@ -159,6 +159,7 @@ MonoBehaviour:
   FiringFrequency: 1
   MovementSpeedAdjuster: 0
   IsInPreviewMode: 0
+  placementCost: 2
 --- !u!208 &-1237341523593231900
 NavMeshObstacle:
   m_ObjectHideFlags: 0

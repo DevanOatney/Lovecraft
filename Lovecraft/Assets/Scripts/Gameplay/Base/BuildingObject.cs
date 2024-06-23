@@ -15,6 +15,8 @@ public class BuildingObject : MonoBehaviour
 
     private Collider buildingCollider;
 
+    public int placementCost = 0;
+
     public void Awake()
     {
         buildingCollider = GetComponentInChildren<Collider>();

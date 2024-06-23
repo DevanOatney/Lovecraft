@@ -7,6 +7,10 @@ TagManager:
   - Ground
   - Enemy
   - CostTMPPurchaseIndicator
+  - SlowTrap
+  - FlashTrap
+  - StunTrap
+  - TurretTrap
   layers:
   - Default
   - TransparentFX
