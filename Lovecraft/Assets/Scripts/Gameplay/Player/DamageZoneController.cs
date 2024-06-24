@@ -28,7 +28,6 @@ public class DamageZoneController : MonoBehaviour
     {
         if ((InteractionWithUnitsOnLayer & (1 << other.gameObject.layer)) != 0)
         {
-            Debug.Log("Damage : " + other.name);
             EnemyAI eAI = other.GetComponent<EnemyAI>();
             if( eAI != null )
             {

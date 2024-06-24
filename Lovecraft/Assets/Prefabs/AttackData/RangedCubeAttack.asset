@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fb35d27866b28648abad7142e6b2725, type: 3}
+  m_Name: RangedCubeAttack
+  m_EditorClassIdentifier: 
+  telegraphDuration: 2
+  attackDuration: 1
+  recoveryDuration: 4
+  damageToDeal: 5
+  isChargeAttack: 0
+  isProjectileAttack: 0
+  Telegraph: {fileID: 6088963278582102181, guid: 33d86d8534480d24e827d4849719adc6, type: 3}
+  ProjectilePrefab: {fileID: 0}

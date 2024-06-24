@@ -26,12 +26,12 @@ public class BuildingObjectSelfDestruct : MonoBehaviour
         {
             lifetimebucket += Time.deltaTime;
 
-            float newLifetime = AbilityUpgradesManager.Instance.AbilityUpgrades[Abilities.TRAP_DURATION].GetModifiedValue(lifetime);
-
-            if( lifetimebucket >= newLifetime)
-            {
-                ActivateSelfDestruct();
-            }
+            //float newLifetime = AbilityUpgradesManager.Instance.AbilityUpgrades[Abilities.TRAP_DURATION].GetModifiedValue(lifetime);
+            //
+            //if( lifetimebucket >= newLifetime)
+            //{
+            //    ActivateSelfDestruct();
+            //}
         }
     }
 

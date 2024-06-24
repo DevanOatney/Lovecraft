@@ -20,4 +20,5 @@ public class Dialogue : ScriptableObject
 {
     public string dialogueName;
     public List<DialogueLine> lines;
+    public UnityEngine.Events.UnityEvent OnCompletion;
 }

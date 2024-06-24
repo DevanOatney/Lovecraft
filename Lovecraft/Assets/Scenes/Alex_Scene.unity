@@ -300,6 +300,8 @@ MonoBehaviour:
   HealthBar: {fileID: 0}
   bloodSplatterBase: {fileID: 0}
   enemyAttack: {fileID: 0}
+  SpeechBubbleRef: {fileID: 0}
+  SpeechBubbleTextRef: {fileID: 0}
 --- !u!195 &19725074
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1042,7 +1044,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4202455940266410065, guid: f35565ad336ba8d47b7204b1a2c5a761, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: f35565ad336ba8d47b7204b1a2c5a761, type: 3}
 --- !u!1001 &295943464
 PrefabInstance:
@@ -1989,6 +1994,8 @@ MonoBehaviour:
   HealthBar: {fileID: 0}
   bloodSplatterBase: {fileID: 0}
   enemyAttack: {fileID: 0}
+  SpeechBubbleRef: {fileID: 0}
+  SpeechBubbleTextRef: {fileID: 0}
 --- !u!195 &543883839
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2280,17 +2287,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69a8ac804f78d284aa25ae923c2a182e, type: 3}
---- !u!114 &619964462 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6147056304947906270, guid: 337ac67ce67d95b409c57d9bd53cd2b1, type: 3}
-  m_PrefabInstance: {fileID: 6823203816225378923}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79de2c39c5a1e4f46bb0fb5488f2ad8b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &620320453
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2609,6 +2605,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 83fe8592a6f73c444886f2c831d65f7c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2095318808}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 83fe8592a6f73c444886f2c831d65f7c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2095318814}
   m_SourcePrefab: {fileID: 100100000, guid: 83fe8592a6f73c444886f2c831d65f7c, type: 3}
 --- !u!1001 &685928627
 PrefabInstance:
@@ -3014,6 +3013,8 @@ MonoBehaviour:
   HealthBar: {fileID: 0}
   bloodSplatterBase: {fileID: 0}
   enemyAttack: {fileID: 0}
+  SpeechBubbleRef: {fileID: 0}
+  SpeechBubbleTextRef: {fileID: 0}
 --- !u!195 &779884102
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -6056,6 +6057,8 @@ MonoBehaviour:
   HealthBar: {fileID: 0}
   bloodSplatterBase: {fileID: 0}
   enemyAttack: {fileID: 0}
+  SpeechBubbleRef: {fileID: 0}
+  SpeechBubbleTextRef: {fileID: 0}
 --- !u!195 &1613734569
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -6378,6 +6381,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SelectedObject: {fileID: 0}
+  GameOverScene: {fileID: 0}
 --- !u!4 &1804506408
 Transform:
   m_ObjectHideFlags: 0
@@ -6561,6 +6565,8 @@ MonoBehaviour:
   HealthBar: {fileID: 0}
   bloodSplatterBase: {fileID: 0}
   enemyAttack: {fileID: 0}
+  SpeechBubbleRef: {fileID: 0}
+  SpeechBubbleTextRef: {fileID: 0}
 --- !u!195 &1857121568
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -7148,6 +7154,8 @@ MonoBehaviour:
   HealthBar: {fileID: 0}
   bloodSplatterBase: {fileID: 0}
   enemyAttack: {fileID: 0}
+  SpeechBubbleRef: {fileID: 0}
+  SpeechBubbleTextRef: {fileID: 0}
 --- !u!195 &1989591912
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -7380,6 +7388,8 @@ MonoBehaviour:
   HealthBar: {fileID: 0}
   bloodSplatterBase: {fileID: 0}
   enemyAttack: {fileID: 0}
+  SpeechBubbleRef: {fileID: 0}
+  SpeechBubbleTextRef: {fileID: 0}
 --- !u!195 &2044101756
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -7680,6 +7690,20 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 83fe8592a6f73c444886f2c831d65f7c, type: 3}
   m_PrefabInstance: {fileID: 681851086}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2095318814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2095318804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e59ae36c4f8035048846dc379487603b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  TreeHealthImage: {fileID: 0}
 --- !u!1001 &5298261354402475771
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7756,7 +7780,7 @@ PrefabInstance:
     - target: {fileID: 1010610231879200054, guid: 1a34a64cec2557c468f3bacc3c7bc0a7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 619964462}
+      objectReference: {fileID: 0}
     - target: {fileID: 5303415635674005386, guid: 1a34a64cec2557c468f3bacc3c7bc0a7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 41.727463
@@ -7810,6 +7834,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 156108534292994870, guid: 337ac67ce67d95b409c57d9bd53cd2b1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.000002861023
+      objectReference: {fileID: 0}
+    - target: {fileID: 156108534292994870, guid: 337ac67ce67d95b409c57d9bd53cd2b1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 14.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 156108534292994870, guid: 337ac67ce67d95b409c57d9bd53cd2b1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -14.200002
+      objectReference: {fileID: 0}
+    - target: {fileID: 156108534292994870, guid: 337ac67ce67d95b409c57d9bd53cd2b1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.00931865
+      objectReference: {fileID: 0}
+    - target: {fileID: 156108534292994870, guid: 337ac67ce67d95b409c57d9bd53cd2b1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.0033811629
+      objectReference: {fileID: 0}
     - target: {fileID: 1821844674282759311, guid: 337ac67ce67d95b409c57d9bd53cd2b1, type: 3}
       propertyPath: m_Name
       value: Player
@@ -7818,6 +7862,26 @@ PrefabInstance:
       propertyPath: dashCooldownIndicator
       value: 
       objectReference: {fileID: 729199226}
+    - target: {fileID: 8585870232659736567, guid: 337ac67ce67d95b409c57d9bd53cd2b1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.000002861023
+      objectReference: {fileID: 0}
+    - target: {fileID: 8585870232659736567, guid: 337ac67ce67d95b409c57d9bd53cd2b1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 14.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8585870232659736567, guid: 337ac67ce67d95b409c57d9bd53cd2b1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -14.200002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8585870232659736567, guid: 337ac67ce67d95b409c57d9bd53cd2b1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.00931865
+      objectReference: {fileID: 0}
+    - target: {fileID: 8585870232659736567, guid: 337ac67ce67d95b409c57d9bd53cd2b1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.0033811629
+      objectReference: {fileID: 0}
     - target: {fileID: 9222016085877644315, guid: 337ac67ce67d95b409c57d9bd53cd2b1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.87

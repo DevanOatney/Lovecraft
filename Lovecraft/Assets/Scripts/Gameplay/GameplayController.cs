@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using Unity.AI.Navigation;
 using UnityEngine;
 
@@ -7,6 +5,7 @@ public class GameplayController : MonoBehaviour
 {
     public Transform SelectedObject;
     public GameOverController GameOverScene;
+
     private Transform previewObject;
     private Vector3 originalScale;
 
@@ -47,12 +46,15 @@ public class GameplayController : MonoBehaviour
         GameEventSystem.Instance.RegisterListener(GameEvent.BUILDING_OBJECT_SELECTED, OnBuildingObjectSelected);
         GameEventSystem.Instance.RegisterListener(GameEvent.PLAYER_KILLED, OnPlayerKilled);
         GameEventSystem.Instance.RegisterListener(GameEvent.DIALOGUE_COMPLETE, OnDialogueComplete);
+        GameEventSystem.Instance.RegisterListener(GameEvent.TREE_DESTROYED, OnTreeDestroyed);
     }
 
     private void UnregisterEventsToListenTo()
     {
         GameEventSystem.Instance.UnregisterListener(GameEvent.BUILDING_OBJECT_SELECTED, OnBuildingObjectSelected);
         GameEventSystem.Instance.UnregisterListener(GameEvent.PLAYER_KILLED, OnPlayerKilled);
+        GameEventSystem.Instance.UnregisterListener(GameEvent.DIALOGUE_COMPLETE, OnDialogueComplete);
+        GameEventSystem.Instance.UnregisterListener(GameEvent.TREE_DESTROYED, OnTreeDestroyed);
     }
 
     private void OnBuildingObjectSelected(object obj)
@@ -83,6 +85,11 @@ public class GameplayController : MonoBehaviour
         // Set the preview object to be transparent
         SetPreviewObjectTransparency(previewObject, 0.5f);
 
+        if (previewObject.GetComponent<UnityEngine.AI.NavMeshObstacle>() != null) {
+            previewObject.GetComponent<UnityEngine.AI.NavMeshObstacle>().enabled = false;
+        }
+        previewObject.GetComponentInChildren<BoxCollider>().enabled = false;
+
         // Add LineRenderer to the preview object for the arrow
         lineRenderer = previewObject.gameObject.AddComponent<LineRenderer>();
         lineRenderer.startWidth = 0.1f;
@@ -105,12 +112,20 @@ public class GameplayController : MonoBehaviour
             {
                 if (Input.GetMouseButtonDown(0))
                 {
-                    creationTimer = 0f;
-                    buildingGrid.CreateBuilding(SelectedObject, previewObject.rotation);
-                    Destroy(previewObject.gameObject);
-                    previewObject = null;
+                    //if you can afford to build to building, remove the currency and build
+                    if( GameObject.FindObjectOfType<PlayerCurrencyController>().Blood_Currency_Count >= SelectedObject.GetComponent<BuildingObject>().placementCost)
+                    {
 
-                    GameEventSystem.Instance.TriggerEvent(GameEvent.BUILDING_OBJECT_PLACE, null);
+                        creationTimer = 0f;
+                        if( buildingGrid.CreateBuilding(SelectedObject, previewObject.rotation) )
+                        {
+                            GameObject.FindObjectOfType<PlayerCurrencyController>().SpendBloodCurrency(SelectedObject.GetComponent<BuildingObject>().placementCost);
+                            GameEventSystem.Instance.TriggerEvent(GameEvent.BUILDING_OBJECT_PLACE, null);
+                        }
+                        Destroy(previewObject.gameObject);
+                        previewObject = null;
+
+                    }
                 }
             }
             else
@@ -183,11 +198,21 @@ public class GameplayController : MonoBehaviour
         waitingForGameOver = true;
     }
 
+    private void OnTreeDestroyed(object data)
+    {
+        Time.timeScale = 0f;
+        Time.timeScale = 0f;
+        GameOverScene.gameObject.SetActive(true);
+        waitingForGameOver = true;
+        waitingForGameOver = true;
+    }
+
     private void OnDialogueComplete(object data)
     {
         if (waitingForGameOver)
         {
-            SceneManager.Instance.ReloadCurrentScene();
+            waitingForGameOver = false;
+            SceneManager.Instance.BackToMainMenu();
         }
     }
 }

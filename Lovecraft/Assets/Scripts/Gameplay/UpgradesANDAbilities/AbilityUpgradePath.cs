@@ -12,7 +12,8 @@ public enum Abilities
     TRAP_COOLDOWN,
     BLOODLETTING,
     TRAP_DURATION,
-    TRAP_EFFECTIVENESS
+    TRAP_EFFECTIVENESS,
+    HP_INCREASE,
 } 
 
 [Serializable]
@@ -30,6 +31,7 @@ public class AbilityUpgradePath : MonoBehaviour
     public float undefinedUpgradeModifier; // this is only used if we dont have a predefined upgrade path
     public int currentAbilityLevel = 0;
     public GameObject purchaseIndicator;
+    public bool isDirty = false;
 
     // UI Connections
     [SerializeField] private TMP_Text uiLevel;
@@ -88,6 +90,7 @@ public class AbilityUpgradePath : MonoBehaviour
                 uiCost.text = (currentAbilityLevel * 10).ToString();
                 currentCost = currentAbilityLevel * 10;
             }
+            isDirty = true;
         } else
         {
             purchaseIndicator.GetComponent<TMP_Text>().text = "Anemic - not enough blood";

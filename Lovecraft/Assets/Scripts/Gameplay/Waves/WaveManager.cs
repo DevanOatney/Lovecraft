@@ -86,7 +86,7 @@ public class WaveManager : MonoBehaviour
         {
             if (enemiesAlive <= 0 && !waveInProgress)
             {
-                GameEventSystem.Instance.TriggerEvent(GameEvent.WAVE_COMPLETED, null);
+                GameEventSystem.Instance.TriggerEvent(GameEvent.WAVE_COMPLETED);
                 yield break;
             }
             yield return new WaitForSeconds(checkInterval);

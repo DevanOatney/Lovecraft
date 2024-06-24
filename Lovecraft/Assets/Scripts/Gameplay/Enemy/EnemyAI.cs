@@ -1,8 +1,11 @@
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using System.Linq;
+using JetBrains.Annotations;
 
 public class EnemyAI : MonoBehaviour
 {
@@ -13,10 +16,20 @@ public class EnemyAI : MonoBehaviour
         FocusPlayer
     }
 
+    public enum EnemyType
+    {
+        Regular,
+        Spawning
+    }
+
+    public EnemyType enemyType; // The type of this enemy
+    public GameObject spawnPrefab; // Prefab for the enemies to spawn
+    public int numberOfSpawns = 3; // Number of enemies to spawn
+
     public Tactic enemyTactic; // The tactic this enemy will use
     public Transform treeTarget; // The target object (tree)
     public Transform playerTarget; // The player object
-    public float attackRange = 5f; // Range within which the enemy can attack
+    public float attackRange = 1f; // Range within which the enemy can attack
     public float playerChaseRange = 10f; // Range within which the enemy will chase the player
     public float playerChaseReturnRange = 15f; // Range beyond which the enemy will stop chasing the player
     public Transform waypointRoot; // Root object for waypoints
@@ -44,6 +57,26 @@ public class EnemyAI : MonoBehaviour
 
     private Dictionary<GameObject, float> adjustments = new Dictionary<GameObject, float>();
 
+    private bool isLaunched = false;
+    private bool isFrozen = false;
+    private bool isStunned = false;
+    private bool isCharmed = false;
+
+    public bool isImmuneToLaunched = false;
+    public bool isImmuneToFrozen = false;
+    public bool isImmuneToStunned = false;
+    public bool isImmuneToCharmed = false;
+    public bool wasSpawned = false;
+
+    private float freezeTimeout = 0f;
+    private float stunTimeout = 0f;
+    private float launchTimeout = 0f;
+    private float launchTimer = 0f;
+    private float freezeTimer = 0f;
+    private float stunTimer = 0f;
+
+    public string TargetTag = "Player";
+
     void Start()
     {
         SpeechBubbleRef.SetActive(false);
@@ -67,6 +100,46 @@ public class EnemyAI : MonoBehaviour
 
     void Update()
     {
+        if (isLaunched)
+        {
+            if (agent.enabled)
+            {
+                agent.enabled = false;
+            }
+            return;
+        }
+
+        if (isFrozen)
+        {
+            freezeTimer += Time.deltaTime;
+            if (freezeTimer >= freezeTimeout)
+            {
+                isFrozen = false;
+                freezeTimer = 0f;
+                UnlockMovement();
+            }
+            return;
+        }
+
+        if (isStunned)
+        {
+            stunTimer += Time.deltaTime;
+            if (stunTimer >= stunTimeout)
+            {
+                isStunned = false;
+                stunTimer = 0f;
+                UnlockMovement();
+            }
+            return;
+        }
+
+        if (isCharmed)
+        {
+            AcquireCharmedTarget();
+            if (playerTarget == null)
+                return;
+        }
+
         if (attackHandler.IsAttacking() || RoundController.Instance.IsSceneInitialized() == false)
         {
             //probably don't need to do anything here but.. /shrug
@@ -81,6 +154,13 @@ public class EnemyAI : MonoBehaviour
         {
             GameEventSystem.Instance.TriggerEvent(GameEvent.CREATURE_SPAWNED_DIALOGUE_BARK, this);
         }
+    }
+
+    private void UnlockMovement()
+    {
+        if (isLaunched || isFrozen || isStunned)
+            return;
+        agent.isStopped = false;
     }
 
     void HandleMovement()
@@ -125,14 +205,14 @@ public class EnemyAI : MonoBehaviour
 
     void HandleFocusTree(float distanceToTree)
     {
-        if (distanceToTree <= attackRange)
+        if (distanceToTree <= 0.5f)
         {
             agent.isStopped = true;
             attackHandler.AttackTree(treeTarget, enemyAttack.damageToDeal);
         }
         else
         {
-            agent.isStopped = false;
+            UnlockMovement();
             if (agent.remainingDistance <= agent.stoppingDistance)
             {
                 PickNextWaypointOrTree();
@@ -147,6 +227,7 @@ public class EnemyAI : MonoBehaviour
             if (distanceToPlayer > playerChaseReturnRange)
             {
                 attackingPlayer = false;
+                UnlockMovement();
                 PickRandomTreePosition();
                 MoveToTarget(currentTreePosition);
             }
@@ -157,7 +238,7 @@ public class EnemyAI : MonoBehaviour
             }
             else
             {
-                agent.isStopped = false;
+                UnlockMovement();
                 MoveToTarget(playerTarget);
             }
         }
@@ -168,14 +249,14 @@ public class EnemyAI : MonoBehaviour
                 attackingPlayer = true;
                 MoveToTarget(playerTarget);
             }
-            else if (distanceToTree <= attackRange)
+            else if (distanceToTree <= 0.5f)
             {
                 agent.isStopped = true;
                 attackHandler.AttackTree(treeTarget, enemyAttack.damageToDeal);
             }
             else
             {
-                agent.isStopped = false;
+                UnlockMovement();
                 if (agent.remainingDistance <= agent.stoppingDistance)
                 {
                     PickNextWaypointOrTree();
@@ -193,7 +274,7 @@ public class EnemyAI : MonoBehaviour
         }
         else
         {
-            agent.isStopped = false;
+            UnlockMovement();
             MoveToTarget(playerTarget);
         }
     }
@@ -243,12 +324,11 @@ public class EnemyAI : MonoBehaviour
 
     public void OnAttackComplete()
     {
-        agent.isStopped = false;
+        UnlockMovement();
     }
 
     public void TakeDamage(float damageToTake)
     {
-
         audioSource.PlayOneShot(hitSFXList[Random.Range(0, hitSFXList.Count)]);
 
         if (IsDying)
@@ -258,7 +338,7 @@ public class EnemyAI : MonoBehaviour
 
         if (HealthBar != null)
         {
-            HealthBar.fillAmount =  HP / MaxHP;
+            HealthBar.fillAmount = HP / MaxHP;
         }
 
         if (HP <= 0)
@@ -270,9 +350,11 @@ public class EnemyAI : MonoBehaviour
 
     private void StartDying()
     {
-        //Play animations?
-        //Sink into the ground?
-        //Spawn resources/loot?
+        if (enemyType == EnemyType.Spawning)
+        {
+            SpawnEnemies();
+        }
+
         GameObject obj = Instantiate(bloodSplatterBase, new Vector3(transform.position.x, 0.51f, transform.position.z), Quaternion.identity);
         obj.transform.Rotate(90, Random.Range(0, 359), 0);
 
@@ -284,8 +366,43 @@ public class EnemyAI : MonoBehaviour
 
     private void FinishDying()
     {
-        GameEventSystem.Instance.TriggerEvent(GameEvent.ENEMY_KILLED);
+        if(wasSpawned == false)
+            GameEventSystem.Instance.TriggerEvent(GameEvent.ENEMY_KILLED);
+
         Destroy(this.gameObject);
+    }
+
+    private void SpawnEnemies()
+    {
+        for (int i = 0; i < numberOfSpawns; i++)
+        {
+            Vector3 spawnPosition = GetValidSpawnPosition();
+            if (spawnPosition != Vector3.zero)
+            {
+                GameObject spawnedEnemy = Instantiate(spawnPrefab, spawnPosition, Quaternion.identity);
+                EnemyAI spawnedAI = spawnedEnemy.GetComponent<EnemyAI>();
+                if (spawnedAI != null)
+                {
+                    spawnedAI.wasSpawned = true;
+                    spawnedAI.enemyTactic = Tactic.FocusPlayer;
+                }
+            }
+        }
+    }
+
+    private Vector3 GetValidSpawnPosition()
+    {
+        for (int attempts = 0; attempts < 10; attempts++)
+        {
+            Vector3 randomDirection = Random.insideUnitSphere * 3; // Adjust radius as needed
+            randomDirection += transform.position;
+            NavMeshHit hit;
+            if (NavMesh.SamplePosition(randomDirection, out hit, 1.0f, NavMesh.AllAreas))
+            {
+                return hit.position;
+            }
+        }
+        return Vector3.zero;
     }
 
     void PopulateWaypoints()
@@ -306,7 +423,7 @@ public class EnemyAI : MonoBehaviour
 
     public void AddAdjuster(GameObject adjuster, float adjustment)
     {
-        if(adjustments.ContainsKey(adjuster))
+        if (adjustments.ContainsKey(adjuster))
             adjustments.Remove(adjuster);
         adjustments.Add(adjuster, adjustment);
     }
@@ -314,6 +431,115 @@ public class EnemyAI : MonoBehaviour
     public void RemoveAdjuster(GameObject adjuster)
     {
         adjustments.Remove(adjuster);
+    }
+
+    public void HandleLaunch(Quaternion direction, float launchSpeed)
+    {
+        if (isImmuneToLaunched)
+            return;
+
+        isLaunched = true;
+        agent.enabled = false;
+        Rigidbody rb = GetComponent<Rigidbody>();
+        if (rb != null)
+        {
+            rb.isKinematic = false;
+            rb.AddForce((direction * Vector3.forward + Vector3.up * 0.5f) * launchSpeed, ForceMode.Impulse);
+        }
+
+        StartCoroutine(CheckLanding());
+    }
+
+    private IEnumerator CheckLanding()
+    {
+        while (!agent.enabled)
+        {
+            launchTimer += Time.deltaTime;
+
+            if (launchTimer >= launchTimeout)
+            {
+                TakeDamage(HP); // Treat it as if the enemy died
+                yield break;
+            }
+
+            if (IsGrounded())
+            {
+                yield return new WaitForSeconds(0.5f); // Give some time to fully settle on the ground
+                agent.enabled = true;
+                isLaunched = false;
+                Rigidbody rb = GetComponent<Rigidbody>();
+                if (rb != null)
+                {
+                    rb.isKinematic = true;
+                    CorrectOrientation(); // Correct the orientation after landing
+                }
+
+                if (!agent.isOnNavMesh || !agent.CalculatePath(treeTarget.position, new NavMeshPath()))
+                {
+                    TakeDamage(HP); // Treat it as if the enemy died
+                }
+            }
+            yield return null;
+        }
+    }
+
+    private void CorrectOrientation()
+    {
+        transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
+    }
+
+    private bool IsGrounded()
+    {
+        return Physics.Raycast(transform.position, Vector3.down, 1f, LayerMask.GetMask("Ground"));
+    }
+
+    public void Freeze(float duration)
+    {
+        if (isImmuneToFrozen)
+            return;
+
+        isFrozen = true;
+        freezeTimeout = duration;
+        agent.isStopped = true;
+    }
+
+    public void Stun(float duration)
+    {
+        if (isImmuneToStunned)
+            return;
+        isStunned = true;
+        stunTimeout = duration;
+        agent.isStopped = true;
+        // Stop attacking
+        attackHandler.CancelAttack();
+    }
+
+    public void Charm()
+    {
+        if (isImmuneToCharmed)
+            return; 
+
+        isCharmed = true;
+        // Logic to switch the enemy to attack other enemies
+        enemyTactic = Tactic.FocusPlayer; // Assuming FocusPlayer targets other enemies
+        playerTarget = null; // Remove the player target to avoid confusion
+        TargetTag = "Enemy";
+        AcquireCharmedTarget();
+    }
+
+    private void AcquireCharmedTarget()
+    {
+        if (playerTarget == null)
+        {
+            var enemies = GameObject.FindObjectsOfType<EnemyAI>();
+
+            if (enemies != null && enemies.Count() > 0)
+            {
+                if (enemies.Count() == 1 && enemies[0] == this)
+                    return;
+                playerTarget = enemies[Random.Range(0, enemies.Count() - 1)].transform;
+            }
+        }
     }
 
     public void OnSpeechBubble(string dialogueLine, SFXType sfxType)

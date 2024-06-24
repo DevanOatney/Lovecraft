@@ -46,7 +46,7 @@ public class GridTest : MonoBehaviour
         }
     }
 
-    public void CreateBuilding(Transform buildingToCreate, Quaternion rotation)
+    public bool CreateBuilding(Transform buildingToCreate, Quaternion rotation)
     {
         Vector3 mousePosition = GetMouseWorldPosition();
         var bNode = grid.GetValue(mousePosition);
@@ -62,9 +62,11 @@ public class GridTest : MonoBehaviour
                 buildingObject.ParentNode = bNode;
                 buildingObject.DirectionToFire = rotation;
             }
+            return true;
 
            // GameObject.FindObjectOfType<NavMeshSurface>().BuildNavMesh();
         }
+        return false;
     }
 
     public Vector3 GetBuildingPositionFromGrid()

@@ -77,3 +77,11 @@ crashlytics-build.properties
 *.cache
 *.cache
 /Lovecraft/obj/Debug
+Lovecraft/ProjectSettings/Packages/com.unity.probuilder/Settings.json
+Lovecraft/UserSettings/EditorUserSettings.asset
+Lovecraft/UserSettings/Layouts/default-2022.dwlt
+Lovecraft/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+Lovecraft/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+Lovecraft/ProjectSettings/Packages/com.unity.probuilder/Settings.json
+Lovecraft/UserSettings/EditorUserSettings.asset
+/Lovecraft/Builds

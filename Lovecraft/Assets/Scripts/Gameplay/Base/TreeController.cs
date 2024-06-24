@@ -27,6 +27,7 @@ public class TreeController : MonoBehaviour
     void Die()
     {
         // Implement what happens when the tree is destroyed
+        GameEventSystem.Instance.TriggerEvent(GameEvent.TREE_DESTROYED);
         Debug.Log("Tree destroyed!");
     }
 }

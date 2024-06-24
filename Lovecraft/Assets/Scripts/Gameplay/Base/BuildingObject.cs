@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class BuildingObject : MonoBehaviour
 {
+    public enum BuildingType { ProjectileShooter, Trap, FreezeTrap, StunTrap, CharmTrap }
+    public BuildingType buildingType = BuildingType.ProjectileShooter;
+
     public Quaternion DirectionToFire = Quaternion.identity;
     public BuildingNode ParentNode = null;
     public GameObject ProjectilePrefab = null;
@@ -10,10 +13,15 @@ public class BuildingObject : MonoBehaviour
     public float FiringFrequency = 1f;
     private float FiringTimer = 0.0f;
 
+    public float TrapCooldown = 1f; // Cooldown for the trap
+    private float TrapTimer = 0.0f;
+
     public float MovementSpeedAdjuster = 0f;
     public bool IsInPreviewMode = false;
 
     private Collider buildingCollider;
+
+    public int placementCost = 0;
 
     public void Awake()
     {
@@ -25,16 +33,28 @@ public class BuildingObject : MonoBehaviour
         if (!IsInPreviewMode)
         {
             float modifier = AbilityUpgradesManager.Instance.AbilityUpgrades[Abilities.TRAP_COOLDOWN].GetModifiedValue(FiringFrequency);
-            Debug.Log(modifier);
-            if (FiringTimer >= FiringFrequency)
+
+            if (buildingType == BuildingType.ProjectileShooter)
             {
-                FiringTimer = 0.0f;
-                FireProjectile();
+                HandleProjectileShooter();
             }
             else
             {
-                FiringTimer += Time.deltaTime;
+                HandleTrap();
             }
+        }
+    }
+
+    private void HandleProjectileShooter()
+    {
+        if (FiringTimer >= FiringFrequency)
+        {
+            FiringTimer = 0.0f;
+            FireProjectile();
+        }
+        else
+        {
+            FiringTimer += Time.deltaTime;
         }
     }
 
@@ -57,11 +77,41 @@ public class BuildingObject : MonoBehaviour
         }
     }
 
+    private void HandleTrap()
+    {
+        if (TrapTimer < TrapCooldown)
+        {
+            TrapTimer += Time.deltaTime;
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
+        if (TrapTimer >= TrapCooldown && other.CompareTag("Enemy"))
+        {
+            if (buildingType == BuildingType.Trap)
+            {
+                LaunchEnemy(other);
+            }
+            else if (buildingType == BuildingType.FreezeTrap)
+            {
+                FreezeEnemy(other);
+            }
+            else if (buildingType == BuildingType.StunTrap)
+            {
+                StunEnemy(other);
+            }
+            else if (buildingType == BuildingType.CharmTrap)
+            {
+                CharmEnemy(other);
+            }
+
+            TrapTimer = 0.0f; // Reset the cooldown timer
+        }
+
         if (MovementSpeedAdjuster != 0f && other.CompareTag("Enemy"))
         {
-            //Adjust movement speed
+            // Adjust movement speed
             EnemyAI eAi = other.GetComponent<EnemyAI>();
             if (eAi != null)
             {
@@ -76,10 +126,46 @@ public class BuildingObject : MonoBehaviour
         {
             // Return enemy movement rate to normal
             EnemyAI eAi = other.GetComponent<EnemyAI>();
-            if(eAi != null)
+            if (eAi != null)
             {
                 eAi.RemoveAdjuster(this.gameObject);
             }
+        }
+    }
+
+    private void LaunchEnemy(Collider enemy)
+    {
+        EnemyAI enemyAI = enemy.GetComponent<EnemyAI>();
+        if (enemyAI != null)
+        {
+            enemyAI.HandleLaunch(DirectionToFire, ProjectileSpeed);
+        }
+    }
+
+    private void FreezeEnemy(Collider enemy)
+    {
+        EnemyAI enemyAI = enemy.GetComponent<EnemyAI>();
+        if (enemyAI != null)
+        {
+            enemyAI.Freeze(TrapCooldown * 0.5f);
+        }
+    }
+
+    private void StunEnemy(Collider enemy)
+    {
+        EnemyAI enemyAI = enemy.GetComponent<EnemyAI>();
+        if (enemyAI != null)
+        {
+            enemyAI.Stun(TrapCooldown * 0.5f);
+        }
+    }
+
+    private void CharmEnemy(Collider enemy)
+    {
+        EnemyAI enemyAI = enemy.GetComponent<EnemyAI>();
+        if (enemyAI != null)
+        {
+            enemyAI.Charm();
         }
     }
 }

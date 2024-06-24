@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 714837343987430492}
   m_Layer: 0
   m_Name: Directional Trap
-  m_TagString: Untagged
+  m_TagString: TurretTrap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -159,6 +159,7 @@ MonoBehaviour:
   FiringFrequency: 1
   MovementSpeedAdjuster: 0
   IsInPreviewMode: 0
+  placementCost: 3
 --- !u!208 &-1237341523593231900
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -190,6 +191,7 @@ MonoBehaviour:
   isTimedSelfDestruct: 0
   lifetime: 3
   isCollisionSelfDestruct: 0
+  isTimedAfterCollisionSelfDestruct: 0
 --- !u!1 &9202142574802977035
 GameObject:
   m_ObjectHideFlags: 0

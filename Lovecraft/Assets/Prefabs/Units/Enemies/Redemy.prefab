@@ -406,7 +406,7 @@ MonoBehaviour:
   enemyTactic: 1
   treeTarget: {fileID: 0}
   playerTarget: {fileID: 0}
-  attackRange: 5
+  attackRange: 3
   playerChaseRange: 10
   playerChaseReturnRange: 15
   waypointRoot: {fileID: 0}
@@ -442,6 +442,7 @@ MonoBehaviour:
   telegraphDuration: 1
   attackDuration: 0.5
   recoveryDuration: 1
+  attackRange: 3
 --- !u!54 &1671639145545408312
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -464,7 +465,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
