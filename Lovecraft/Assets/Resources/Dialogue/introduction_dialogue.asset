@@ -16,7 +16,7 @@ MonoBehaviour:
   lines:
   - speakerName: Emma
     dialogueText: Henry... I'm tired.
-    portraitName: 
+    portraitName: alice_portrait
     sfxType: 0
     isRandomBark: 0
     storyAudioClip: {fileID: 8300000, guid: 10dabffe88b1c424fbd89421c7f4dea9, type: 3}
@@ -24,7 +24,7 @@ MonoBehaviour:
   - speakerName: Henry
     dialogueText: "I know, my love but you must keep fighting. Things will be better
       soon. You\u2019ll see."
-    portraitName: H_Neutral_ECMO
+    portraitName: bob_portrait
     sfxType: 0
     isRandomBark: 0
     storyAudioClip: {fileID: 8300000, guid: c9ce9f4d0ac48464d8c1f212f2c9429a, type: 3}
