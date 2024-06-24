@@ -5,6 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using System.Linq;
+using JetBrains.Annotations;
 
 public class EnemyAI : MonoBehaviour
 {
@@ -14,6 +15,16 @@ public class EnemyAI : MonoBehaviour
         TreeOrPlayer,
         FocusPlayer
     }
+
+    public enum EnemyType
+    {
+        Regular,
+        Spawning
+    }
+
+    public EnemyType enemyType; // The type of this enemy
+    public GameObject spawnPrefab; // Prefab for the enemies to spawn
+    public int numberOfSpawns = 3; // Number of enemies to spawn
 
     public Tactic enemyTactic; // The tactic this enemy will use
     public Transform treeTarget; // The target object (tree)
@@ -50,6 +61,12 @@ public class EnemyAI : MonoBehaviour
     private bool isFrozen = false;
     private bool isStunned = false;
     private bool isCharmed = false;
+
+    public bool isImmuneToLaunched = false;
+    public bool isImmuneToFrozen = false;
+    public bool isImmuneToStunned = false;
+    public bool isImmuneToCharmed = false;
+    public bool wasSpawned = false;
 
     private float freezeTimeout = 0f;
     private float stunTimeout = 0f;
@@ -333,9 +350,11 @@ public class EnemyAI : MonoBehaviour
 
     private void StartDying()
     {
-        //Play animations?
-        //Sink into the ground?
-        //Spawn resources/loot?
+        if (enemyType == EnemyType.Spawning)
+        {
+            SpawnEnemies();
+        }
+
         GameObject obj = Instantiate(bloodSplatterBase, new Vector3(transform.position.x, 0.51f, transform.position.z), Quaternion.identity);
         obj.transform.Rotate(90, Random.Range(0, 359), 0);
 
@@ -347,8 +366,43 @@ public class EnemyAI : MonoBehaviour
 
     private void FinishDying()
     {
-        GameEventSystem.Instance.TriggerEvent(GameEvent.ENEMY_KILLED);
+        if(wasSpawned == false)
+            GameEventSystem.Instance.TriggerEvent(GameEvent.ENEMY_KILLED);
+
         Destroy(this.gameObject);
+    }
+
+    private void SpawnEnemies()
+    {
+        for (int i = 0; i < numberOfSpawns; i++)
+        {
+            Vector3 spawnPosition = GetValidSpawnPosition();
+            if (spawnPosition != Vector3.zero)
+            {
+                GameObject spawnedEnemy = Instantiate(spawnPrefab, spawnPosition, Quaternion.identity);
+                EnemyAI spawnedAI = spawnedEnemy.GetComponent<EnemyAI>();
+                if (spawnedAI != null)
+                {
+                    spawnedAI.wasSpawned = true;
+                    spawnedAI.enemyTactic = Tactic.FocusPlayer;
+                }
+            }
+        }
+    }
+
+    private Vector3 GetValidSpawnPosition()
+    {
+        for (int attempts = 0; attempts < 10; attempts++)
+        {
+            Vector3 randomDirection = Random.insideUnitSphere * 3; // Adjust radius as needed
+            randomDirection += transform.position;
+            NavMeshHit hit;
+            if (NavMesh.SamplePosition(randomDirection, out hit, 1.0f, NavMesh.AllAreas))
+            {
+                return hit.position;
+            }
+        }
+        return Vector3.zero;
     }
 
     void PopulateWaypoints()
@@ -381,6 +435,9 @@ public class EnemyAI : MonoBehaviour
 
     public void HandleLaunch(Quaternion direction, float launchSpeed)
     {
+        if (isImmuneToLaunched)
+            return;
+
         isLaunched = true;
         agent.enabled = false;
         Rigidbody rb = GetComponent<Rigidbody>();
@@ -438,6 +495,9 @@ public class EnemyAI : MonoBehaviour
 
     public void Freeze(float duration)
     {
+        if (isImmuneToFrozen)
+            return;
+
         isFrozen = true;
         freezeTimeout = duration;
         agent.isStopped = true;
@@ -445,6 +505,8 @@ public class EnemyAI : MonoBehaviour
 
     public void Stun(float duration)
     {
+        if (isImmuneToStunned)
+            return;
         isStunned = true;
         stunTimeout = duration;
         agent.isStopped = true;
@@ -454,6 +516,9 @@ public class EnemyAI : MonoBehaviour
 
     public void Charm()
     {
+        if (isImmuneToCharmed)
+            return; 
+
         isCharmed = true;
         // Logic to switch the enemy to attack other enemies
         enemyTactic = Tactic.FocusPlayer; // Assuming FocusPlayer targets other enemies
