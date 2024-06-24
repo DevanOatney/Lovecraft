@@ -205,7 +205,7 @@ public class EnemyAI : MonoBehaviour
 
     void HandleFocusTree(float distanceToTree)
     {
-        if (distanceToTree <= attackRange)
+        if (distanceToTree <= 0.5f)
         {
             agent.isStopped = true;
             attackHandler.AttackTree(treeTarget, enemyAttack.damageToDeal);
@@ -249,7 +249,7 @@ public class EnemyAI : MonoBehaviour
                 attackingPlayer = true;
                 MoveToTarget(playerTarget);
             }
-            else if (distanceToTree <= attackRange)
+            else if (distanceToTree <= 0.5f)
             {
                 agent.isStopped = true;
                 attackHandler.AttackTree(treeTarget, enemyAttack.damageToDeal);

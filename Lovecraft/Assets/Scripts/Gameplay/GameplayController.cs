@@ -46,12 +46,15 @@ public class GameplayController : MonoBehaviour
         GameEventSystem.Instance.RegisterListener(GameEvent.BUILDING_OBJECT_SELECTED, OnBuildingObjectSelected);
         GameEventSystem.Instance.RegisterListener(GameEvent.PLAYER_KILLED, OnPlayerKilled);
         GameEventSystem.Instance.RegisterListener(GameEvent.DIALOGUE_COMPLETE, OnDialogueComplete);
+        GameEventSystem.Instance.RegisterListener(GameEvent.TREE_DESTROYED, OnTreeDestroyed);
     }
 
     private void UnregisterEventsToListenTo()
     {
         GameEventSystem.Instance.UnregisterListener(GameEvent.BUILDING_OBJECT_SELECTED, OnBuildingObjectSelected);
         GameEventSystem.Instance.UnregisterListener(GameEvent.PLAYER_KILLED, OnPlayerKilled);
+        GameEventSystem.Instance.UnregisterListener(GameEvent.DIALOGUE_COMPLETE, OnDialogueComplete);
+        GameEventSystem.Instance.UnregisterListener(GameEvent.TREE_DESTROYED, OnTreeDestroyed);
     }
 
     private void OnBuildingObjectSelected(object obj)
@@ -192,6 +195,15 @@ public class GameplayController : MonoBehaviour
         Time.timeScale = 0f;
         GameOverScene.gameObject.SetActive(true);
         GameOverScene.OnGameOver();
+        waitingForGameOver = true;
+    }
+
+    private void OnTreeDestroyed(object data)
+    {
+        Time.timeScale = 0f;
+        Time.timeScale = 0f;
+        GameOverScene.gameObject.SetActive(true);
+        waitingForGameOver = true;
         waitingForGameOver = true;
     }
 

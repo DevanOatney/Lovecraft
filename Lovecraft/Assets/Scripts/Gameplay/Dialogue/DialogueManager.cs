@@ -14,6 +14,7 @@ public class DialogueManager : MonoBehaviour
     public Button nextLineButtonRef;
     public List<Dialogue> StoryPoints = new List<Dialogue>();
     public Dialogue WaveCompleteVictory;
+    public Dialogue TreeDestroyedLoss;
     private int CurrentStoryPointIndex = 0;
 
     private Queue<DialogueLine> dialogueLines;
@@ -34,6 +35,7 @@ public class DialogueManager : MonoBehaviour
             GameEventSystem.Instance.RegisterListener(GameEvent.GAME_OVER, OnGameOver);
             GameEventSystem.Instance.RegisterListener(GameEvent.WAVE_COMPLETED, OnWaveComplete);
             GameEventSystem.Instance.RegisterListener(GameEvent.GAME_STARTED, OnGameStart);
+            GameEventSystem.Instance.RegisterListener(GameEvent.TREE_DESTROYED, OnTreeDestroyed);
         }
         else
         {
@@ -49,6 +51,7 @@ public class DialogueManager : MonoBehaviour
         GameEventSystem.Instance.UnregisterListener(GameEvent.GAME_OVER, OnGameOver);
         GameEventSystem.Instance.UnregisterListener(GameEvent.WAVE_COMPLETED, OnWaveComplete);
         GameEventSystem.Instance.UnregisterListener(GameEvent.GAME_STARTED, OnGameStart);
+        GameEventSystem.Instance.UnregisterListener(GameEvent.TREE_DESTROYED, OnTreeDestroyed);
     }
 
     private void OnGameStart(object data)
@@ -85,6 +88,11 @@ public class DialogueManager : MonoBehaviour
     private void OnGameOver(object data)
     {
         StartDialogue("player_death_ending_story_dialogue");
+    }
+
+    private void OnTreeDestroyed(object data)
+    {
+        StartDialogue(TreeDestroyedLoss.dialogueName);
     }
 
     public void StartDialogue(string dialogueName)
