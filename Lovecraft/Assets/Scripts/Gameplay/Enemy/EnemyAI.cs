@@ -1,9 +1,10 @@
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using System.Collections;
+using System.Linq;
 
 public class EnemyAI : MonoBehaviour
 {
@@ -46,8 +47,18 @@ public class EnemyAI : MonoBehaviour
     private Dictionary<GameObject, float> adjustments = new Dictionary<GameObject, float>();
 
     private bool isLaunched = false;
-    private float launchTimeout = 10f; // Max time allowed for being in the air
+    private bool isFrozen = false;
+    private bool isStunned = false;
+    private bool isCharmed = false;
+
+    private float freezeTimeout = 0f;
+    private float stunTimeout = 0f;
+    private float launchTimeout = 0f;
     private float launchTimer = 0f;
+    private float freezeTimer = 0f;
+    private float stunTimer = 0f;
+
+    public string TargetTag = "Player";
 
     void Start()
     {
@@ -81,6 +92,37 @@ public class EnemyAI : MonoBehaviour
             return;
         }
 
+        if (isFrozen)
+        {
+            freezeTimer += Time.deltaTime;
+            if (freezeTimer >= freezeTimeout)
+            {
+                isFrozen = false;
+                freezeTimer = 0f;
+                UnlockMovement();
+            }
+            return;
+        }
+
+        if (isStunned)
+        {
+            stunTimer += Time.deltaTime;
+            if (stunTimer >= stunTimeout)
+            {
+                isStunned = false;
+                stunTimer = 0f;
+                UnlockMovement();
+            }
+            return;
+        }
+
+        if (isCharmed)
+        {
+            AcquireCharmedTarget();
+            if (playerTarget == null)
+                return;
+        }
+
         if (attackHandler.IsAttacking() || RoundController.Instance.IsSceneInitialized() == false)
         {
             //probably don't need to do anything here but.. /shrug
@@ -95,6 +137,13 @@ public class EnemyAI : MonoBehaviour
         {
             GameEventSystem.Instance.TriggerEvent(GameEvent.CREATURE_SPAWNED_DIALOGUE_BARK, this);
         }
+    }
+
+    private void UnlockMovement()
+    {
+        if (isLaunched || isFrozen || isStunned)
+            return;
+        agent.isStopped = false;
     }
 
     void HandleMovement()
@@ -146,7 +195,7 @@ public class EnemyAI : MonoBehaviour
         }
         else
         {
-            agent.isStopped = false;
+            UnlockMovement();
             if (agent.remainingDistance <= agent.stoppingDistance)
             {
                 PickNextWaypointOrTree();
@@ -161,7 +210,7 @@ public class EnemyAI : MonoBehaviour
             if (distanceToPlayer > playerChaseReturnRange)
             {
                 attackingPlayer = false;
-                agent.isStopped = false;
+                UnlockMovement();
                 PickRandomTreePosition();
                 MoveToTarget(currentTreePosition);
             }
@@ -172,7 +221,7 @@ public class EnemyAI : MonoBehaviour
             }
             else
             {
-                agent.isStopped = false;
+                UnlockMovement();
                 MoveToTarget(playerTarget);
             }
         }
@@ -190,7 +239,7 @@ public class EnemyAI : MonoBehaviour
             }
             else
             {
-                agent.isStopped = false;
+                UnlockMovement();
                 if (agent.remainingDistance <= agent.stoppingDistance)
                 {
                     PickNextWaypointOrTree();
@@ -208,7 +257,7 @@ public class EnemyAI : MonoBehaviour
         }
         else
         {
-            agent.isStopped = false;
+            UnlockMovement();
             MoveToTarget(playerTarget);
         }
     }
@@ -258,7 +307,7 @@ public class EnemyAI : MonoBehaviour
 
     public void OnAttackComplete()
     {
-        agent.isStopped = false;
+        UnlockMovement();
     }
 
     public void TakeDamage(float damageToTake)
@@ -333,7 +382,6 @@ public class EnemyAI : MonoBehaviour
     public void HandleLaunch(Quaternion direction, float launchSpeed)
     {
         isLaunched = true;
-        launchTimer = 0f;
         agent.enabled = false;
         Rigidbody rb = GetComponent<Rigidbody>();
         if (rb != null)
@@ -385,7 +433,48 @@ public class EnemyAI : MonoBehaviour
 
     private bool IsGrounded()
     {
-        return Physics.Raycast(transform.position, Vector3.down, 0.7f, LayerMask.GetMask("BuildableSurface"));
+        return Physics.Raycast(transform.position, Vector3.down, 1f, LayerMask.GetMask("Ground"));
+    }
+
+    public void Freeze(float duration)
+    {
+        isFrozen = true;
+        freezeTimeout = duration;
+        agent.isStopped = true;
+    }
+
+    public void Stun(float duration)
+    {
+        isStunned = true;
+        stunTimeout = duration;
+        agent.isStopped = true;
+        // Stop attacking
+        attackHandler.CancelAttack();
+    }
+
+    public void Charm()
+    {
+        isCharmed = true;
+        // Logic to switch the enemy to attack other enemies
+        enemyTactic = Tactic.FocusPlayer; // Assuming FocusPlayer targets other enemies
+        playerTarget = null; // Remove the player target to avoid confusion
+        TargetTag = "Enemy";
+        AcquireCharmedTarget();
+    }
+
+    private void AcquireCharmedTarget()
+    {
+        if (playerTarget == null)
+        {
+            var enemies = GameObject.FindObjectsOfType<EnemyAI>();
+
+            if (enemies != null && enemies.Count() > 0)
+            {
+                if (enemies.Count() == 1 && enemies[0] == this)
+                    return;
+                playerTarget = enemies[Random.Range(0, enemies.Count() - 1)].transform;
+            }
+        }
     }
 
     public void OnSpeechBubble(string dialogueLine, SFXType sfxType)

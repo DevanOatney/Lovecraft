@@ -74,6 +74,12 @@ public class AttackHandler : MonoBehaviour
         }
         yield return new WaitForSeconds(telegraphDuration);
 
+        if (target == null)
+        {
+            CancelAttack();
+            yield break;
+        }
+
         if (Vector3.Distance(transform.position, target.position) > attackRange)
         {
             CancelAttack();
@@ -104,6 +110,10 @@ public class AttackHandler : MonoBehaviour
             {
                 target.GetComponent<PlayerSixWayDirectionalController>().TakeDamage(damage);
             }
+            else if (target.GetComponent<EnemyAI>() != null)
+            {
+                target.GetComponent<EnemyAI>().TakeDamage(damage);
+            }
         }
         yield return new WaitForSeconds(attackDuration);
 
@@ -126,6 +136,12 @@ public class AttackHandler : MonoBehaviour
         Quaternion lookDir = Quaternion.LookRotation(new Vector3(dir.x, 0f, dir.z));
         transform.rotation = lookDir;
 
+        if (target == null)
+        {
+            CancelAttack();
+            yield break;
+        }
+
         if (Vector3.Distance(transform.position, target.position) > attackRange)
         {
             CancelAttack();
@@ -141,6 +157,12 @@ public class AttackHandler : MonoBehaviour
             telegraphArea.name = "Telegraph";
         }
         yield return new WaitForSeconds(telegraphDuration);
+
+        if (target == null)
+        {
+            CancelAttack();
+            yield break;
+        }
 
         if (Vector3.Distance(transform.position, target.position) > attackRange)
         {
@@ -170,6 +192,10 @@ public class AttackHandler : MonoBehaviour
             {
                 target.GetComponent<PlayerSixWayDirectionalController>().TakeDamage(damage);
             }
+            else if (target.GetComponent<EnemyAI>() != null)
+            {
+                target.GetComponent<EnemyAI>().TakeDamage(damage);
+            }
         }
 
         // Recover
@@ -185,6 +211,12 @@ public class AttackHandler : MonoBehaviour
         Vector3 dir = (target.position - transform.position).normalized;
         Quaternion lookDir = Quaternion.LookRotation(new Vector3(dir.x, 0f, dir.z));
         transform.rotation = lookDir;
+
+        if (target == null)
+        {
+            CancelAttack();
+            yield break;
+        }
 
         if (Vector3.Distance(transform.position, target.position) > attackRange)
         {
@@ -202,6 +234,12 @@ public class AttackHandler : MonoBehaviour
         }
         yield return new WaitForSeconds(telegraphDuration);
 
+        if (target == null)
+        {
+            CancelAttack();
+            yield break;
+        }
+
         if (Vector3.Distance(transform.position, target.position) > attackRange)
         {
             CancelAttack();
@@ -215,6 +253,7 @@ public class AttackHandler : MonoBehaviour
             EnemyProjectileController projectile = projectileInstance.GetComponent<EnemyProjectileController>();
             projectile.DamageToDeal = damage;
             projectile.Speed = 10f; // Set the speed for the projectile
+            projectile.FilteredTag = enemyAI.TargetTag;
             projectile.Initialize(GetComponent<Collider>(), target.position);
         }
 
@@ -292,7 +331,7 @@ public class AttackHandler : MonoBehaviour
         return isAttacking;
     }
 
-    private void CancelAttack()
+    public void CancelAttack()
     {
         if (telegraphArea != null)
         {

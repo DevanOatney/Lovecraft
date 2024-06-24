@@ -7234,6 +7234,30 @@ PrefabInstance:
       propertyPath: waveManagers.Array.data[0]
       value: 
       objectReference: {fileID: 1919749142}
+    - target: {fileID: 1695833574740709486, guid: 1a34a64cec2557c468f3bacc3c7bc0a7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1695833574740709486, guid: 1a34a64cec2557c468f3bacc3c7bc0a7, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1695833574740709486, guid: 1a34a64cec2557c468f3bacc3c7bc0a7, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1695833574740709486, guid: 1a34a64cec2557c468f3bacc3c7bc0a7, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1695833574740709486, guid: 1a34a64cec2557c468f3bacc3c7bc0a7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1695833574740709486, guid: 1a34a64cec2557c468f3bacc3c7bc0a7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4070561976975034980, guid: 1a34a64cec2557c468f3bacc3c7bc0a7, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

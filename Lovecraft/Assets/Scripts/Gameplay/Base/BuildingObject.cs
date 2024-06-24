@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class BuildingObject : MonoBehaviour
 {
-    public enum BuildingType { ProjectileShooter, Trap }
+    public enum BuildingType { ProjectileShooter, Trap, FreezeTrap, StunTrap, CharmTrap }
     public BuildingType buildingType = BuildingType.ProjectileShooter;
 
     public Quaternion DirectionToFire = Quaternion.identity;
@@ -38,7 +38,7 @@ public class BuildingObject : MonoBehaviour
             {
                 HandleProjectileShooter();
             }
-            else if (buildingType == BuildingType.Trap)
+            else
             {
                 HandleTrap();
             }
@@ -87,9 +87,25 @@ public class BuildingObject : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (buildingType == BuildingType.Trap && TrapTimer >= TrapCooldown && other.CompareTag("Enemy"))
+        if (TrapTimer >= TrapCooldown && other.CompareTag("Enemy"))
         {
-            LaunchEnemy(other);
+            if (buildingType == BuildingType.Trap)
+            {
+                LaunchEnemy(other);
+            }
+            else if (buildingType == BuildingType.FreezeTrap)
+            {
+                FreezeEnemy(other);
+            }
+            else if (buildingType == BuildingType.StunTrap)
+            {
+                StunEnemy(other);
+            }
+            else if (buildingType == BuildingType.CharmTrap)
+            {
+                CharmEnemy(other);
+            }
+
             TrapTimer = 0.0f; // Reset the cooldown timer
         }
 
@@ -123,6 +139,33 @@ public class BuildingObject : MonoBehaviour
         if (enemyAI != null)
         {
             enemyAI.HandleLaunch(DirectionToFire, ProjectileSpeed);
+        }
+    }
+
+    private void FreezeEnemy(Collider enemy)
+    {
+        EnemyAI enemyAI = enemy.GetComponent<EnemyAI>();
+        if (enemyAI != null)
+        {
+            enemyAI.Freeze(TrapCooldown * 0.5f);
+        }
+    }
+
+    private void StunEnemy(Collider enemy)
+    {
+        EnemyAI enemyAI = enemy.GetComponent<EnemyAI>();
+        if (enemyAI != null)
+        {
+            enemyAI.Stun(TrapCooldown * 0.5f);
+        }
+    }
+
+    private void CharmEnemy(Collider enemy)
+    {
+        EnemyAI enemyAI = enemy.GetComponent<EnemyAI>();
+        if (enemyAI != null)
+        {
+            enemyAI.Charm();
         }
     }
 }
