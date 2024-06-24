@@ -6509,7 +6509,7 @@ MonoBehaviour:
   waves:
   - stages:
     - enemiesToSpawn:
-      - enemyPrefab: {fileID: 6101225967246542521, guid: ad04c23eebd714642828153e3f9f4097, type: 3}
+      - enemyPrefab: {fileID: 6101225967246542521, guid: 36c9a15278066f54ea9facd3636cd02c, type: 3}
         count: 1
         spawnRegion:
           regionTransform: {fileID: 464840797}

@@ -281,28 +281,7 @@ public class AttackHandler : MonoBehaviour
             yield return null;
         }
 
-        // Telegraph
-        if (telegraphArea == null)
-        {
-            Vector3 heightAdjust = target.position + new Vector3(0f, transform.lossyScale.y * 0.5f, 0f);
-            telegraphArea = Instantiate(enemyAttackData.Telegraph.transform, heightAdjust, this.transform.rotation);
-            telegraphArea.GetComponent<Collider>().enabled = false;
-            telegraphArea.name = "Telegraph";
-        }
         yield return new WaitForSeconds(telegraphDuration);
-
-        if (attack == null && telegraphArea != null)
-        {
-            attack = Instantiate(enemyAttackData.Telegraph.transform, telegraphArea.transform.position, telegraphArea.transform.rotation);
-            attack.GetComponent<Collider>().enabled = true;
-            attack.name = "Attack";
-            attack.GetComponent<DamageZoneController>().Initialize(LayerMask.NameToLayer("TreeLayer"), damage);
-        }
-
-        if (telegraphArea != null)
-        {
-            Destroy(telegraphArea.gameObject);
-        }
 
         // Execute attack
         if (target != null)
