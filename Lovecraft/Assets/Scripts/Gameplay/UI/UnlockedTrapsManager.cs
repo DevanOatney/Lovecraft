@@ -8,6 +8,7 @@ public enum TRAP_TYPES
     FLASH,
     STUN,
     TURRET,
+    LAUNCHER,
 }
 
 
