@@ -16,23 +16,23 @@ MonoBehaviour:
   lines:
   - speakerName: Emma
     dialogueText: Henry... I'm tired.
-    portraitName: alice_portrait
+    portraitName: Emma_Smile
     sfxType: 0
     isRandomBark: 0
-    storyAudioClip: {fileID: 8300000, guid: 10dabffe88b1c424fbd89421c7f4dea9, type: 3}
-    portrait: {fileID: 0}
+    storyAudioClip: {fileID: 8300000, guid: 1d67bad16f2aba9479c6c40aa60f05b7, type: 3}
+    portrait: {fileID: 21300000, guid: 5d3a0bb98a319d246847e0660da91604, type: 3}
   - speakerName: Henry
     dialogueText: "I know, my love but you must keep fighting. Things will be better
       soon. You\u2019ll see."
-    portraitName: bob_portrait
+    portraitName: Henry_Soft
     sfxType: 0
     isRandomBark: 0
-    storyAudioClip: {fileID: 8300000, guid: c9ce9f4d0ac48464d8c1f212f2c9429a, type: 3}
-    portrait: {fileID: 0}
+    storyAudioClip: {fileID: 8300000, guid: 0f68d83215699ed4bba3a65959e30819, type: 3}
+    portrait: {fileID: 21300000, guid: 2eefa86c5f8c1194db31baac9fdc7263, type: 3}
   - speakerName: Emma
     dialogueText: Help me outside. Just for a moment. I miss the garden. Do you remember
       how we would sit under the oak in the evenings? The jasmine smelled so sweet.
-    portraitName: 
+    portraitName: Emma_Smile
     sfxType: 0
     isRandomBark: 0
     storyAudioClip: {fileID: 8300000, guid: b2495b9c7301c8040aca6361d603506e, type: 3}
@@ -40,21 +40,21 @@ MonoBehaviour:
   - speakerName: Henry
     dialogueText: "Yes, I remember. But you mustn\u2019t go outside. You need to
       stay here and rest."
-    portraitName: H_Neutral_ECMC
+    portraitName: Henry_Soft
     sfxType: 0
     isRandomBark: 0
     storyAudioClip: {fileID: 8300000, guid: 3eaf1ea2f883b594cb8d196f0147b3fb, type: 3}
     portrait: {fileID: 0}
   - speakerName: Henry
     dialogueText: ...
-    portraitName: H_Neutral_EOMC
+    portraitName: Henry_Soft
     sfxType: 0
     isRandomBark: 0
     storyAudioClip: {fileID: 0}
     portrait: {fileID: 0}
   - speakerName: Henry
     dialogueText: Stay inside.
-    portraitName: H_Neutral_EOMO
+    portraitName: Henry_Neutral
     sfxType: 0
     isRandomBark: 0
     storyAudioClip: {fileID: 8300000, guid: 7312dadc282d6e04fa8bff91a9a1a279, type: 3}
@@ -63,14 +63,14 @@ MonoBehaviour:
     dialogueText: It is the hour of your reckoning. You slaughter our kin, use them
       as fodder for your infernal machine. Today your fiendish machinations come
       to an end.
-    portraitName: 
+    portraitName: Inquisitor Portrait
     sfxType: 0
     isRandomBark: 0
     storyAudioClip: {fileID: 8300000, guid: 4a2cafc4b4e5b2d42a408be5e29e3edc, type: 3}
-    portrait: {fileID: 0}
+    portrait: {fileID: 21300000, guid: 8b7752e19a43dc649917d0224b457c21, type: 3}
   - speakerName: Henry
     dialogueText: I did what I had to do.
-    portraitName: H_Angry_EOMC
+    portraitName: Henry_Angry
     sfxType: 0
     isRandomBark: 0
     storyAudioClip: {fileID: 8300000, guid: 3aa17ebc39609094e8aabcd8c5e20e8c, type: 3}
@@ -78,85 +78,88 @@ MonoBehaviour:
   - speakerName: High Inquisitor
     dialogueText: You and that witch are a plague on this land. By grand decree,
       on this day, you will be bathed in holy fire. May God have mercy on your soul.
-    portraitName: 
+    portraitName: Inquisitor Portrait
     sfxType: 0
     isRandomBark: 0
     storyAudioClip: {fileID: 8300000, guid: 2bd216241cf30f44c95b3b91128022b5, type: 3}
-    portrait: {fileID: 0}
+    portrait: {fileID: 21300000, guid: 8b7752e19a43dc649917d0224b457c21, type: 3}
   - speakerName: High Inquisitor
     dialogueText: Tear it down. And kill them both.
-    portraitName: 
+    portraitName: Inquisitor Portrait
     sfxType: 0
     isRandomBark: 0
     storyAudioClip: {fileID: 8300000, guid: bef515840a701524ab122def23e33008, type: 3}
-    portrait: {fileID: 0}
+    portrait: {fileID: 21300000, guid: 8b7752e19a43dc649917d0224b457c21, type: 3}
   - speakerName: Henry
     dialogueText: Stop! Get away from it!
-    portraitName: H_Apprehensive_EOMO
+    portraitName: Henry_Angry
     sfxType: 0
     isRandomBark: 0
     storyAudioClip: {fileID: 8300000, guid: 0cb4a6bc284838d4594c528f98bd2e68, type: 3}
     portrait: {fileID: 0}
   - speakerName: Emma
     dialogueText: Aaaahh!
-    portraitName: 
+    portraitName: Emma_Neutral
     sfxType: 0
     isRandomBark: 0
-    storyAudioClip: {fileID: 8300000, guid: bdb98e669b3b63d4f9a04d117871e203, type: 3}
+    storyAudioClip: {fileID: 8300000, guid: 117ceac79d293704c8a0fa57a24b5f18, type: 3}
     portrait: {fileID: 0}
   - speakerName: Henry
     dialogueText: "Stop! You\u2019re killing her!"
-    portraitName: H_Apprehensive_EOMO
+    portraitName: Henry_Angry
     sfxType: 0
     isRandomBark: 0
     storyAudioClip: {fileID: 8300000, guid: f7af19d382b5e084592159d9f5b17ad5, type: 3}
     portrait: {fileID: 0}
   - speakerName: Emma
     dialogueText: Henry!
-    portraitName: 
+    portraitName: Emma_Neutral
     sfxType: 0
     isRandomBark: 0
     storyAudioClip: {fileID: 8300000, guid: 3aefa81920614014c9807ce1000dc0b8, type: 3}
     portrait: {fileID: 0}
   - speakerName: Henry
     dialogueText: I said STOP!
-    portraitName: H_Rage_EOMO
+    portraitName: Henry_Angry
     sfxType: 0
     isRandomBark: 0
     storyAudioClip: {fileID: 8300000, guid: d9566b0f279cf8d48813416c78e5463a, type: 3}
     portrait: {fileID: 0}
   - speakerName: Henry
     dialogueText: Emma! Are you alright?
-    portraitName: H_Angry_EOMC
+    portraitName: Henry_Angry
     sfxType: 0
     isRandomBark: 0
     storyAudioClip: {fileID: 8300000, guid: 5e9e287b7cd1e924cbd5127839fe1089, type: 3}
     portrait: {fileID: 0}
   - speakerName: Emma
     dialogueText: "Henry, what\u2019s going on?"
-    portraitName: 
+    portraitName: Emma_Neutral
     sfxType: 0
     isRandomBark: 0
     storyAudioClip: {fileID: 8300000, guid: dba3c4cfd9ad8004fb1b60bfd4c5995b, type: 3}
     portrait: {fileID: 0}
   - speakerName: Henry
     dialogueText: Just stay inside! Everything will be alright.
-    portraitName: H_Angry_EOMC
+    portraitName: Henry_Angry
     sfxType: 0
     isRandomBark: 0
     storyAudioClip: {fileID: 8300000, guid: 7312dadc282d6e04fa8bff91a9a1a279, type: 3}
     portrait: {fileID: 0}
   - speakerName: Henry
     dialogueText: "I\u2019ll make sure of it."
-    portraitName: H_Neutral_EOMC
+    portraitName: Henry_Neutral
     sfxType: 0
     isRandomBark: 0
     storyAudioClip: {fileID: 8300000, guid: 6e4444f64d2565b4498737e341b45038, type: 3}
     portrait: {fileID: 0}
   - speakerName: Henry
     dialogueText: More will come. I must prepare.
-    portraitName: H_Angry_ECMC
+    portraitName: Henry_Angry
     sfxType: 0
     isRandomBark: 0
     storyAudioClip: {fileID: 8300000, guid: 2353a2d11a1f56b4da756d06b76701d5, type: 3}
     portrait: {fileID: 0}
+  OnCompletion:
+    m_PersistentCalls:
+      m_Calls: []

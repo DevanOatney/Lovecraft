@@ -139,7 +139,7 @@ MonoBehaviour:
   TrapCooldown: 2
   MovementSpeedAdjuster: 0
   IsInPreviewMode: 0
-  placementCost: 1
+  placementCost: 8
 --- !u!65 &2901942016521388250
 BoxCollider:
   m_ObjectHideFlags: 0

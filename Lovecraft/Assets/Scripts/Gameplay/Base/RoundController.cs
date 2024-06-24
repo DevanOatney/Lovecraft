@@ -36,7 +36,6 @@ public class RoundController : MonoBehaviour
 
     [SerializeField] private GameSate gameState = GameSate.BUILD_PHASE;
     [SerializeField] private bool allowTimedPhases = false;
-    [SerializeField] private RectTransform phaseClockHand;
     [SerializeField] private float timeForEachRound = 45f;
     [SerializeField] private GameObject combatPhaseIndicator;
     [SerializeField] private GameObject buildingPhaseIndicator;
@@ -68,10 +67,6 @@ public class RoundController : MonoBehaviour
     {
         if (allowTimedPhases)
         {
-            if (!phaseClockHand.parent.gameObject.activeSelf)
-            {
-                phaseClockHand.parent.gameObject.SetActive(true);
-            }
             if (nextPhaseButton.activeSelf)
             {
                 nextPhaseButton.SetActive(false);
@@ -84,21 +79,9 @@ public class RoundController : MonoBehaviour
                 roundTimerBucket = 0f;
                 TriggerPhaseChange();
             }
-
-            float percent = roundTimerBucket / timeForEachRound;
-            float rotationAmount = -180 * percent;
-            if (gameState == GameSate.COMBAT_PHASE)
-            {
-                rotationAmount -= 180f;
-            }
-            phaseClockHand.rotation = Quaternion.Euler(0, 0, rotationAmount);
         }
         else
         {
-            if (phaseClockHand.parent.gameObject.activeSelf)
-            {
-                phaseClockHand.parent.gameObject.SetActive(false);
-            }
             if (!nextPhaseButton.activeSelf)
             {
                 nextPhaseButton.SetActive(true);

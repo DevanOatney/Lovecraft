@@ -9,6 +9,7 @@ public enum TRAP_TYPES
     STUN,
     TURRET,
     LAUNCHER,
+    CHARM,
 }
 
 
