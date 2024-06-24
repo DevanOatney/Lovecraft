@@ -10,14 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3b1e7284cf7543d41b80dceb2f90ce8f, type: 3}
-  m_Name: soldier_dialogue
+  m_Name: soldier_barks_dialogue
   m_EditorClassIdentifier: 
   dialogueName: solider_barks_dialogue
-  lines:
-  - speakerName: Soldier #2
-    dialogueText: Demon!
-    portraitName: 
-    sfxType: 4
-    isRandomBark: 1
-    storyAudioClip: {fileID: 8300000, guid: 1fb8478906b87394daec5b9b9cedcaef, type: 3}
-    portrait: {fileID: 0}
+  lines: []
+  OnCompletion:
+    m_PersistentCalls:
+      m_Calls: []

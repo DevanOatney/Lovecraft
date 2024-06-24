@@ -17,35 +17,35 @@ MonoBehaviour:
   - speakerName: High Inquisitor
     dialogueText: "That\u2019s enough! I\u2019ll have to put you down myself. There
       is no honor in an unfair fight- even if you are a beast. Prepare yourself."
-    portraitName: 
+    portraitName: inquisitor
     sfxType: 5
     isRandomBark: 0
     storyAudioClip: {fileID: 8300000, guid: bb6c4a092c7d96a438fc7931ef71ca44, type: 3}
     portrait: {fileID: 0}
   - speakerName: High Inquisitor
     dialogueText: Your wickedness shall be cleansed. Light, guide my blade.
-    portraitName: 
+    portraitName: inquisitor
     sfxType: 5
     isRandomBark: 0
     storyAudioClip: {fileID: 8300000, guid: 5f020b49d1d679340bbbf23a87513994, type: 3}
     portrait: {fileID: 0}
   - speakerName: High Inquisitor
     dialogueText: Die!
-    portraitName: 
+    portraitName: inquisitor
     sfxType: 5
     isRandomBark: 0
     storyAudioClip: {fileID: 8300000, guid: 1fb8478906b87394daec5b9b9cedcaef, type: 3}
     portrait: {fileID: 0}
   - speakerName: High Inquisitor
     dialogueText: I grow tired of this little game. Guard, to the front!
-    portraitName: 
+    portraitName: inquisitor
     sfxType: 5
     isRandomBark: 0
     storyAudioClip: {fileID: 8300000, guid: 1fb8478906b87394daec5b9b9cedcaef, type: 3}
     portrait: {fileID: 0}
   - speakerName: High Inquisitor
     dialogueText: It ends now.
-    portraitName: 
+    portraitName: inquisitor
     sfxType: 5
     isRandomBark: 0
     storyAudioClip: {fileID: 8300000, guid: 1fb8478906b87394daec5b9b9cedcaef, type: 3}
@@ -59,14 +59,14 @@ MonoBehaviour:
     portrait: {fileID: 0}
   - speakerName: High Inquisitor
     dialogueText: Strike her down!
-    portraitName: 
+    portraitName: inquisitor
     sfxType: 5
     isRandomBark: 0
     storyAudioClip: {fileID: 8300000, guid: 1fb8478906b87394daec5b9b9cedcaef, type: 3}
     portrait: {fileID: 0}
   - speakerName: High Inquisitor
     dialogueText: Abomination.
-    portraitName: 
+    portraitName: inquisitor
     sfxType: 5
     isRandomBark: 0
     storyAudioClip: {fileID: 8300000, guid: 1fb8478906b87394daec5b9b9cedcaef, type: 3}
@@ -85,3 +85,6 @@ MonoBehaviour:
     isRandomBark: 0
     storyAudioClip: {fileID: 8300000, guid: 1fb8478906b87394daec5b9b9cedcaef, type: 3}
     portrait: {fileID: 0}
+  OnCompletion:
+    m_PersistentCalls:
+      m_Calls: []

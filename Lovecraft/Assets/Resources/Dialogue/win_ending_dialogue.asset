@@ -16,7 +16,7 @@ MonoBehaviour:
   lines:
   - speakerName: High Inquisitor
     dialogueText: The Light forsakes me.
-    portraitName: 
+    portraitName: inquisitor
     sfxType: 5
     isRandomBark: 0
     storyAudioClip: {fileID: 8300000, guid: fdb6c8e542599454cb9cb9622ecbeb04, type: 3}
@@ -63,3 +63,6 @@ MonoBehaviour:
     isRandomBark: 0
     storyAudioClip: {fileID: 8300000, guid: c5611c3e022a90a45905c7a2c9b1142e, type: 3}
     portrait: {fileID: 0}
+  OnCompletion:
+    m_PersistentCalls:
+      m_Calls: []
