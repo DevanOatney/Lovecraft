@@ -16,15 +16,15 @@ MonoBehaviour:
   lines:
   - speakerName: Emma
     dialogueText: 'Aaaagghhh! '
-    portraitName: 
-    sfxType: 0
+    portraitName: E_Pain_EOMO
+    sfxType: 5
     isRandomBark: 0
     storyAudioClip: {fileID: 8300000, guid: bdb98e669b3b63d4f9a04d117871e203, type: 3}
     portrait: {fileID: 0}
   - speakerName: Henry
     dialogueText: No!
     portraitName: H_Apprehensive_EOMO
-    sfxType: 0
+    sfxType: 5
     isRandomBark: 0
     storyAudioClip: {fileID: 8300000, guid: 7c0eb189344be38478ec30238d83c32d, type: 3}
     portrait: {fileID: 0}

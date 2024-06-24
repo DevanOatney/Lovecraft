@@ -18,21 +18,21 @@ MonoBehaviour:
     dialogueText: "That\u2019s enough! I\u2019ll have to put you down myself. There
       is no honor in an unfair fight- even if you are a beast. Prepare yourself."
     portraitName: 
-    voiceClip: 2
+    sfxType: 5
     isRandomBark: 0
     storyAudioClip: {fileID: 8300000, guid: 1fb8478906b87394daec5b9b9cedcaef, type: 3}
     portrait: {fileID: 0}
   - speakerName: High Inquisitor
     dialogueText: Your wickedness shall be cleansed. Light, guide my blade.
     portraitName: 
-    voiceClip: 2
+    sfxType: 5
     isRandomBark: 0
     storyAudioClip: {fileID: 8300000, guid: c5611c3e022a90a45905c7a2c9b1142e, type: 3}
     portrait: {fileID: 0}
   - speakerName: High Inquisitor
     dialogueText: Die!
     portraitName: 
-    voiceClip: 2
+    sfxType: 5
     isRandomBark: 0
     storyAudioClip: {fileID: 8300000, guid: c5611c3e022a90a45905c7a2c9b1142e, type: 3}
     portrait: {fileID: 0}
