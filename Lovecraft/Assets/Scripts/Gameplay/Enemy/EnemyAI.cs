@@ -3,6 +3,7 @@ using UnityEngine.AI;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using TMPro;
+using System.Collections;
 
 public class EnemyAI : MonoBehaviour
 {
@@ -44,6 +45,10 @@ public class EnemyAI : MonoBehaviour
 
     private Dictionary<GameObject, float> adjustments = new Dictionary<GameObject, float>();
 
+    private bool isLaunched = false;
+    private float launchTimeout = 10f; // Max time allowed for being in the air
+    private float launchTimer = 0f;
+
     void Start()
     {
         SpeechBubbleRef.SetActive(false);
@@ -67,6 +72,15 @@ public class EnemyAI : MonoBehaviour
 
     void Update()
     {
+        if (isLaunched)
+        {
+            if (agent.enabled)
+            {
+                agent.enabled = false;
+            }
+            return;
+        }
+
         if (attackHandler.IsAttacking() || RoundController.Instance.IsSceneInitialized() == false)
         {
             //probably don't need to do anything here but.. /shrug
@@ -249,7 +263,6 @@ public class EnemyAI : MonoBehaviour
 
     public void TakeDamage(float damageToTake)
     {
-
         audioSource.PlayOneShot(hitSFXList[Random.Range(0, hitSFXList.Count)]);
 
         if (IsDying)
@@ -259,7 +272,7 @@ public class EnemyAI : MonoBehaviour
 
         if (HealthBar != null)
         {
-            HealthBar.fillAmount =  HP / MaxHP;
+            HealthBar.fillAmount = HP / MaxHP;
         }
 
         if (HP <= 0)
@@ -307,7 +320,7 @@ public class EnemyAI : MonoBehaviour
 
     public void AddAdjuster(GameObject adjuster, float adjustment)
     {
-        if(adjustments.ContainsKey(adjuster))
+        if (adjustments.ContainsKey(adjuster))
             adjustments.Remove(adjuster);
         adjustments.Add(adjuster, adjustment);
     }
@@ -315,6 +328,64 @@ public class EnemyAI : MonoBehaviour
     public void RemoveAdjuster(GameObject adjuster)
     {
         adjustments.Remove(adjuster);
+    }
+
+    public void HandleLaunch(Quaternion direction, float launchSpeed)
+    {
+        isLaunched = true;
+        launchTimer = 0f;
+        agent.enabled = false;
+        Rigidbody rb = GetComponent<Rigidbody>();
+        if (rb != null)
+        {
+            rb.isKinematic = false;
+            rb.AddForce((direction * Vector3.forward + Vector3.up * 0.5f) * launchSpeed, ForceMode.Impulse);
+        }
+
+        StartCoroutine(CheckLanding());
+    }
+
+    private IEnumerator CheckLanding()
+    {
+        while (!agent.enabled)
+        {
+            launchTimer += Time.deltaTime;
+
+            if (launchTimer >= launchTimeout)
+            {
+                TakeDamage(HP); // Treat it as if the enemy died
+                yield break;
+            }
+
+            if (IsGrounded())
+            {
+                yield return new WaitForSeconds(0.5f); // Give some time to fully settle on the ground
+                agent.enabled = true;
+                isLaunched = false;
+                Rigidbody rb = GetComponent<Rigidbody>();
+                if (rb != null)
+                {
+                    rb.isKinematic = true;
+                    CorrectOrientation(); // Correct the orientation after landing
+                }
+
+                if (!agent.isOnNavMesh || !agent.CalculatePath(treeTarget.position, new NavMeshPath()))
+                {
+                    TakeDamage(HP); // Treat it as if the enemy died
+                }
+            }
+            yield return null;
+        }
+    }
+
+    private void CorrectOrientation()
+    {
+        transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
+    }
+
+    private bool IsGrounded()
+    {
+        return Physics.Raycast(transform.position, Vector3.down, 0.7f, LayerMask.GetMask("BuildableSurface"));
     }
 
     public void OnSpeechBubble(string dialogueLine, SFXType sfxType)
