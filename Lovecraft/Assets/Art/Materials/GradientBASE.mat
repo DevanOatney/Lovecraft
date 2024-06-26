@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Gradient Shader_Base
+  m_Name: GradientBASE
   m_Shader: {fileID: -6465566751694194690, guid: 35839d5a2d255224595e5bc3d295e8ca, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
