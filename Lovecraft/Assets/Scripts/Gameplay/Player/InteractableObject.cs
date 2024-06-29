@@ -9,6 +9,7 @@ public class InteractableObject : MonoBehaviour
     [SerializeField] private InputAction InteractionAction;
     public UnityEvent ActionEvent;
     public GameObject Indicator;
+    public UnityEvent WalkAwayEvent;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +31,7 @@ public class InteractableObject : MonoBehaviour
     {
         Indicator.SetActive(false);
         InteractionAction.Disable();
+        WalkAwayEvent.Invoke();
     }
 
     protected void PerformAction(InputAction.CallbackContext context)

@@ -33,7 +33,6 @@ public class PlayerSixWayDirectionalController : MonoBehaviour
     private Vector2 movementInput;
     private bool isMovingWithInput;
     private int curHP = 0;
-    private PlayerDashAbility dashAbility;
     private MovementControlCombo movementControl;
     private MovementControlCombo prevMovementControl;
 
@@ -42,7 +41,6 @@ public class PlayerSixWayDirectionalController : MonoBehaviour
     private void Start()
     {
         agent = GetComponentInChildren<NavMeshAgent>();
-        dashAbility = GetComponent<PlayerDashAbility>();
         transform.rotation = Quaternion.identity;
         transform.Rotate(new Vector3(0, 120, 0));
         curHP = MaxHP;
@@ -76,22 +74,9 @@ public class PlayerSixWayDirectionalController : MonoBehaviour
             curHP += (int)deltaHP;
             AbilityUpgradesManager.Instance.AbilityUpgrades[Abilities.HP_INCREASE].isDirty = false;
         }
-
-        if( dashAbility.IsDashing() )
-        {
-            if (!agent.pathPending)
-            {
-                if (agent.remainingDistance <= agent.stoppingDistance)
-                {
-                    if (!agent.hasPath || agent.velocity.sqrMagnitude == 0f)
-                    {
-                        // Done
-                        dashAbility.SetDashing(false);
-                        agent.speed = 12;
-                    }
-                }
-            }
-        } else if (isMovingWithInput)
+        
+        
+        if (isMovingWithInput)
         {
             if (!sfxFootsteps.isPlaying)
             {

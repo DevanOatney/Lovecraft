@@ -282,7 +282,6 @@ GameObject:
   - component: {fileID: 9222016085877644315}
   - component: {fileID: 2888299167588811223}
   - component: {fileID: 2639783265070328548}
-  - component: {fileID: 2233644863914172661}
   - component: {fileID: 7540397418575788686}
   - component: {fileID: 4210230401389451343}
   - component: {fileID: 5143150741863022121}
@@ -413,39 +412,6 @@ MonoBehaviour:
   twoDAnimations: {fileID: 7097515049185935780}
   sfxFootsteps: {fileID: 4253203380328887712}
   HitCircle: {fileID: 0}
---- !u!114 &2233644863914172661
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1821844674282759311}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 788ae0c5cc9e6e0499a2a8ef2d40b10d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerVisuals: {fileID: 1947467634584407920}
-  playerDash:
-    m_Name: Player Dash
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 78bc8771-c0d8-46b5-8de9-bce741c81345
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: ceb90eea-38ef-4174-b56e-5ecb00f76ae9
-      m_Path: <Keyboard>/shift
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Player Dash
-      m_Flags: 0
-    m_Flags: 0
-  dashDistance: 15
-  dashCooldown: 3
-  dashCooldownIndicator: {fileID: 0}
 --- !u!136 &7540397418575788686
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -520,7 +486,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da9d4aeaced82aa4b8800087248cb0c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Blood_Currency_Count: 69
+  Blood_Currency_Count: 4
 --- !u!1 &2348319102099890103
 GameObject:
   m_ObjectHideFlags: 0
@@ -549,8 +515,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2348319102099890103}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.34106275, y: -0.009318597, z: 0.003381134, w: 0.93998826}
-  m_LocalPosition: {x: 0, y: 14.250001, z: -14.2}
+  m_LocalRotation: {x: 0.34106097, y: -0.009812475, z: 0.0035603195, w: 0.93998325}
+  m_LocalPosition: {x: -0.000002861023, y: 14.25, z: -14.200002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1133,8 +1099,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4936279243077657860}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.34106275, y: -0.009318597, z: 0.003381134, w: 0.93998826}
-  m_LocalPosition: {x: 0, y: 14.250001, z: -14.2}
+  m_LocalRotation: {x: 0.34106097, y: -0.009812475, z: 0.0035603195, w: 0.93998325}
+  m_LocalPosition: {x: -0.000002861023, y: 14.25, z: -14.200002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
