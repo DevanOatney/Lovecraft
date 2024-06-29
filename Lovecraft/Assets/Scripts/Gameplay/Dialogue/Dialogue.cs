@@ -13,6 +13,7 @@ public class DialogueLine
     public bool isRandomBark;
     public AudioClip storyAudioClip; // Specific AudioClip for StoryDialogue
     [HideInInspector] public Sprite portrait; // Loaded portrait sprite
+    public string CinematicCameraName;
 }
 
 [CreateAssetMenu(fileName = "New Dialogue", menuName = "Dialogue System/Dialogue")]
@@ -21,4 +22,5 @@ public class Dialogue : ScriptableObject
     public string dialogueName;
     public List<DialogueLine> lines;
     public UnityEngine.Events.UnityEvent OnCompletion;
+    public string ReturnCameraName;
 }

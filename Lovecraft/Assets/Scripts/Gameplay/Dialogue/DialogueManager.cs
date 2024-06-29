@@ -18,6 +18,8 @@ public class DialogueManager : MonoBehaviour
     private int CurrentStoryPointIndex = 0;
 
     private Queue<DialogueLine> dialogueLines;
+    private Camera theActiveCamera;
+    private AudioSource previousClip;
 
     private void Awake()
     {
@@ -98,6 +100,14 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogue(string dialogueName)
     {
         Dialogue dialogue = DialogueLoader.Instance.GetDialogue(dialogueName);
+        if (dialogue.ReturnCameraName != null && dialogue.ReturnCameraName.Length > 0)
+        {
+            Camera cam = GameObject.Find(dialogue.ReturnCameraName).GetComponent<Camera>();
+            if (Camera.main != cam)
+            {
+                CinematicCameraManager.Instance.BackToGameplay();
+            }
+        }
 
         if (dialogue != null)
         {
@@ -118,13 +128,14 @@ public class DialogueManager : MonoBehaviour
                 dialoguePanelRef.SetActive(true);
                 Time.timeScale = 0; // Pause the game
                 DisplayNextLine();
+
             }
         }
     }
 
     //(can be called from the UI)
     public void DisplayNextLine()
-    {
+    { 
         if (dialogueLines.Count == 0)
         {
             EndDialogue();
@@ -136,17 +147,31 @@ public class DialogueManager : MonoBehaviour
         dialogueTextRef.text = line.dialogueText;
         portraitImageRef.sprite = line.portrait;
 
+        if( previousClip != null && previousClip.isPlaying)
+        {
+            previousClip.Stop();
+        }
         if (line.storyAudioClip != null)
         {
-            AudioManager.Instance.PlayAudioClip(line.storyAudioClip);
+            previousClip = AudioManager.Instance.PlayAudioClip(line.storyAudioClip);
         }
+
+        if (line.CinematicCameraName != null && line.CinematicCameraName.Length > 0)
+        {
+            CinematicCameraManager.Instance.ActivateCamera(line.CinematicCameraName);
+        }
+
     }
 
     private void EndDialogue()
     {
+
+        CinematicCameraManager.Instance.BackToGameplay();
+
         dialoguePanelRef.SetActive(false);
         Time.timeScale = 1; // Resume the game
         GameEventSystem.Instance.TriggerEvent(GameEvent.DIALOGUE_COMPLETE);
+
     }
 
     private void Update()

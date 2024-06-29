@@ -6,6 +6,7 @@ public enum GameSate
 {
     BUILD_PHASE,
     COMBAT_PHASE,
+    DIALOGUE_PHASE,
     GAME_STATE_COUNT,
 }
 
@@ -53,8 +54,8 @@ public class RoundController : MonoBehaviour
     {
         GameEventSystem.Instance.RegisterListener(GameEvent.PHASE_CHANGE, OnPhaseChange);
         GameEventSystem.Instance.RegisterListener(GameEvent.WAVE_COMPLETED, OnWaveCompleted);
+        GameEventSystem.Instance.RegisterListener(GameEvent.DIALOGUE_COMPLETE, TriggerBuildPhase);
         GameEventSystem.Instance.TriggerEvent(GameEvent.GAME_STARTED);
-        TriggerBuildPhase();
     }
 
     private void OnDestroy()
@@ -94,7 +95,7 @@ public class RoundController : MonoBehaviour
         GameEventSystem.Instance.TriggerEvent(GameEvent.PHASE_CHANGE, null);
     }
 
-    public void TriggerBuildPhase()
+    public void TriggerBuildPhase(object obj)
     {
         gameState = GameSate.COMBAT_PHASE;
         TriggerPhaseChange();
