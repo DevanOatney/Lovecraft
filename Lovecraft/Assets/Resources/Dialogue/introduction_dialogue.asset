@@ -143,11 +143,11 @@ MonoBehaviour:
     CinematicCameraName: 
   - speakerName: ...
     dialogueText: '*screams of soldiers being attacked*'
-    portraitName: 
+    portraitName: monsterhenry
     sfxType: 5
     isRandomBark: 0
     storyAudioClip: {fileID: 0}
-    portrait: {fileID: 21300000, guid: 50e311d80e1dd864db0358a205e1ef32, type: 3}
+    portrait: {fileID: 0}
     CinematicCameraName: 
   - speakerName: Henry
     dialogueText: Emma! Are you alright?
