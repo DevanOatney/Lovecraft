@@ -24,7 +24,15 @@ MonoBehaviour:
     portrait: {fileID: 0}
     CinematicCameraName: 
   - speakerName: High Inquisitor
-    dialogueText: Your wickedness shall be cleansed. Light, guide my blade.
+    dialogueText: Your wickedness shall be cleansed.
+    portraitName: Inquisitor Portrait
+    sfxType: 5
+    isRandomBark: 0
+    storyAudioClip: {fileID: 8300000, guid: 6ba6e5c2954222747a376abc2388b269, type: 3}
+    portrait: {fileID: 0}
+    CinematicCameraName: 
+  - speakerName: High Inquisitor
+    dialogueText: Light, guide my blade!
     portraitName: Inquisitor Portrait
     sfxType: 5
     isRandomBark: 0
@@ -57,7 +65,7 @@ MonoBehaviour:
     CinematicCameraName: 
   - speakerName: Henry
     dialogueText: No...
-    portraitName: H_Apprehensive_EOMO
+    portraitName: H_Neutral_EOMO
     sfxType: 5
     isRandomBark: 0
     storyAudioClip: {fileID: 8300000, guid: 18f562a86aada134580956370fb01616, type: 3}

@@ -16,11 +16,11 @@ MonoBehaviour:
   lines:
   - speakerName: Emma
     dialogueText: Henry... I'm tired.
-    portraitName: Emma_Neutral
+    portraitName: E_Neutral_ECMC
     sfxType: 5
     isRandomBark: 0
-    storyAudioClip: {fileID: 8300000, guid: 1d67bad16f2aba9479c6c40aa60f05b7, type: 3}
-    portrait: {fileID: 21300000, guid: 0a2b54278ec2fba459a0e925c3f2b210, type: 3}
+    storyAudioClip: {fileID: 8300000, guid: 591082e55d4af254fa7112786ceffed4, type: 3}
+    portrait: {fileID: 0}
     CinematicCameraName: CineCameraPos_1
   - speakerName: Henry
     dialogueText: "I know, my love but you must keep fighting. Things will be better
@@ -28,7 +28,7 @@ MonoBehaviour:
     portraitName: Henry_Soft
     sfxType: 0
     isRandomBark: 0
-    storyAudioClip: {fileID: 8300000, guid: 0f68d83215699ed4bba3a65959e30819, type: 3}
+    storyAudioClip: {fileID: 0}
     portrait: {fileID: 21300000, guid: 148b8195b1182354095a5034d750f1d8, type: 3}
     CinematicCameraName: 
   - speakerName: Emma
@@ -37,7 +37,7 @@ MonoBehaviour:
     portraitName: Emma_Neutral
     sfxType: 5
     isRandomBark: 0
-    storyAudioClip: {fileID: 8300000, guid: b2495b9c7301c8040aca6361d603506e, type: 3}
+    storyAudioClip: {fileID: 0}
     portrait: {fileID: 21300000, guid: 739fdbf58c9672945b33535c2b87ba7c, type: 3}
     CinematicCameraName: 
   - speakerName: Henry
@@ -46,8 +46,16 @@ MonoBehaviour:
     portraitName: Henry_Soft
     sfxType: 5
     isRandomBark: 0
-    storyAudioClip: {fileID: 8300000, guid: 3eaf1ea2f883b594cb8d196f0147b3fb, type: 3}
+    storyAudioClip: {fileID: 0}
     portrait: {fileID: 21300000, guid: 148b8195b1182354095a5034d750f1d8, type: 3}
+    CinematicCameraName: 
+  - speakerName: 
+    dialogueText: '*the clatter of armor and hooves approaching*'
+    portraitName: 
+    sfxType: 5
+    isRandomBark: 0
+    storyAudioClip: {fileID: 0}
+    portrait: {fileID: 0}
     CinematicCameraName: 
   - speakerName: Henry
     dialogueText: ...
@@ -62,7 +70,7 @@ MonoBehaviour:
     portraitName: Henry_Neutral
     sfxType: 5
     isRandomBark: 0
-    storyAudioClip: {fileID: 8300000, guid: 7312dadc282d6e04fa8bff91a9a1a279, type: 3}
+    storyAudioClip: {fileID: 0}
     portrait: {fileID: 21300000, guid: fa008eaf1674e9745a00bdf1199d10cf, type: 3}
     CinematicCameraName: CineCameraPos_1
   - speakerName: High Inquisitor
@@ -72,15 +80,15 @@ MonoBehaviour:
     portraitName: Inquisitor Portrait
     sfxType: 5
     isRandomBark: 0
-    storyAudioClip: {fileID: 8300000, guid: 4a2cafc4b4e5b2d42a408be5e29e3edc, type: 3}
+    storyAudioClip: {fileID: 0}
     portrait: {fileID: 21300000, guid: 8b7752e19a43dc649917d0224b457c21, type: 3}
     CinematicCameraName: CineCameraPos_2
   - speakerName: Henry
-    dialogueText: I did what I had to do.
+    dialogueText: I did what was necessary.
     portraitName: Henry_Angry
     sfxType: 5
     isRandomBark: 0
-    storyAudioClip: {fileID: 8300000, guid: 3aa17ebc39609094e8aabcd8c5e20e8c, type: 3}
+    storyAudioClip: {fileID: 0}
     portrait: {fileID: 21300000, guid: 50e311d80e1dd864db0358a205e1ef32, type: 3}
     CinematicCameraName: CineCameraPos_1
   - speakerName: High Inquisitor
@@ -90,7 +98,7 @@ MonoBehaviour:
     portraitName: Inquisitor Portrait
     sfxType: 5
     isRandomBark: 0
-    storyAudioClip: {fileID: 8300000, guid: 2bd216241cf30f44c95b3b91128022b5, type: 3}
+    storyAudioClip: {fileID: 0}
     portrait: {fileID: 21300000, guid: 8b7752e19a43dc649917d0224b457c21, type: 3}
     CinematicCameraName: CineCameraPos_2
   - speakerName: High Inquisitor
@@ -98,23 +106,47 @@ MonoBehaviour:
     portraitName: Inquisitor Portrait
     sfxType: 5
     isRandomBark: 0
-    storyAudioClip: {fileID: 8300000, guid: bef515840a701524ab122def23e33008, type: 3}
+    storyAudioClip: {fileID: 0}
     portrait: {fileID: 21300000, guid: 8b7752e19a43dc649917d0224b457c21, type: 3}
     CinematicCameraName: CineCameraPos_3
+  - speakerName: 
+    dialogueText: The soldiers surround the Beating Heart and ready their weapons.
+    portraitName: 
+    sfxType: 5
+    isRandomBark: 0
+    storyAudioClip: {fileID: 0}
+    portrait: {fileID: 0}
+    CinematicCameraName: 
+  - speakerName: 
+    dialogueText: A sword slashes down on the machine.
+    portraitName: 
+    sfxType: 5
+    isRandomBark: 0
+    storyAudioClip: {fileID: 0}
+    portrait: {fileID: 0}
+    CinematicCameraName: 
   - speakerName: Henry
     dialogueText: Stop! Get away from it!
     portraitName: Henry_Neutral
     sfxType: 5
     isRandomBark: 0
-    storyAudioClip: {fileID: 8300000, guid: 0cb4a6bc284838d4594c528f98bd2e68, type: 3}
+    storyAudioClip: {fileID: 0}
     portrait: {fileID: 21300000, guid: fa008eaf1674e9745a00bdf1199d10cf, type: 3}
     CinematicCameraName: CineCameraPos_1
+  - speakerName: 
+    dialogueText: The men swing their weapons wildly. A cable severs and spews blood.
+    portraitName: 
+    sfxType: 5
+    isRandomBark: 0
+    storyAudioClip: {fileID: 0}
+    portrait: {fileID: 0}
+    CinematicCameraName: 
   - speakerName: Emma
     dialogueText: Aaaahh!
     portraitName: Emma_Neutral
     sfxType: 5
     isRandomBark: 0
-    storyAudioClip: {fileID: 8300000, guid: 117ceac79d293704c8a0fa57a24b5f18, type: 3}
+    storyAudioClip: {fileID: 0}
     portrait: {fileID: 21300000, guid: 739fdbf58c9672945b33535c2b87ba7c, type: 3}
     CinematicCameraName: 
   - speakerName: Henry
@@ -122,7 +154,7 @@ MonoBehaviour:
     portraitName: Henry_Angry
     sfxType: 5
     isRandomBark: 0
-    storyAudioClip: {fileID: 8300000, guid: f7af19d382b5e084592159d9f5b17ad5, type: 3}
+    storyAudioClip: {fileID: 0}
     portrait: {fileID: 21300000, guid: 50e311d80e1dd864db0358a205e1ef32, type: 3}
     CinematicCameraName: 
   - speakerName: Emma
@@ -130,16 +162,25 @@ MonoBehaviour:
     portraitName: Emma_Neutral
     sfxType: 5
     isRandomBark: 0
-    storyAudioClip: {fileID: 8300000, guid: 3aefa81920614014c9807ce1000dc0b8, type: 3}
+    storyAudioClip: {fileID: 0}
     portrait: {fileID: 21300000, guid: 739fdbf58c9672945b33535c2b87ba7c, type: 3}
     CinematicCameraName: 
   - speakerName: Henry
     dialogueText: I said STOP!
-    portraitName: monsterhenry
+    portraitName: Henry
     sfxType: 5
     isRandomBark: 0
-    storyAudioClip: {fileID: 8300000, guid: d9566b0f279cf8d48813416c78e5463a, type: 3}
-    portrait: {fileID: 21300000, guid: a033074e92c2be24eabb9db4e25d6af7, type: 3}
+    storyAudioClip: {fileID: 0}
+    portrait: {fileID: 0}
+    CinematicCameraName: 
+  - speakerName: 
+    dialogueText: Consumed by rage, Henry transforms into a beast and heaves himself
+      violently into the group of men, claws rending flesh.
+    portraitName: 
+    sfxType: 5
+    isRandomBark: 0
+    storyAudioClip: {fileID: 0}
+    portrait: {fileID: 0}
     CinematicCameraName: 
   - speakerName: ...
     dialogueText: '*screams of soldiers being attacked*'
@@ -154,7 +195,7 @@ MonoBehaviour:
     portraitName: Henry_Angry
     sfxType: 5
     isRandomBark: 0
-    storyAudioClip: {fileID: 8300000, guid: 5e9e287b7cd1e924cbd5127839fe1089, type: 3}
+    storyAudioClip: {fileID: 0}
     portrait: {fileID: 21300000, guid: 50e311d80e1dd864db0358a205e1ef32, type: 3}
     CinematicCameraName: 
   - speakerName: Emma
@@ -162,31 +203,24 @@ MonoBehaviour:
     portraitName: Emma_Neutral
     sfxType: 5
     isRandomBark: 0
-    storyAudioClip: {fileID: 8300000, guid: dba3c4cfd9ad8004fb1b60bfd4c5995b, type: 3}
+    storyAudioClip: {fileID: 0}
     portrait: {fileID: 21300000, guid: 739fdbf58c9672945b33535c2b87ba7c, type: 3}
     CinematicCameraName: 
   - speakerName: Henry
-    dialogueText: Just stay inside! Everything will be alright.
+    dialogueText: "Just stay inside! Everything will be okay. I\u2019ll make sure
+      of it."
     portraitName: Henry_Angry
     sfxType: 5
     isRandomBark: 0
-    storyAudioClip: {fileID: 8300000, guid: 7312dadc282d6e04fa8bff91a9a1a279, type: 3}
+    storyAudioClip: {fileID: 0}
     portrait: {fileID: 21300000, guid: 50e311d80e1dd864db0358a205e1ef32, type: 3}
-    CinematicCameraName: 
-  - speakerName: Henry
-    dialogueText: "I\u2019ll make sure of it."
-    portraitName: Henry_Neutral
-    sfxType: 5
-    isRandomBark: 0
-    storyAudioClip: {fileID: 8300000, guid: 6e4444f64d2565b4498737e341b45038, type: 3}
-    portrait: {fileID: 21300000, guid: fa008eaf1674e9745a00bdf1199d10cf, type: 3}
     CinematicCameraName: 
   - speakerName: Henry
     dialogueText: More will come. I must prepare.
     portraitName: Henry_Angry
     sfxType: 5
     isRandomBark: 0
-    storyAudioClip: {fileID: 8300000, guid: 2353a2d11a1f56b4da756d06b76701d5, type: 3}
+    storyAudioClip: {fileID: 0}
     portrait: {fileID: 21300000, guid: 50e311d80e1dd864db0358a205e1ef32, type: 3}
     CinematicCameraName: 
   OnCompletion:

@@ -20,15 +20,23 @@ MonoBehaviour:
     portraitName: Inquisitor Portrait
     sfxType: 5
     isRandomBark: 0
-    storyAudioClip: {fileID: 8300000, guid: 1fb8478906b87394daec5b9b9cedcaef, type: 3}
+    storyAudioClip: {fileID: 8300000, guid: 606c077878096304ab340fc58dee6037, type: 3}
     portrait: {fileID: 0}
     CinematicCameraName: 
   - speakerName: High Inquisitor
-    dialogueText: Your wickedness shall be cleansed. Light, guide my blade.
+    dialogueText: Your wickedness shall be cleansed.
     portraitName: Inquisitor Portrait
     sfxType: 5
     isRandomBark: 0
-    storyAudioClip: {fileID: 8300000, guid: c5611c3e022a90a45905c7a2c9b1142e, type: 3}
+    storyAudioClip: {fileID: 8300000, guid: 6ba6e5c2954222747a376abc2388b269, type: 3}
+    portrait: {fileID: 0}
+    CinematicCameraName: 
+  - speakerName: High Inquisitor
+    dialogueText: Light, guide my blade!
+    portraitName: Inquisitor Portrait
+    sfxType: 5
+    isRandomBark: 0
+    storyAudioClip: {fileID: 8300000, guid: 375f18cd35c47bc4cbd4ff04b611c228, type: 3}
     portrait: {fileID: 0}
     CinematicCameraName: 
   - speakerName: High Inquisitor
@@ -36,7 +44,7 @@ MonoBehaviour:
     portraitName: Inquisitor Portrait
     sfxType: 5
     isRandomBark: 0
-    storyAudioClip: {fileID: 8300000, guid: c5611c3e022a90a45905c7a2c9b1142e, type: 3}
+    storyAudioClip: {fileID: 8300000, guid: d59acca49b0c27c4cb43d3e673d62882, type: 3}
     portrait: {fileID: 0}
     CinematicCameraName: 
   OnCompletion:

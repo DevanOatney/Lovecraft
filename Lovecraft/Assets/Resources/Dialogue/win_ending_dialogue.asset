@@ -19,7 +19,7 @@ MonoBehaviour:
     portraitName: Inquisitor Portrait
     sfxType: 5
     isRandomBark: 0
-    storyAudioClip: {fileID: 8300000, guid: fdb6c8e542599454cb9cb9622ecbeb04, type: 3}
+    storyAudioClip: {fileID: 8300000, guid: dcc2623b6d398684fad20035918e57fd, type: 3}
     portrait: {fileID: 0}
     CinematicCameraName: 
   - speakerName: Henry
@@ -27,7 +27,7 @@ MonoBehaviour:
     portraitName: H_Neutral_EOMO
     sfxType: 5
     isRandomBark: 0
-    storyAudioClip: {fileID: 8300000, guid: e6f30afdb733d234abd99ee28be8392c, type: 3}
+    storyAudioClip: {fileID: 8300000, guid: 1fe61a6145d5367438c6e1bef35b59e6, type: 3}
     portrait: {fileID: 0}
     CinematicCameraName: 
   - speakerName: Emma
@@ -35,7 +35,7 @@ MonoBehaviour:
     portraitName: E_Neutral_EOMO
     sfxType: 5
     isRandomBark: 0
-    storyAudioClip: {fileID: 8300000, guid: 3de5c7834302a3543b5cdf36a98798c4, type: 3}
+    storyAudioClip: {fileID: 8300000, guid: f01db63f3a141ef459cd683d4e0e0bd3, type: 3}
     portrait: {fileID: 0}
     CinematicCameraName: 
   - speakerName: Henry
@@ -43,7 +43,7 @@ MonoBehaviour:
     portraitName: H_Soft_EOMO
     sfxType: 5
     isRandomBark: 0
-    storyAudioClip: {fileID: 8300000, guid: c5611c3e022a90a45905c7a2c9b1142e, type: 3}
+    storyAudioClip: {fileID: 8300000, guid: e88fd3b9019990e4da59096f22941189, type: 3}
     portrait: {fileID: 0}
     CinematicCameraName: 
   - speakerName: Emma
@@ -51,7 +51,7 @@ MonoBehaviour:
     portraitName: E_Neutral_EOMC
     sfxType: 5
     isRandomBark: 0
-    storyAudioClip: {fileID: 8300000, guid: c5611c3e022a90a45905c7a2c9b1142e, type: 3}
+    storyAudioClip: {fileID: 8300000, guid: 6482dd3b893fa6042a790f24d3292303, type: 3}
     portrait: {fileID: 0}
     CinematicCameraName: 
   - speakerName: Emma
@@ -59,7 +59,7 @@ MonoBehaviour:
     portraitName: E_Neutral_EOMO
     sfxType: 5
     isRandomBark: 0
-    storyAudioClip: {fileID: 8300000, guid: c5611c3e022a90a45905c7a2c9b1142e, type: 3}
+    storyAudioClip: {fileID: 8300000, guid: 5a748be27b891ad42b10e413d92541a0, type: 3}
     portrait: {fileID: 0}
     CinematicCameraName: 
   - speakerName: Henry
@@ -67,7 +67,7 @@ MonoBehaviour:
     portraitName: H_Soft_EOMC
     sfxType: 5
     isRandomBark: 0
-    storyAudioClip: {fileID: 8300000, guid: c5611c3e022a90a45905c7a2c9b1142e, type: 3}
+    storyAudioClip: {fileID: 8300000, guid: 7be4e78f7159e204088e64f30691e831, type: 3}
     portrait: {fileID: 0}
     CinematicCameraName: 
   OnCompletion:

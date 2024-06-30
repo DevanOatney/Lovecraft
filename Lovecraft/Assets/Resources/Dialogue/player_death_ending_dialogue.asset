@@ -16,10 +16,10 @@ MonoBehaviour:
   lines:
   - speakerName: Emma
     dialogueText: 'Henry? Henry! '
-    portraitName: E_Pain_ECMO
+    portraitName: E_Neutral_EOMO
     sfxType: 5
     isRandomBark: 0
-    storyAudioClip: {fileID: 8300000, guid: c1d13afa865bf5c48ba4e9b530aa1159, type: 3}
+    storyAudioClip: {fileID: 8300000, guid: 1a6d20653e98ed04bb2873302a373a79, type: 3}
     portrait: {fileID: 0}
     CinematicCameraName: 
   - speakerName: Henry
@@ -27,7 +27,7 @@ MonoBehaviour:
     portraitName: H_Neutral_ECMO
     sfxType: 5
     isRandomBark: 0
-    storyAudioClip: {fileID: 8300000, guid: dd5219753acbea24d9b820449015a285, type: 3}
+    storyAudioClip: {fileID: 8300000, guid: 060f789aee03df446a34c846bdf672a6, type: 3}
     portrait: {fileID: 0}
     CinematicCameraName: 
   OnCompletion:
