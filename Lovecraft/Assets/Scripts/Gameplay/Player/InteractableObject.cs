@@ -23,8 +23,11 @@ public class InteractableObject : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Indicator.SetActive(true);
-        InteractionAction.Enable();
+        if (other.tag == "Player")
+        {
+            Indicator.SetActive(true);
+            InteractionAction.Enable();
+        }
     }
 
     private void OnTriggerExit(Collider other)

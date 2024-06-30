@@ -135,6 +135,7 @@ public class RoundController : MonoBehaviour
 
     private void StartCombatPhase()
     {
+        GameObject.FindAnyObjectByType<PlayerSixWayDirectionalController>().HealHalf();
         if (currentWaveIndex < waveManager.waves.Count)
         {
             waveManager.StartWave();

@@ -135,6 +135,7 @@ public class GameplayController : MonoBehaviour
             {
                 Destroy(previewObject.gameObject);
                 previewObject = null;
+                GameEventSystem.Instance.TriggerEvent(GameEvent.BUILDING_OBJECT_PLACE, null);
             }
         }
     }

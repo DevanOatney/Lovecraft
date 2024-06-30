@@ -58,14 +58,6 @@ MonoBehaviour:
     portrait: {fileID: 21300000, guid: c8a03d02e827d914cb4d071268997b30, type: 3}
     CinematicCameraName: 
   - speakerName: Henry
-    dialogueText: ...
-    portraitName: H_Neutral_EOMC
-    sfxType: 5
-    isRandomBark: 0
-    storyAudioClip: {fileID: 8300000, guid: e216218f3947cf244904673b96cf3587, type: 3}
-    portrait: {fileID: 21300000, guid: f5c0d99cd70440746b247bffdbfa49a9, type: 3}
-    CinematicCameraName: CineCameraPos_3
-  - speakerName: Henry
     dialogueText: Stay inside.
     portraitName: H_Neutral_EOMO
     sfxType: 5
@@ -188,7 +180,7 @@ MonoBehaviour:
     sfxType: 5
     isRandomBark: 0
     storyAudioClip: {fileID: 0}
-    portrait: {fileID: 21300000, guid: 33f522208bb001d40b8236c8438c8a74, type: 3}
+    portrait: {fileID: 21300000, guid: a033074e92c2be24eabb9db4e25d6af7, type: 3}
     CinematicCameraName: 
   - speakerName: Henry
     dialogueText: Emma! Are you alright?

@@ -19,7 +19,7 @@ public class RandomAppliedPhysics : MonoBehaviour
         BucketTimer -= Time.deltaTime;
         if( BucketTimer <= 0 )
         {
-            BucketTimer = 3.5f;
+            BucketTimer = 1.5f;
             float eX = Random.Range(-3, 3) + RB.transform.position.x;
             float eY = Random.Range(-3, 3) + RB.transform.position.y;
             float eZ = Random.Range(-3, 3) + RB.transform.position.z;

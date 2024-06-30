@@ -229,4 +229,13 @@ public class PlayerSixWayDirectionalController : MonoBehaviour
             }
         }
     }
+
+    public void HealHalf()
+    {
+        curHP += (MaxHP / 2);
+        if (curHP > MaxHP)
+        {
+            curHP = MaxHP;
+        }
+    }
 }
