@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.InputSystem;
 using UnityEngine.Audio;
+using UnityEngine.UI;
 
 public enum MovementControlCombo
 {
@@ -28,6 +29,7 @@ public class PlayerSixWayDirectionalController : MonoBehaviour
     [SerializeField] private Transform PlayerVisuals;
     [SerializeField] private Animator twoDAnimations;
     [SerializeField] private AudioSource sfxFootsteps;
+    [SerializeField] private Image healthBar;
 
     private NavMeshAgent agent;
     private Vector2 movementInput;
@@ -217,6 +219,10 @@ public class PlayerSixWayDirectionalController : MonoBehaviour
         if (curHP > 0)
         {
             curHP -= damageToTake;
+            if (healthBar != null)
+            {
+                healthBar.fillAmount = (float)((float)curHP / (float)MaxHP);
+            }
             if (curHP <= 0)
             {
                 GameEventSystem.Instance.TriggerEvent(GameEvent.PLAYER_KILLED);
