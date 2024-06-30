@@ -947,16 +947,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddd2642a1dbd21c4e9f9c547cfeac1f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DelayToStartBackgroundMusic: 0.5
-  OpeningSoundEffect: {fileID: 8300000, guid: f84031b2fd0978348bb630cbf65d5f96, type: 3}
-  OpeningSFXVolume: 0.173
+  DelayToStartBackgroundMusic: 5.25
+  OpeningSoundEffect: {fileID: 8300000, guid: 24daee49826a4154f8c411a8cda5da28, type: 3}
+  OpeningSFXVolume: 0.648
   BackgroundMusicList:
   - delayOffset: 0
-    music: {fileID: 8300000, guid: 582582eb71ca5164e8f6cfeff6d1fc9d, type: 3}
-    volume: 0.758
-  - delayOffset: 5
     music: {fileID: 8300000, guid: e91b7e5ef061ec240bd9d75fa2d57c46, type: 3}
-    volume: 0.784
+    volume: 0.153
 --- !u!4 &996934974
 Transform:
   m_ObjectHideFlags: 0
