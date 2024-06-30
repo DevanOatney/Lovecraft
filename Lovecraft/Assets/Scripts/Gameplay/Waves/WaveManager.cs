@@ -6,7 +6,7 @@ public class WaveManager : MonoBehaviour
 {
     public List<WaveData> waves;
     public float checkInterval = 2f;
-    private int currentWaveIndex = 0;
+    public int currentWaveIndex = 0;
     private int enemiesAlive = 0;
     private Transform treeTarget;
     private Transform playerTarget;
@@ -86,6 +86,7 @@ public class WaveManager : MonoBehaviour
         {
             if (enemiesAlive <= 0 && !waveInProgress)
             {
+                currentWaveIndex++;
                 GameEventSystem.Instance.TriggerEvent(GameEvent.WAVE_COMPLETED);
                 yield break;
             }

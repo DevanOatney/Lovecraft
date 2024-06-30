@@ -65,7 +65,7 @@ public class DialogueManager : MonoBehaviour
     private void OnWaveComplete(object data)
     {
         CurrentStoryPointIndex++;
-        if(CurrentStoryPointIndex < StoryPoints.Count)
+        if(CurrentStoryPointIndex < StoryPoints.Count && StoryPoints[CurrentStoryPointIndex] != null)
             StartDialogue(StoryPoints[CurrentStoryPointIndex].dialogueName);
     }
 
@@ -130,6 +130,10 @@ public class DialogueManager : MonoBehaviour
                 DisplayNextLine();
 
             }
+            if( dialogue.isAnEnding )
+            {
+                GameEventSystem.Instance.TriggerEvent(GameEvent.GAME_OVER);
+            }
         }
     }
 
@@ -165,6 +169,7 @@ public class DialogueManager : MonoBehaviour
 
     private void EndDialogue()
     {
+        
 
         CinematicCameraManager.Instance.BackToGameplay();
 

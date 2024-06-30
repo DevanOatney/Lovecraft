@@ -34,3 +34,4 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   ReturnCameraName: 
+  isAnEnding: 1

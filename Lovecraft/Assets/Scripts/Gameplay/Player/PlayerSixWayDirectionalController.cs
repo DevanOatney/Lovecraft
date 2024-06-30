@@ -244,4 +244,12 @@ public class PlayerSixWayDirectionalController : MonoBehaviour
         }
         healthBar.fillAmount = (float)((float)curHP / (float)MaxHP);
     }
+
+    public void KILLALLENEMIES()
+    {
+        foreach(EnemyAI enemy in GameObject.FindObjectsByType<EnemyAI>(FindObjectsSortMode.None))
+        {
+            enemy.TakeDamage(99999);
+        }
+    }
 }

@@ -23,4 +23,5 @@ public class Dialogue : ScriptableObject
     public List<DialogueLine> lines;
     public UnityEngine.Events.UnityEvent OnCompletion;
     public string ReturnCameraName;
+    public bool isAnEnding = false;
 }

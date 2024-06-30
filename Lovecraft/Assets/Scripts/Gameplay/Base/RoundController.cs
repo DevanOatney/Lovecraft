@@ -47,7 +47,6 @@ public class RoundController : MonoBehaviour
 
     private float roundTimerBucket = 0f;
     
-    private int currentWaveIndex = 0;
     private bool isSceneInitialized = false;
 
     void Start()
@@ -136,7 +135,7 @@ public class RoundController : MonoBehaviour
     private void StartCombatPhase()
     {
         GameObject.FindAnyObjectByType<PlayerSixWayDirectionalController>().HealHalf();
-        if (currentWaveIndex < waveManager.waves.Count)
+        if (waveManager.currentWaveIndex < waveManager.waves.Count)
         {
             waveManager.StartWave();
         }
@@ -144,8 +143,7 @@ public class RoundController : MonoBehaviour
 
     private void OnWaveCompleted(object obj)
     {
-        currentWaveIndex++;
-        if (currentWaveIndex < waveManager.waves.Count)
+        if (waveManager.currentWaveIndex < waveManager.waves.Count)
         {
             OnPhaseChange(null);
         }
