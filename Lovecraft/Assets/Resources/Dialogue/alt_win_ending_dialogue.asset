@@ -20,7 +20,7 @@ MonoBehaviour:
     portraitName: Inquisitor Portrait
     sfxType: 5
     isRandomBark: 0
-    storyAudioClip: {fileID: 8300000, guid: bb6c4a092c7d96a438fc7931ef71ca44, type: 3}
+    storyAudioClip: {fileID: 8300000, guid: 606c077878096304ab340fc58dee6037, type: 3}
     portrait: {fileID: 0}
     CinematicCameraName: 
   - speakerName: High Inquisitor
@@ -28,7 +28,7 @@ MonoBehaviour:
     portraitName: Inquisitor Portrait
     sfxType: 5
     isRandomBark: 0
-    storyAudioClip: {fileID: 8300000, guid: 5f020b49d1d679340bbbf23a87513994, type: 3}
+    storyAudioClip: {fileID: 8300000, guid: 375f18cd35c47bc4cbd4ff04b611c228, type: 3}
     portrait: {fileID: 0}
     CinematicCameraName: 
   - speakerName: High Inquisitor
@@ -36,7 +36,7 @@ MonoBehaviour:
     portraitName: Inquisitor Portrait
     sfxType: 5
     isRandomBark: 0
-    storyAudioClip: {fileID: 8300000, guid: 1fb8478906b87394daec5b9b9cedcaef, type: 3}
+    storyAudioClip: {fileID: 8300000, guid: d59acca49b0c27c4cb43d3e673d62882, type: 3}
     portrait: {fileID: 0}
     CinematicCameraName: 
   - speakerName: High Inquisitor
@@ -44,7 +44,7 @@ MonoBehaviour:
     portraitName: Inquisitor Portrait
     sfxType: 5
     isRandomBark: 0
-    storyAudioClip: {fileID: 8300000, guid: 1fb8478906b87394daec5b9b9cedcaef, type: 3}
+    storyAudioClip: {fileID: 8300000, guid: fde2ec728e4b4784c8bf713b3424f9c4, type: 3}
     portrait: {fileID: 0}
     CinematicCameraName: 
   - speakerName: High Inquisitor
@@ -52,7 +52,7 @@ MonoBehaviour:
     portraitName: Inquisitor Portrait
     sfxType: 5
     isRandomBark: 0
-    storyAudioClip: {fileID: 8300000, guid: 1fb8478906b87394daec5b9b9cedcaef, type: 3}
+    storyAudioClip: {fileID: 8300000, guid: dee46f1de17b37c44b2469b32335fce5, type: 3}
     portrait: {fileID: 0}
     CinematicCameraName: 
   - speakerName: Henry
@@ -60,7 +60,7 @@ MonoBehaviour:
     portraitName: H_Apprehensive_EOMO
     sfxType: 5
     isRandomBark: 0
-    storyAudioClip: {fileID: 8300000, guid: 1fb8478906b87394daec5b9b9cedcaef, type: 3}
+    storyAudioClip: {fileID: 8300000, guid: 18f562a86aada134580956370fb01616, type: 3}
     portrait: {fileID: 0}
     CinematicCameraName: 
   - speakerName: High Inquisitor
@@ -68,7 +68,7 @@ MonoBehaviour:
     portraitName: Inquisitor Portrait
     sfxType: 5
     isRandomBark: 0
-    storyAudioClip: {fileID: 8300000, guid: 1fb8478906b87394daec5b9b9cedcaef, type: 3}
+    storyAudioClip: {fileID: 8300000, guid: 62ae8c85df715e94bbd4996beed0cc54, type: 3}
     portrait: {fileID: 0}
     CinematicCameraName: 
   - speakerName: High Inquisitor
@@ -76,7 +76,7 @@ MonoBehaviour:
     portraitName: Inquisitor Portrait
     sfxType: 5
     isRandomBark: 0
-    storyAudioClip: {fileID: 8300000, guid: 1fb8478906b87394daec5b9b9cedcaef, type: 3}
+    storyAudioClip: {fileID: 8300000, guid: a472e3322e157b345808a004145e6765, type: 3}
     portrait: {fileID: 0}
     CinematicCameraName: 
   - speakerName: Henry
@@ -84,7 +84,7 @@ MonoBehaviour:
     portraitName: H_Neutral_ECMO
     sfxType: 5
     isRandomBark: 0
-    storyAudioClip: {fileID: 8300000, guid: 1fb8478906b87394daec5b9b9cedcaef, type: 3}
+    storyAudioClip: {fileID: 8300000, guid: ae7870c43527b884a938b0886fe38f7e, type: 3}
     portrait: {fileID: 0}
     CinematicCameraName: 
   - speakerName: Emma
@@ -92,7 +92,7 @@ MonoBehaviour:
     portraitName: EW_Smile_EOMC
     sfxType: 5
     isRandomBark: 0
-    storyAudioClip: {fileID: 8300000, guid: 1fb8478906b87394daec5b9b9cedcaef, type: 3}
+    storyAudioClip: {fileID: 8300000, guid: 218eed8759708e54c80c62e4bb31b771, type: 3}
     portrait: {fileID: 0}
     CinematicCameraName: 
   OnCompletion:
