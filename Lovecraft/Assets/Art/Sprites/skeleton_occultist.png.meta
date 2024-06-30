@@ -3,7 +3,7 @@ guid: ce80e10556a5cae47a77a339dac98dc7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 12
+  serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -69,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -132,6 +132,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -140,9 +153,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 896
-        width: 128
-        height: 128
+        y: 1792
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,10 +173,10 @@ TextureImporter:
       name: skeleton_occultist_1
       rect:
         serializedVersion: 2
-        x: 128
-        y: 896
-        width: 128
-        height: 128
+        x: 256
+        y: 1792
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,10 +194,10 @@ TextureImporter:
       name: skeleton_occultist_2
       rect:
         serializedVersion: 2
-        x: 256
-        y: 896
-        width: 128
-        height: 128
+        x: 512
+        y: 1792
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,10 +215,10 @@ TextureImporter:
       name: skeleton_occultist_3
       rect:
         serializedVersion: 2
-        x: 384
-        y: 896
-        width: 128
-        height: 128
+        x: 768
+        y: 1792
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -223,10 +236,10 @@ TextureImporter:
       name: skeleton_occultist_4
       rect:
         serializedVersion: 2
-        x: 512
-        y: 896
-        width: 128
-        height: 128
+        x: 1024
+        y: 1792
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,10 +257,10 @@ TextureImporter:
       name: skeleton_occultist_5
       rect:
         serializedVersion: 2
-        x: 640
-        y: 896
-        width: 128
-        height: 128
+        x: 1280
+        y: 1792
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -265,10 +278,10 @@ TextureImporter:
       name: skeleton_occultist_6
       rect:
         serializedVersion: 2
-        x: 768
-        y: 896
-        width: 128
-        height: 128
+        x: 1536
+        y: 1792
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -286,10 +299,10 @@ TextureImporter:
       name: skeleton_occultist_7
       rect:
         serializedVersion: 2
-        x: 896
-        y: 896
-        width: 128
-        height: 128
+        x: 1792
+        y: 1792
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -307,10 +320,10 @@ TextureImporter:
       name: skeleton_occultist_8
       rect:
         serializedVersion: 2
-        x: 1024
-        y: 896
-        width: 128
-        height: 128
+        x: 2048
+        y: 1792
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -328,10 +341,10 @@ TextureImporter:
       name: skeleton_occultist_9
       rect:
         serializedVersion: 2
-        x: 1152
-        y: 896
-        width: 128
-        height: 128
+        x: 2304
+        y: 1792
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -349,10 +362,10 @@ TextureImporter:
       name: skeleton_occultist_10
       rect:
         serializedVersion: 2
-        x: 1280
-        y: 896
-        width: 128
-        height: 128
+        x: 2560
+        y: 1792
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -370,10 +383,10 @@ TextureImporter:
       name: skeleton_occultist_11
       rect:
         serializedVersion: 2
-        x: 1408
-        y: 896
-        width: 128
-        height: 128
+        x: 2816
+        y: 1792
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -391,10 +404,10 @@ TextureImporter:
       name: skeleton_occultist_12
       rect:
         serializedVersion: 2
-        x: 1536
-        y: 896
-        width: 128
-        height: 128
+        x: 3072
+        y: 1792
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -412,10 +425,10 @@ TextureImporter:
       name: skeleton_occultist_13
       rect:
         serializedVersion: 2
-        x: 1664
-        y: 896
-        width: 128
-        height: 128
+        x: 3328
+        y: 1792
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -433,10 +446,10 @@ TextureImporter:
       name: skeleton_occultist_14
       rect:
         serializedVersion: 2
-        x: 1792
-        y: 896
-        width: 128
-        height: 128
+        x: 3584
+        y: 1792
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -454,10 +467,10 @@ TextureImporter:
       name: skeleton_occultist_15
       rect:
         serializedVersion: 2
-        x: 1920
-        y: 896
-        width: 128
-        height: 128
+        x: 3840
+        y: 1792
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -475,10 +488,10 @@ TextureImporter:
       name: skeleton_occultist_16
       rect:
         serializedVersion: 2
-        x: 2048
-        y: 896
-        width: 128
-        height: 128
+        x: 4096
+        y: 1792
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -496,10 +509,10 @@ TextureImporter:
       name: skeleton_occultist_17
       rect:
         serializedVersion: 2
-        x: 2176
-        y: 896
-        width: 128
-        height: 128
+        x: 4352
+        y: 1792
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -517,10 +530,10 @@ TextureImporter:
       name: skeleton_occultist_18
       rect:
         serializedVersion: 2
-        x: 2304
-        y: 896
-        width: 128
-        height: 128
+        x: 4608
+        y: 1792
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -538,10 +551,10 @@ TextureImporter:
       name: skeleton_occultist_19
       rect:
         serializedVersion: 2
-        x: 2432
-        y: 896
-        width: 128
-        height: 128
+        x: 4864
+        y: 1792
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -559,10 +572,10 @@ TextureImporter:
       name: skeleton_occultist_20
       rect:
         serializedVersion: 2
-        x: 2560
-        y: 896
-        width: 128
-        height: 128
+        x: 5120
+        y: 1792
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -580,10 +593,10 @@ TextureImporter:
       name: skeleton_occultist_21
       rect:
         serializedVersion: 2
-        x: 2688
-        y: 896
-        width: 128
-        height: 128
+        x: 5376
+        y: 1792
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -601,10 +614,10 @@ TextureImporter:
       name: skeleton_occultist_22
       rect:
         serializedVersion: 2
-        x: 2816
-        y: 896
-        width: 128
-        height: 128
+        x: 5632
+        y: 1792
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -622,10 +635,10 @@ TextureImporter:
       name: skeleton_occultist_23
       rect:
         serializedVersion: 2
-        x: 2944
-        y: 896
-        width: 128
-        height: 128
+        x: 5888
+        y: 1792
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -643,10 +656,10 @@ TextureImporter:
       name: skeleton_occultist_24
       rect:
         serializedVersion: 2
-        x: 3072
-        y: 896
-        width: 128
-        height: 128
+        x: 6144
+        y: 1792
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -664,10 +677,10 @@ TextureImporter:
       name: skeleton_occultist_25
       rect:
         serializedVersion: 2
-        x: 3200
-        y: 896
-        width: 128
-        height: 128
+        x: 6400
+        y: 1792
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -685,10 +698,10 @@ TextureImporter:
       name: skeleton_occultist_26
       rect:
         serializedVersion: 2
-        x: 3328
-        y: 896
-        width: 128
-        height: 128
+        x: 6656
+        y: 1792
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -706,10 +719,10 @@ TextureImporter:
       name: skeleton_occultist_27
       rect:
         serializedVersion: 2
-        x: 3456
-        y: 896
-        width: 128
-        height: 128
+        x: 6912
+        y: 1792
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -728,9 +741,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 768
-        width: 128
-        height: 128
+        y: 1536
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -748,10 +761,10 @@ TextureImporter:
       name: skeleton_occultist_29
       rect:
         serializedVersion: 2
-        x: 128
-        y: 768
-        width: 128
-        height: 128
+        x: 256
+        y: 1536
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -769,10 +782,10 @@ TextureImporter:
       name: skeleton_occultist_30
       rect:
         serializedVersion: 2
-        x: 256
-        y: 768
-        width: 128
-        height: 128
+        x: 512
+        y: 1536
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -790,10 +803,10 @@ TextureImporter:
       name: skeleton_occultist_31
       rect:
         serializedVersion: 2
-        x: 384
-        y: 768
-        width: 128
-        height: 128
+        x: 768
+        y: 1536
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -811,10 +824,10 @@ TextureImporter:
       name: skeleton_occultist_32
       rect:
         serializedVersion: 2
-        x: 512
-        y: 768
-        width: 128
-        height: 128
+        x: 1024
+        y: 1536
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -832,10 +845,10 @@ TextureImporter:
       name: skeleton_occultist_33
       rect:
         serializedVersion: 2
-        x: 640
-        y: 768
-        width: 128
-        height: 128
+        x: 1280
+        y: 1536
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -853,10 +866,10 @@ TextureImporter:
       name: skeleton_occultist_34
       rect:
         serializedVersion: 2
-        x: 768
-        y: 768
-        width: 128
-        height: 128
+        x: 1536
+        y: 1536
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -874,10 +887,10 @@ TextureImporter:
       name: skeleton_occultist_35
       rect:
         serializedVersion: 2
-        x: 896
-        y: 768
-        width: 128
-        height: 128
+        x: 1792
+        y: 1536
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -895,10 +908,10 @@ TextureImporter:
       name: skeleton_occultist_36
       rect:
         serializedVersion: 2
-        x: 1024
-        y: 768
-        width: 128
-        height: 128
+        x: 2048
+        y: 1536
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -916,10 +929,10 @@ TextureImporter:
       name: skeleton_occultist_37
       rect:
         serializedVersion: 2
-        x: 1152
-        y: 768
-        width: 128
-        height: 128
+        x: 2304
+        y: 1536
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -937,10 +950,10 @@ TextureImporter:
       name: skeleton_occultist_38
       rect:
         serializedVersion: 2
-        x: 1280
-        y: 768
-        width: 128
-        height: 128
+        x: 2560
+        y: 1536
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -958,10 +971,10 @@ TextureImporter:
       name: skeleton_occultist_39
       rect:
         serializedVersion: 2
-        x: 1408
-        y: 768
-        width: 128
-        height: 128
+        x: 2816
+        y: 1536
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -979,10 +992,10 @@ TextureImporter:
       name: skeleton_occultist_40
       rect:
         serializedVersion: 2
-        x: 1536
-        y: 768
-        width: 128
-        height: 128
+        x: 3072
+        y: 1536
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1000,10 +1013,10 @@ TextureImporter:
       name: skeleton_occultist_41
       rect:
         serializedVersion: 2
-        x: 1664
-        y: 768
-        width: 128
-        height: 128
+        x: 3328
+        y: 1536
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1021,10 +1034,10 @@ TextureImporter:
       name: skeleton_occultist_42
       rect:
         serializedVersion: 2
-        x: 1792
-        y: 768
-        width: 128
-        height: 128
+        x: 3584
+        y: 1536
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1042,10 +1055,10 @@ TextureImporter:
       name: skeleton_occultist_43
       rect:
         serializedVersion: 2
-        x: 1920
-        y: 768
-        width: 128
-        height: 128
+        x: 3840
+        y: 1536
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1063,10 +1076,10 @@ TextureImporter:
       name: skeleton_occultist_44
       rect:
         serializedVersion: 2
-        x: 2048
-        y: 768
-        width: 128
-        height: 128
+        x: 4096
+        y: 1536
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1084,10 +1097,10 @@ TextureImporter:
       name: skeleton_occultist_45
       rect:
         serializedVersion: 2
-        x: 2176
-        y: 768
-        width: 128
-        height: 128
+        x: 4352
+        y: 1536
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1105,10 +1118,10 @@ TextureImporter:
       name: skeleton_occultist_46
       rect:
         serializedVersion: 2
-        x: 2304
-        y: 768
-        width: 128
-        height: 128
+        x: 4608
+        y: 1536
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1126,10 +1139,10 @@ TextureImporter:
       name: skeleton_occultist_47
       rect:
         serializedVersion: 2
-        x: 2432
-        y: 768
-        width: 128
-        height: 128
+        x: 4864
+        y: 1536
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1147,10 +1160,10 @@ TextureImporter:
       name: skeleton_occultist_48
       rect:
         serializedVersion: 2
-        x: 2560
-        y: 768
-        width: 128
-        height: 128
+        x: 5120
+        y: 1536
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1168,10 +1181,10 @@ TextureImporter:
       name: skeleton_occultist_49
       rect:
         serializedVersion: 2
-        x: 2688
-        y: 768
-        width: 128
-        height: 128
+        x: 5376
+        y: 1536
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1189,10 +1202,10 @@ TextureImporter:
       name: skeleton_occultist_50
       rect:
         serializedVersion: 2
-        x: 2816
-        y: 768
-        width: 128
-        height: 128
+        x: 5632
+        y: 1536
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1210,10 +1223,10 @@ TextureImporter:
       name: skeleton_occultist_51
       rect:
         serializedVersion: 2
-        x: 2944
-        y: 768
-        width: 128
-        height: 128
+        x: 5888
+        y: 1536
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1231,10 +1244,10 @@ TextureImporter:
       name: skeleton_occultist_52
       rect:
         serializedVersion: 2
-        x: 3072
-        y: 768
-        width: 128
-        height: 128
+        x: 6144
+        y: 1536
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1252,10 +1265,10 @@ TextureImporter:
       name: skeleton_occultist_53
       rect:
         serializedVersion: 2
-        x: 3200
-        y: 768
-        width: 128
-        height: 128
+        x: 6400
+        y: 1536
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1273,10 +1286,10 @@ TextureImporter:
       name: skeleton_occultist_54
       rect:
         serializedVersion: 2
-        x: 3328
-        y: 768
-        width: 128
-        height: 128
+        x: 6656
+        y: 1536
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1294,10 +1307,10 @@ TextureImporter:
       name: skeleton_occultist_55
       rect:
         serializedVersion: 2
-        x: 3456
-        y: 768
-        width: 128
-        height: 128
+        x: 6912
+        y: 1536
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1316,9 +1329,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 640
-        width: 128
-        height: 128
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1336,10 +1349,10 @@ TextureImporter:
       name: skeleton_occultist_57
       rect:
         serializedVersion: 2
-        x: 128
-        y: 640
-        width: 128
-        height: 128
+        x: 256
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1357,10 +1370,10 @@ TextureImporter:
       name: skeleton_occultist_58
       rect:
         serializedVersion: 2
-        x: 256
-        y: 640
-        width: 128
-        height: 128
+        x: 512
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1378,10 +1391,10 @@ TextureImporter:
       name: skeleton_occultist_59
       rect:
         serializedVersion: 2
-        x: 384
-        y: 640
-        width: 128
-        height: 128
+        x: 768
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1399,10 +1412,10 @@ TextureImporter:
       name: skeleton_occultist_60
       rect:
         serializedVersion: 2
-        x: 512
-        y: 640
-        width: 128
-        height: 128
+        x: 1024
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1420,10 +1433,10 @@ TextureImporter:
       name: skeleton_occultist_61
       rect:
         serializedVersion: 2
-        x: 640
-        y: 640
-        width: 128
-        height: 128
+        x: 1280
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1441,10 +1454,10 @@ TextureImporter:
       name: skeleton_occultist_62
       rect:
         serializedVersion: 2
-        x: 768
-        y: 640
-        width: 128
-        height: 128
+        x: 1536
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1462,10 +1475,10 @@ TextureImporter:
       name: skeleton_occultist_63
       rect:
         serializedVersion: 2
-        x: 896
-        y: 640
-        width: 128
-        height: 128
+        x: 1792
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1483,10 +1496,10 @@ TextureImporter:
       name: skeleton_occultist_64
       rect:
         serializedVersion: 2
-        x: 1024
-        y: 640
-        width: 128
-        height: 128
+        x: 2048
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1504,10 +1517,10 @@ TextureImporter:
       name: skeleton_occultist_65
       rect:
         serializedVersion: 2
-        x: 1152
-        y: 640
-        width: 128
-        height: 128
+        x: 2304
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1525,10 +1538,10 @@ TextureImporter:
       name: skeleton_occultist_66
       rect:
         serializedVersion: 2
-        x: 1280
-        y: 640
-        width: 128
-        height: 128
+        x: 2560
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1546,10 +1559,10 @@ TextureImporter:
       name: skeleton_occultist_67
       rect:
         serializedVersion: 2
-        x: 1408
-        y: 640
-        width: 128
-        height: 128
+        x: 2816
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1567,10 +1580,10 @@ TextureImporter:
       name: skeleton_occultist_68
       rect:
         serializedVersion: 2
-        x: 1536
-        y: 640
-        width: 128
-        height: 128
+        x: 3072
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1588,10 +1601,10 @@ TextureImporter:
       name: skeleton_occultist_69
       rect:
         serializedVersion: 2
-        x: 1664
-        y: 640
-        width: 128
-        height: 128
+        x: 3328
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1609,10 +1622,10 @@ TextureImporter:
       name: skeleton_occultist_70
       rect:
         serializedVersion: 2
-        x: 1792
-        y: 640
-        width: 128
-        height: 128
+        x: 3584
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1630,10 +1643,10 @@ TextureImporter:
       name: skeleton_occultist_71
       rect:
         serializedVersion: 2
-        x: 1920
-        y: 640
-        width: 128
-        height: 128
+        x: 3840
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1651,10 +1664,10 @@ TextureImporter:
       name: skeleton_occultist_72
       rect:
         serializedVersion: 2
-        x: 2048
-        y: 640
-        width: 128
-        height: 128
+        x: 4096
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1672,10 +1685,10 @@ TextureImporter:
       name: skeleton_occultist_73
       rect:
         serializedVersion: 2
-        x: 2176
-        y: 640
-        width: 128
-        height: 128
+        x: 4352
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1693,10 +1706,10 @@ TextureImporter:
       name: skeleton_occultist_74
       rect:
         serializedVersion: 2
-        x: 2304
-        y: 640
-        width: 128
-        height: 128
+        x: 4608
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1714,10 +1727,10 @@ TextureImporter:
       name: skeleton_occultist_75
       rect:
         serializedVersion: 2
-        x: 2432
-        y: 640
-        width: 128
-        height: 128
+        x: 4864
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1735,10 +1748,10 @@ TextureImporter:
       name: skeleton_occultist_76
       rect:
         serializedVersion: 2
-        x: 2560
-        y: 640
-        width: 128
-        height: 128
+        x: 5120
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1756,10 +1769,10 @@ TextureImporter:
       name: skeleton_occultist_77
       rect:
         serializedVersion: 2
-        x: 2688
-        y: 640
-        width: 128
-        height: 128
+        x: 5376
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1777,10 +1790,10 @@ TextureImporter:
       name: skeleton_occultist_78
       rect:
         serializedVersion: 2
-        x: 2816
-        y: 640
-        width: 128
-        height: 128
+        x: 5632
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1798,10 +1811,10 @@ TextureImporter:
       name: skeleton_occultist_79
       rect:
         serializedVersion: 2
-        x: 2944
-        y: 640
-        width: 128
-        height: 128
+        x: 5888
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1819,10 +1832,10 @@ TextureImporter:
       name: skeleton_occultist_80
       rect:
         serializedVersion: 2
-        x: 3072
-        y: 640
-        width: 128
-        height: 128
+        x: 6144
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1840,10 +1853,10 @@ TextureImporter:
       name: skeleton_occultist_81
       rect:
         serializedVersion: 2
-        x: 3200
-        y: 640
-        width: 128
-        height: 128
+        x: 6400
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1861,10 +1874,10 @@ TextureImporter:
       name: skeleton_occultist_82
       rect:
         serializedVersion: 2
-        x: 3328
-        y: 640
-        width: 128
-        height: 128
+        x: 6656
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1882,10 +1895,10 @@ TextureImporter:
       name: skeleton_occultist_83
       rect:
         serializedVersion: 2
-        x: 3456
-        y: 640
-        width: 128
-        height: 128
+        x: 6912
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1904,9 +1917,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 512
-        width: 128
-        height: 128
+        y: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1924,10 +1937,10 @@ TextureImporter:
       name: skeleton_occultist_85
       rect:
         serializedVersion: 2
-        x: 128
-        y: 512
-        width: 128
-        height: 128
+        x: 256
+        y: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1945,10 +1958,10 @@ TextureImporter:
       name: skeleton_occultist_86
       rect:
         serializedVersion: 2
-        x: 256
-        y: 512
-        width: 128
-        height: 128
+        x: 512
+        y: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1966,10 +1979,10 @@ TextureImporter:
       name: skeleton_occultist_87
       rect:
         serializedVersion: 2
-        x: 384
-        y: 512
-        width: 128
-        height: 128
+        x: 768
+        y: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1987,10 +2000,10 @@ TextureImporter:
       name: skeleton_occultist_88
       rect:
         serializedVersion: 2
-        x: 512
-        y: 512
-        width: 128
-        height: 128
+        x: 1024
+        y: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2008,10 +2021,10 @@ TextureImporter:
       name: skeleton_occultist_89
       rect:
         serializedVersion: 2
-        x: 640
-        y: 512
-        width: 128
-        height: 128
+        x: 1280
+        y: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2029,10 +2042,10 @@ TextureImporter:
       name: skeleton_occultist_90
       rect:
         serializedVersion: 2
-        x: 768
-        y: 512
-        width: 128
-        height: 128
+        x: 1536
+        y: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2050,10 +2063,10 @@ TextureImporter:
       name: skeleton_occultist_91
       rect:
         serializedVersion: 2
-        x: 896
-        y: 512
-        width: 128
-        height: 128
+        x: 1792
+        y: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2071,10 +2084,10 @@ TextureImporter:
       name: skeleton_occultist_92
       rect:
         serializedVersion: 2
-        x: 1024
-        y: 512
-        width: 128
-        height: 128
+        x: 2048
+        y: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2092,10 +2105,10 @@ TextureImporter:
       name: skeleton_occultist_93
       rect:
         serializedVersion: 2
-        x: 1152
-        y: 512
-        width: 128
-        height: 128
+        x: 2304
+        y: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2113,10 +2126,10 @@ TextureImporter:
       name: skeleton_occultist_94
       rect:
         serializedVersion: 2
-        x: 1280
-        y: 512
-        width: 128
-        height: 128
+        x: 2560
+        y: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2134,10 +2147,10 @@ TextureImporter:
       name: skeleton_occultist_95
       rect:
         serializedVersion: 2
-        x: 1408
-        y: 512
-        width: 128
-        height: 128
+        x: 2816
+        y: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2155,10 +2168,10 @@ TextureImporter:
       name: skeleton_occultist_96
       rect:
         serializedVersion: 2
-        x: 1536
-        y: 512
-        width: 128
-        height: 128
+        x: 3072
+        y: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2176,10 +2189,10 @@ TextureImporter:
       name: skeleton_occultist_97
       rect:
         serializedVersion: 2
-        x: 1664
-        y: 512
-        width: 128
-        height: 128
+        x: 3328
+        y: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2197,10 +2210,10 @@ TextureImporter:
       name: skeleton_occultist_98
       rect:
         serializedVersion: 2
-        x: 1792
-        y: 512
-        width: 128
-        height: 128
+        x: 3584
+        y: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2218,10 +2231,10 @@ TextureImporter:
       name: skeleton_occultist_99
       rect:
         serializedVersion: 2
-        x: 1920
-        y: 512
-        width: 128
-        height: 128
+        x: 3840
+        y: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2239,10 +2252,10 @@ TextureImporter:
       name: skeleton_occultist_100
       rect:
         serializedVersion: 2
-        x: 2048
-        y: 512
-        width: 128
-        height: 128
+        x: 4096
+        y: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2260,10 +2273,10 @@ TextureImporter:
       name: skeleton_occultist_101
       rect:
         serializedVersion: 2
-        x: 2176
-        y: 512
-        width: 128
-        height: 128
+        x: 4352
+        y: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2281,10 +2294,10 @@ TextureImporter:
       name: skeleton_occultist_102
       rect:
         serializedVersion: 2
-        x: 2304
-        y: 512
-        width: 128
-        height: 128
+        x: 4608
+        y: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2302,10 +2315,10 @@ TextureImporter:
       name: skeleton_occultist_103
       rect:
         serializedVersion: 2
-        x: 2432
-        y: 512
-        width: 128
-        height: 128
+        x: 4864
+        y: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2323,10 +2336,10 @@ TextureImporter:
       name: skeleton_occultist_104
       rect:
         serializedVersion: 2
-        x: 2560
-        y: 512
-        width: 128
-        height: 128
+        x: 5120
+        y: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2344,10 +2357,10 @@ TextureImporter:
       name: skeleton_occultist_105
       rect:
         serializedVersion: 2
-        x: 2688
-        y: 512
-        width: 128
-        height: 128
+        x: 5376
+        y: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2365,10 +2378,10 @@ TextureImporter:
       name: skeleton_occultist_106
       rect:
         serializedVersion: 2
-        x: 2816
-        y: 512
-        width: 128
-        height: 128
+        x: 5632
+        y: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2386,10 +2399,10 @@ TextureImporter:
       name: skeleton_occultist_107
       rect:
         serializedVersion: 2
-        x: 2944
-        y: 512
-        width: 128
-        height: 128
+        x: 5888
+        y: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2407,10 +2420,10 @@ TextureImporter:
       name: skeleton_occultist_108
       rect:
         serializedVersion: 2
-        x: 3072
-        y: 512
-        width: 128
-        height: 128
+        x: 6144
+        y: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2428,10 +2441,10 @@ TextureImporter:
       name: skeleton_occultist_109
       rect:
         serializedVersion: 2
-        x: 3200
-        y: 512
-        width: 128
-        height: 128
+        x: 6400
+        y: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2449,10 +2462,10 @@ TextureImporter:
       name: skeleton_occultist_110
       rect:
         serializedVersion: 2
-        x: 3328
-        y: 512
-        width: 128
-        height: 128
+        x: 6656
+        y: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2470,10 +2483,10 @@ TextureImporter:
       name: skeleton_occultist_111
       rect:
         serializedVersion: 2
-        x: 3456
-        y: 512
-        width: 128
-        height: 128
+        x: 6912
+        y: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2492,9 +2505,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 384
-        width: 128
-        height: 128
+        y: 768
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2512,10 +2525,10 @@ TextureImporter:
       name: skeleton_occultist_113
       rect:
         serializedVersion: 2
-        x: 128
-        y: 384
-        width: 128
-        height: 128
+        x: 256
+        y: 768
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2533,10 +2546,10 @@ TextureImporter:
       name: skeleton_occultist_114
       rect:
         serializedVersion: 2
-        x: 256
-        y: 384
-        width: 128
-        height: 128
+        x: 512
+        y: 768
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2554,10 +2567,10 @@ TextureImporter:
       name: skeleton_occultist_115
       rect:
         serializedVersion: 2
-        x: 384
-        y: 384
-        width: 128
-        height: 128
+        x: 768
+        y: 768
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2575,10 +2588,10 @@ TextureImporter:
       name: skeleton_occultist_116
       rect:
         serializedVersion: 2
-        x: 512
-        y: 384
-        width: 128
-        height: 128
+        x: 1024
+        y: 768
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2596,10 +2609,10 @@ TextureImporter:
       name: skeleton_occultist_117
       rect:
         serializedVersion: 2
-        x: 640
-        y: 384
-        width: 128
-        height: 128
+        x: 1280
+        y: 768
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2617,10 +2630,10 @@ TextureImporter:
       name: skeleton_occultist_118
       rect:
         serializedVersion: 2
-        x: 768
-        y: 384
-        width: 128
-        height: 128
+        x: 1536
+        y: 768
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2638,10 +2651,10 @@ TextureImporter:
       name: skeleton_occultist_119
       rect:
         serializedVersion: 2
-        x: 896
-        y: 384
-        width: 128
-        height: 128
+        x: 1792
+        y: 768
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2659,10 +2672,10 @@ TextureImporter:
       name: skeleton_occultist_120
       rect:
         serializedVersion: 2
-        x: 1024
-        y: 384
-        width: 128
-        height: 128
+        x: 2048
+        y: 768
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2680,10 +2693,10 @@ TextureImporter:
       name: skeleton_occultist_121
       rect:
         serializedVersion: 2
-        x: 1152
-        y: 384
-        width: 128
-        height: 128
+        x: 2304
+        y: 768
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2701,10 +2714,10 @@ TextureImporter:
       name: skeleton_occultist_122
       rect:
         serializedVersion: 2
-        x: 1280
-        y: 384
-        width: 128
-        height: 128
+        x: 2560
+        y: 768
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2722,10 +2735,10 @@ TextureImporter:
       name: skeleton_occultist_123
       rect:
         serializedVersion: 2
-        x: 1408
-        y: 384
-        width: 128
-        height: 128
+        x: 2816
+        y: 768
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2743,10 +2756,10 @@ TextureImporter:
       name: skeleton_occultist_124
       rect:
         serializedVersion: 2
-        x: 1536
-        y: 384
-        width: 128
-        height: 128
+        x: 3072
+        y: 768
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2764,10 +2777,10 @@ TextureImporter:
       name: skeleton_occultist_125
       rect:
         serializedVersion: 2
-        x: 1664
-        y: 384
-        width: 128
-        height: 128
+        x: 3328
+        y: 768
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2785,10 +2798,10 @@ TextureImporter:
       name: skeleton_occultist_126
       rect:
         serializedVersion: 2
-        x: 1792
-        y: 384
-        width: 128
-        height: 128
+        x: 3584
+        y: 768
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2806,10 +2819,10 @@ TextureImporter:
       name: skeleton_occultist_127
       rect:
         serializedVersion: 2
-        x: 1920
-        y: 384
-        width: 128
-        height: 128
+        x: 3840
+        y: 768
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2827,10 +2840,10 @@ TextureImporter:
       name: skeleton_occultist_128
       rect:
         serializedVersion: 2
-        x: 2048
-        y: 384
-        width: 128
-        height: 128
+        x: 4096
+        y: 768
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2848,10 +2861,10 @@ TextureImporter:
       name: skeleton_occultist_129
       rect:
         serializedVersion: 2
-        x: 2176
-        y: 384
-        width: 128
-        height: 128
+        x: 4352
+        y: 768
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2869,10 +2882,10 @@ TextureImporter:
       name: skeleton_occultist_130
       rect:
         serializedVersion: 2
-        x: 2304
-        y: 384
-        width: 128
-        height: 128
+        x: 4608
+        y: 768
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2890,10 +2903,10 @@ TextureImporter:
       name: skeleton_occultist_131
       rect:
         serializedVersion: 2
-        x: 2432
-        y: 384
-        width: 128
-        height: 128
+        x: 4864
+        y: 768
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2911,10 +2924,10 @@ TextureImporter:
       name: skeleton_occultist_132
       rect:
         serializedVersion: 2
-        x: 2560
-        y: 384
-        width: 128
-        height: 128
+        x: 5120
+        y: 768
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2932,10 +2945,10 @@ TextureImporter:
       name: skeleton_occultist_133
       rect:
         serializedVersion: 2
-        x: 2688
-        y: 384
-        width: 128
-        height: 128
+        x: 5376
+        y: 768
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2953,10 +2966,10 @@ TextureImporter:
       name: skeleton_occultist_134
       rect:
         serializedVersion: 2
-        x: 2816
-        y: 384
-        width: 128
-        height: 128
+        x: 5632
+        y: 768
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2974,10 +2987,10 @@ TextureImporter:
       name: skeleton_occultist_135
       rect:
         serializedVersion: 2
-        x: 2944
-        y: 384
-        width: 128
-        height: 128
+        x: 5888
+        y: 768
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2995,10 +3008,10 @@ TextureImporter:
       name: skeleton_occultist_136
       rect:
         serializedVersion: 2
-        x: 3072
-        y: 384
-        width: 128
-        height: 128
+        x: 6144
+        y: 768
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3016,10 +3029,10 @@ TextureImporter:
       name: skeleton_occultist_137
       rect:
         serializedVersion: 2
-        x: 3200
-        y: 384
-        width: 128
-        height: 128
+        x: 6400
+        y: 768
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3037,10 +3050,10 @@ TextureImporter:
       name: skeleton_occultist_138
       rect:
         serializedVersion: 2
-        x: 3328
-        y: 384
-        width: 128
-        height: 128
+        x: 6656
+        y: 768
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3058,10 +3071,10 @@ TextureImporter:
       name: skeleton_occultist_139
       rect:
         serializedVersion: 2
-        x: 3456
-        y: 384
-        width: 128
-        height: 128
+        x: 6912
+        y: 768
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3080,9 +3093,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 256
-        width: 128
-        height: 128
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3100,10 +3113,10 @@ TextureImporter:
       name: skeleton_occultist_141
       rect:
         serializedVersion: 2
-        x: 128
-        y: 256
-        width: 128
-        height: 128
+        x: 256
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3121,10 +3134,10 @@ TextureImporter:
       name: skeleton_occultist_142
       rect:
         serializedVersion: 2
-        x: 256
-        y: 256
-        width: 128
-        height: 128
+        x: 512
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3142,10 +3155,10 @@ TextureImporter:
       name: skeleton_occultist_143
       rect:
         serializedVersion: 2
-        x: 384
-        y: 256
-        width: 128
-        height: 128
+        x: 768
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3163,10 +3176,10 @@ TextureImporter:
       name: skeleton_occultist_144
       rect:
         serializedVersion: 2
-        x: 512
-        y: 256
-        width: 128
-        height: 128
+        x: 1024
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3184,10 +3197,10 @@ TextureImporter:
       name: skeleton_occultist_145
       rect:
         serializedVersion: 2
-        x: 640
-        y: 256
-        width: 128
-        height: 128
+        x: 1280
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3205,10 +3218,10 @@ TextureImporter:
       name: skeleton_occultist_146
       rect:
         serializedVersion: 2
-        x: 768
-        y: 256
-        width: 128
-        height: 128
+        x: 1536
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3226,10 +3239,10 @@ TextureImporter:
       name: skeleton_occultist_147
       rect:
         serializedVersion: 2
-        x: 896
-        y: 256
-        width: 128
-        height: 128
+        x: 1792
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3247,10 +3260,10 @@ TextureImporter:
       name: skeleton_occultist_148
       rect:
         serializedVersion: 2
-        x: 1024
-        y: 256
-        width: 128
-        height: 128
+        x: 2048
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3268,10 +3281,10 @@ TextureImporter:
       name: skeleton_occultist_149
       rect:
         serializedVersion: 2
-        x: 1152
-        y: 256
-        width: 128
-        height: 128
+        x: 2304
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3289,10 +3302,10 @@ TextureImporter:
       name: skeleton_occultist_150
       rect:
         serializedVersion: 2
-        x: 1280
-        y: 256
-        width: 128
-        height: 128
+        x: 2560
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3310,10 +3323,10 @@ TextureImporter:
       name: skeleton_occultist_151
       rect:
         serializedVersion: 2
-        x: 1408
-        y: 256
-        width: 128
-        height: 128
+        x: 2816
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3331,10 +3344,10 @@ TextureImporter:
       name: skeleton_occultist_152
       rect:
         serializedVersion: 2
-        x: 1536
-        y: 256
-        width: 128
-        height: 128
+        x: 3072
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3352,10 +3365,10 @@ TextureImporter:
       name: skeleton_occultist_153
       rect:
         serializedVersion: 2
-        x: 1664
-        y: 256
-        width: 128
-        height: 128
+        x: 3328
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3373,10 +3386,10 @@ TextureImporter:
       name: skeleton_occultist_154
       rect:
         serializedVersion: 2
-        x: 1792
-        y: 256
-        width: 128
-        height: 128
+        x: 3584
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3394,10 +3407,10 @@ TextureImporter:
       name: skeleton_occultist_155
       rect:
         serializedVersion: 2
-        x: 1920
-        y: 256
-        width: 128
-        height: 128
+        x: 3840
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3415,10 +3428,10 @@ TextureImporter:
       name: skeleton_occultist_156
       rect:
         serializedVersion: 2
-        x: 2048
-        y: 256
-        width: 128
-        height: 128
+        x: 4096
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3436,10 +3449,10 @@ TextureImporter:
       name: skeleton_occultist_157
       rect:
         serializedVersion: 2
-        x: 2176
-        y: 256
-        width: 128
-        height: 128
+        x: 4352
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3457,10 +3470,10 @@ TextureImporter:
       name: skeleton_occultist_158
       rect:
         serializedVersion: 2
-        x: 2304
-        y: 256
-        width: 128
-        height: 128
+        x: 4608
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3478,10 +3491,10 @@ TextureImporter:
       name: skeleton_occultist_159
       rect:
         serializedVersion: 2
-        x: 2432
-        y: 256
-        width: 128
-        height: 128
+        x: 4864
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3499,10 +3512,10 @@ TextureImporter:
       name: skeleton_occultist_160
       rect:
         serializedVersion: 2
-        x: 2560
-        y: 256
-        width: 128
-        height: 128
+        x: 5120
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3520,10 +3533,10 @@ TextureImporter:
       name: skeleton_occultist_161
       rect:
         serializedVersion: 2
-        x: 2688
-        y: 256
-        width: 128
-        height: 128
+        x: 5376
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3541,10 +3554,10 @@ TextureImporter:
       name: skeleton_occultist_162
       rect:
         serializedVersion: 2
-        x: 2816
-        y: 256
-        width: 128
-        height: 128
+        x: 5632
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3562,10 +3575,10 @@ TextureImporter:
       name: skeleton_occultist_163
       rect:
         serializedVersion: 2
-        x: 2944
-        y: 256
-        width: 128
-        height: 128
+        x: 5888
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3583,10 +3596,10 @@ TextureImporter:
       name: skeleton_occultist_164
       rect:
         serializedVersion: 2
-        x: 3072
-        y: 256
-        width: 128
-        height: 128
+        x: 6144
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3604,10 +3617,10 @@ TextureImporter:
       name: skeleton_occultist_165
       rect:
         serializedVersion: 2
-        x: 3200
-        y: 256
-        width: 128
-        height: 128
+        x: 6400
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3625,10 +3638,10 @@ TextureImporter:
       name: skeleton_occultist_166
       rect:
         serializedVersion: 2
-        x: 3328
-        y: 256
-        width: 128
-        height: 128
+        x: 6656
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3646,10 +3659,10 @@ TextureImporter:
       name: skeleton_occultist_167
       rect:
         serializedVersion: 2
-        x: 3456
-        y: 256
-        width: 128
-        height: 128
+        x: 6912
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3668,9 +3681,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 128
-        width: 128
-        height: 128
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3688,10 +3701,10 @@ TextureImporter:
       name: skeleton_occultist_169
       rect:
         serializedVersion: 2
-        x: 128
-        y: 128
-        width: 128
-        height: 128
+        x: 256
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3709,10 +3722,10 @@ TextureImporter:
       name: skeleton_occultist_170
       rect:
         serializedVersion: 2
-        x: 256
-        y: 128
-        width: 128
-        height: 128
+        x: 512
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3730,10 +3743,10 @@ TextureImporter:
       name: skeleton_occultist_171
       rect:
         serializedVersion: 2
-        x: 384
-        y: 128
-        width: 128
-        height: 128
+        x: 768
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3751,10 +3764,10 @@ TextureImporter:
       name: skeleton_occultist_172
       rect:
         serializedVersion: 2
-        x: 512
-        y: 128
-        width: 128
-        height: 128
+        x: 1024
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3772,10 +3785,10 @@ TextureImporter:
       name: skeleton_occultist_173
       rect:
         serializedVersion: 2
-        x: 640
-        y: 128
-        width: 128
-        height: 128
+        x: 1280
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3793,10 +3806,10 @@ TextureImporter:
       name: skeleton_occultist_174
       rect:
         serializedVersion: 2
-        x: 768
-        y: 128
-        width: 128
-        height: 128
+        x: 1536
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3814,10 +3827,10 @@ TextureImporter:
       name: skeleton_occultist_175
       rect:
         serializedVersion: 2
-        x: 896
-        y: 128
-        width: 128
-        height: 128
+        x: 1792
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3835,10 +3848,10 @@ TextureImporter:
       name: skeleton_occultist_176
       rect:
         serializedVersion: 2
-        x: 1024
-        y: 128
-        width: 128
-        height: 128
+        x: 2048
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3856,10 +3869,10 @@ TextureImporter:
       name: skeleton_occultist_177
       rect:
         serializedVersion: 2
-        x: 1152
-        y: 128
-        width: 128
-        height: 128
+        x: 2304
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3877,10 +3890,10 @@ TextureImporter:
       name: skeleton_occultist_178
       rect:
         serializedVersion: 2
-        x: 1280
-        y: 128
-        width: 128
-        height: 128
+        x: 2560
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3898,10 +3911,10 @@ TextureImporter:
       name: skeleton_occultist_179
       rect:
         serializedVersion: 2
-        x: 1408
-        y: 128
-        width: 128
-        height: 128
+        x: 2816
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3919,10 +3932,10 @@ TextureImporter:
       name: skeleton_occultist_180
       rect:
         serializedVersion: 2
-        x: 1536
-        y: 128
-        width: 128
-        height: 128
+        x: 3072
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3940,10 +3953,10 @@ TextureImporter:
       name: skeleton_occultist_181
       rect:
         serializedVersion: 2
-        x: 1664
-        y: 128
-        width: 128
-        height: 128
+        x: 3328
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3961,10 +3974,10 @@ TextureImporter:
       name: skeleton_occultist_182
       rect:
         serializedVersion: 2
-        x: 1792
-        y: 128
-        width: 128
-        height: 128
+        x: 3584
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3982,10 +3995,10 @@ TextureImporter:
       name: skeleton_occultist_183
       rect:
         serializedVersion: 2
-        x: 1920
-        y: 128
-        width: 128
-        height: 128
+        x: 3840
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4003,10 +4016,10 @@ TextureImporter:
       name: skeleton_occultist_184
       rect:
         serializedVersion: 2
-        x: 2048
-        y: 128
-        width: 128
-        height: 128
+        x: 4096
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4024,10 +4037,10 @@ TextureImporter:
       name: skeleton_occultist_185
       rect:
         serializedVersion: 2
-        x: 2176
-        y: 128
-        width: 128
-        height: 128
+        x: 4352
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4045,10 +4058,10 @@ TextureImporter:
       name: skeleton_occultist_186
       rect:
         serializedVersion: 2
-        x: 2304
-        y: 128
-        width: 128
-        height: 128
+        x: 4608
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4066,10 +4079,10 @@ TextureImporter:
       name: skeleton_occultist_187
       rect:
         serializedVersion: 2
-        x: 2432
-        y: 128
-        width: 128
-        height: 128
+        x: 4864
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4087,10 +4100,10 @@ TextureImporter:
       name: skeleton_occultist_188
       rect:
         serializedVersion: 2
-        x: 2560
-        y: 128
-        width: 128
-        height: 128
+        x: 5120
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4108,10 +4121,10 @@ TextureImporter:
       name: skeleton_occultist_189
       rect:
         serializedVersion: 2
-        x: 2688
-        y: 128
-        width: 128
-        height: 128
+        x: 5376
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4129,10 +4142,10 @@ TextureImporter:
       name: skeleton_occultist_190
       rect:
         serializedVersion: 2
-        x: 2816
-        y: 128
-        width: 128
-        height: 128
+        x: 5632
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4150,10 +4163,10 @@ TextureImporter:
       name: skeleton_occultist_191
       rect:
         serializedVersion: 2
-        x: 2944
-        y: 128
-        width: 128
-        height: 128
+        x: 5888
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4171,10 +4184,10 @@ TextureImporter:
       name: skeleton_occultist_192
       rect:
         serializedVersion: 2
-        x: 3072
-        y: 128
-        width: 128
-        height: 128
+        x: 6144
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4192,10 +4205,10 @@ TextureImporter:
       name: skeleton_occultist_193
       rect:
         serializedVersion: 2
-        x: 3200
-        y: 128
-        width: 128
-        height: 128
+        x: 6400
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4213,10 +4226,10 @@ TextureImporter:
       name: skeleton_occultist_194
       rect:
         serializedVersion: 2
-        x: 3328
-        y: 128
-        width: 128
-        height: 128
+        x: 6656
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4234,10 +4247,10 @@ TextureImporter:
       name: skeleton_occultist_195
       rect:
         serializedVersion: 2
-        x: 3456
-        y: 128
-        width: 128
-        height: 128
+        x: 6912
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4257,8 +4270,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 128
-        height: 128
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4276,10 +4289,10 @@ TextureImporter:
       name: skeleton_occultist_197
       rect:
         serializedVersion: 2
-        x: 128
+        x: 256
         y: 0
-        width: 128
-        height: 128
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4297,10 +4310,10 @@ TextureImporter:
       name: skeleton_occultist_198
       rect:
         serializedVersion: 2
-        x: 256
+        x: 512
         y: 0
-        width: 128
-        height: 128
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4318,10 +4331,10 @@ TextureImporter:
       name: skeleton_occultist_199
       rect:
         serializedVersion: 2
-        x: 384
+        x: 768
         y: 0
-        width: 128
-        height: 128
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4339,10 +4352,10 @@ TextureImporter:
       name: skeleton_occultist_200
       rect:
         serializedVersion: 2
-        x: 512
+        x: 1024
         y: 0
-        width: 128
-        height: 128
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4360,10 +4373,10 @@ TextureImporter:
       name: skeleton_occultist_201
       rect:
         serializedVersion: 2
-        x: 640
+        x: 1280
         y: 0
-        width: 128
-        height: 128
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4381,10 +4394,10 @@ TextureImporter:
       name: skeleton_occultist_202
       rect:
         serializedVersion: 2
-        x: 768
+        x: 1536
         y: 0
-        width: 128
-        height: 128
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4402,10 +4415,10 @@ TextureImporter:
       name: skeleton_occultist_203
       rect:
         serializedVersion: 2
-        x: 896
+        x: 1792
         y: 0
-        width: 128
-        height: 128
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4423,10 +4436,10 @@ TextureImporter:
       name: skeleton_occultist_204
       rect:
         serializedVersion: 2
-        x: 1024
+        x: 2048
         y: 0
-        width: 128
-        height: 128
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4444,10 +4457,10 @@ TextureImporter:
       name: skeleton_occultist_205
       rect:
         serializedVersion: 2
-        x: 1152
+        x: 2304
         y: 0
-        width: 128
-        height: 128
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4465,10 +4478,10 @@ TextureImporter:
       name: skeleton_occultist_206
       rect:
         serializedVersion: 2
-        x: 1280
+        x: 2560
         y: 0
-        width: 128
-        height: 128
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4486,10 +4499,10 @@ TextureImporter:
       name: skeleton_occultist_207
       rect:
         serializedVersion: 2
-        x: 1408
+        x: 2816
         y: 0
-        width: 128
-        height: 128
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4507,10 +4520,10 @@ TextureImporter:
       name: skeleton_occultist_208
       rect:
         serializedVersion: 2
-        x: 1536
+        x: 3072
         y: 0
-        width: 128
-        height: 128
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4528,10 +4541,10 @@ TextureImporter:
       name: skeleton_occultist_209
       rect:
         serializedVersion: 2
-        x: 1664
+        x: 3328
         y: 0
-        width: 128
-        height: 128
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4549,10 +4562,10 @@ TextureImporter:
       name: skeleton_occultist_210
       rect:
         serializedVersion: 2
-        x: 1792
+        x: 3584
         y: 0
-        width: 128
-        height: 128
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4570,10 +4583,10 @@ TextureImporter:
       name: skeleton_occultist_211
       rect:
         serializedVersion: 2
-        x: 1920
+        x: 3840
         y: 0
-        width: 128
-        height: 128
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4591,10 +4604,10 @@ TextureImporter:
       name: skeleton_occultist_212
       rect:
         serializedVersion: 2
-        x: 2048
+        x: 4096
         y: 0
-        width: 128
-        height: 128
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4612,10 +4625,10 @@ TextureImporter:
       name: skeleton_occultist_213
       rect:
         serializedVersion: 2
-        x: 2176
+        x: 4352
         y: 0
-        width: 128
-        height: 128
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4633,10 +4646,10 @@ TextureImporter:
       name: skeleton_occultist_214
       rect:
         serializedVersion: 2
-        x: 2304
+        x: 4608
         y: 0
-        width: 128
-        height: 128
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4654,10 +4667,10 @@ TextureImporter:
       name: skeleton_occultist_215
       rect:
         serializedVersion: 2
-        x: 2432
+        x: 4864
         y: 0
-        width: 128
-        height: 128
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4675,10 +4688,10 @@ TextureImporter:
       name: skeleton_occultist_216
       rect:
         serializedVersion: 2
-        x: 2560
+        x: 5120
         y: 0
-        width: 128
-        height: 128
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4696,10 +4709,10 @@ TextureImporter:
       name: skeleton_occultist_217
       rect:
         serializedVersion: 2
-        x: 2688
+        x: 5376
         y: 0
-        width: 128
-        height: 128
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4717,10 +4730,10 @@ TextureImporter:
       name: skeleton_occultist_218
       rect:
         serializedVersion: 2
-        x: 2816
+        x: 5632
         y: 0
-        width: 128
-        height: 128
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4738,10 +4751,10 @@ TextureImporter:
       name: skeleton_occultist_219
       rect:
         serializedVersion: 2
-        x: 2944
+        x: 5888
         y: 0
-        width: 128
-        height: 128
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4759,10 +4772,10 @@ TextureImporter:
       name: skeleton_occultist_220
       rect:
         serializedVersion: 2
-        x: 3072
+        x: 6144
         y: 0
-        width: 128
-        height: 128
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4780,10 +4793,10 @@ TextureImporter:
       name: skeleton_occultist_221
       rect:
         serializedVersion: 2
-        x: 3200
+        x: 6400
         y: 0
-        width: 128
-        height: 128
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4801,10 +4814,10 @@ TextureImporter:
       name: skeleton_occultist_222
       rect:
         serializedVersion: 2
-        x: 3328
+        x: 6656
         y: 0
-        width: 128
-        height: 128
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4822,10 +4835,10 @@ TextureImporter:
       name: skeleton_occultist_223
       rect:
         serializedVersion: 2
-        x: 3456
+        x: 6912
         y: 0
-        width: 128
-        height: 128
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
