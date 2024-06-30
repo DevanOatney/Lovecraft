@@ -25,7 +25,7 @@ MonoBehaviour:
   - speakerName: Henry
     dialogueText: "I know, my love but you must keep fighting. Things will be better
       soon. You\u2019ll see."
-    portraitName: Henry_Soft
+    portraitName: H_Soft_EOMC
     sfxType: 5
     isRandomBark: 0
     storyAudioClip: {fileID: 8300000, guid: 883c2dee1c84d3f4ea6dacfd5d074b27, type: 3}
@@ -59,7 +59,7 @@ MonoBehaviour:
     CinematicCameraName: 
   - speakerName: Henry
     dialogueText: ...
-    portraitName: Henry_Neutral
+    portraitName: H_Neutral_EOMC
     sfxType: 5
     isRandomBark: 0
     storyAudioClip: {fileID: 8300000, guid: e216218f3947cf244904673b96cf3587, type: 3}
@@ -85,7 +85,7 @@ MonoBehaviour:
     CinematicCameraName: CineCameraPos_2
   - speakerName: Henry
     dialogueText: I did what was necessary.
-    portraitName: Henry_Angry
+    portraitName: H_Angry_ECMC
     sfxType: 5
     isRandomBark: 0
     storyAudioClip: {fileID: 8300000, guid: 561f91dbc6f191445a7ca61772ef5023, type: 3}
@@ -143,7 +143,7 @@ MonoBehaviour:
     CinematicCameraName: 
   - speakerName: Emma
     dialogueText: Aaaahh!
-    portraitName: Emma_Neutral
+    portraitName: E_Neutral_ECMO
     sfxType: 5
     isRandomBark: 0
     storyAudioClip: {fileID: 8300000, guid: e315662d687a2924ba74843c448e37d0, type: 3}
@@ -159,7 +159,7 @@ MonoBehaviour:
     CinematicCameraName: 
   - speakerName: Emma
     dialogueText: Henry!
-    portraitName: Emma_Neutral
+    portraitName: E_Neutral_EOMO
     sfxType: 5
     isRandomBark: 0
     storyAudioClip: {fileID: 8300000, guid: 0d10db9dcd7d3da4e8d9547d53ae49b9, type: 3}
@@ -176,11 +176,19 @@ MonoBehaviour:
   - speakerName: 
     dialogueText: Consumed by rage, Henry transforms into a beast and heaves himself
       violently into the group of men, claws rending flesh.
-    portraitName: monsterhenry
+    portraitName: PLACEHOLDER
     sfxType: 5
     isRandomBark: 0
     storyAudioClip: {fileID: 0}
     portrait: {fileID: 21300000, guid: a033074e92c2be24eabb9db4e25d6af7, type: 3}
+    CinematicCameraName: 
+  - speakerName: ...
+    dialogueText: '**sounds of soldiers dying**'
+    portraitName: monsterhenry
+    sfxType: 5
+    isRandomBark: 0
+    storyAudioClip: {fileID: 0}
+    portrait: {fileID: 21300000, guid: 50e311d80e1dd864db0358a205e1ef32, type: 3}
     CinematicCameraName: 
   - speakerName: Henry
     dialogueText: Emma! Are you alright?
@@ -209,7 +217,7 @@ MonoBehaviour:
     CinematicCameraName: 
   - speakerName: Henry
     dialogueText: More will come. I must prepare.
-    portraitName: Henry_Angry
+    portraitName: H_Angry_EOMC
     sfxType: 5
     isRandomBark: 0
     storyAudioClip: {fileID: 8300000, guid: 424a16243e6935249bab8fdd28b95b56, type: 3}
