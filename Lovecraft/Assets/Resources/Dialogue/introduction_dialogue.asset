@@ -19,7 +19,7 @@ MonoBehaviour:
     portraitName: E_Neutral_ECMC
     sfxType: 5
     isRandomBark: 0
-    storyAudioClip: {fileID: 8300000, guid: 591082e55d4af254fa7112786ceffed4, type: 3}
+    storyAudioClip: {fileID: 8300000, guid: bb1f3971227a97649bb59fd76725545e, type: 3}
     portrait: {fileID: 21300000, guid: f15a6791eb00ce341b9f8615d276b286, type: 3}
     CinematicCameraName: CineCameraPos_1
   - speakerName: Henry
