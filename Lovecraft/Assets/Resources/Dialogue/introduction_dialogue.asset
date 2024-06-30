@@ -19,7 +19,7 @@ MonoBehaviour:
     portraitName: E_Neutral_ECMC
     sfxType: 5
     isRandomBark: 0
-    storyAudioClip: {fileID: 0}
+    storyAudioClip: {fileID: 8300000, guid: 591082e55d4af254fa7112786ceffed4, type: 3}
     portrait: {fileID: 21300000, guid: f15a6791eb00ce341b9f8615d276b286, type: 3}
     CinematicCameraName: CineCameraPos_1
   - speakerName: Henry
@@ -46,13 +46,8 @@ MonoBehaviour:
     portraitName: H_Soft_EOMO
     sfxType: 5
     isRandomBark: 0
-<<<<<<< HEAD
     storyAudioClip: {fileID: 8300000, guid: d4badd524b1888540bd580e0f4104ed6, type: 3}
     portrait: {fileID: 21300000, guid: 148b8195b1182354095a5034d750f1d8, type: 3}
-=======
-    storyAudioClip: {fileID: 0}
-    portrait: {fileID: 21300000, guid: 55666a6a9e5d25348a43073c6d771186, type: 3}
->>>>>>> 606dfd828ffa03d10253fba6515dc249ea01d0e4
     CinematicCameraName: 
   - speakerName: 
     dialogueText: '*the clatter of armor and hooves approaching*'
@@ -75,13 +70,8 @@ MonoBehaviour:
     portraitName: H_Neutral_EOMO
     sfxType: 5
     isRandomBark: 0
-<<<<<<< HEAD
     storyAudioClip: {fileID: 8300000, guid: 5dbac0cfdf54134409319a3c82bc72c2, type: 3}
     portrait: {fileID: 21300000, guid: fa008eaf1674e9745a00bdf1199d10cf, type: 3}
-=======
-    storyAudioClip: {fileID: 0}
-    portrait: {fileID: 21300000, guid: 0b3956ebe50615b45972502d526e2553, type: 3}
->>>>>>> 606dfd828ffa03d10253fba6515dc249ea01d0e4
     CinematicCameraName: CineCameraPos_1
   - speakerName: High Inquisitor
     dialogueText: It is the hour of your reckoning. You slaughter our kin, use them
@@ -140,13 +130,8 @@ MonoBehaviour:
     portraitName: H_Angry_EOMO
     sfxType: 5
     isRandomBark: 0
-<<<<<<< HEAD
     storyAudioClip: {fileID: 8300000, guid: 5517331e402dae642919f39b1bc902e9, type: 3}
     portrait: {fileID: 21300000, guid: fa008eaf1674e9745a00bdf1199d10cf, type: 3}
-=======
-    storyAudioClip: {fileID: 0}
-    portrait: {fileID: 21300000, guid: 3ca56baacc1d8684fa901a297bd54a70, type: 3}
->>>>>>> 606dfd828ffa03d10253fba6515dc249ea01d0e4
     CinematicCameraName: CineCameraPos_1
   - speakerName: 
     dialogueText: The men swing their weapons wildly. A cable severs and spews blood.
@@ -169,13 +154,8 @@ MonoBehaviour:
     portraitName: H_Angry_EOMO
     sfxType: 5
     isRandomBark: 0
-<<<<<<< HEAD
     storyAudioClip: {fileID: 8300000, guid: 7014f37b87f1a844682e6a09b60d700c, type: 3}
     portrait: {fileID: 21300000, guid: 50e311d80e1dd864db0358a205e1ef32, type: 3}
-=======
-    storyAudioClip: {fileID: 0}
-    portrait: {fileID: 21300000, guid: 3ca56baacc1d8684fa901a297bd54a70, type: 3}
->>>>>>> 606dfd828ffa03d10253fba6515dc249ea01d0e4
     CinematicCameraName: 
   - speakerName: Emma
     dialogueText: Henry!
@@ -190,13 +170,8 @@ MonoBehaviour:
     portraitName: H_Transform
     sfxType: 5
     isRandomBark: 0
-<<<<<<< HEAD
     storyAudioClip: {fileID: 8300000, guid: 68c96d4399bd638439b26bf9d3aae0c8, type: 3}
     portrait: {fileID: 0}
-=======
-    storyAudioClip: {fileID: 0}
-    portrait: {fileID: 21300000, guid: 041929feb94a65c429c527a5435f98d5, type: 3}
->>>>>>> 606dfd828ffa03d10253fba6515dc249ea01d0e4
     CinematicCameraName: 
   - speakerName: 
     dialogueText: Consumed by rage, Henry transforms into a beast and heaves himself
