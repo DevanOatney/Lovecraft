@@ -17,39 +17,44 @@ MonoBehaviour:
   - speakerName: High Inquisitor
     dialogueText: "That\u2019s enough! I\u2019ll have to put you down myself. There
       is no honor in an unfair fight- even if you are a beast. Prepare yourself."
-    portraitName: inquisitor
+    portraitName: Inquisitor Portrait
     sfxType: 5
     isRandomBark: 0
     storyAudioClip: {fileID: 8300000, guid: bb6c4a092c7d96a438fc7931ef71ca44, type: 3}
     portrait: {fileID: 0}
+    CinematicCameraName: 
   - speakerName: High Inquisitor
     dialogueText: Your wickedness shall be cleansed. Light, guide my blade.
-    portraitName: inquisitor
+    portraitName: Inquisitor Portrait
     sfxType: 5
     isRandomBark: 0
     storyAudioClip: {fileID: 8300000, guid: 5f020b49d1d679340bbbf23a87513994, type: 3}
     portrait: {fileID: 0}
+    CinematicCameraName: 
   - speakerName: High Inquisitor
     dialogueText: Die!
-    portraitName: inquisitor
+    portraitName: Inquisitor Portrait
     sfxType: 5
     isRandomBark: 0
     storyAudioClip: {fileID: 8300000, guid: 1fb8478906b87394daec5b9b9cedcaef, type: 3}
     portrait: {fileID: 0}
+    CinematicCameraName: 
   - speakerName: High Inquisitor
     dialogueText: I grow tired of this little game. Guard, to the front!
-    portraitName: inquisitor
+    portraitName: Inquisitor Portrait
     sfxType: 5
     isRandomBark: 0
     storyAudioClip: {fileID: 8300000, guid: 1fb8478906b87394daec5b9b9cedcaef, type: 3}
     portrait: {fileID: 0}
+    CinematicCameraName: 
   - speakerName: High Inquisitor
     dialogueText: It ends now.
-    portraitName: inquisitor
+    portraitName: Inquisitor Portrait
     sfxType: 5
     isRandomBark: 0
     storyAudioClip: {fileID: 8300000, guid: 1fb8478906b87394daec5b9b9cedcaef, type: 3}
     portrait: {fileID: 0}
+    CinematicCameraName: 
   - speakerName: Henry
     dialogueText: No...
     portraitName: H_Apprehensive_EOMO
@@ -57,20 +62,23 @@ MonoBehaviour:
     isRandomBark: 0
     storyAudioClip: {fileID: 8300000, guid: 1fb8478906b87394daec5b9b9cedcaef, type: 3}
     portrait: {fileID: 0}
+    CinematicCameraName: 
   - speakerName: High Inquisitor
     dialogueText: Strike her down!
-    portraitName: inquisitor
+    portraitName: Inquisitor Portrait
     sfxType: 5
     isRandomBark: 0
     storyAudioClip: {fileID: 8300000, guid: 1fb8478906b87394daec5b9b9cedcaef, type: 3}
     portrait: {fileID: 0}
+    CinematicCameraName: 
   - speakerName: High Inquisitor
     dialogueText: Abomination.
-    portraitName: inquisitor
+    portraitName: Inquisitor Portrait
     sfxType: 5
     isRandomBark: 0
     storyAudioClip: {fileID: 8300000, guid: 1fb8478906b87394daec5b9b9cedcaef, type: 3}
     portrait: {fileID: 0}
+    CinematicCameraName: 
   - speakerName: Henry
     dialogueText: "Emma... I\u2019m so sorry."
     portraitName: H_Neutral_ECMO
@@ -78,6 +86,7 @@ MonoBehaviour:
     isRandomBark: 0
     storyAudioClip: {fileID: 8300000, guid: 1fb8478906b87394daec5b9b9cedcaef, type: 3}
     portrait: {fileID: 0}
+    CinematicCameraName: 
   - speakerName: Emma
     dialogueText: "Whatever for, Henry? I\u2019m feeling much better now."
     portraitName: EW_Smile_EOMC
@@ -85,6 +94,8 @@ MonoBehaviour:
     isRandomBark: 0
     storyAudioClip: {fileID: 8300000, guid: 1fb8478906b87394daec5b9b9cedcaef, type: 3}
     portrait: {fileID: 0}
+    CinematicCameraName: 
   OnCompletion:
     m_PersistentCalls:
       m_Calls: []
+  ReturnCameraName: 

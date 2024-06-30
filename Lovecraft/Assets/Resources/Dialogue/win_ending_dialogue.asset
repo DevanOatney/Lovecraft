@@ -16,11 +16,12 @@ MonoBehaviour:
   lines:
   - speakerName: High Inquisitor
     dialogueText: The Light forsakes me.
-    portraitName: inquisitor
+    portraitName: Inquisitor Portrait
     sfxType: 5
     isRandomBark: 0
     storyAudioClip: {fileID: 8300000, guid: fdb6c8e542599454cb9cb9622ecbeb04, type: 3}
     portrait: {fileID: 0}
+    CinematicCameraName: 
   - speakerName: Henry
     dialogueText: Emma...
     portraitName: H_Neutral_EOMO
@@ -28,6 +29,7 @@ MonoBehaviour:
     isRandomBark: 0
     storyAudioClip: {fileID: 8300000, guid: e6f30afdb733d234abd99ee28be8392c, type: 3}
     portrait: {fileID: 0}
+    CinematicCameraName: 
   - speakerName: Emma
     dialogueText: Henry?
     portraitName: E_Neutral_EOMO
@@ -35,6 +37,7 @@ MonoBehaviour:
     isRandomBark: 0
     storyAudioClip: {fileID: 8300000, guid: 3de5c7834302a3543b5cdf36a98798c4, type: 3}
     portrait: {fileID: 0}
+    CinematicCameraName: 
   - speakerName: Henry
     dialogueText: Emma!
     portraitName: H_Soft_EOMO
@@ -42,6 +45,7 @@ MonoBehaviour:
     isRandomBark: 0
     storyAudioClip: {fileID: 8300000, guid: c5611c3e022a90a45905c7a2c9b1142e, type: 3}
     portrait: {fileID: 0}
+    CinematicCameraName: 
   - speakerName: Emma
     dialogueText: Henry, what is all this?
     portraitName: E_Neutral_EOMC
@@ -49,6 +53,7 @@ MonoBehaviour:
     isRandomBark: 0
     storyAudioClip: {fileID: 8300000, guid: c5611c3e022a90a45905c7a2c9b1142e, type: 3}
     portrait: {fileID: 0}
+    CinematicCameraName: 
   - speakerName: Emma
     dialogueText: You did this?
     portraitName: E_Neutral_EOMO
@@ -56,6 +61,7 @@ MonoBehaviour:
     isRandomBark: 0
     storyAudioClip: {fileID: 8300000, guid: c5611c3e022a90a45905c7a2c9b1142e, type: 3}
     portrait: {fileID: 0}
+    CinematicCameraName: 
   - speakerName: Henry
     dialogueText: I did what was necessary, my love.
     portraitName: H_Soft_EOMC
@@ -63,6 +69,8 @@ MonoBehaviour:
     isRandomBark: 0
     storyAudioClip: {fileID: 8300000, guid: c5611c3e022a90a45905c7a2c9b1142e, type: 3}
     portrait: {fileID: 0}
+    CinematicCameraName: 
   OnCompletion:
     m_PersistentCalls:
       m_Calls: []
+  ReturnCameraName: 
