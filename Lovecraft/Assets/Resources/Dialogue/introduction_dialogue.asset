@@ -135,7 +135,7 @@ MonoBehaviour:
     CinematicCameraName: 
   - speakerName: Henry
     dialogueText: I said STOP!
-    portraitName: Henry_Angry
+    portraitName: monsterhenry
     sfxType: 5
     isRandomBark: 0
     storyAudioClip: {fileID: 8300000, guid: d9566b0f279cf8d48813416c78e5463a, type: 3}
