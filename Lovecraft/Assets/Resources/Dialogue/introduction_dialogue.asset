@@ -26,9 +26,9 @@ MonoBehaviour:
     dialogueText: "I know, my love but you must keep fighting. Things will be better
       soon. You\u2019ll see."
     portraitName: Henry_Soft
-    sfxType: 0
+    sfxType: 5
     isRandomBark: 0
-    storyAudioClip: {fileID: 0}
+    storyAudioClip: {fileID: 8300000, guid: 883c2dee1c84d3f4ea6dacfd5d074b27, type: 3}
     portrait: {fileID: 21300000, guid: 148b8195b1182354095a5034d750f1d8, type: 3}
     CinematicCameraName: 
   - speakerName: Emma
@@ -37,7 +37,7 @@ MonoBehaviour:
     portraitName: Emma_Neutral
     sfxType: 5
     isRandomBark: 0
-    storyAudioClip: {fileID: 0}
+    storyAudioClip: {fileID: 8300000, guid: c0045aaf9bbdd98408314b1be5cd5f1c, type: 3}
     portrait: {fileID: 21300000, guid: 739fdbf58c9672945b33535c2b87ba7c, type: 3}
     CinematicCameraName: 
   - speakerName: Henry
@@ -46,15 +46,15 @@ MonoBehaviour:
     portraitName: Henry_Soft
     sfxType: 5
     isRandomBark: 0
-    storyAudioClip: {fileID: 0}
+    storyAudioClip: {fileID: 8300000, guid: d4badd524b1888540bd580e0f4104ed6, type: 3}
     portrait: {fileID: 21300000, guid: 148b8195b1182354095a5034d750f1d8, type: 3}
     CinematicCameraName: 
   - speakerName: 
     dialogueText: '*the clatter of armor and hooves approaching*'
-    portraitName: 
+    portraitName: PLACEHOLDER
     sfxType: 5
     isRandomBark: 0
-    storyAudioClip: {fileID: 0}
+    storyAudioClip: {fileID: 8300000, guid: e216218f3947cf244904673b96cf3587, type: 3}
     portrait: {fileID: 0}
     CinematicCameraName: 
   - speakerName: Henry
@@ -62,7 +62,7 @@ MonoBehaviour:
     portraitName: Henry_Neutral
     sfxType: 5
     isRandomBark: 0
-    storyAudioClip: {fileID: 0}
+    storyAudioClip: {fileID: 8300000, guid: e216218f3947cf244904673b96cf3587, type: 3}
     portrait: {fileID: 21300000, guid: fa008eaf1674e9745a00bdf1199d10cf, type: 3}
     CinematicCameraName: CineCameraPos_3
   - speakerName: Henry
@@ -70,7 +70,7 @@ MonoBehaviour:
     portraitName: Henry_Neutral
     sfxType: 5
     isRandomBark: 0
-    storyAudioClip: {fileID: 0}
+    storyAudioClip: {fileID: 8300000, guid: 5dbac0cfdf54134409319a3c82bc72c2, type: 3}
     portrait: {fileID: 21300000, guid: fa008eaf1674e9745a00bdf1199d10cf, type: 3}
     CinematicCameraName: CineCameraPos_1
   - speakerName: High Inquisitor
@@ -80,7 +80,7 @@ MonoBehaviour:
     portraitName: Inquisitor Portrait
     sfxType: 5
     isRandomBark: 0
-    storyAudioClip: {fileID: 0}
+    storyAudioClip: {fileID: 8300000, guid: 8f99e573d4c142b4fa8c7e7447f2e9a8, type: 3}
     portrait: {fileID: 21300000, guid: 8b7752e19a43dc649917d0224b457c21, type: 3}
     CinematicCameraName: CineCameraPos_2
   - speakerName: Henry
@@ -88,7 +88,7 @@ MonoBehaviour:
     portraitName: Henry_Angry
     sfxType: 5
     isRandomBark: 0
-    storyAudioClip: {fileID: 0}
+    storyAudioClip: {fileID: 8300000, guid: 561f91dbc6f191445a7ca61772ef5023, type: 3}
     portrait: {fileID: 21300000, guid: 50e311d80e1dd864db0358a205e1ef32, type: 3}
     CinematicCameraName: CineCameraPos_1
   - speakerName: High Inquisitor
@@ -98,7 +98,7 @@ MonoBehaviour:
     portraitName: Inquisitor Portrait
     sfxType: 5
     isRandomBark: 0
-    storyAudioClip: {fileID: 0}
+    storyAudioClip: {fileID: 8300000, guid: 5ae1a9a39d7010042b354446d179d451, type: 3}
     portrait: {fileID: 21300000, guid: 8b7752e19a43dc649917d0224b457c21, type: 3}
     CinematicCameraName: CineCameraPos_2
   - speakerName: High Inquisitor
@@ -106,12 +106,12 @@ MonoBehaviour:
     portraitName: Inquisitor Portrait
     sfxType: 5
     isRandomBark: 0
-    storyAudioClip: {fileID: 0}
+    storyAudioClip: {fileID: 8300000, guid: 904939dedadd55942bb2649448e0a8c2, type: 3}
     portrait: {fileID: 21300000, guid: 8b7752e19a43dc649917d0224b457c21, type: 3}
     CinematicCameraName: CineCameraPos_3
   - speakerName: 
     dialogueText: The soldiers surround the Beating Heart and ready their weapons.
-    portraitName: 
+    portraitName: PLACEHOLDER
     sfxType: 5
     isRandomBark: 0
     storyAudioClip: {fileID: 0}
@@ -119,10 +119,10 @@ MonoBehaviour:
     CinematicCameraName: 
   - speakerName: 
     dialogueText: A sword slashes down on the machine.
-    portraitName: 
+    portraitName: PLACEHOLDER
     sfxType: 5
     isRandomBark: 0
-    storyAudioClip: {fileID: 0}
+    storyAudioClip: {fileID: 8300000, guid: 821bd5b603a7a4a419085f21ef81b299, type: 3}
     portrait: {fileID: 0}
     CinematicCameraName: 
   - speakerName: Henry
@@ -130,15 +130,15 @@ MonoBehaviour:
     portraitName: Henry_Neutral
     sfxType: 5
     isRandomBark: 0
-    storyAudioClip: {fileID: 0}
+    storyAudioClip: {fileID: 8300000, guid: 5517331e402dae642919f39b1bc902e9, type: 3}
     portrait: {fileID: 21300000, guid: fa008eaf1674e9745a00bdf1199d10cf, type: 3}
     CinematicCameraName: CineCameraPos_1
   - speakerName: 
     dialogueText: The men swing their weapons wildly. A cable severs and spews blood.
-    portraitName: 
+    portraitName: PLACEHOLDER
     sfxType: 5
     isRandomBark: 0
-    storyAudioClip: {fileID: 0}
+    storyAudioClip: {fileID: 8300000, guid: d0e2babbf60e3fd4998e8c025f74e62d, type: 3}
     portrait: {fileID: 0}
     CinematicCameraName: 
   - speakerName: Emma
@@ -146,7 +146,7 @@ MonoBehaviour:
     portraitName: Emma_Neutral
     sfxType: 5
     isRandomBark: 0
-    storyAudioClip: {fileID: 0}
+    storyAudioClip: {fileID: 8300000, guid: e315662d687a2924ba74843c448e37d0, type: 3}
     portrait: {fileID: 21300000, guid: 739fdbf58c9672945b33535c2b87ba7c, type: 3}
     CinematicCameraName: 
   - speakerName: Henry
@@ -154,7 +154,7 @@ MonoBehaviour:
     portraitName: Henry_Angry
     sfxType: 5
     isRandomBark: 0
-    storyAudioClip: {fileID: 0}
+    storyAudioClip: {fileID: 8300000, guid: 7014f37b87f1a844682e6a09b60d700c, type: 3}
     portrait: {fileID: 21300000, guid: 50e311d80e1dd864db0358a205e1ef32, type: 3}
     CinematicCameraName: 
   - speakerName: Emma
@@ -162,7 +162,7 @@ MonoBehaviour:
     portraitName: Emma_Neutral
     sfxType: 5
     isRandomBark: 0
-    storyAudioClip: {fileID: 0}
+    storyAudioClip: {fileID: 8300000, guid: 0d10db9dcd7d3da4e8d9547d53ae49b9, type: 3}
     portrait: {fileID: 21300000, guid: 739fdbf58c9672945b33535c2b87ba7c, type: 3}
     CinematicCameraName: 
   - speakerName: Henry
@@ -170,13 +170,13 @@ MonoBehaviour:
     portraitName: Henry
     sfxType: 5
     isRandomBark: 0
-    storyAudioClip: {fileID: 0}
+    storyAudioClip: {fileID: 8300000, guid: 68c96d4399bd638439b26bf9d3aae0c8, type: 3}
     portrait: {fileID: 0}
     CinematicCameraName: 
   - speakerName: 
     dialogueText: Consumed by rage, Henry transforms into a beast and heaves himself
       violently into the group of men, claws rending flesh.
-    portraitName: 
+    portraitName: PLACEHOLDER
     sfxType: 5
     isRandomBark: 0
     storyAudioClip: {fileID: 0}
@@ -195,7 +195,7 @@ MonoBehaviour:
     portraitName: Henry_Angry
     sfxType: 5
     isRandomBark: 0
-    storyAudioClip: {fileID: 0}
+    storyAudioClip: {fileID: 8300000, guid: 5cc18725af364934cabbc34876246880, type: 3}
     portrait: {fileID: 21300000, guid: 50e311d80e1dd864db0358a205e1ef32, type: 3}
     CinematicCameraName: 
   - speakerName: Emma
@@ -203,7 +203,7 @@ MonoBehaviour:
     portraitName: Emma_Neutral
     sfxType: 5
     isRandomBark: 0
-    storyAudioClip: {fileID: 0}
+    storyAudioClip: {fileID: 8300000, guid: 57880b1af2b56ee4f8b3a8b3c144322e, type: 3}
     portrait: {fileID: 21300000, guid: 739fdbf58c9672945b33535c2b87ba7c, type: 3}
     CinematicCameraName: 
   - speakerName: Henry
@@ -212,7 +212,7 @@ MonoBehaviour:
     portraitName: Henry_Angry
     sfxType: 5
     isRandomBark: 0
-    storyAudioClip: {fileID: 0}
+    storyAudioClip: {fileID: 8300000, guid: fd6696b7c454a32498e662152d6b14da, type: 3}
     portrait: {fileID: 21300000, guid: 50e311d80e1dd864db0358a205e1ef32, type: 3}
     CinematicCameraName: 
   - speakerName: Henry
@@ -220,7 +220,7 @@ MonoBehaviour:
     portraitName: Henry_Angry
     sfxType: 5
     isRandomBark: 0
-    storyAudioClip: {fileID: 0}
+    storyAudioClip: {fileID: 8300000, guid: 424a16243e6935249bab8fdd28b95b56, type: 3}
     portrait: {fileID: 21300000, guid: 50e311d80e1dd864db0358a205e1ef32, type: 3}
     CinematicCameraName: 
   OnCompletion:
