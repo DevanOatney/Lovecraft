@@ -5,12 +5,15 @@ using UnityEngine;
 public class DamageZoneController : MonoBehaviour
 {
     [SerializeField] public float damageToOpponent = 1;
-    [SerializeField] LayerMask InteractionWithUnitsOnLayer;
+    [SerializeField] LayerMask interactionWithUnitsOnLayer;
+
+    private bool isSelfDestructing = true;
 
     // Start is called before the first frame update
     void Start()
     {
-        Invoke("DestroyMe", 0.75f);
+        if (isSelfDestructing)
+            Invoke("DestroyMe", 0.75f);
     }
 
     void DestroyMe()
@@ -18,22 +21,25 @@ public class DamageZoneController : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public void Initialize(LayerMask targetMask, float dmg)
+    public void Initialize(int targetLayer, float dmg, bool selfDestruct = true)
     {
-        InteractionWithUnitsOnLayer = targetMask; 
+        interactionWithUnitsOnLayer = 1 << targetLayer;
         damageToOpponent = dmg;
+        isSelfDestructing = selfDestruct;
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if ((InteractionWithUnitsOnLayer & (1 << other.gameObject.layer)) != 0)
+        int layerMaskValue = 1 << other.gameObject.layer;
+        if ((interactionWithUnitsOnLayer.value & layerMaskValue) != 0)
         {
             EnemyAI eAI = other.GetComponent<EnemyAI>();
-            if( eAI != null )
+            if (eAI != null)
             {
                 eAI.TakeDamage(damageToOpponent);
                 return;
             }
+
             PlayerSixWayDirectionalController pC = other.GetComponent<PlayerSixWayDirectionalController>();
             if (pC != null)
             {

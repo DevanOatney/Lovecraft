@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.ProBuilder;
 
@@ -15,6 +16,8 @@ public class AttackHandler : MonoBehaviour
     private Transform telegraphArea;
     private Transform attack;
     private EnemyAttackData enemyAttackData;
+
+    private bool chargeDealtDamage = false;
 
     void Start()
     {
@@ -91,7 +94,8 @@ public class AttackHandler : MonoBehaviour
             attack = Instantiate(enemyAttackData.Telegraph.transform, telegraphArea.transform.position, telegraphArea.transform.rotation);
             attack.GetComponent<Collider>().enabled = true;
             attack.name = "Attack";
-            attack.GetComponent<DamageZoneController>().Initialize(LayerMask.NameToLayer("PlayerLayer"), damage);
+            var damageZone = attack.AddComponent<DamageZoneController>();
+            damageZone.Initialize(LayerMask.NameToLayer("PlayerLayer"), damage, false);
         }
 
         if (telegraphArea != null)
@@ -105,14 +109,6 @@ public class AttackHandler : MonoBehaviour
             if (target.GetComponent<TreeController>() != null)
             {
                 target.GetComponent<TreeController>().TakeDamage(damage);
-            }
-            else if (target.GetComponent<PlayerSixWayDirectionalController>() != null)
-            {
-                target.GetComponent<PlayerSixWayDirectionalController>().TakeDamage(damage);
-            }
-            else if (target.GetComponent<EnemyAI>() != null)
-            {
-                target.GetComponent<EnemyAI>().TakeDamage(damage);
             }
         }
         yield return new WaitForSeconds(attackDuration);
@@ -131,6 +127,7 @@ public class AttackHandler : MonoBehaviour
 
     private IEnumerator ChargeAttackRoutine(Transform target, int damage)
     {
+        chargeDealtDamage = false;
         // First, face the direction of the target
         Vector3 dir = (target.position - transform.position).normalized;
         Quaternion lookDir = Quaternion.LookRotation(new Vector3(dir.x, 0f, dir.z));
@@ -170,33 +167,36 @@ public class AttackHandler : MonoBehaviour
             yield break;
         }
 
+        if (telegraphArea != null)
+        {
+            Destroy(telegraphArea.gameObject);
+        }
+
         // Execute charge attack
         float chargeSpeed = 10f; // Adjust this as needed
         float chargeDuration = 1f; // Adjust this as needed
         float startTime = Time.time;
         while (Time.time < startTime + chargeDuration)
         {
+            // Check for collision with the player
+            if (target != null && Vector3.Distance(transform.position, target.position) <= 2f && !chargeDealtDamage)
+            {
+                if (target.GetComponent<PlayerSixWayDirectionalController>() != null)
+                {
+                    chargeDealtDamage = true;
+                    target.GetComponent<PlayerSixWayDirectionalController>().TakeDamage(damage);
+                }
+                else if (target.GetComponent<EnemyAI>() != null)
+                {
+                    chargeDealtDamage = true;
+                    target.GetComponent<EnemyAI>().TakeDamage(damage);
+                }
+            }
             transform.position += transform.forward * chargeSpeed * Time.deltaTime;
             yield return null;
         }
 
-        if (telegraphArea != null)
-        {
-            Destroy(telegraphArea.gameObject);
-        }
-
-        // Check for collision with the player
-        if (target != null && Vector3.Distance(transform.position, target.position) <= attackRange)
-        {
-            if (target.GetComponent<PlayerSixWayDirectionalController>() != null)
-            {
-                target.GetComponent<PlayerSixWayDirectionalController>().TakeDamage(damage);
-            }
-            else if (target.GetComponent<EnemyAI>() != null)
-            {
-                target.GetComponent<EnemyAI>().TakeDamage(damage);
-            }
-        }
+       
 
         // Recover
         yield return new WaitForSeconds(recoveryDuration);

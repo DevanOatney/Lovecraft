@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 5366613733665935035}
   - component: {fileID: 4192310575494414959}
   - component: {fileID: 3045412610631215239}
-  - component: {fileID: 6970921438695497251}
   m_Layer: 0
   m_Name: Telegraph_Attack
   m_TagString: Untagged
@@ -106,19 +105,3 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6970921438695497251
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6088963278582102181}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef6ec70abdafc8e45a6f1e7c141e3511, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damageToOpponent: 1
-  InteractionWithUnitsOnLayer:
-    serializedVersion: 2
-    m_Bits: 0

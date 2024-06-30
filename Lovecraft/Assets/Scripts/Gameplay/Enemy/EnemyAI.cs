@@ -567,4 +567,10 @@ public class EnemyAI : MonoBehaviour
         SpeechBubbleTextRef.text = "";
         SpeechBubbleRef.SetActive(false);
     }
+
+    public void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Player")
+            Debug.Log("hit");
+    }
 }

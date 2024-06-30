@@ -188,7 +188,7 @@ GameObject:
   - component: {fileID: 3179822023037457829}
   - component: {fileID: 702892904161259905}
   - component: {fileID: 6979978003805424896}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: cm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -285,7 +285,8 @@ GameObject:
   - component: {fileID: 7540397418575788686}
   - component: {fileID: 4210230401389451343}
   - component: {fileID: 5143150741863022121}
-  m_Layer: 6
+  - component: {fileID: 6940339613721065039}
+  m_Layer: 8
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -488,6 +489,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Blood_Currency_Count: 4
+--- !u!54 &6940339613721065039
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1821844674282759311}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2348319102099890103
 GameObject:
   m_ObjectHideFlags: 0
@@ -501,7 +529,7 @@ GameObject:
   - component: {fileID: 2493729551728826334}
   - component: {fileID: 5798307079806069415}
   - component: {fileID: 7259322368896125657}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -516,8 +544,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2348319102099890103}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.17374294, y: 0.8089326, z: -0.29351085, w: 0.4788454}
-  m_LocalPosition: {x: -8.521172, y: 14.621, z: -47.40362}
+  m_LocalRotation: {x: 0.34106296, y: -0.009325356, z: 0.003383592, w: 0.93998814}
+  m_LocalPosition: {x: -0.000002861023, y: 14.25, z: -14.200002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -915,7 +943,7 @@ GameObject:
   - component: {fileID: 2395759923061473016}
   - component: {fileID: 962455674618962662}
   - component: {fileID: 8019396320759621784}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: InteractionInputIndicator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1085,7 +1113,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8585870232659736567}
   - component: {fileID: 6087455644943064102}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Virtual Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1100,8 +1128,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4936279243077657860}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.34106275, y: -0.009319721, z: 0.003381542, w: 0.93998826}
-  m_LocalPosition: {x: 0, y: 14.25, z: -14.2}
+  m_LocalRotation: {x: 0.34106314, y: -0.009325206, z: 0.0033835322, w: 0.9399881}
+  m_LocalPosition: {x: -0.000002861023, y: 14.25, z: -14.200002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1157,7 +1185,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5056013774438584790}
   - component: {fileID: 4253203380328887712}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Dirt Run 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1286,8 +1314,7 @@ GameObject:
   - component: {fileID: 1947467634584407920}
   - component: {fileID: 219985977146527972}
   - component: {fileID: 725820944148397744}
-  - component: {fileID: 2844189388591462913}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1364,33 +1391,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!54 &2844189388591462913
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7027591578683684758}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &7128399364556153065
 GameObject:
   m_ObjectHideFlags: 0
@@ -1403,7 +1403,7 @@ GameObject:
   - component: {fileID: 2392515282010090782}
   - component: {fileID: 7097515049185935780}
   - component: {fileID: 64679493903064055}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: skeleton_occultist_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1419,8 +1419,8 @@ Transform:
   m_GameObject: {fileID: 7128399364556153065}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.65, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 9222016085877644315}
@@ -1474,7 +1474,7 @@ SpriteRenderer:
   m_Size: {x: 1.2803127, y: 1.28}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &7097515049185935780
@@ -1541,7 +1541,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.036, y: 0.029999971, z: 1.0179}
-  m_LocalScale: {x: 3, y: 3.1692, z: 2.4622102}
+  m_LocalScale: {x: 6.544683, y: 6.913803, z: 5.371462}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1947467634584407920}
@@ -1629,7 +1629,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef6ec70abdafc8e45a6f1e7c141e3511, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageToOpponent: 1
+  damageToOpponent: 2.5
   InteractionWithUnitsOnLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -1644,7 +1644,7 @@ GameObject:
   - component: {fileID: 1475448811547674138}
   - component: {fileID: 5581434285557193940}
   - component: {fileID: 7905783367449105708}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Slash_VFX_Graph
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1753,7 +1753,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8649320239631985518}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: slash_vfx
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1784,9 +1784,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1947467634584407920}
     m_Modifications:
+    - target: {fileID: 4402846774163269308, guid: 131357a0e4d903041b6b7ae95751e51a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7795838014576979188, guid: 131357a0e4d903041b6b7ae95751e51a, type: 3}
       propertyPath: m_Name
       value: HealthBarCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 7795838014576979188, guid: 131357a0e4d903041b6b7ae95751e51a, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8371576069198910868, guid: 131357a0e4d903041b6b7ae95751e51a, type: 3}
       propertyPath: m_Pivot.x
@@ -1858,11 +1866,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8371576069198910868, guid: 131357a0e4d903041b6b7ae95751e51a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.405
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8371576069198910868, guid: 131357a0e4d903041b6b7ae95751e51a, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 2.583
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8371576069198910868, guid: 131357a0e4d903041b6b7ae95751e51a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
