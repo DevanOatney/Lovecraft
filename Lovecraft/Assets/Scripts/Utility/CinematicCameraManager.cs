@@ -23,17 +23,15 @@ public class CinematicCameraManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        cinematicCameras = new List<Camera>();
-        foreach( Camera cam in GetComponentsInChildren<Camera>())
-        {
-            cinematicCameras.Add(cam);
-            cam.gameObject.SetActive(false);
-        }
+        if (cinematicCameras == null)
+            InitializeCameras();
     }
 
     public void ActivateCamera(string _name)
     {
         MainGamePlayCamera.gameObject.SetActive(false);
+        if(cinematicCameras == null)
+            InitializeCameras();
         foreach(Camera cam in cinematicCameras)
         {
             if (cam.name.Equals(_name))
@@ -43,6 +41,16 @@ public class CinematicCameraManager : MonoBehaviour
             {
                 cam.gameObject.SetActive(false);
             }
+        }
+    }
+
+    private void InitializeCameras()
+    {
+        cinematicCameras = new List<Camera>();
+        foreach (Camera cam in GetComponentsInChildren<Camera>())
+        {
+            cinematicCameras.Add(cam);
+            cam.gameObject.SetActive(false);
         }
     }
 
