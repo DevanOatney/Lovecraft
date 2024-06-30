@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class BuildingObject : MonoBehaviour
 {
-    public enum BuildingType { ProjectileShooter, Trap, FreezeTrap, StunTrap, CharmTrap }
+    public enum BuildingType { ProjectileShooter, Trap, FreezeTrap, StunTrap, CharmTrap, Potion }
     public BuildingType buildingType = BuildingType.ProjectileShooter;
 
     public Quaternion DirectionToFire = Quaternion.identity;
@@ -107,6 +107,12 @@ public class BuildingObject : MonoBehaviour
             }
 
             TrapTimer = 0.0f; // Reset the cooldown timer
+        } else if ( other.CompareTag("Player"))
+        {
+            if( buildingType == BuildingType.Potion )
+            {
+                HealPlayer(other);
+            }
         }
 
         if (MovementSpeedAdjuster != 0f && other.CompareTag("Enemy"))
@@ -167,5 +173,11 @@ public class BuildingObject : MonoBehaviour
         {
             enemyAI.Charm();
         }
+    }
+
+    private void HealPlayer(Collider player)
+    {
+        PlayerSixWayDirectionalController pController = player.GetComponent<PlayerSixWayDirectionalController>();
+        pController.HealPlayer((int)AbilityUpgradesManager.Instance.AbilityUpgrades[Abilities.TRAP_EFFECTIVENESS].GetModifiedValue(35));
     }
 }

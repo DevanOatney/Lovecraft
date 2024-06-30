@@ -49,7 +49,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5073610159795257428}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -117,6 +117,7 @@ GameObject:
   - component: {fileID: 6156307744085145319}
   - component: {fileID: -1237341523593231900}
   - component: {fileID: 714837343987430492}
+  - component: {fileID: 5258985579413836984}
   m_Layer: 0
   m_Name: Directional Trap
   m_TagString: TurretTrap
@@ -155,7 +156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingType: 0
   DirectionToFire: {x: 0, y: 0, z: 0, w: 1}
-  ProjectilePrefab: {fileID: 919132149155446097, guid: 47b86af6908824d43bba86d2de2c4155, type: 3}
+  ProjectilePrefab: {fileID: 7071153619678315087, guid: fac874be33ef3604ba1e57635b17d4b0, type: 3}
   ProjectileSpeed: 10
   FiringFrequency: 1
   TrapCooldown: 1
@@ -194,6 +195,27 @@ MonoBehaviour:
   lifetime: 3
   isCollisionSelfDestruct: 0
   isTimedAfterCollisionSelfDestruct: 0
+--- !u!65 &5258985579413836984
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6233558388099431412}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!1001 &8859606984528927307
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -212,7 +234,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 80e2d8cea876fdb4fac0caf764863f9c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.283
+      value: 0.24
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 80e2d8cea876fdb4fac0caf764863f9c, type: 3}
       propertyPath: m_LocalPosition.z

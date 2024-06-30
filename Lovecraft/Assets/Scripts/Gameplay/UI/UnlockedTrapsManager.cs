@@ -10,6 +10,7 @@ public enum TRAP_TYPES
     TURRET,
     LAUNCHER,
     CHARM,
+    POTION,
 }
 
 

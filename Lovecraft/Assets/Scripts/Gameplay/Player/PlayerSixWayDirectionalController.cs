@@ -232,10 +232,16 @@ public class PlayerSixWayDirectionalController : MonoBehaviour
 
     public void HealHalf()
     {
-        curHP += (MaxHP / 2);
+        HealPlayer(MaxHP / 2);
+    }
+
+    public void HealPlayer(int healAmount)
+    {
+        curHP += healAmount;
         if (curHP > MaxHP)
         {
             curHP = MaxHP;
         }
+        healthBar.fillAmount = (float)((float)curHP / (float)MaxHP);
     }
 }
