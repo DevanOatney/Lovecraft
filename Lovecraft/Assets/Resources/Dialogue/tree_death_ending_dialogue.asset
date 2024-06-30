@@ -16,15 +16,21 @@ MonoBehaviour:
   lines:
   - speakerName: Emma
     dialogueText: 'Aaaagghhh! '
-    portraitName: E_Pain_EOMO
+    portraitName: E_Neutral_ECMO
     sfxType: 5
     isRandomBark: 0
-    storyAudioClip: {fileID: 8300000, guid: bdb98e669b3b63d4f9a04d117871e203, type: 3}
+    storyAudioClip: {fileID: 8300000, guid: f17a99827d47b7340bc4393080f28023, type: 3}
     portrait: {fileID: 0}
+    CinematicCameraName: 
   - speakerName: Henry
     dialogueText: No!
-    portraitName: H_Apprehensive_EOMO
+    portraitName: H_Angry_EOMO
     sfxType: 5
     isRandomBark: 0
-    storyAudioClip: {fileID: 8300000, guid: 7c0eb189344be38478ec30238d83c32d, type: 3}
+    storyAudioClip: {fileID: 8300000, guid: 6ac7f5259baae1c4389ebfddba825ea7, type: 3}
     portrait: {fileID: 0}
+    CinematicCameraName: 
+  OnCompletion:
+    m_PersistentCalls:
+      m_Calls: []
+  ReturnCameraName: 
