@@ -16932,41 +16932,18 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.003543079
       objectReference: {fileID: 0}
-    - target: {fileID: 557699914954359111, guid: 337ac67ce67d95b409c57d9bd53cd2b1, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 557699914954359111, guid: 337ac67ce67d95b409c57d9bd53cd2b1, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 557699914954359111, guid: 337ac67ce67d95b409c57d9bd53cd2b1, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 557699914954359111, guid: 337ac67ce67d95b409c57d9bd53cd2b1, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 1821844674282759311, guid: 337ac67ce67d95b409c57d9bd53cd2b1, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-<<<<<<< Updated upstream
     - target: {fileID: 2016638492781322697, guid: 337ac67ce67d95b409c57d9bd53cd2b1, type: 3}
       propertyPath: damageToOpponent
       value: 2.5
-=======
-    - target: {fileID: 1832527774100393616, guid: 337ac67ce67d95b409c57d9bd53cd2b1, type: 3}
-      propertyPath: animationSpeed
-      value: 0.25
->>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 5308812024031531305, guid: 337ac67ce67d95b409c57d9bd53cd2b1, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-<<<<<<< Updated upstream
     - target: {fileID: 7184328499682418433, guid: 337ac67ce67d95b409c57d9bd53cd2b1, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -16982,15 +16959,6 @@ PrefabInstance:
     - target: {fileID: 8469962362644333126, guid: 337ac67ce67d95b409c57d9bd53cd2b1, type: 3}
       propertyPath: m_LocalScale.z
       value: 5.371462
-=======
-    - target: {fileID: 7113942489888876717, guid: 337ac67ce67d95b409c57d9bd53cd2b1, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7113942489888876717, guid: 337ac67ce67d95b409c57d9bd53cd2b1, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 4
->>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 8585870232659736567, guid: 337ac67ce67d95b409c57d9bd53cd2b1, type: 3}
       propertyPath: m_LocalPosition.x
