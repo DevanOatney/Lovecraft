@@ -19,8 +19,8 @@ MonoBehaviour:
     portraitName: E_Neutral_ECMC
     sfxType: 5
     isRandomBark: 0
-    storyAudioClip: {fileID: 8300000, guid: 591082e55d4af254fa7112786ceffed4, type: 3}
-    portrait: {fileID: 0}
+    storyAudioClip: {fileID: 0}
+    portrait: {fileID: 21300000, guid: f15a6791eb00ce341b9f8615d276b286, type: 3}
     CinematicCameraName: CineCameraPos_1
   - speakerName: Henry
     dialogueText: "I know, my love but you must keep fighting. Things will be better
@@ -51,11 +51,11 @@ MonoBehaviour:
     CinematicCameraName: 
   - speakerName: 
     dialogueText: '*the clatter of armor and hooves approaching*'
-    portraitName: 
+    portraitName: PLACEHOLDER
     sfxType: 5
     isRandomBark: 0
     storyAudioClip: {fileID: 0}
-    portrait: {fileID: 0}
+    portrait: {fileID: 21300000, guid: c8a03d02e827d914cb4d071268997b30, type: 3}
     CinematicCameraName: 
   - speakerName: Henry
     dialogueText: ...
@@ -111,19 +111,19 @@ MonoBehaviour:
     CinematicCameraName: CineCameraPos_3
   - speakerName: 
     dialogueText: The soldiers surround the Beating Heart and ready their weapons.
-    portraitName: 
+    portraitName: PLACEHOLDER
     sfxType: 5
     isRandomBark: 0
     storyAudioClip: {fileID: 0}
-    portrait: {fileID: 0}
+    portrait: {fileID: 21300000, guid: c8a03d02e827d914cb4d071268997b30, type: 3}
     CinematicCameraName: 
   - speakerName: 
     dialogueText: A sword slashes down on the machine.
-    portraitName: 
+    portraitName: PLACEHOLDER
     sfxType: 5
     isRandomBark: 0
     storyAudioClip: {fileID: 0}
-    portrait: {fileID: 0}
+    portrait: {fileID: 21300000, guid: c8a03d02e827d914cb4d071268997b30, type: 3}
     CinematicCameraName: 
   - speakerName: Henry
     dialogueText: Stop! Get away from it!
@@ -135,11 +135,11 @@ MonoBehaviour:
     CinematicCameraName: CineCameraPos_1
   - speakerName: 
     dialogueText: The men swing their weapons wildly. A cable severs and spews blood.
-    portraitName: 
+    portraitName: PLACEHOLDER
     sfxType: 5
     isRandomBark: 0
     storyAudioClip: {fileID: 0}
-    portrait: {fileID: 0}
+    portrait: {fileID: 21300000, guid: c8a03d02e827d914cb4d071268997b30, type: 3}
     CinematicCameraName: 
   - speakerName: Emma
     dialogueText: Aaaahh!
@@ -167,7 +167,7 @@ MonoBehaviour:
     CinematicCameraName: 
   - speakerName: Henry
     dialogueText: I said STOP!
-    portraitName: Henry
+    portraitName: Henry_Angry
     sfxType: 5
     isRandomBark: 0
     storyAudioClip: {fileID: 0}
@@ -176,11 +176,11 @@ MonoBehaviour:
   - speakerName: 
     dialogueText: Consumed by rage, Henry transforms into a beast and heaves himself
       violently into the group of men, claws rending flesh.
-    portraitName: 
+    portraitName: H_Transform
     sfxType: 5
     isRandomBark: 0
     storyAudioClip: {fileID: 0}
-    portrait: {fileID: 0}
+    portrait: {fileID: 21300000, guid: 041929feb94a65c429c527a5435f98d5, type: 3}
     CinematicCameraName: 
   - speakerName: ...
     dialogueText: '*screams of soldiers being attacked*'
