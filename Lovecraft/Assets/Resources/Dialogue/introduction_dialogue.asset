@@ -43,11 +43,16 @@ MonoBehaviour:
   - speakerName: Henry
     dialogueText: "Yes, I remember. But you mustn\u2019t go outside. You need to
       stay here and rest."
-    portraitName: Henry_Soft
+    portraitName: H_Soft_EOMO
     sfxType: 5
     isRandomBark: 0
+<<<<<<< HEAD
     storyAudioClip: {fileID: 8300000, guid: d4badd524b1888540bd580e0f4104ed6, type: 3}
     portrait: {fileID: 21300000, guid: 148b8195b1182354095a5034d750f1d8, type: 3}
+=======
+    storyAudioClip: {fileID: 0}
+    portrait: {fileID: 21300000, guid: 55666a6a9e5d25348a43073c6d771186, type: 3}
+>>>>>>> 606dfd828ffa03d10253fba6515dc249ea01d0e4
     CinematicCameraName: 
   - speakerName: 
     dialogueText: '*the clatter of armor and hooves approaching*'
@@ -67,11 +72,16 @@ MonoBehaviour:
     CinematicCameraName: CineCameraPos_3
   - speakerName: Henry
     dialogueText: Stay inside.
-    portraitName: Henry_Neutral
+    portraitName: H_Neutral_EOMO
     sfxType: 5
     isRandomBark: 0
+<<<<<<< HEAD
     storyAudioClip: {fileID: 8300000, guid: 5dbac0cfdf54134409319a3c82bc72c2, type: 3}
     portrait: {fileID: 21300000, guid: fa008eaf1674e9745a00bdf1199d10cf, type: 3}
+=======
+    storyAudioClip: {fileID: 0}
+    portrait: {fileID: 21300000, guid: 0b3956ebe50615b45972502d526e2553, type: 3}
+>>>>>>> 606dfd828ffa03d10253fba6515dc249ea01d0e4
     CinematicCameraName: CineCameraPos_1
   - speakerName: High Inquisitor
     dialogueText: It is the hour of your reckoning. You slaughter our kin, use them
@@ -127,11 +137,16 @@ MonoBehaviour:
     CinematicCameraName: 
   - speakerName: Henry
     dialogueText: Stop! Get away from it!
-    portraitName: Henry_Neutral
+    portraitName: H_Angry_EOMO
     sfxType: 5
     isRandomBark: 0
+<<<<<<< HEAD
     storyAudioClip: {fileID: 8300000, guid: 5517331e402dae642919f39b1bc902e9, type: 3}
     portrait: {fileID: 21300000, guid: fa008eaf1674e9745a00bdf1199d10cf, type: 3}
+=======
+    storyAudioClip: {fileID: 0}
+    portrait: {fileID: 21300000, guid: 3ca56baacc1d8684fa901a297bd54a70, type: 3}
+>>>>>>> 606dfd828ffa03d10253fba6515dc249ea01d0e4
     CinematicCameraName: CineCameraPos_1
   - speakerName: 
     dialogueText: The men swing their weapons wildly. A cable severs and spews blood.
@@ -151,11 +166,16 @@ MonoBehaviour:
     CinematicCameraName: 
   - speakerName: Henry
     dialogueText: "Stop it! You\u2019re killing her!"
-    portraitName: Henry_Angry
+    portraitName: H_Angry_EOMO
     sfxType: 5
     isRandomBark: 0
+<<<<<<< HEAD
     storyAudioClip: {fileID: 8300000, guid: 7014f37b87f1a844682e6a09b60d700c, type: 3}
     portrait: {fileID: 21300000, guid: 50e311d80e1dd864db0358a205e1ef32, type: 3}
+=======
+    storyAudioClip: {fileID: 0}
+    portrait: {fileID: 21300000, guid: 3ca56baacc1d8684fa901a297bd54a70, type: 3}
+>>>>>>> 606dfd828ffa03d10253fba6515dc249ea01d0e4
     CinematicCameraName: 
   - speakerName: Emma
     dialogueText: Henry!
@@ -167,23 +187,20 @@ MonoBehaviour:
     CinematicCameraName: 
   - speakerName: Henry
     dialogueText: I said STOP!
-    portraitName: Henry_Angry
+    portraitName: H_Transform
     sfxType: 5
     isRandomBark: 0
+<<<<<<< HEAD
     storyAudioClip: {fileID: 8300000, guid: 68c96d4399bd638439b26bf9d3aae0c8, type: 3}
     portrait: {fileID: 0}
+=======
+    storyAudioClip: {fileID: 0}
+    portrait: {fileID: 21300000, guid: 041929feb94a65c429c527a5435f98d5, type: 3}
+>>>>>>> 606dfd828ffa03d10253fba6515dc249ea01d0e4
     CinematicCameraName: 
   - speakerName: 
     dialogueText: Consumed by rage, Henry transforms into a beast and heaves himself
       violently into the group of men, claws rending flesh.
-    portraitName: H_Transform
-    sfxType: 5
-    isRandomBark: 0
-    storyAudioClip: {fileID: 0}
-    portrait: {fileID: 21300000, guid: 041929feb94a65c429c527a5435f98d5, type: 3}
-    CinematicCameraName: 
-  - speakerName: ...
-    dialogueText: '*screams of soldiers being attacked*'
     portraitName: monsterhenry
     sfxType: 5
     isRandomBark: 0
@@ -192,7 +209,7 @@ MonoBehaviour:
     CinematicCameraName: 
   - speakerName: Henry
     dialogueText: Emma! Are you alright?
-    portraitName: Henry_Angry
+    portraitName: H_Neutral_ECMO
     sfxType: 5
     isRandomBark: 0
     storyAudioClip: {fileID: 8300000, guid: 5cc18725af364934cabbc34876246880, type: 3}
@@ -200,7 +217,7 @@ MonoBehaviour:
     CinematicCameraName: 
   - speakerName: Emma
     dialogueText: "Henry, what\u2019s going on?"
-    portraitName: Emma_Neutral
+    portraitName: E_Neutral_EOMO
     sfxType: 5
     isRandomBark: 0
     storyAudioClip: {fileID: 8300000, guid: 57880b1af2b56ee4f8b3a8b3c144322e, type: 3}
@@ -209,7 +226,7 @@ MonoBehaviour:
   - speakerName: Henry
     dialogueText: "Just stay inside! Everything will be okay. I\u2019ll make sure
       of it."
-    portraitName: Henry_Angry
+    portraitName: H_Angry_ECMO
     sfxType: 5
     isRandomBark: 0
     storyAudioClip: {fileID: 8300000, guid: fd6696b7c454a32498e662152d6b14da, type: 3}
