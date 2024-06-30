@@ -265,6 +265,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6936625688591216172, guid: 6a93f427781b5984290b511b454dcdb7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.88
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 6a93f427781b5984290b511b454dcdb7, type: 3}
       propertyPath: m_Name
       value: Trap Spike
@@ -272,8 +276,38 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6a93f427781b5984290b511b454dcdb7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5681118307092405500}
   m_SourcePrefab: {fileID: 100100000, guid: 6a93f427781b5984290b511b454dcdb7, type: 3}
+--- !u!4 &2802720764925147246 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -6936625688591216172, guid: 6a93f427781b5984290b511b454dcdb7, type: 3}
+  m_PrefabInstance: {fileID: 4132444219783686586}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3861851860669273323 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 6a93f427781b5984290b511b454dcdb7, type: 3}
+  m_PrefabInstance: {fileID: 4132444219783686586}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5681118307092405500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3861851860669273323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 189a7d67b300c3d4ea8e4c0643408615, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Spikes: {fileID: 2802720764925147246}
+  riseHeight: 1
+  riseTime: 0.5
+  stayUpTime: 1
+  sinkTime: 1
 --- !u!4 &4527205467456261713 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6a93f427781b5984290b511b454dcdb7, type: 3}
